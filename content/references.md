@@ -13,15 +13,6 @@ kernelspec:
 (content:references)=
 # References and cross-references
 
-Because `jupyter-book` is built on top of {term}`Sphinx`,
-there are many ways to reference content within your book (or even across other books, or Sphinx websites).
-
-Referencing is accomplished with **roles** or with **markdown link syntax**, depending on your use-case.
-There are a few ways to reference content from your book, depending on what kind of content you'd like to reference.
-
-:::{seealso}
-If you're getting started, check out [](../tutorials/references.md) for more information.
-:::
 
 (content:references:labels)=
 ## Reference section labels

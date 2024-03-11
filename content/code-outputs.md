@@ -10,7 +10,6 @@ kernelspec:
 ---
 
 (content:code-outputs)=
-
 # Formatting code outputs
 
 The formatting of code outputs is highly configurable.

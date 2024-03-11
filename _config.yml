@@ -2,7 +2,7 @@
 # Book settings
 title: ""
 logo: images/logo-wide.svg
-author: Commoner Artisan
+author: NeneWang
 email: nelson.wang80@bcmail.cuny.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This is an example book built with Jupyter Books.

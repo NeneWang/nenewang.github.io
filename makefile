@@ -1,4 +1,4 @@
 preview:
-	jupyter-book build .
+	jupyter-book build . -q
 rebuild:
-	jupyter-book build --all .
+	jupyter-book build --all . -q

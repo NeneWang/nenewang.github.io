@@ -7,12 +7,17 @@ parts:
   - file: 1-intro/about
   - file: 1-intro/syllabus
 
-- caption: Current Learning
+
+- caption: Software Engineering
   chapters:
   - file: algorithms/intro
-  - file: data_tools/03.00-Introduction-to-Pandas
+
+- caption: Data Science
+  chapters:
+  - file: data_tools/introduction
     sections:
-    - file: data_tools/03.08-Aggregation-and-Grouping
+      - file: data_tools/03.00-Introduction-to-Pandas
+      - file: data_tools/03.08-Aggregation-and-Grouping
 
 
 - caption: Topic Guides
@@ -29,4 +34,5 @@ parts:
     - file: content/proof
     - file: content/figures
     - file: content/metadata
+
 

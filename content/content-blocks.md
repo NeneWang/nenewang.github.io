@@ -166,24 +166,8 @@ You can use this syntax for any kind of directive, though it is generally recomm
 
 ### Insert code cell outputs into admonitions
 
-If you'd like to insert the outputs of running code *inside* admonition
-blocks, we recommend using [`glue` functionality](content:executable:output-insert).
-For example, we'll insert one of the outputs that was glued into the book from the [code outputs page](./code-outputs.md).
 
-For example:
 
-````{example}
-
-```{note}
-Here's my figure:
-
-```{glue} sorted_means_fig
-:doc: executable/output-insert.md
-```
-
-````
-
-See [](content:executable:output-insert) for more information on how to use `glue` to insert your outputs directly into your content.
 
 :::{tip}
 To hide code input and output that generated the variable you are inserting, use the `remove_cell` tag.

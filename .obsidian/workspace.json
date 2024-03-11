@@ -140,6 +140,11 @@
   },
   "active": "720b4658fe19a1e3",
   "lastOpenFiles": [
+    "_build/html/searchindex.js.tmp",
+    "_build/html/_images/03.08-split-apply-combine.png",
+    "_build/html/_sources/data_tools/introduction.md",
+    "_build/html/data_tools/introduction.html",
+    "data_tools/introduction.md",
     "file-types/restructuredtext.md",
     "file-types/notebooks.ipynb",
     "file-types/myst-notebooks.md",
@@ -148,7 +153,6 @@
     "file-types/jupytext.Rmd",
     "file-types/include-rst.rst",
     "file-types",
-    "_build/html/searchindex.js.tmp",
     "images/tags_notebook.png",
     "images/tags_jupyterlab.jpg",
     "images/netlify-domain.png",
@@ -158,12 +162,10 @@
     "images/metadata_edit.png",
     "images/metadata_edit.gif",
     "images/logo-wide.svg",
-    "images/logo-square.svg",
     "images/favicon.ico",
     "images",
     "_build/html/_static/proof.css",
     "_build/html/_rediraffe_redirected.json",
-    "_build/html/customize/toc.html",
     "_build/html/_sources/web/index.md",
     "_build/html/_sources/web/announcements.md",
     "_build/html/_sources/tutorials/references.md",
@@ -182,9 +184,6 @@
     "_build/html/_sources/reference/cli.md",
     "_build/html/_sources/reference/cheatsheet.md",
     "_build/html/_sources/reference/_changelog.md",
-    "_build/html/_sources/publish/web.md",
-    "_build/html/_sources/publish/readthedocs.md",
-    "_build/html/_sources/publish/netlify.md",
-    "_build/html/_sources/publish/gh-pages.md"
+    "_build/html/_sources/publish/web.md"
   ]
 }

@@ -18,7 +18,7 @@ title: Books with Jupyter
 :class: sd-fs-3
 Build beautiful, publication-quality books and documents from computational content.
 
-```{button-ref} start/your-first-book
+```{button-ref} 1-intro/syllabus
 :ref-type: doc
 :color: primary
 :class: sd-rounded-pill float-left
@@ -29,8 +29,7 @@ Get started
 
 % The SVG rendering breaks latex builds for the GitHub badge, so only include in HTML
 ```{only} html
-[![](https://img.shields.io/github/stars/executablebooks/jupyter-book?style=social)](https://github.com/executablebooks/jupyter-book)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg)](https://doi.org/10.5281/zenodo.2561065)
+[![](https://img.shields.io/github/stars/nenewang/lecture-notes?style=social)](https://github.com/nenewang/lecture-notes)
 ```
 
 :::
@@ -305,7 +304,7 @@ Check out our community documentation to learn more about us and how we work.
 
 # Acknowledgements
 
-Jupyter Book is supported by an [open community of contributors](https://github.com/executablebooks/jupyter-book/graphs/contributors), many of whom come from [the Executable Books Community](https://executablebooks.org) and [the Jupyter community](https://jupyter.org/community).
+Jupyter Book is supported by an [open community of contributors](https://github.com/nenewang/lecture-notes/graphs/contributors), many of whom come from [the Executable Books Community](https://executablebooks.org) and [the Jupyter community](https://jupyter.org/community).
 
 ::::{grid} 2 2 2 2
 
