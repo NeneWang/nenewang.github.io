@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Combining Datasets: merge and join</title>
+    <title>1.2.9. Combining Datasets: merge and join</title>
   
   
   
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -80,6 +80,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.2.10. Aggregation and Grouping" href="03.08-Aggregation-and-Grouping.html" />
+    <link rel="prev" title="1.2.8. Combining Datasets: concat and append" href="03.06-Concat-And-Append.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,8 +143,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -159,7 +159,7 @@
 
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -193,41 +193,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Current Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../start/your-first-book.html">Create your first book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../start/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/create.html">Create a template book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/build.html">Build your book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/new-file.html">Create your own content file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/publish.html">Publish your book online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/example-book.html">Build a small example project</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/references.html">Get started with references</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/organize.html">Structure and organize content</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../structure/toc.html">Structure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../file-types/index.html">Types of content source files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/restructuredtext.html">reStructuredText files</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/create.html">Create books automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
@@ -239,65 +262,16 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/executable/index.html">Write executable content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/interactive.html">Interactive data visualizations</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/building/index.html">Build and publish outputs</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/build.html">Build from the command line</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../publish/web.html">Publish your book on the internet</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../publish/gh-pages.html">GitHub Pages and Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/netlify.html">Netlify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/readthedocs.html">Read the Docs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/pdf.html">Build a PDF</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../web/index.html">Web and internet features</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/repository.html">Connect your book to a code repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../web/announcements.html">Announcement banners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/html.html">Advanced HTML outputs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx usage and customization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/sphinx.html">Advanced Sphinx usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/developers.html">Developer workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../explain/sphinx.html">How Jupyter Book and Sphinx relate to one another</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/index.html">Advanced Jupyter Book Usage</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/windows.html">Working on Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute/intro.html">Contribute to Jupyter Book</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../customize/config.html">Configuration reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cli.html">Command-line interface reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About Jupyter Book</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery">Gallery of Jupyter Books</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/components.html">The Jupyter Book toolchain and components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Cite Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/migration.html">Migrating to <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.14</span></code></a></li>
 </ul>
 
     </div>
@@ -577,22 +551,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-algebra">Relational Algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categories-of-joins">Categories of Joins</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-to-one-joins">One-to-One Joins</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-one-joins">Many-to-One Joins</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-many-joins">Many-to-Many Joins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-algebra">1.2.9.1. Relational Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categories-of-joins">1.2.9.2. Categories of Joins</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-to-one-joins">1.2.9.2.1. One-to-One Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-one-joins">1.2.9.2.2. Many-to-One Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-many-joins">1.2.9.2.3. Many-to-Many Joins</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification-of-the-merge-key">Specification of the Merge Key</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-on-keyword">The on Keyword</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-on-and-right-on-keywords">The left_on and right_on Keywords</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-index-and-right-index-keywords">The left_index and right_index Keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification-of-the-merge-key">1.2.9.3. Specification of the Merge Key</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-on-keyword">1.2.9.3.1. The on Keyword</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-on-and-right-on-keywords">1.2.9.3.2. The left_on and right_on Keywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-index-and-right-index-keywords">1.2.9.3.3. The left_index and right_index Keywords</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-set-arithmetic-for-joins">Specifying Set Arithmetic for Joins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overlapping-column-names-the-suffixes-keyword">Overlapping Column Names: The suffixes Keyword</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-us-states-data">Example: US States Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-set-arithmetic-for-joins">1.2.9.4. Specifying Set Arithmetic for Joins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overlapping-column-names-the-suffixes-keyword">1.2.9.5. Overlapping Column Names: The suffixes Keyword</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-us-states-data">1.2.9.6. Example: US States Data</a></li>
 </ul>
             </nav>
         </div>
@@ -605,7 +579,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="combining-datasets-merge-and-join">
-<h1>Combining Datasets: merge and join<a class="headerlink" href="#combining-datasets-merge-and-join" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.9. </span>Combining Datasets: merge and join<a class="headerlink" href="#combining-datasets-merge-and-join" title="Link to this heading">#</a></h1>
 <p>One important feature offered by Pandas is its high-performance, in-memory join and merge operations, which you may be familiar with if you have ever worked with databases.
 The main interface for this is the <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> function, and we’ll see a few examples of how this can work in practice.</p>
 <p>For convenience, we will again define the <code class="docutils literal notranslate"><span class="pre">display</span></code> function from the previous chapter after the usual imports:</p>
@@ -634,7 +608,7 @@ The main interface for this is the <code class="docutils literal notranslate"><s
 </div>
 </div>
 <section id="relational-algebra">
-<h2>Relational Algebra<a class="headerlink" href="#relational-algebra" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9.1. </span>Relational Algebra<a class="headerlink" href="#relational-algebra" title="Link to this heading">#</a></h2>
 <p>The behavior implemented in <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> is a subset of what is known as <em>relational algebra</em>, which is a formal set of rules for manipulating relational data that forms the conceptual foundation of operations available in most databases.
 The strength of the relational algebra approach is that it proposes several fundamental operations, which become the building blocks of more complicated operations on any dataset.
 With this lexicon of fundamental operations implemented efficiently in a database or other program, a wide range of fairly complicated composite operations can be performed.</p>
@@ -642,12 +616,12 @@ With this lexicon of fundamental operations implemented efficiently in a databas
 As you will see, these let you efficiently link data from different sources.</p>
 </section>
 <section id="categories-of-joins">
-<h2>Categories of Joins<a class="headerlink" href="#categories-of-joins" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9.2. </span>Categories of Joins<a class="headerlink" href="#categories-of-joins" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> function implements a number of types of joins: <em>one-to-one</em>, <em>many-to-one</em>, and <em>many-to-many</em>.
 All three types of joins are accessed via an identical call to the <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> interface; the type of join performed depends on the form of the input data.
 We’ll start with some simple examples of the three types of merges, and discuss detailed options a bit later.</p>
 <section id="one-to-one-joins">
-<h3>One-to-One Joins<a class="headerlink" href="#one-to-one-joins" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.9.2.1. </span>One-to-One Joins<a class="headerlink" href="#one-to-one-joins" title="Link to this heading">#</a></h3>
 <p>Perhaps the simplest type of merge is the one-to-one join, which is in many ways similar to the column-wise concatenation you saw in <a class="reference internal" href="03.06-Concat-And-Append.html"><span class="std std-doc">Combining Datasets: Concat &amp; Append</span></a>.
 As a concrete example, consider the following two <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects, which contain information on several employees in a company:</p>
 <div class="cell docutils container">
@@ -826,7 +800,7 @@ Notice that the order of entries in each column is not necessarily maintained: i
 Additionally, keep in mind that the merge in general discards the index, except in the special case of merges by index (see the <code class="docutils literal notranslate"><span class="pre">left_index</span></code> and <code class="docutils literal notranslate"><span class="pre">right_index</span></code> keywords, discussed momentarily).</p>
 </section>
 <section id="many-to-one-joins">
-<h3>Many-to-One Joins<a class="headerlink" href="#many-to-one-joins" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.9.2.2. </span>Many-to-One Joins<a class="headerlink" href="#many-to-one-joins" title="Link to this heading">#</a></h3>
 <p>Many-to-one joins are joins in which one of the two key columns contains duplicate entries.
 For the many-to-one case, the resulting <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> will preserve those duplicate entries as appropriate.
 Consider the following example of a many-to-one join:</p>
@@ -997,7 +971,7 @@ Consider the following example of a many-to-one join:</p>
 <p>The resulting <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> has an additional column with the “supervisor” information, where the information is repeated in one or more locations as required by the inputs.</p>
 </section>
 <section id="many-to-many-joins">
-<h3>Many-to-Many Joins<a class="headerlink" href="#many-to-many-joins" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.9.2.3. </span>Many-to-Many Joins<a class="headerlink" href="#many-to-many-joins" title="Link to this heading">#</a></h3>
 <p>Many-to-many joins may be a bit confusing conceptually, but are nevertheless well defined.
 If the key column in both the left and right arrays contains duplicates, then the result is a many-to-many merge.
 This will be perhaps most clear with a concrete example.
@@ -1204,11 +1178,11 @@ In the following section we’ll consider some of the options provided by <code 
 </section>
 </section>
 <section id="specification-of-the-merge-key">
-<h2>Specification of the Merge Key<a class="headerlink" href="#specification-of-the-merge-key" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9.3. </span>Specification of the Merge Key<a class="headerlink" href="#specification-of-the-merge-key" title="Link to this heading">#</a></h2>
 <p>We’ve already seen the default behavior of <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code>: it looks for one or more matching column names between the two inputs, and uses this as the key.
 However, often the column names will not match so nicely, and <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> provides a variety of options for handling this.</p>
 <section id="the-on-keyword">
-<h3>The on Keyword<a class="headerlink" href="#the-on-keyword" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.9.3.1. </span>The on Keyword<a class="headerlink" href="#the-on-keyword" title="Link to this heading">#</a></h3>
 <p>Most simply, you can explicitly specify the name of the key column using the <code class="docutils literal notranslate"><span class="pre">on</span></code> keyword, which takes a column name or a list of column names:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1370,7 +1344,7 @@ However, often the column names will not match so nicely, and <code class="docut
 <p>This option works only if both the left and right <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s have the specified column name.</p>
 </section>
 <section id="the-left-on-and-right-on-keywords">
-<h3>The left_on and right_on Keywords<a class="headerlink" href="#the-left-on-and-right-on-keywords" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.9.3.2. </span>The left_on and right_on Keywords<a class="headerlink" href="#the-left-on-and-right-on-keywords" title="Link to this heading">#</a></h3>
 <p>At times you may wish to merge two datasets with different column names; for example, we may have a dataset in which the employee name is labeled as “name” rather than “employee”.
 In this case, we can use the <code class="docutils literal notranslate"><span class="pre">left_on</span></code> and <code class="docutils literal notranslate"><span class="pre">right_on</span></code> keywords to specify the two column names:</p>
 <div class="cell docutils container">
@@ -1599,7 +1573,7 @@ In this case, we can use the <code class="docutils literal notranslate"><span cl
 </div>
 </section>
 <section id="the-left-index-and-right-index-keywords">
-<h3>The left_index and right_index Keywords<a class="headerlink" href="#the-left-index-and-right-index-keywords" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.9.3.3. </span>The left_index and right_index Keywords<a class="headerlink" href="#the-left-index-and-right-index-keywords" title="Link to this heading">#</a></h3>
 <p>Sometimes, rather than merging on a column, you would instead like to merge on an index.
 For example, your data might look like this:</p>
 <div class="cell docutils container">
@@ -2085,7 +2059,7 @@ For more information on this, see the <a class="reference external" href="http:/
 </section>
 </section>
 <section id="specifying-set-arithmetic-for-joins">
-<h2>Specifying Set Arithmetic for Joins<a class="headerlink" href="#specifying-set-arithmetic-for-joins" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9.4. </span>Specifying Set Arithmetic for Joins<a class="headerlink" href="#specifying-set-arithmetic-for-joins" title="Link to this heading">#</a></h2>
 <p>In all the preceding examples we have glossed over one important consideration in performing a join: the type of set arithmetic used in the join.
 This comes up when a value appears in one key column but not the other. Consider this example:</p>
 <div class="cell docutils container">
@@ -2549,7 +2523,7 @@ For example:</p>
 <p>All of these options can be applied straightforwardly to any of the preceding join types.</p>
 </section>
 <section id="overlapping-column-names-the-suffixes-keyword">
-<h2>Overlapping Column Names: The suffixes Keyword<a class="headerlink" href="#overlapping-column-names-the-suffixes-keyword" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9.5. </span>Overlapping Column Names: The suffixes Keyword<a class="headerlink" href="#overlapping-column-names-the-suffixes-keyword" title="Link to this heading">#</a></h2>
 <p>Last, you may end up in a case where your two input <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s have conflicting column names.
 Consider this example:</p>
 <div class="cell docutils container">
@@ -2779,7 +2753,7 @@ If these defaults are inappropriate, it is possible to specify a custom suffix u
 Also see the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/merging.html">“Merge, Join, Concatenate and Compare” section</a> of the Pandas documentation for further discussion of these topics.</p>
 </section>
 <section id="example-us-states-data">
-<h2>Example: US States Data<a class="headerlink" href="#example-us-states-data" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9.6. </span>Example: US States Data<a class="headerlink" href="#example-us-states-data" title="Link to this heading">#</a></h2>
 <p>Merge and join operations come up most often when combining data from different sources.
 Here we will consider an example of some data about US states and their populations.
 The data files can be found at <a class="github reference external" href="http://github.com/jakevdp/data-USstates">jakevdp/data-USstates</a>:</p>
@@ -3572,6 +3546,24 @@ I hope that this example has given you an idea of some of the ways you can combi
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="03.06-Concat-And-Append.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.2.8. </span>Combining Datasets: concat and append</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03.08-Aggregation-and-Grouping.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.2.10. </span>Aggregation and Grouping</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -3588,22 +3580,22 @@ I hope that this example has given you an idea of some of the ways you can combi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-algebra">Relational Algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categories-of-joins">Categories of Joins</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-to-one-joins">One-to-One Joins</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-one-joins">Many-to-One Joins</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-many-joins">Many-to-Many Joins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-algebra">1.2.9.1. Relational Algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categories-of-joins">1.2.9.2. Categories of Joins</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-to-one-joins">1.2.9.2.1. One-to-One Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-one-joins">1.2.9.2.2. Many-to-One Joins</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#many-to-many-joins">1.2.9.2.3. Many-to-Many Joins</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification-of-the-merge-key">Specification of the Merge Key</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-on-keyword">The on Keyword</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-on-and-right-on-keywords">The left_on and right_on Keywords</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-index-and-right-index-keywords">The left_index and right_index Keywords</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification-of-the-merge-key">1.2.9.3. Specification of the Merge Key</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-on-keyword">1.2.9.3.1. The on Keyword</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-on-and-right-on-keywords">1.2.9.3.2. The left_on and right_on Keywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-left-index-and-right-index-keywords">1.2.9.3.3. The left_index and right_index Keywords</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-set-arithmetic-for-joins">Specifying Set Arithmetic for Joins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overlapping-column-names-the-suffixes-keyword">Overlapping Column Names: The suffixes Keyword</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-us-states-data">Example: US States Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-set-arithmetic-for-joins">1.2.9.4. Specifying Set Arithmetic for Joins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overlapping-column-names-the-suffixes-keyword">1.2.9.5. Overlapping Column Names: The suffixes Keyword</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-us-states-data">1.2.9.6. Example: US States Data</a></li>
 </ul>
   </nav></div>
 
@@ -3618,7 +3610,7 @@ I hope that this example has given you an idea of some of the ways you can combi
   <div class="footer-item">
     
 <p class="component-author">
-By Commoner Artisan
+By NeneWang
 </p>
 
   </div>

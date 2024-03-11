@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Computation on Arrays: Broadcasting</title>
+    <title>1.1.6. Computation on Arrays: Broadcasting</title>
   
   
   
@@ -82,6 +82,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.1.7. Comparisons, Masks, and Boolean Logic" href="02.06-Boolean-Arrays-and-Masks.html" />
+    <link rel="prev" title="1.1.5. Aggregations: min, max, and Everything in Between" href="02.04-Computation-on-arrays-aggregates.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -143,8 +145,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -161,7 +161,7 @@
 
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -195,41 +195,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Current Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../start/your-first-book.html">Create your first book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../start/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/create.html">Create a template book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/build.html">Build your book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/new-file.html">Create your own content file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/publish.html">Publish your book online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/example-book.html">Build a small example project</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/references.html">Get started with references</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/organize.html">Structure and organize content</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../structure/toc.html">Structure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../file-types/index.html">Types of content source files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/restructuredtext.html">reStructuredText files</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/create.html">Create books automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
@@ -241,65 +264,16 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/executable/index.html">Write executable content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/interactive.html">Interactive data visualizations</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/building/index.html">Build and publish outputs</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/build.html">Build from the command line</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../publish/web.html">Publish your book on the internet</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../publish/gh-pages.html">GitHub Pages and Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/netlify.html">Netlify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/readthedocs.html">Read the Docs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/pdf.html">Build a PDF</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../web/index.html">Web and internet features</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/repository.html">Connect your book to a code repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../web/announcements.html">Announcement banners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/html.html">Advanced HTML outputs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx usage and customization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/sphinx.html">Advanced Sphinx usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/developers.html">Developer workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../explain/sphinx.html">How Jupyter Book and Sphinx relate to one another</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/index.html">Advanced Jupyter Book Usage</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/windows.html">Working on Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute/intro.html">Contribute to Jupyter Book</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../customize/config.html">Configuration reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cli.html">Command-line interface reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About Jupyter Book</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery">Gallery of Jupyter Books</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/components.html">The Jupyter Book toolchain and components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Cite Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/migration.html">Migrating to <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.14</span></code></a></li>
 </ul>
 
     </div>
@@ -579,16 +553,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-broadcasting">Introducing Broadcasting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-broadcasting">Rules of Broadcasting</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-1">Broadcasting Example 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-2">Broadcasting Example 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-3">Broadcasting Example 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-broadcasting">1.1.6.1. Introducing Broadcasting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-broadcasting">1.1.6.2. Rules of Broadcasting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-1">1.1.6.2.1. Broadcasting Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-2">1.1.6.2.2. Broadcasting Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-3">1.1.6.2.3. Broadcasting Example 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-in-practice">Broadcasting in Practice</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#centering-an-array">Centering an Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-a-two-dimensional-function">Plotting a Two-Dimensional Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-in-practice">1.1.6.3. Broadcasting in Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#centering-an-array">1.1.6.3.1. Centering an Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-a-two-dimensional-function">1.1.6.3.2. Plotting a Two-Dimensional Function</a></li>
 </ul>
 </li>
 </ul>
@@ -603,11 +577,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="computation-on-arrays-broadcasting">
-<h1>Computation on Arrays: Broadcasting<a class="headerlink" href="#computation-on-arrays-broadcasting" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.1.6. </span>Computation on Arrays: Broadcasting<a class="headerlink" href="#computation-on-arrays-broadcasting" title="Link to this heading">#</a></h1>
 <p>We saw in <a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html"><span class="std std-doc">Computation on NumPy Arrays: Universal Functions</span></a> how NumPy’s universal functions can be used to <em>vectorize</em> operations and thereby remove slow Python loops.
 This chapter discusses <em>broadcasting</em>: a set of rules by which NumPy lets you apply binary operations (e.g., addition, subtraction, multiplication, etc.) between arrays of different sizes and shapes.</p>
 <section id="introducing-broadcasting">
-<h2>Introducing Broadcasting<a class="headerlink" href="#introducing-broadcasting" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.6.1. </span>Introducing Broadcasting<a class="headerlink" href="#introducing-broadcasting" title="Link to this heading">#</a></h2>
 <p>Recall that for arrays of the same size, binary operations are performed on an element-by-element basis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -715,7 +689,7 @@ The geometry of these examples is visualized in the following figure. (Code to p
 <p>The light boxes represent the broadcasted values. This way of thinking about broadcasting may raise questions about its efficiency in terms of memory use, but worry not: NumPy broadcasting does not actually copy the broadcasted values in memory. Still, this can be a useful mental model as we think about broadcasting.</p>
 </section>
 <section id="rules-of-broadcasting">
-<h2>Rules of Broadcasting<a class="headerlink" href="#rules-of-broadcasting" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.6.2. </span>Rules of Broadcasting<a class="headerlink" href="#rules-of-broadcasting" title="Link to this heading">#</a></h2>
 <p>Broadcasting in NumPy follows a strict set of rules to determine the interaction between the two arrays:</p>
 <ul class="simple">
 <li><p>Rule 1: If the two arrays differ in their number of dimensions, the shape of the one with fewer dimensions is <em>padded</em> with ones on its leading (left) side.</p></li>
@@ -724,7 +698,7 @@ The geometry of these examples is visualized in the following figure. (Code to p
 </ul>
 <p>To make these rules clear, let’s consider a few examples in detail.</p>
 <section id="broadcasting-example-1">
-<h3>Broadcasting Example 1<a class="headerlink" href="#broadcasting-example-1" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.6.2.1. </span>Broadcasting Example 1<a class="headerlink" href="#broadcasting-example-1" title="Link to this heading">#</a></h3>
 <p>Suppose we want to add a two-dimensional array to a one-dimensional array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -765,7 +739,7 @@ The geometry of these examples is visualized in the following figure. (Code to p
 </div>
 </section>
 <section id="broadcasting-example-2">
-<h3>Broadcasting Example 2<a class="headerlink" href="#broadcasting-example-2" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.6.2.2. </span>Broadcasting Example 2<a class="headerlink" href="#broadcasting-example-2" title="Link to this heading">#</a></h3>
 <p>Now let’s take a look at an example where both arrays need to be broadcast:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -807,7 +781,7 @@ The geometry of these examples is visualized in the following figure. (Code to p
 </div>
 </section>
 <section id="broadcasting-example-3">
-<h3>Broadcasting Example 3<a class="headerlink" href="#broadcasting-example-3" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.6.2.3. </span>Broadcasting Example 3<a class="headerlink" href="#broadcasting-example-3" title="Link to this heading">#</a></h3>
 <p>Next, let’s take a look at an example in which the two arrays are not compatible:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -901,11 +875,11 @@ For example, here is the <code class="docutils literal notranslate"><span class=
 </section>
 </section>
 <section id="broadcasting-in-practice">
-<h2>Broadcasting in Practice<a class="headerlink" href="#broadcasting-in-practice" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.6.3. </span>Broadcasting in Practice<a class="headerlink" href="#broadcasting-in-practice" title="Link to this heading">#</a></h2>
 <p>Broadcasting operations form the core of many examples you’ll see throughout this book.
 We’ll now take a look at some instances of where they can be useful.</p>
 <section id="centering-an-array">
-<h3>Centering an Array<a class="headerlink" href="#centering-an-array" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.6.3.1. </span>Centering an Array<a class="headerlink" href="#centering-an-array" title="Link to this heading">#</a></h3>
 <p>In <a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html"><span class="std std-doc">Computation on NumPy Arrays: Universal Functions</span></a>, we saw that ufuncs allow a NumPy user to remove the need to explicitly write slow Python loops. Broadcasting extends this ability.
 One commonly seen example in data science is subtracting the row-wise mean from an array of data.
 Imagine we have an array of 10 observations, each of which consists of 3 values.
@@ -956,7 +930,7 @@ Using the standard convention (see <a class="reference internal" href="05.02-Int
 <p>To within machine precision, the mean is now zero.</p>
 </section>
 <section id="plotting-a-two-dimensional-function">
-<h3>Plotting a Two-Dimensional Function<a class="headerlink" href="#plotting-a-two-dimensional-function" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.6.3.2. </span>Plotting a Two-Dimensional Function<a class="headerlink" href="#plotting-a-two-dimensional-function" title="Link to this heading">#</a></h3>
 <p>One place that broadcasting often comes in handy is in displaying images based on two-dimensional functions.
 If we want to define a function <span class="math notranslate nohighlight">\(z = f(x, y)\)</span>, broadcasting can be used to compute the function across the grid:</p>
 <div class="cell docutils container">
@@ -970,7 +944,7 @@ If we want to define a function <span class="math notranslate nohighlight">\(z =
 </div>
 </div>
 </div>
-<p>We’ll use Matplotlib to plot this two-dimensional array, shown in the following figure (these tools will be discussed in full in <a class="reference internal" href="04.04-Density-and-Contour-Plots.html"><span class="std std-doc">Density and Contour Plots</span></a>):</p>
+<p>We’ll use Matplotlib to plot this two-dimensional array, shown in the following figure (these tools will be discussed in full in <span class="xref myst">Density and Contour Plots</span>):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -1025,6 +999,24 @@ If we want to define a function <span class="math notranslate nohighlight">\(z =
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="02.04-Computation-on-arrays-aggregates.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.1.5. </span>Aggregations: min, max, and Everything in Between</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02.06-Boolean-Arrays-and-Masks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.1.7. </span>Comparisons, Masks, and Boolean Logic</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1041,16 +1033,16 @@ If we want to define a function <span class="math notranslate nohighlight">\(z =
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-broadcasting">Introducing Broadcasting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-broadcasting">Rules of Broadcasting</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-1">Broadcasting Example 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-2">Broadcasting Example 2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-3">Broadcasting Example 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-broadcasting">1.1.6.1. Introducing Broadcasting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-broadcasting">1.1.6.2. Rules of Broadcasting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-1">1.1.6.2.1. Broadcasting Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-2">1.1.6.2.2. Broadcasting Example 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-example-3">1.1.6.2.3. Broadcasting Example 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-in-practice">Broadcasting in Practice</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#centering-an-array">Centering an Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-a-two-dimensional-function">Plotting a Two-Dimensional Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#broadcasting-in-practice">1.1.6.3. Broadcasting in Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#centering-an-array">1.1.6.3.1. Centering an Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-a-two-dimensional-function">1.1.6.3.2. Plotting a Two-Dimensional Function</a></li>
 </ul>
 </li>
 </ul>
@@ -1067,7 +1059,7 @@ If we want to define a function <span class="math notranslate nohighlight">\(z =
   <div class="footer-item">
     
 <p class="component-author">
-By Commoner Artisan
+By NeneWang
 </p>
 
   </div>

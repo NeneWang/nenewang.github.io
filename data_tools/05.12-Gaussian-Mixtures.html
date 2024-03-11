@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>In Depth: Gaussian Mixture Models</title>
+    <title>1.3.12. In Depth: Gaussian Mixture Models</title>
   
   
   
@@ -80,6 +80,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.3.13. In Depth: Kernel Density Estimation" href="05.13-Kernel-Density-Estimation.html" />
+    <link rel="prev" title="1.3.11. In Depth: k-Means Clustering" href="05.11-K-Means.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,8 +143,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -159,7 +159,7 @@
 
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -193,41 +193,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Current Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../start/your-first-book.html">Create your first book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../start/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/create.html">Create a template book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/build.html">Build your book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/new-file.html">Create your own content file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/publish.html">Publish your book online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/example-book.html">Build a small example project</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/references.html">Get started with references</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.3.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/organize.html">Structure and organize content</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../structure/toc.html">Structure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../file-types/index.html">Types of content source files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/restructuredtext.html">reStructuredText files</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/create.html">Create books automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
@@ -239,65 +262,16 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/executable/index.html">Write executable content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/interactive.html">Interactive data visualizations</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/building/index.html">Build and publish outputs</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/build.html">Build from the command line</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../publish/web.html">Publish your book on the internet</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../publish/gh-pages.html">GitHub Pages and Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/netlify.html">Netlify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/readthedocs.html">Read the Docs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/pdf.html">Build a PDF</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../web/index.html">Web and internet features</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/repository.html">Connect your book to a code repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../web/announcements.html">Announcement banners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/html.html">Advanced HTML outputs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx usage and customization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/sphinx.html">Advanced Sphinx usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/developers.html">Developer workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../explain/sphinx.html">How Jupyter Book and Sphinx relate to one another</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/index.html">Advanced Jupyter Book Usage</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/windows.html">Working on Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute/intro.html">Contribute to Jupyter Book</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../customize/config.html">Configuration reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cli.html">Command-line interface reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About Jupyter Book</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery">Gallery of Jupyter Books</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/components.html">The Jupyter Book toolchain and components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Cite Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/migration.html">Migrating to <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.14</span></code></a></li>
 </ul>
 
     </div>
@@ -577,14 +551,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-gaussian-mixtures-weaknesses-of-k-means">Motivating Gaussian Mixtures: Weaknesses of k-Means</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing-em-gaussian-mixture-models">Generalizing E–M: Gaussian Mixture Models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-the-covariance-type">Choosing the Covariance Type</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-mixture-models-as-density-estimation">Gaussian Mixture Models as Density Estimation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-components">How Many Components?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-gaussian-mixtures-weaknesses-of-k-means">1.3.12.1. Motivating Gaussian Mixtures: Weaknesses of k-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing-em-gaussian-mixture-models">1.3.12.2. Generalizing E–M: Gaussian Mixture Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-the-covariance-type">1.3.12.3. Choosing the Covariance Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-mixture-models-as-density-estimation">1.3.12.4. Gaussian Mixture Models as Density Estimation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-components">1.3.12.4.1. How Many Components?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gmms-for-generating-new-data">Example: GMMs for Generating New Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gmms-for-generating-new-data">1.3.12.5. Example: GMMs for Generating New Data</a></li>
 </ul>
             </nav>
         </div>
@@ -597,7 +571,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="in-depth-gaussian-mixture-models">
-<h1>In Depth: Gaussian Mixture Models<a class="headerlink" href="#in-depth-gaussian-mixture-models" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.3.12. </span>In Depth: Gaussian Mixture Models<a class="headerlink" href="#in-depth-gaussian-mixture-models" title="Link to this heading">#</a></h1>
 <p>The <em>k</em>-means clustering model explored in the previous chapter is simple and relatively easy to understand, but its simplicity leads to practical challenges in its application.
 In particular, the nonprobabilistic nature of <em>k</em>-means and its use of simple distance from cluster center to assign cluster membership leads to poor performance for many real-world situations.
 In this chapter we will take a look at Gaussian mixture models, which can be viewed as an extension of the ideas behind <em>k</em>-means, but can also be a powerful tool for estimation beyond simple clustering.</p>
@@ -613,7 +587,7 @@ In this chapter we will take a look at Gaussian mixture models, which can be vie
 </div>
 </div>
 <section id="motivating-gaussian-mixtures-weaknesses-of-k-means">
-<h2>Motivating Gaussian Mixtures: Weaknesses of k-Means<a class="headerlink" href="#motivating-gaussian-mixtures-weaknesses-of-k-means" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.3.12.1. </span>Motivating Gaussian Mixtures: Weaknesses of k-Means<a class="headerlink" href="#motivating-gaussian-mixtures-weaknesses-of-k-means" title="Link to this heading">#</a></h2>
 <p>Let’s take a look at some of the weaknesses of <em>k</em>-means and think about how we might improve the cluster model.
 As we saw in the previous chapter, given simple, well-separated data, <em>k</em>-means finds suitable clustering results.</p>
 <p>For example, if we have simple blobs of data, the <em>k</em>-means algorithm can quickly label those clusters in a way that closely matches what we might do by eye (see the following figure):</p>
@@ -709,7 +683,7 @@ You might also imagine allowing the cluster boundaries to be ellipses rather tha
 It turns out these are two essential components of a different type of clustering model, Gaussian mixture models.</p>
 </section>
 <section id="generalizing-em-gaussian-mixture-models">
-<h2>Generalizing E–M: Gaussian Mixture Models<a class="headerlink" href="#generalizing-em-gaussian-mixture-models" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.3.12.2. </span>Generalizing E–M: Gaussian Mixture Models<a class="headerlink" href="#generalizing-em-gaussian-mixture-models" title="Link to this heading">#</a></h2>
 <p>A Gaussian mixture model (GMM) attempts to find a mixture of multidimensional Gaussian probability distributions that best model any input dataset.
 In the simplest case, GMMs can be used for finding clusters in the same manner as <em>k</em>-means (see the following figure):</p>
 <div class="cell docutils container">
@@ -834,7 +808,7 @@ Just as in the <em>k</em>-means expectation–maximization approach, this algori
 <p>This makes clear that GMMs address the two main practical issues with <em>k</em>-means encountered before.</p>
 </section>
 <section id="choosing-the-covariance-type">
-<h2>Choosing the Covariance Type<a class="headerlink" href="#choosing-the-covariance-type" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.3.12.3. </span>Choosing the Covariance Type<a class="headerlink" href="#choosing-the-covariance-type" title="Link to this heading">#</a></h2>
 <p>If you look at the details of the preceding fits, you will see that the <code class="docutils literal notranslate"><span class="pre">covariance_type</span></code> option was set differently within each.
 This hyperparameter controls the degrees of freedom in the shape of each cluster; it is essential to set this carefully for any given problem.
 The default is <code class="docutils literal notranslate"><span class="pre">covariance_type=&quot;diag&quot;</span></code>, which means that the size of the cluster along each dimension can be set independently, with the resulting ellipse constrained to align with the axes.
@@ -845,7 +819,7 @@ A more complicated and computationally expensive model (especially as the number
 <a class="reference external" href="https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/06.00-Figure-Code.ipynb#Covariance-Type">figure source in Appendix</a></p>
 </section>
 <section id="gaussian-mixture-models-as-density-estimation">
-<h2>Gaussian Mixture Models as Density Estimation<a class="headerlink" href="#gaussian-mixture-models-as-density-estimation" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.3.12.4. </span>Gaussian Mixture Models as Density Estimation<a class="headerlink" href="#gaussian-mixture-models-as-density-estimation" title="Link to this heading">#</a></h2>
 <p>Though the GMM is often categorized as a clustering algorithm, fundamentally it is an algorithm for <em>density estimation</em>.
 That is to say, the result of a GMM fit to some data is technically not a clustering model, but a generative probabilistic model describing the distribution of the data.</p>
 <p>As an example, consider some data generated from Scikit-Learn’s <code class="docutils literal notranslate"><span class="pre">make_moons</span></code> function, introduced in <a class="reference internal" href="05.11-K-Means.html"><span class="std std-doc">In Depth: K-Means Clustering</span></a> (see the following figure):</p>
@@ -901,7 +875,7 @@ For example, here are 400 new points drawn from this 16-component GMM fit to our
 </div>
 <p>A GMM is convenient as a flexible means of modeling an arbitrary multidimensional distribution of data.</p>
 <section id="how-many-components">
-<h3>How Many Components?<a class="headerlink" href="#how-many-components" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.3.12.4.1. </span>How Many Components?<a class="headerlink" href="#how-many-components" title="Link to this heading">#</a></h3>
 <p>The fact that a GMM is a generative model gives us a natural means of determining the optimal number of components for a given dataset.
 A generative model is inherently a probability distribution for the dataset, and so we can simply evaluate the <em>likelihood</em> of the data under the model, using cross-validation to avoid overfitting.
 Another means of correcting for overfitting is to adjust the model likelihoods using some analytic criterion such as the <a class="reference external" href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike information criterion (AIC)</a> or the <a class="reference external" href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">Bayesian information criterion (BIC)</a>.
@@ -931,7 +905,7 @@ I’d encourage you to think of the GMM primarily as a density estimator, and us
 </section>
 </section>
 <section id="example-gmms-for-generating-new-data">
-<h2>Example: GMMs for Generating New Data<a class="headerlink" href="#example-gmms-for-generating-new-data" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.3.12.5. </span>Example: GMMs for Generating New Data<a class="headerlink" href="#example-gmms-for-generating-new-data" title="Link to this heading">#</a></h2>
 <p>We just saw a simple example of using a GMM as a generative model in order to create new samples from the distribution defined by the input data.
 Here we will run with this idea and generate <em>new handwritten digits</em> from the standard digits corpus that we have used before.</p>
 <p>To start with, let’s load the digits data using Scikit-Learn’s data tools:</p>
@@ -1079,6 +1053,24 @@ Such a generative model of digits can prove very useful as a component of a Baye
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="05.11-K-Means.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.3.11. </span>In Depth: k-Means Clustering</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05.13-Kernel-Density-Estimation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.3.13. </span>In Depth: Kernel Density Estimation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1095,14 +1087,14 @@ Such a generative model of digits can prove very useful as a component of a Baye
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-gaussian-mixtures-weaknesses-of-k-means">Motivating Gaussian Mixtures: Weaknesses of k-Means</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing-em-gaussian-mixture-models">Generalizing E–M: Gaussian Mixture Models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-the-covariance-type">Choosing the Covariance Type</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-mixture-models-as-density-estimation">Gaussian Mixture Models as Density Estimation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-components">How Many Components?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-gaussian-mixtures-weaknesses-of-k-means">1.3.12.1. Motivating Gaussian Mixtures: Weaknesses of k-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizing-em-gaussian-mixture-models">1.3.12.2. Generalizing E–M: Gaussian Mixture Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-the-covariance-type">1.3.12.3. Choosing the Covariance Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-mixture-models-as-density-estimation">1.3.12.4. Gaussian Mixture Models as Density Estimation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-many-components">1.3.12.4.1. How Many Components?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gmms-for-generating-new-data">Example: GMMs for Generating New Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gmms-for-generating-new-data">1.3.12.5. Example: GMMs for Generating New Data</a></li>
 </ul>
   </nav></div>
 
@@ -1117,7 +1109,7 @@ Such a generative model of digits can prove very useful as a component of a Baye
   <div class="footer-item">
     
 <p class="component-author">
-By Commoner Artisan
+By NeneWang
 </p>
 
   </div>

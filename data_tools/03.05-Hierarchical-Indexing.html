@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hierarchical Indexing</title>
+    <title>1.2.7. Hierarchical Indexing</title>
   
   
   
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -80,6 +80,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.2.8. Combining Datasets: concat and append" href="03.06-Concat-And-Append.html" />
+    <link rel="prev" title="1.2.6. Handling Missing Data" href="03.04-Missing-Values.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,8 +143,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -159,7 +159,7 @@
 
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -193,41 +193,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Current Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../start/your-first-book.html">Create your first book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../start/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/create.html">Create a template book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/build.html">Build your book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/new-file.html">Create your own content file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/publish.html">Publish your book online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/example-book.html">Build a small example project</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/references.html">Get started with references</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/organize.html">Structure and organize content</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../structure/toc.html">Structure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../file-types/index.html">Types of content source files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/restructuredtext.html">reStructuredText files</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/create.html">Create books automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
@@ -239,65 +262,16 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/executable/index.html">Write executable content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/interactive.html">Interactive data visualizations</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/building/index.html">Build and publish outputs</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/build.html">Build from the command line</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../publish/web.html">Publish your book on the internet</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../publish/gh-pages.html">GitHub Pages and Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/netlify.html">Netlify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/readthedocs.html">Read the Docs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/pdf.html">Build a PDF</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../web/index.html">Web and internet features</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/repository.html">Connect your book to a code repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../web/announcements.html">Announcement banners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/html.html">Advanced HTML outputs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx usage and customization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/sphinx.html">Advanced Sphinx usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/developers.html">Developer workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../explain/sphinx.html">How Jupyter Book and Sphinx relate to one another</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/index.html">Advanced Jupyter Book Usage</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/windows.html">Working on Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute/intro.html">Contribute to Jupyter Book</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../customize/config.html">Configuration reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cli.html">Command-line interface reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About Jupyter Book</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery">Gallery of Jupyter Books</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/components.html">The Jupyter Book toolchain and components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Cite Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/migration.html">Migrating to <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.14</span></code></a></li>
 </ul>
 
     </div>
@@ -577,27 +551,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-multiply-indexed-series">A Multiply Indexed Series</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bad-way">The Bad Way</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-better-way-the-pandas-multiindex">The Better Way: The Pandas MultiIndex</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-as-extra-dimension">MultiIndex as Extra Dimension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-multiply-indexed-series">1.2.7.1. A Multiply Indexed Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bad-way">1.2.7.1.1. The Bad Way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-better-way-the-pandas-multiindex">1.2.7.1.2. The Better Way: The Pandas MultiIndex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-as-extra-dimension">1.2.7.1.3. MultiIndex as Extra Dimension</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-multiindex-creation">Methods of MultiIndex Creation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-multiindex-constructors">Explicit MultiIndex Constructors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-level-names">MultiIndex Level Names</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-for-columns">MultiIndex for Columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-multiindex-creation">1.2.7.2. Methods of MultiIndex Creation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-multiindex-constructors">1.2.7.2.1. Explicit MultiIndex Constructors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-level-names">1.2.7.2.2. MultiIndex Level Names</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-for-columns">1.2.7.2.3. MultiIndex for Columns</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-a-multiindex">Indexing and Slicing a MultiIndex</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-series">Multiply Indexed Series</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-dataframes">Multiply Indexed DataFrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-a-multiindex">1.2.7.3. Indexing and Slicing a MultiIndex</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-series">1.2.7.3.1. Multiply Indexed Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-dataframes">1.2.7.3.2. Multiply Indexed DataFrames</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rearranging-multi-indexes">Rearranging Multi-Indexes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-and-unsorted-indices">Sorted and Unsorted Indices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacking-and-unstacking-indices">Stacking and Unstacking Indices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-setting-and-resetting">Index Setting and Resetting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rearranging-multi-indexes">1.2.7.4. Rearranging Multi-Indexes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-and-unsorted-indices">1.2.7.4.1. Sorted and Unsorted Indices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacking-and-unstacking-indices">1.2.7.4.2. Stacking and Unstacking Indices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-setting-and-resetting">1.2.7.4.3. Index Setting and Resetting</a></li>
 </ul>
 </li>
 </ul>
@@ -612,7 +586,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hierarchical-indexing">
-<h1>Hierarchical Indexing<a class="headerlink" href="#hierarchical-indexing" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.7. </span>Hierarchical Indexing<a class="headerlink" href="#hierarchical-indexing" title="Link to this heading">#</a></h1>
 <p>Up to this point we’ve been focused primarily on one-dimensional and two-dimensional data, stored in Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects, respectively.
 Often it is useful to go beyond this and store higher-dimensional data—that is, data indexed by more than one or two keys.
 Early Pandas versions provided <code class="docutils literal notranslate"><span class="pre">Panel</span></code> and <code class="docutils literal notranslate"><span class="pre">Panel4D</span></code> objects that could be thought of as 3D or 4D analogs to the 2D <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, but they were somewhat clunky to use in practice. A far more common pattern for handling higher-dimensional data is to make use of <em>hierarchical indexing</em> (also known as <em>multi-indexing</em>) to incorporate multiple index <em>levels</em> within a single index.
@@ -629,11 +603,11 @@ In this way, higher-dimensional data can be compactly represented within the fam
 </div>
 </div>
 <section id="a-multiply-indexed-series">
-<h2>A Multiply Indexed Series<a class="headerlink" href="#a-multiply-indexed-series" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.7.1. </span>A Multiply Indexed Series<a class="headerlink" href="#a-multiply-indexed-series" title="Link to this heading">#</a></h2>
 <p>Let’s start by considering how we might represent two-dimensional data within a one-dimensional <code class="docutils literal notranslate"><span class="pre">Series</span></code>.
 For concreteness, we will consider a series of data where each point has a character and numerical key.</p>
 <section id="the-bad-way">
-<h3>The Bad Way<a class="headerlink" href="#the-bad-way" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.1.1. </span>The Bad Way<a class="headerlink" href="#the-bad-way" title="Link to this heading">#</a></h3>
 <p>Suppose you would like to track data about states from two different years.
 Using the Pandas tools we’ve already covered, you might be tempted to simply use Python tuples as keys:</p>
 <div class="cell docutils container">
@@ -697,7 +671,7 @@ dtype: int64
 <p>This produces the desired result, but is not as clean (or as efficient for large datasets) as the slicing syntax we’ve grown to love in Pandas.</p>
 </section>
 <section id="the-better-way-the-pandas-multiindex">
-<h3>The Better Way: The Pandas MultiIndex<a class="headerlink" href="#the-better-way-the-pandas-multiindex" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.1.2. </span>The Better Way: The Pandas MultiIndex<a class="headerlink" href="#the-better-way-the-pandas-multiindex" title="Link to this heading">#</a></h3>
 <p>Fortunately, Pandas provides a better way.
 Our tuple-based indexing is essentially a rudimentary multi-index, and the Pandas <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> type gives us the types of operations we wish to have.
 We can create a multi-index from the tuples as follows:</p>
@@ -752,7 +726,7 @@ This syntax is much more convenient (and the operation is much more efficient!) 
 We’ll now further discuss this sort of indexing operation on hierarchically indexed data.</p>
 </section>
 <section id="multiindex-as-extra-dimension">
-<h3>MultiIndex as Extra Dimension<a class="headerlink" href="#multiindex-as-extra-dimension" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.1.3. </span>MultiIndex as Extra Dimension<a class="headerlink" href="#multiindex-as-extra-dimension" title="Link to this heading">#</a></h3>
 <p>You might notice something else here: we could easily have stored the same data using a simple <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with index and column labels.
 In fact, Pandas is built with this equivalence in mind. The <code class="docutils literal notranslate"><span class="pre">unstack</span></code> method will quickly convert a multiply indexed <code class="docutils literal notranslate"><span class="pre">Series</span></code> into a conventionally indexed <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
 <div class="cell docutils container">
@@ -955,7 +929,7 @@ Here we compute the fraction of people under 18 by year, given the above data:</
 </section>
 </section>
 <section id="methods-of-multiindex-creation">
-<h2>Methods of MultiIndex Creation<a class="headerlink" href="#methods-of-multiindex-creation" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.7.2. </span>Methods of MultiIndex Creation<a class="headerlink" href="#methods-of-multiindex-creation" title="Link to this heading">#</a></h2>
 <p>The most straightforward way to construct a multiply indexed <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is to simply pass a list of two or more index arrays to the constructor. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1045,7 +1019,7 @@ dtype: int64
 </div>
 <p>Nevertheless, it is sometimes useful to explicitly create a <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code>; we’ll look at a couple of methods for doing this next.</p>
 <section id="explicit-multiindex-constructors">
-<h3>Explicit MultiIndex Constructors<a class="headerlink" href="#explicit-multiindex-constructors" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.2.1. </span>Explicit MultiIndex Constructors<a class="headerlink" href="#explicit-multiindex-constructors" title="Link to this heading">#</a></h3>
 <p>For more flexibility in how the index is constructed, you can instead use the constructor methods available in the <code class="docutils literal notranslate"><span class="pre">pd.MultiIndex</span></code> class.
 For example, as we did before, you can construct a <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> from a simple list of arrays giving the index values within each level:</p>
 <div class="cell docutils container">
@@ -1119,7 +1093,7 @@ For example, as we did before, you can construct a <code class="docutils literal
 <p>Any of these objects can be passed as the <code class="docutils literal notranslate"><span class="pre">index</span></code> argument when creating a <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, or be passed to the <code class="docutils literal notranslate"><span class="pre">reindex</span></code> method of an existing <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
 </section>
 <section id="multiindex-level-names">
-<h3>MultiIndex Level Names<a class="headerlink" href="#multiindex-level-names" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.2.2. </span>MultiIndex Level Names<a class="headerlink" href="#multiindex-level-names" title="Link to this heading">#</a></h3>
 <p>Sometimes it is convenient to name the levels of the <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code>.
 This can be accomplished by passing the <code class="docutils literal notranslate"><span class="pre">names</span></code> argument to any of the previously discussed <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> constructors, or by setting the <code class="docutils literal notranslate"><span class="pre">names</span></code> attribute of the index after the fact:</p>
 <div class="cell docutils container">
@@ -1145,7 +1119,7 @@ dtype: int64
 <p>With more involved datasets, this can be a useful way to keep track of the meaning of various index values.</p>
 </section>
 <section id="multiindex-for-columns">
-<h3>MultiIndex for Columns<a class="headerlink" href="#multiindex-for-columns" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.2.3. </span>MultiIndex for Columns<a class="headerlink" href="#multiindex-for-columns" title="Link to this heading">#</a></h3>
 <p>In a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, the rows and columns are completely symmetric, and just as the rows can have multiple levels of indices, the columns can have multiple levels as well.
 Consider the following, which is a mock-up of some (somewhat realistic) medical data:</p>
 <div class="cell docutils container">
@@ -1327,11 +1301,11 @@ With this in place we can, for example, index the top-level column by the person
 </section>
 </section>
 <section id="indexing-and-slicing-a-multiindex">
-<h2>Indexing and Slicing a MultiIndex<a class="headerlink" href="#indexing-and-slicing-a-multiindex" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.7.3. </span>Indexing and Slicing a MultiIndex<a class="headerlink" href="#indexing-and-slicing-a-multiindex" title="Link to this heading">#</a></h2>
 <p>Indexing and slicing on a <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> is designed to be intuitive, and it helps if you think about the indices as added dimensions.
 We’ll first look at indexing multiply indexed <code class="docutils literal notranslate"><span class="pre">Series</span></code>, and then multiply indexed <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects.</p>
 <section id="multiply-indexed-series">
-<h3>Multiply Indexed Series<a class="headerlink" href="#multiply-indexed-series" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.3.1. </span>Multiply Indexed Series<a class="headerlink" href="#multiply-indexed-series" title="Link to this heading">#</a></h3>
 <p>Consider the multiply indexed <code class="docutils literal notranslate"><span class="pre">Series</span></code> of state populations we saw earlier:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1455,7 +1429,7 @@ dtype: int64
 </div>
 </section>
 <section id="multiply-indexed-dataframes">
-<h3>Multiply Indexed DataFrames<a class="headerlink" href="#multiply-indexed-dataframes" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.3.2. </span>Multiply Indexed DataFrames<a class="headerlink" href="#multiply-indexed-dataframes" title="Link to this heading">#</a></h3>
 <p>A multiply indexed <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> behaves in a similar manner.
 Consider our toy medical <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from before:</p>
 <div class="cell docutils container">
@@ -1746,12 +1720,12 @@ For example:</p>
 </section>
 </section>
 <section id="rearranging-multi-indexes">
-<h2>Rearranging Multi-Indexes<a class="headerlink" href="#rearranging-multi-indexes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.7.4. </span>Rearranging Multi-Indexes<a class="headerlink" href="#rearranging-multi-indexes" title="Link to this heading">#</a></h2>
 <p>One of the keys to working with multiply indexed data is knowing how to effectively transform the data.
 There are a number of operations that will preserve all the information in the dataset, but rearrange it for the purposes of various computations.
 We saw a brief example of this in the <code class="docutils literal notranslate"><span class="pre">stack</span></code> and <code class="docutils literal notranslate"><span class="pre">unstack</span></code> methods, but there are many more ways to finely control the rearrangement of data between hierarchical indices and columns, and we’ll explore them here.</p>
 <section id="sorted-and-unsorted-indices">
-<h3>Sorted and Unsorted Indices<a class="headerlink" href="#sorted-and-unsorted-indices" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.4.1. </span>Sorted and Unsorted Indices<a class="headerlink" href="#sorted-and-unsorted-indices" title="Link to this heading">#</a></h3>
 <p>Earlier I briefly mentioned a caveat, but I should emphasize it more here.
 <em>Many of the <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> slicing operations will fail if the index is not sorted.</em>
 Let’s take a closer look.</p>
@@ -1838,7 +1812,7 @@ dtype: float64
 </div>
 </section>
 <section id="stacking-and-unstacking-indices">
-<h3>Stacking and Unstacking Indices<a class="headerlink" href="#stacking-and-unstacking-indices" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.4.2. </span>Stacking and Unstacking Indices<a class="headerlink" href="#stacking-and-unstacking-indices" title="Link to this heading">#</a></h3>
 <p>As we saw briefly before, it is possible to convert a dataset from a stacked multi-index to a simple two-dimensional representation, optionally specifying the level to use:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1969,7 +1943,7 @@ dtype: int64
 </div>
 </section>
 <section id="index-setting-and-resetting">
-<h3>Index Setting and Resetting<a class="headerlink" href="#index-setting-and-resetting" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7.4.3. </span>Index Setting and Resetting<a class="headerlink" href="#index-setting-and-resetting" title="Link to this heading">#</a></h3>
 <p>Another way to rearrange hierarchical data is to turn the index labels into columns; this can be accomplished with the <code class="docutils literal notranslate"><span class="pre">reset_index</span></code> method.
 Calling this on the population dictionary will result in a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with <code class="docutils literal notranslate"><span class="pre">state</span></code> and <code class="docutils literal notranslate"><span class="pre">year</span></code> columns holding the information that was formerly in the index.
 For clarity, we can optionally specify the name of the data for the column representation:</p>
@@ -2148,6 +2122,24 @@ This can be done with the <code class="docutils literal notranslate"><span class
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="03.04-Missing-Values.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.2.6. </span>Handling Missing Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03.06-Concat-And-Append.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.2.8. </span>Combining Datasets: concat and append</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -2164,27 +2156,27 @@ This can be done with the <code class="docutils literal notranslate"><span class
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-multiply-indexed-series">A Multiply Indexed Series</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bad-way">The Bad Way</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-better-way-the-pandas-multiindex">The Better Way: The Pandas MultiIndex</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-as-extra-dimension">MultiIndex as Extra Dimension</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-multiply-indexed-series">1.2.7.1. A Multiply Indexed Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bad-way">1.2.7.1.1. The Bad Way</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-better-way-the-pandas-multiindex">1.2.7.1.2. The Better Way: The Pandas MultiIndex</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-as-extra-dimension">1.2.7.1.3. MultiIndex as Extra Dimension</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-multiindex-creation">Methods of MultiIndex Creation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-multiindex-constructors">Explicit MultiIndex Constructors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-level-names">MultiIndex Level Names</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-for-columns">MultiIndex for Columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-of-multiindex-creation">1.2.7.2. Methods of MultiIndex Creation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explicit-multiindex-constructors">1.2.7.2.1. Explicit MultiIndex Constructors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-level-names">1.2.7.2.2. MultiIndex Level Names</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiindex-for-columns">1.2.7.2.3. MultiIndex for Columns</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-a-multiindex">Indexing and Slicing a MultiIndex</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-series">Multiply Indexed Series</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-dataframes">Multiply Indexed DataFrames</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-a-multiindex">1.2.7.3. Indexing and Slicing a MultiIndex</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-series">1.2.7.3.1. Multiply Indexed Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiply-indexed-dataframes">1.2.7.3.2. Multiply Indexed DataFrames</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rearranging-multi-indexes">Rearranging Multi-Indexes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-and-unsorted-indices">Sorted and Unsorted Indices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacking-and-unstacking-indices">Stacking and Unstacking Indices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-setting-and-resetting">Index Setting and Resetting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rearranging-multi-indexes">1.2.7.4. Rearranging Multi-Indexes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted-and-unsorted-indices">1.2.7.4.1. Sorted and Unsorted Indices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacking-and-unstacking-indices">1.2.7.4.2. Stacking and Unstacking Indices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-setting-and-resetting">1.2.7.4.3. Index Setting and Resetting</a></li>
 </ul>
 </li>
 </ul>
@@ -2201,7 +2193,7 @@ This can be done with the <code class="docutils literal notranslate"><span class
   <div class="footer-item">
     
 <p class="component-author">
-By Commoner Artisan
+By NeneWang
 </p>
 
   </div>

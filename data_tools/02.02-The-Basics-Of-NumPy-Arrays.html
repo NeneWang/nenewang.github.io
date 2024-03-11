@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>The Basics of NumPy Arrays</title>
+    <title>1.1.3. The Basics of NumPy Arrays</title>
   
   
   
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -82,6 +82,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.1.4. Computation on NumPy Arrays: Universal Functions" href="02.03-Computation-on-arrays-ufuncs.html" />
+    <link rel="prev" title="1.1.2. Understanding Data Types in Python" href="02.01-Understanding-Data-Types.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -143,8 +145,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -161,7 +161,7 @@
 
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -195,41 +195,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Current Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../start/your-first-book.html">Create your first book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../start/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/create.html">Create a template book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/build.html">Build your book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/new-file.html">Create your own content file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/publish.html">Publish your book online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/example-book.html">Build a small example project</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/references.html">Get started with references</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/organize.html">Structure and organize content</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../structure/toc.html">Structure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../file-types/index.html">Types of content source files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/restructuredtext.html">reStructuredText files</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/create.html">Create books automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
@@ -241,65 +264,16 @@
 
 <li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/executable/index.html">Write executable content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/interactive.html">Interactive data visualizations</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/building/index.html">Build and publish outputs</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/build.html">Build from the command line</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../publish/web.html">Publish your book on the internet</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../publish/gh-pages.html">GitHub Pages and Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/netlify.html">Netlify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/readthedocs.html">Read the Docs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/pdf.html">Build a PDF</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../web/index.html">Web and internet features</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/repository.html">Connect your book to a code repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../web/announcements.html">Announcement banners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/html.html">Advanced HTML outputs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx usage and customization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/sphinx.html">Advanced Sphinx usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/developers.html">Developer workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../explain/sphinx.html">How Jupyter Book and Sphinx relate to one another</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/index.html">Advanced Jupyter Book Usage</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/windows.html">Working on Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute/intro.html">Contribute to Jupyter Book</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../customize/config.html">Configuration reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cli.html">Command-line interface reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About Jupyter Book</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery">Gallery of Jupyter Books</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/components.html">The Jupyter Book toolchain and components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Cite Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/migration.html">Migrating to <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.14</span></code></a></li>
 </ul>
 
     </div>
@@ -579,22 +553,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-array-attributes">NumPy Array Attributes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-indexing-accessing-single-elements">Array Indexing: Accessing Single Elements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-slicing-accessing-subarrays">Array Slicing: Accessing Subarrays</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-subarrays">One-Dimensional Subarrays</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-subarrays">Multidimensional Subarrays</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-array-rows-and-columns">Accessing array rows and columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-array-attributes">1.1.3.1. NumPy Array Attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-indexing-accessing-single-elements">1.1.3.2. Array Indexing: Accessing Single Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-slicing-accessing-subarrays">1.1.3.3. Array Slicing: Accessing Subarrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-subarrays">1.1.3.3.1. One-Dimensional Subarrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-subarrays">1.1.3.3.2. Multidimensional Subarrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-array-rows-and-columns">1.1.3.3.2.1. Accessing array rows and columns</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subarrays-as-no-copy-views">Subarrays as No-Copy Views</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-copies-of-arrays">Creating Copies of Arrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subarrays-as-no-copy-views">1.1.3.3.3. Subarrays as No-Copy Views</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-copies-of-arrays">1.1.3.3.4. Creating Copies of Arrays</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshaping-of-arrays">Reshaping of Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-concatenation-and-splitting">Array Concatenation and Splitting</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-of-arrays">Concatenation of Arrays</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-of-arrays">Splitting of Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshaping-of-arrays">1.1.3.4. Reshaping of Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-concatenation-and-splitting">1.1.3.5. Array Concatenation and Splitting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-of-arrays">1.1.3.5.1. Concatenation of Arrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-of-arrays">1.1.3.5.2. Splitting of Arrays</a></li>
 </ul>
 </li>
 </ul>
@@ -609,8 +583,8 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-basics-of-numpy-arrays">
-<h1>The Basics of NumPy Arrays<a class="headerlink" href="#the-basics-of-numpy-arrays" title="Link to this heading">#</a></h1>
-<p>Data manipulation in Python is nearly synonymous with NumPy array manipulation: even newer tools like Pandas (<a class="reference internal" href="03.00-Introduction-to-Pandas.html"><span class="std std-doc">Part 3</span></a>) are built around the NumPy array.
+<h1><span class="section-number">1.1.3. </span>The Basics of NumPy Arrays<a class="headerlink" href="#the-basics-of-numpy-arrays" title="Link to this heading">#</a></h1>
+<p>Data manipulation in Python is nearly synonymous with NumPy array manipulation: even newer tools like Pandas (<a class="reference internal" href="#03.00-Introduction-to-Pandas.ipynb"><span class="xref myst">Part 3</span></a>) are built around the NumPy array.
 This chapter will present several examples of using NumPy array manipulation to access data and subarrays, and to split, reshape, and join the arrays.
 While the types of operations shown here may seem a bit dry and pedantic, they comprise the building blocks of many other examples used throughout the book.
 Get to know them well!</p>
@@ -623,7 +597,7 @@ Get to know them well!</p>
 <li><p><em>Joining and splitting of arrays</em>: Combining multiple arrays into one, and splitting one array into many</p></li>
 </ul>
 <section id="numpy-array-attributes">
-<h2>NumPy Array Attributes<a class="headerlink" href="#numpy-array-attributes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.3.1. </span>NumPy Array Attributes<a class="headerlink" href="#numpy-array-attributes" title="Link to this heading">#</a></h2>
 <p>First let’s discuss some useful array attributes.
 We’ll start by defining random arrays of one, two, and three dimensions.
 We’ll use NumPy’s random number generator, which we will <em>seed</em> with a set value in order to ensure that the same random arrays are generated each time this code is run:</p>
@@ -661,7 +635,7 @@ dtype:    int64
 <p>For more discussion of data types, see <a class="reference internal" href="02.01-Understanding-Data-Types.html"><span class="std std-doc">Understanding Data Types in Python</span></a>.</p>
 </section>
 <section id="array-indexing-accessing-single-elements">
-<h2>Array Indexing: Accessing Single Elements<a class="headerlink" href="#array-indexing-accessing-single-elements" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.3.2. </span>Array Indexing: Accessing Single Elements<a class="headerlink" href="#array-indexing-accessing-single-elements" title="Link to this heading">#</a></h2>
 <p>If you are familiar with Python’s standard list indexing, indexing in NumPy will feel quite familiar.
 In a one-dimensional array, the <span class="math notranslate nohighlight">\(i^{th}\)</span> value (counting from zero) can be accessed by specifying the desired index in square brackets, just as with Python lists:</p>
 <div class="cell docutils container">
@@ -809,7 +783,7 @@ This means, for example, that if you attempt to insert a floating-point value in
 </div>
 </section>
 <section id="array-slicing-accessing-subarrays">
-<h2>Array Slicing: Accessing Subarrays<a class="headerlink" href="#array-slicing-accessing-subarrays" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.3.3. </span>Array Slicing: Accessing Subarrays<a class="headerlink" href="#array-slicing-accessing-subarrays" title="Link to this heading">#</a></h2>
 <p>Just as we can use square brackets to access individual array elements, we can also use them to access subarrays with the <em>slice</em> notation, marked by the colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>) character.
 The NumPy slicing syntax follows that of the standard Python list; to access a slice of an array <code class="docutils literal notranslate"><span class="pre">x</span></code>, use this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
@@ -818,7 +792,7 @@ The NumPy slicing syntax follows that of the standard Python list; to access a s
 <p>If any of these are unspecified, they default to the values <code class="docutils literal notranslate"><span class="pre">start=0</span></code>, <code class="docutils literal notranslate"><span class="pre">stop=&lt;size</span> <span class="pre">of</span> <span class="pre">dimension&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">step=1</span></code>.
 Let’s look at some examples of accessing subarrays in one dimension and in multiple dimensions.</p>
 <section id="one-dimensional-subarrays">
-<h3>One-Dimensional Subarrays<a class="headerlink" href="#one-dimensional-subarrays" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3.3.1. </span>One-Dimensional Subarrays<a class="headerlink" href="#one-dimensional-subarrays" title="Link to this heading">#</a></h3>
 <p>Here are some examples of accessing elements in one-dimensional subarrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -921,7 +895,7 @@ This becomes a convenient way to reverse an array:</p>
 </div>
 </section>
 <section id="multidimensional-subarrays">
-<h3>Multidimensional Subarrays<a class="headerlink" href="#multidimensional-subarrays" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3.3.2. </span>Multidimensional Subarrays<a class="headerlink" href="#multidimensional-subarrays" title="Link to this heading">#</a></h3>
 <p>Multidimensional slices work in the same way, with multiple slices separated by commas.
 For example:</p>
 <div class="cell docutils container">
@@ -980,7 +954,7 @@ For example:</p>
 </div>
 </div>
 <section id="accessing-array-rows-and-columns">
-<h4>Accessing array rows and columns<a class="headerlink" href="#accessing-array-rows-and-columns" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.1.3.3.2.1. </span>Accessing array rows and columns<a class="headerlink" href="#accessing-array-rows-and-columns" title="Link to this heading">#</a></h4>
 <p>One commonly needed routine is accessing single rows or columns of an array.
 This can be done by combining indexing and slicing, using an empty slice marked by a single colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>):</p>
 <div class="cell docutils container">
@@ -1023,7 +997,7 @@ This can be done by combining indexing and slicing, using an empty slice marked 
 </section>
 </section>
 <section id="subarrays-as-no-copy-views">
-<h3>Subarrays as No-Copy Views<a class="headerlink" href="#subarrays-as-no-copy-views" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3.3.3. </span>Subarrays as No-Copy Views<a class="headerlink" href="#subarrays-as-no-copy-views" title="Link to this heading">#</a></h3>
 <p>Unlike Python list slices, NumPy array slices are returned as <em>views</em> rather than <em>copies</em> of the array data.
 Consider our two-dimensional array from before:</p>
 <div class="cell docutils container">
@@ -1087,7 +1061,7 @@ Consider our two-dimensional array from before:</p>
 <p>Some users may find this surprising, but it can be advantageous: for example, when working with large datasets, we can access and process pieces of these datasets without the need to copy the underlying data buffer.</p>
 </section>
 <section id="creating-copies-of-arrays">
-<h3>Creating Copies of Arrays<a class="headerlink" href="#creating-copies-of-arrays" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3.3.4. </span>Creating Copies of Arrays<a class="headerlink" href="#creating-copies-of-arrays" title="Link to this heading">#</a></h3>
 <p>Despite the nice features of array views, it is sometimes useful to instead explicitly copy the data within an array or a subarray. This can be most easily done with the <code class="docutils literal notranslate"><span class="pre">copy</span></code> method:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1135,7 +1109,7 @@ Consider our two-dimensional array from before:</p>
 </section>
 </section>
 <section id="reshaping-of-arrays">
-<h2>Reshaping of Arrays<a class="headerlink" href="#reshaping-of-arrays" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.3.4. </span>Reshaping of Arrays<a class="headerlink" href="#reshaping-of-arrays" title="Link to this heading">#</a></h2>
 <p>Another useful type of operation is reshaping of arrays, which can be done with the <code class="docutils literal notranslate"><span class="pre">reshape</span></code> method.
 For example, if you want to put the numbers 1 through 9 in a <span class="math notranslate nohighlight">\(3 \times 3\)</span> grid, you can do the following:</p>
 <div class="cell docutils container">
@@ -1212,10 +1186,10 @@ For example, if you want to put the numbers 1 through 9 in a <span class="math n
 <p>This is a pattern that we will utilize often throughout the remainder of the book.</p>
 </section>
 <section id="array-concatenation-and-splitting">
-<h2>Array Concatenation and Splitting<a class="headerlink" href="#array-concatenation-and-splitting" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.3.5. </span>Array Concatenation and Splitting<a class="headerlink" href="#array-concatenation-and-splitting" title="Link to this heading">#</a></h2>
 <p>All of the preceding routines worked on single arrays. NumPy also provides tools to combine multiple arrays into one, and to conversely split a single array into multiple arrays.</p>
 <section id="concatenation-of-arrays">
-<h3>Concatenation of Arrays<a class="headerlink" href="#concatenation-of-arrays" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3.5.1. </span>Concatenation of Arrays<a class="headerlink" href="#concatenation-of-arrays" title="Link to this heading">#</a></h3>
 <p>Concatenation, or joining of two arrays in NumPy, is primarily accomplished using the routines <code class="docutils literal notranslate"><span class="pre">np.concatenate</span></code>, <code class="docutils literal notranslate"><span class="pre">np.vstack</span></code>, and <code class="docutils literal notranslate"><span class="pre">np.hstack</span></code>.
 <code class="docutils literal notranslate"><span class="pre">np.concatenate</span></code> takes a tuple or list of arrays as its first argument, as you can see here:</p>
 <div class="cell docutils container">
@@ -1320,7 +1294,7 @@ For example, if you want to put the numbers 1 through 9 in a <span class="math n
 <p>Similarly, for higher-dimensional arrays, <code class="docutils literal notranslate"><span class="pre">np.dstack</span></code> will stack arrays along the third axis.</p>
 </section>
 <section id="splitting-of-arrays">
-<h3>Splitting of Arrays<a class="headerlink" href="#splitting-of-arrays" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.1.3.5.2. </span>Splitting of Arrays<a class="headerlink" href="#splitting-of-arrays" title="Link to this heading">#</a></h3>
 <p>The opposite of concatenation is splitting, which is implemented by the functions <code class="docutils literal notranslate"><span class="pre">np.split</span></code>, <code class="docutils literal notranslate"><span class="pre">np.hsplit</span></code>, and <code class="docutils literal notranslate"><span class="pre">np.vsplit</span></code>.  For each of these, we can pass a list of indices giving the split points:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1427,6 +1401,24 @@ The related functions <code class="docutils literal notranslate"><span class="pr
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="02.01-Understanding-Data-Types.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.1.2. </span>Understanding Data Types in Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02.03-Computation-on-arrays-ufuncs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.1.4. </span>Computation on NumPy Arrays: Universal Functions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1443,22 +1435,22 @@ The related functions <code class="docutils literal notranslate"><span class="pr
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-array-attributes">NumPy Array Attributes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-indexing-accessing-single-elements">Array Indexing: Accessing Single Elements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-slicing-accessing-subarrays">Array Slicing: Accessing Subarrays</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-subarrays">One-Dimensional Subarrays</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-subarrays">Multidimensional Subarrays</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-array-rows-and-columns">Accessing array rows and columns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-array-attributes">1.1.3.1. NumPy Array Attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-indexing-accessing-single-elements">1.1.3.2. Array Indexing: Accessing Single Elements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-slicing-accessing-subarrays">1.1.3.3. Array Slicing: Accessing Subarrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-dimensional-subarrays">1.1.3.3.1. One-Dimensional Subarrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-subarrays">1.1.3.3.2. Multidimensional Subarrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-array-rows-and-columns">1.1.3.3.2.1. Accessing array rows and columns</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subarrays-as-no-copy-views">Subarrays as No-Copy Views</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-copies-of-arrays">Creating Copies of Arrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subarrays-as-no-copy-views">1.1.3.3.3. Subarrays as No-Copy Views</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-copies-of-arrays">1.1.3.3.4. Creating Copies of Arrays</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshaping-of-arrays">Reshaping of Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-concatenation-and-splitting">Array Concatenation and Splitting</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-of-arrays">Concatenation of Arrays</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-of-arrays">Splitting of Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshaping-of-arrays">1.1.3.4. Reshaping of Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array-concatenation-and-splitting">1.1.3.5. Array Concatenation and Splitting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-of-arrays">1.1.3.5.1. Concatenation of Arrays</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-of-arrays">1.1.3.5.2. Splitting of Arrays</a></li>
 </ul>
 </li>
 </ul>
@@ -1475,7 +1467,7 @@ The related functions <code class="docutils literal notranslate"><span class="pr
   <div class="footer-item">
     
 <p class="component-author">
-By Commoner Artisan
+By NeneWang
 </p>
 
   </div>
