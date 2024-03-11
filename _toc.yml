@@ -1,6 +1,16 @@
 format: jb-book
 root: intro
 parts:
+
+- caption: About these Notes
+  chapters:
+  - file: 1-intro/about
+  - file: 1-intro/syllabus
+
+- caption: Current Learning
+  chapters:
+  - file: algorithms/intro
+
 - caption: Tutorials
   chapters:
   - file: start/your-first-book
