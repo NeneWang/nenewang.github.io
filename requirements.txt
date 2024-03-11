@@ -1,4 +1,5 @@
 # Copied from 'sphinx' extra of pyproject.toml
+jupyter-book
 altair
 bokeh
 folium
