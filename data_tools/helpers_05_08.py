@@ -1,6 +1,6 @@
 
 import numpy as np
-import matplotlib.pyplot as plt; plt.rcParams['figure.dpi'] = 600
+import matplotlib.pyplot as plt
 from sklearn.tree import DecisionTreeClassifier
 from ipywidgets import interact
 

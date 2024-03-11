@@ -324,4 +324,3 @@ Will result in the following HTML when your book is built:
 </div>
 ```
 
-This can be useful if you'd like to style your book with [custom CSS or JavaScript](custom-assets).

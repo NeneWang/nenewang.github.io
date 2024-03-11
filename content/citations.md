@@ -20,9 +20,6 @@ You can add citations and bibliographies using references that are stored in a `
 This functionality uses the excellent [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/) extension.
 ```
 
-## Basic citations
-
-To get started with citations in Jupyter Book, check out [](tutorials:references).
 
 ## Change the in-line citation style
 
