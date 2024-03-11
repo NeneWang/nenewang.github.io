@@ -13,10 +13,45 @@ parts:
   - file: algorithms/intro
 
 - caption: Data Science
+  numbered: true
   chapters:
   - file: data_tools/introduction
     sections:
-      - file: data_tools/03.00-Introduction-to-Pandas
-      - file: data_tools/03.08-Aggregation-and-Grouping
+      - file: data_tools/01-introduction
+      - file: data_tools/pandas
+        sections:
+        - file: data_tools/pandas/03.01-Introducing-Pandas-Objects
+        - file: data_tools/pandas/03.02-Data-Indexing-and-Selection
+        - file: data_tools/pandas/03.03-Operations-in-Pandas
+        - file: data_tools/pandas/03.04-Missing-Values
+        - file: data_tools/pandas/03.05-Hierarchical-Indexing
+        - file: data_tools/pandas/03.06-Concat-And-Append
+        - file: data_tools/pandas/03.07-Merge-and-Join
+        - file: data_tools/pandas/03.08-Aggregation-and-Grouping
+        - file: data_tools/pandas/03.09-Pivot-Tables
+        - file: data_tools/pandas/03.10-Working-With-Strings
+        - file: data_tools/pandas/03.11-Working-with-Time-Series
+        - file: data_tools/pandas/03.12-Performance-Eval-and-Query
+- caption: Topic Guides
+  chapters:
+  - file: content/index
+    sections:
+    - file: content/myst
+    - file: content/content-blocks
+    - file: content/components
+    - file: content/references
+    - file: content/layout
+    - file: content/citations
+    - file: content/math
+    - file: content/proof
+    - file: content/figures
+    - file: content/metadata
+    - file: interactive/hiding
+    - file: interactive/launchbuttons
+    - file: interactive/thebe
+    - file: interactive/comments
+      sections:
+      - file: interactive/comments/hypothesis
+      - file: interactive/comments/utterances
 
 
