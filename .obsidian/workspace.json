@@ -140,8 +140,9 @@
   },
   "active": "720b4658fe19a1e3",
   "lastOpenFiles": [
-    "index.md",
     "_build/html/searchindex.js.tmp",
+    "_build/html/_sources/index.md",
+    "index.md",
     "intro_code.md",
     "intro copy.md",
     "_build/html/_images/03.08-split-apply-combine.png",
@@ -183,8 +184,6 @@
     "_build/html/_sources/start/create.md",
     "_build/html/_sources/start/build.md",
     "_build/html/_sources/sphinx/index.md",
-    "_build/html/_sources/reference/glossary.md",
-    "_build/html/_sources/reference/cli.md",
-    "_build/html/_sources/reference/cheatsheet.md"
+    "_build/html/_sources/reference/glossary.md"
   ]
 }

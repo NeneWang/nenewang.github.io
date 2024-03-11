@@ -20,19 +20,3 @@ parts:
       - file: data_tools/03.08-Aggregation-and-Grouping
 
 
-# - caption: Topic Guides
-#   chapters:
-#   - file: content/index
-#     sections:
-#     - file: content/myst
-#     - file: content/content-blocks
-#     - file: content/components
-#     - file: content/references
-#     - file: content/layout
-#     - file: content/citations
-#     - file: content/math
-#     - file: content/proof
-#     - file: content/figures
-#     - file: content/metadata
-
-
