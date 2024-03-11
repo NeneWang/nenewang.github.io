@@ -141,6 +141,8 @@
   "active": "720b4658fe19a1e3",
   "lastOpenFiles": [
     "_build/html/searchindex.js.tmp",
+    "intro_code.md",
+    "intro copy.md",
     "_build/html/_images/03.08-split-apply-combine.png",
     "_build/html/_sources/data_tools/introduction.md",
     "_build/html/data_tools/introduction.html",
@@ -182,8 +184,6 @@
     "_build/html/_sources/sphinx/index.md",
     "_build/html/_sources/reference/glossary.md",
     "_build/html/_sources/reference/cli.md",
-    "_build/html/_sources/reference/cheatsheet.md",
-    "_build/html/_sources/reference/_changelog.md",
-    "_build/html/_sources/publish/web.md"
+    "_build/html/_sources/reference/cheatsheet.md"
   ]
 }
