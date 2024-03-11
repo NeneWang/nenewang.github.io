@@ -171,7 +171,6 @@ You can use this syntax for any kind of directive, though it is generally recomm
 
 :::{tip}
 To hide code input and output that generated the variable you are inserting, use the `remove_cell` tag.
-See [](../interactive/hiding.md) for more information and other tag options.
 :::
 
 (content-blocks:html-admonitions)=
