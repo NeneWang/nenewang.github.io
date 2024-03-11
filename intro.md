@@ -1,5 +1,5 @@
 ---
-title: Books with Jupyter
+title: Some Random Studnet NOtembooks
 ---
 
 ::::{grid} 2
