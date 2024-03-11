@@ -1,0 +1,1522 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.1.12. Vectorized String Operations</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ebe79ad7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03-pandas/03.10-Working-With-Strings';</script>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/03-pandas/03.10-Working-With-Strings.html" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.1.13. Working with Time Series" href="03.11-Working-with-Time-Series.html" />
+    <link rel="prev" title="1.1.11. Pivot Tables" href="03.09-Pivot-Tables.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1-intro/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1-intro/syllabus.html">Syllabus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../03-pandas.html">1.1. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.1.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.1.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.1.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.1.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.1.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.1.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.1.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.1.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.1.11. Pivot Tables</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.1.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.1.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../interactive/comments/utterances.html">Utterances</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03-pandas/03.10-Working-With-Strings.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03-pandas/03.10-Working-With-Strings.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03-pandas/03.10-Working-With-Strings.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03-pandas/03.10-Working-With-Strings.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/data_tools/03-pandas/03.10-Working-With-Strings.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vectorized String Operations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-pandas-string-operations">1.1.12.1. Introducing Pandas String Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables-of-pandas-string-methods">1.1.12.2. Tables of Pandas String Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-similar-to-python-string-methods">1.1.12.2.1. Methods Similar to Python String Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-using-regular-expressions">1.1.12.2.2. Methods Using Regular Expressions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-methods">1.1.12.2.3. Miscellaneous Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorized-item-access-and-slicing">1.1.12.2.3.1. Vectorized item access and slicing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#indicator-variables">1.1.12.2.3.2. Indicator variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-recipe-database">1.1.12.3. Example: Recipe Database</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-recipe-recommender">1.1.12.3.1. A Simple Recipe Recommender</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further-with-recipes">1.1.12.3.2. Going Further with Recipes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vectorized-string-operations">
+<h1><span class="section-number">1.1.12. </span>Vectorized String Operations<a class="headerlink" href="#vectorized-string-operations" title="Link to this heading">#</a></h1>
+<p>One strength of Python is its relative ease in handling and manipulating string data.
+Pandas builds on this and provides a comprehensive set of <em>vectorized string operations</em> that are an important part of the type of munging required when working with (read: cleaning up) real-world data.
+In this chapter, we’ll walk through some of the Pandas string operations, and then take a look at using them to partially clean up a very messy dataset of recipes collected from the internet.</p>
+<section id="introducing-pandas-string-operations">
+<h2><span class="section-number">1.1.12.1. </span>Introducing Pandas String Operations<a class="headerlink" href="#introducing-pandas-string-operations" title="Link to this heading">#</a></h2>
+<p>We saw in previous chapters how tools like NumPy and Pandas generalize arithmetic operations so that we can easily and quickly perform the same operation on many array elements. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">])</span>
+<span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 4,  6, 10, 14, 22, 26])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This <em>vectorization</em> of operations simplifies the syntax of operating on arrays of data: we no longer have to worry about the size or shape of the array, but just about what operation we want done.
+For arrays of strings, NumPy does not provide such simple access, and thus you’re stuck using a more verbose loop syntax:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="s1">&#39;MARY&#39;</span><span class="p">,</span> <span class="s1">&#39;gUIDO&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Peter&#39;, &#39;Paul&#39;, &#39;Mary&#39;, &#39;Guido&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is perhaps sufficient to work with some data, but it will break if there are any missing values, so this approach requires putting in extra checks:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;peter&#39;</span><span class="p">,</span> <span class="s1">&#39;Paul&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;MARY&#39;</span><span class="p">,</span> <span class="s1">&#39;gUIDO&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">s</span> <span class="k">if</span> <span class="n">s</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">s</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Peter&#39;, &#39;Paul&#39;, None, &#39;Mary&#39;, &#39;Guido&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This kind of manual approach is not only verbose and inconvenient, it can be error-prone.</p>
+<p>Pandas includes features to address both this need for vectorized string operations and the need for correctly handling missing data via the <code class="docutils literal notranslate"><span class="pre">str</span></code> attribute of Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">Index</span></code> objects containing strings.
+So, for example, if we create a Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> with this data we can directly call the <code class="docutils literal notranslate"><span class="pre">str.capitalize</span></code> method, which has missing value handling built in:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">names</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    Peter
+1     Paul
+2     None
+3     Mary
+4    Guido
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tables-of-pandas-string-methods">
+<h2><span class="section-number">1.1.12.2. </span>Tables of Pandas String Methods<a class="headerlink" href="#tables-of-pandas-string-methods" title="Link to this heading">#</a></h2>
+<p>If you have a good understanding of string manipulation in Python, most of the Pandas string syntax is intuitive enough that it’s probably sufficient to just list the available methods. We’ll start with that here, before diving deeper into a few of the subtleties.
+The examples in this section use the following <code class="docutils literal notranslate"><span class="pre">Series</span></code> object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Graham Chapman&#39;</span><span class="p">,</span> <span class="s1">&#39;John Cleese&#39;</span><span class="p">,</span> <span class="s1">&#39;Terry Gilliam&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;Eric Idle&#39;</span><span class="p">,</span> <span class="s1">&#39;Terry Jones&#39;</span><span class="p">,</span> <span class="s1">&#39;Michael Palin&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="methods-similar-to-python-string-methods">
+<h3><span class="section-number">1.1.12.2.1. </span>Methods Similar to Python String Methods<a class="headerlink" href="#methods-similar-to-python-string-methods" title="Link to this heading">#</a></h3>
+<p>Nearly all of Python’s built-in string methods are mirrored by a Pandas vectorized string method. Here is a list of Pandas <code class="docutils literal notranslate"><span class="pre">str</span></code> methods that mirror Python string methods:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">lower()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">translate()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">islower()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ljust()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">upper()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">startswith()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isupper()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rjust()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">find()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">endswith()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isnumeric()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">center()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rfind()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isalnum()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isdecimal()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">zfill()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">index()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isalpha()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">split()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">strip()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rindex()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isdigit()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rsplit()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rstrip()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">capitalize()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isspace()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">partition()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lstrip()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">swapcase()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">istitle()</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rpartition()</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Notice that these have various return values. Some, like <code class="docutils literal notranslate"><span class="pre">lower</span></code>, return a series of strings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    graham chapman
+1       john cleese
+2     terry gilliam
+3         eric idle
+4       terry jones
+5     michael palin
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>But some others return numbers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    14
+1    11
+2    13
+3     9
+4    11
+5    13
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or Boolean values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    False
+1    False
+2     True
+3    False
+4     True
+5    False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>Still others return lists or other compound values for each element:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    [Graham, Chapman]
+1       [John, Cleese]
+2     [Terry, Gilliam]
+3         [Eric, Idle]
+4       [Terry, Jones]
+5     [Michael, Palin]
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll see further manipulations of this kind of series-of-lists object as we continue our discussion.</p>
+</section>
+<section id="methods-using-regular-expressions">
+<h3><span class="section-number">1.1.12.2.2. </span>Methods Using Regular Expressions<a class="headerlink" href="#methods-using-regular-expressions" title="Link to this heading">#</a></h3>
+<p>In addition, there are several methods that accept regular expressions (regexps) to examine the content of each string element, and follow some of the API conventions of Python’s built-in <code class="docutils literal notranslate"><span class="pre">re</span></code> module:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">match</span></code></p></td>
+<td><p>Calls <code class="docutils literal notranslate"><span class="pre">re.match</span></code> on each element, returning a Boolean.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extract</span></code></p></td>
+<td><p>Calls <code class="docutils literal notranslate"><span class="pre">re.match</span></code> on each element, returning matched groups as strings.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">findall</span></code></p></td>
+<td><p>Calls <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> on each element</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">replace</span></code></p></td>
+<td><p>Replaces occurrences of pattern with some other string</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">contains</span></code></p></td>
+<td><p>Calls <code class="docutils literal notranslate"><span class="pre">re.search</span></code> on each element, returning a boolean</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">count</span></code></p></td>
+<td><p>Counts occurrences of pattern</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">split</span></code></p></td>
+<td><p>Equivalent to <code class="docutils literal notranslate"><span class="pre">str.split</span></code>, but accepts regexps</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rsplit</span></code></p></td>
+<td><p>Equivalent to <code class="docutils literal notranslate"><span class="pre">str.rsplit</span></code>, but accepts regexps</p></td>
+</tr>
+</tbody>
+</table>
+<p>With these, we can do a wide range of operations.
+For example, we can extract the first name from each element by asking for a contiguous group of characters at the beginning of each element:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;([A-Za-z]+)&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     Graham
+1       John
+2      Terry
+3       Eric
+4      Terry
+5    Michael
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or we can do something more complicated, like finding all names that start and end with a consonant, making use of the start-of-string (<code class="docutils literal notranslate"><span class="pre">^</span></code>) and end-of-string (<code class="docutils literal notranslate"><span class="pre">$</span></code>) regular expression characters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[^AEIOU].*[^aeiou]$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    [Graham Chapman]
+1                  []
+2     [Terry Gilliam]
+3                  []
+4       [Terry Jones]
+5     [Michael Palin]
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>The ability to concisely apply regular expressions across <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> entries opens up many possibilities for analysis and cleaning of data.</p>
+</section>
+<section id="miscellaneous-methods">
+<h3><span class="section-number">1.1.12.2.3. </span>Miscellaneous Methods<a class="headerlink" href="#miscellaneous-methods" title="Link to this heading">#</a></h3>
+<p>Finally, there are some miscellaneous methods that enable other convenient operations:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">get</span></code></p></td>
+<td><p>Indexes each element</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">slice</span></code></p></td>
+<td><p>Slices each element</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">slice_replace</span></code></p></td>
+<td><p>Replaces slice in each element with the passed value</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></td>
+<td><p>Concatenates strings</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">repeat</span></code></p></td>
+<td><p>Repeats values</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">normalize</span></code></p></td>
+<td><p>Returns Unicode form of strings</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pad</span></code></p></td>
+<td><p>Adds whitespace to left, right, or both sides of strings</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">wrap</span></code></p></td>
+<td><p>Splits long strings into lines with length less than a given width</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">join</span></code></p></td>
+<td><p>Joins strings in each element of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> with the passed separator</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">get_dummies</span></code></p></td>
+<td><p>Extracts dummy variables as a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<section id="vectorized-item-access-and-slicing">
+<h4><span class="section-number">1.1.12.2.3.1. </span>Vectorized item access and slicing<a class="headerlink" href="#vectorized-item-access-and-slicing" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">get</span></code> and <code class="docutils literal notranslate"><span class="pre">slice</span></code> operations, in particular, enable vectorized element access from each array.
+For example, we can get a slice of the first three characters of each array using <code class="docutils literal notranslate"><span class="pre">str.slice(0,</span> <span class="pre">3)</span></code>.
+Note that this behavior is also available through Python’s normal indexing syntax; for example, <code class="docutils literal notranslate"><span class="pre">df.str.slice(0,</span> <span class="pre">3)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">df.str[0:3]</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    Gra
+1    Joh
+2    Ter
+3    Eri
+4    Ter
+5    Mic
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Indexing via <code class="docutils literal notranslate"><span class="pre">df.str.get(i)</span></code> and <code class="docutils literal notranslate"><span class="pre">df.str[i]</span></code> are likewise similar.</p>
+<p>These indexing methods also let you access elements of arrays returned by <code class="docutils literal notranslate"><span class="pre">split</span></code>.
+For example, to extract the last name of each entry, we can combine <code class="docutils literal notranslate"><span class="pre">split</span></code> with <code class="docutils literal notranslate"><span class="pre">str</span></code> indexing:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monte</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    Chapman
+1     Cleese
+2    Gilliam
+3       Idle
+4      Jones
+5      Palin
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="indicator-variables">
+<h4><span class="section-number">1.1.12.2.3.2. </span>Indicator variables<a class="headerlink" href="#indicator-variables" title="Link to this heading">#</a></h4>
+<p>Another method that requires a bit of extra explanation is the <code class="docutils literal notranslate"><span class="pre">get_dummies</span></code> method.
+This is useful when your data has a column containing some sort of coded indicator.
+For example, we might have a dataset that contains information in the form of codes, such as A = “born in America,” B = “born in the United Kingdom,” C = “likes cheese,” D = “likes spam”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_monte</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">monte</span><span class="p">,</span>
+                           <span class="s1">&#39;info&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B|C|D&#39;</span><span class="p">,</span> <span class="s1">&#39;B|D&#39;</span><span class="p">,</span> <span class="s1">&#39;A|C&#39;</span><span class="p">,</span>
+                                    <span class="s1">&#39;B|D&#39;</span><span class="p">,</span> <span class="s1">&#39;B|C&#39;</span><span class="p">,</span> <span class="s1">&#39;B|C|D&#39;</span><span class="p">]})</span>
+<span class="n">full_monte</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Graham Chapman</td>
+      <td>B|C|D</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>John Cleese</td>
+      <td>B|D</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Terry Gilliam</td>
+      <td>A|C</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Eric Idle</td>
+      <td>B|D</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Terry Jones</td>
+      <td>B|C</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Michael Palin</td>
+      <td>B|C|D</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">get_dummies</span></code> routine lets us split out these indicator variables into a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">full_monte</span><span class="p">[</span><span class="s1">&#39;info&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>With these operations as building blocks, you can construct an endless range of string processing procedures when cleaning your data.</p>
+<p>We won’t dive further into these methods here, but I encourage you to read through <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html">“Working with Text Data”</a> in the Pandas online documentation, or to refer to the resources listed in <a class="reference internal" href="#03.13-Further-Resources.ipynb"><span class="xref myst">Further Resources</span></a>.</p>
+</section>
+</section>
+</section>
+<section id="example-recipe-database">
+<h2><span class="section-number">1.1.12.3. </span>Example: Recipe Database<a class="headerlink" href="#example-recipe-database" title="Link to this heading">#</a></h2>
+<p>These vectorized string operations become most useful in the process of cleaning up messy, real-world data.
+Here I’ll walk through an example of that, using an open recipe database compiled from various sources on the web.
+Our goal will be to parse the recipe data into ingredient lists, so we can quickly find a recipe based on some ingredients we have on hand. The scripts used to compile this can be found at <a class="github reference external" href="https://github.com/fictivekin/openrecipes">fictivekin/openrecipes</a>, and the link to the most recent version of the database is found there as well.</p>
+<p>This database is about 30 MB, and can be downloaded and unzipped with these commands:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># repo = &quot;https://raw.githubusercontent.com/jakevdp/open-recipe-data/master&quot;</span>
+<span class="c1"># !cd data &amp;&amp; curl -O {repo}/recipeitems.json.gz</span>
+<span class="c1"># !gunzip data/recipeitems.json.gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The database is in JSON format, so we will use <code class="docutils literal notranslate"><span class="pre">pd.read_json</span></code> to read it (<code class="docutils literal notranslate"><span class="pre">lines=True</span></code> is required for this dataset because each line of the file is a JSON entry):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;data/recipeitems.json&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">recipes</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;data/recipeitems.json&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">recipes</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\util\_decorators.py:207,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
+<span class="ne">--&gt; </span><span class="mi">207</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\util\_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:612,</span> in <span class="ni">read_json</span><span class="nt">(path_or_buf, orient, typ, dtype, convert_axes, convert_dates, keep_default_dates, numpy, precise_float, date_unit, encoding, encoding_errors, lines, chunksize, compression, nrows, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">609</span>     <span class="k">return</span> <span class="n">json_reader</span>
+<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="k">with</span> <span class="n">json_reader</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">612</span>     <span class="k">return</span> <span class="n">json_reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:744,</span> in <span class="ni">JsonReader.read</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">742</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">ensure_str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="n">data_lines</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">744</span>         <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_object_parser</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_combine_lines</span><span class="p">(</span><span class="n">data_lines</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span>     <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_object_parser</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:768,</span> in <span class="ni">JsonReader._get_object_parser</span><span class="nt">(self, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">766</span> <span class="n">obj</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">767</span> <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="s2">&quot;frame&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">768</span>     <span class="n">obj</span> <span class="o">=</span> <span class="n">FrameParser</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">770</span> <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="s2">&quot;series&quot;</span> <span class="ow">or</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">771</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:880,</span> in <span class="ni">Parser.parse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parse_numpy</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">880</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parse_no_numpy</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">883</span>     <span class="k">return</span> <span class="kc">None</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:1133,</span> in <span class="ni">FrameParser._parse_no_numpy</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1129</span> <span class="n">orient</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">orient</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span> <span class="k">if</span> <span class="n">orient</span> <span class="o">==</span> <span class="s2">&quot;columns&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>     <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span>
+<span class="ne">-&gt; </span><span class="mi">1133</span>         <span class="n">loads</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="n">precise_float</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">precise_float</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1134</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1135</span> <span class="k">elif</span> <span class="n">orient</span> <span class="o">==</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1136</span>     <span class="n">decoded</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">   </span><span class="mi">1137</span>         <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="n">v</span>
+<span class="nn">   1138         for k, v</span> in <span class="ni">loads(json, precise_float=self.precise_float).items</span><span class="nt">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1139</span>     <span class="p">}</span>
+
+<span class="ne">ValueError</span>: Expected object or value
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see there are nearly 175,000 recipes, and 17 columns.
+Let’s take a look at one row to see what we have:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is a lot of information there, but much of it is in a very messy form, as is typical of data scraped from the web.
+In particular, the ingredient list is in string format; we’re going to have to carefully extract the information we’re interested in.
+Let’s start by taking a closer look at the ingredients:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>The ingredient lists average 250 characters long, with a minimum of 0 and a maximum of nearly 10,000 characters!</p>
+<p>Just out of curiosity, let’s see which recipe has the longest ingredient list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">())]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">())]</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can do other aggregate explorations; for example, we can see how many of the recipes are for breakfast foods (using regular expression syntax to match both lowercase and capital letters):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;[Bb]reakfast&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;[Bb]reakfast&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or how many of the recipes list cinnamon as an ingredient:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;[Cc]innamon&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;[Cc]innamon&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We could even look to see whether any recipes misspell the ingredient as “cinamon”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;[Cc]inamon&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;[Cc]inamon&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is the type of data exploration that is possible with Pandas string tools.
+It is data munging like this that Python really excels at.</p>
+<section id="a-simple-recipe-recommender">
+<h3><span class="section-number">1.1.12.3.1. </span>A Simple Recipe Recommender<a class="headerlink" href="#a-simple-recipe-recommender" title="Link to this heading">#</a></h3>
+<p>Let’s go a bit further, and start working on a simple recipe recommendation system: given a list of ingredients, we want to find any recipes that use all those ingredients.
+While conceptually straightforward, the task is complicated by the heterogeneity of the data: there is no easy operation, for example, to extract a clean list of ingredients from each row.
+So, we will cheat a bit: we’ll start with a list of common ingredients, and simply search to see whether they are in each recipe’s ingredient list.
+For simplicity, let’s just stick with herbs and spices for the time being:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spice_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;salt&#39;</span><span class="p">,</span> <span class="s1">&#39;pepper&#39;</span><span class="p">,</span> <span class="s1">&#39;oregano&#39;</span><span class="p">,</span> <span class="s1">&#39;sage&#39;</span><span class="p">,</span> <span class="s1">&#39;parsley&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;rosemary&#39;</span><span class="p">,</span> <span class="s1">&#39;tarragon&#39;</span><span class="p">,</span> <span class="s1">&#39;thyme&#39;</span><span class="p">,</span> <span class="s1">&#39;paprika&#39;</span><span class="p">,</span> <span class="s1">&#39;cumin&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then build a Boolean <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> consisting of <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> values, indicating whether each ingredient appears in the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">spice_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="n">spice</span><span class="p">:</span> <span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">spice</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">spice</span> <span class="ow">in</span> <span class="n">spice_list</span><span class="p">})</span>
+<span class="n">spice_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">re</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">spice_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">spice</span><span class="p">:</span> <span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">spice</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">for</span> <span class="n">spice</span> <span class="ow">in</span> <span class="n">spice_list</span><span class="p">})</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">spice_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="nn">Cell In[25], line 3,</span> in <span class="ni">&lt;dictcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">re</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">spice_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">spice</span><span class="p">:</span> <span class="n">recipes</span><span class="o">.</span><span class="n">ingredients</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">spice</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">for</span> <span class="n">spice</span> <span class="ow">in</span> <span class="n">spice_list</span><span class="p">})</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">spice_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, as an example, let’s say we’d like to find a recipe that uses parsley, paprika, and tarragon.
+We can compute this very quickly using the <code class="docutils literal notranslate"><span class="pre">query</span></code> method of <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s, discussed further in <a class="reference internal" href="03.12-Performance-Eval-and-Query.html"><span class="std std-doc">High-Performance Pandas: <code class="docutils literal notranslate"><span class="pre">eval()</span></code> and <code class="docutils literal notranslate"><span class="pre">query()</span></code></span></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="n">spice_df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;parsley &amp; paprika &amp; tarragon&#39;</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">spice_df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;parsley &amp; paprika &amp; tarragon&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">len</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;spice_df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>We find only 10 recipes with this combination. Let’s use the index returned by this selection to discover the names of those recipes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">recipes</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="n">selection</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span><span class="o">.</span><span class="n">name</span><span class="p">[</span><span class="n">selection</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;recipes&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have narrowed down our recipe selection from 175,000 to 10, we are in a position to make a more informed decision about what we’d like to cook for dinner.</p>
+</section>
+<section id="going-further-with-recipes">
+<h3><span class="section-number">1.1.12.3.2. </span>Going Further with Recipes<a class="headerlink" href="#going-further-with-recipes" title="Link to this heading">#</a></h3>
+<p>Hopefully this example has given you a bit of a flavor (heh) of the types of data cleaning operations that are efficiently enabled by Pandas string methods.
+Of course, building a robust recipe recommendation system would require a <em>lot</em> more work!
+Extracting full ingredient lists from each recipe would be an important piece of the task; unfortunately, the wide variety of formats used makes this a relatively time-consuming process.
+This points to the truism that in data science, cleaning and munging of real-world data often comprises the majority of the work—and Pandas provides the tools that can help you do this efficiently.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./data_tools\03-pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03.09-Pivot-Tables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.1.11. </span>Pivot Tables</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03.11-Working-with-Time-Series.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.1.13. </span>Working with Time Series</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-pandas-string-operations">1.1.12.1. Introducing Pandas String Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables-of-pandas-string-methods">1.1.12.2. Tables of Pandas String Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-similar-to-python-string-methods">1.1.12.2.1. Methods Similar to Python String Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-using-regular-expressions">1.1.12.2.2. Methods Using Regular Expressions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-methods">1.1.12.2.3. Miscellaneous Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorized-item-access-and-slicing">1.1.12.2.3.1. Vectorized item access and slicing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#indicator-variables">1.1.12.2.3.2. Indicator variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-recipe-database">1.1.12.3. Example: Recipe Database</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-recipe-recommender">1.1.12.3.1. A Simple Recipe Recommender</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further-with-recipes">1.1.12.3.2. Going Further with Recipes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeneWang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,2445 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.1.10. Aggregation and Grouping</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ebe79ad7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/pandas/03.08-Aggregation-and-Grouping';</script>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/pandas/03.08-Aggregation-and-Grouping.html" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.1.11. Pivot Tables" href="03.09-Pivot-Tables.html" />
+    <link rel="prev" title="1.1.9. Combining Datasets: merge and join" href="03.07-Merge-and-Join.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../1-intro/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../1-intro/syllabus.html">Syllabus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../pandas.html">1.1. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.1.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.1.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.1.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.1.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.1.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.1.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.1.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.1.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.1.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.1.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.1.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../interactive/comments/utterances.html">Utterances</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/pandas/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/pandas/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/pandas/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/pandas/03.08-Aggregation-and-Grouping.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/data_tools/pandas/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Aggregation and Grouping</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planets-data">1.1.10.1. Planets Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-aggregation-in-pandas">1.1.10.2. Simple Aggregation in Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-split-apply-combine">1.1.10.3. groupby: Split, Apply, Combine</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-apply-combine">1.1.10.3.1. Split, Apply, Combine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-groupby-object">1.1.10.3.2. The GroupBy Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-indexing">1.1.10.3.2.1. Column indexing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-over-groups">1.1.10.3.2.2. Iteration over groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-methods">1.1.10.3.2.3. Dispatch methods</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-filter-transform-apply">1.1.10.3.3. Aggregate, Filter, Transform, Apply</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">1.1.10.3.3.1. Aggregation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">1.1.10.3.3.2. Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation">1.1.10.3.3.3. Transformation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">1.1.10.3.3.4. The apply method</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-split-key">1.1.10.3.4. Specifying the Split Key</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-array-series-or-index-providing-the-grouping-keys">1.1.10.3.4.1. A list, array, series, or index providing the grouping keys</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dictionary-or-series-mapping-index-to-group">1.1.10.3.4.2. A dictionary or series mapping index to group</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#any-python-function">1.1.10.3.4.3. Any Python function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-of-valid-keys">1.1.10.3.4.4. A list of valid keys</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-example">1.1.10.3.5. Grouping Example</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="aggregation-and-grouping">
+<h1><span class="section-number">1.1.10. </span>Aggregation and Grouping<a class="headerlink" href="#aggregation-and-grouping" title="Link to this heading">#</a></h1>
+<p>A fundamental piece of many data analysis tasks is efficient summarization: computing aggregations like <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, and <code class="docutils literal notranslate"><span class="pre">max</span></code>, in which a single number summarizes aspects of a potentially large dataset.
+In this chapter, we’ll explore aggregations in Pandas, from simple operations akin to what we’ve seen on NumPy arrays to more sophisticated operations based on the concept of a <code class="docutils literal notranslate"><span class="pre">groupby</span></code>.</p>
+<p>For convenience, we’ll use the same <code class="docutils literal notranslate"><span class="pre">display</span></code> magic function that we used in the previous chapters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">class</span> <span class="nc">display</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Display HTML representation of multiple objects&quot;&quot;&quot;</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;div style=&quot;float: left; padding: 10px;&quot;&gt;</span>
+<span class="s2">    &lt;p style=&#39;font-family:&quot;Courier New&quot;, Courier, monospace&#39;&gt;</span><span class="si">{0}</span><span class="s2">&lt;/p&gt;</span><span class="si">{1}</span>
+<span class="s2">    &lt;/div&gt;&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
+        
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">eval</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">.</span><span class="n">_repr_html_</span><span class="p">())</span>
+                         <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+                           <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="planets-data">
+<h2><span class="section-number">1.1.10.1. </span>Planets Data<a class="headerlink" href="#planets-data" title="Link to this heading">#</a></h2>
+<p>Here we will use the Planets dataset, available via the <a class="reference external" href="http://seaborn.pydata.org/">Seaborn package</a> (see <a class="reference internal" href="#04.14-Visualization-With-Seaborn.ipynb"><span class="xref myst">Visualization With Seaborn</span></a>).
+It gives information on planets that astronomers have discovered around other stars (known as <em>extrasolar planets</em>, or <em>exoplanets</em> for short). It can be downloaded with a simple Seaborn command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">planets</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;planets&#39;</span><span class="p">)</span>
+<span class="n">planets</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1035, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>method</th>
+      <th>number</th>
+      <th>orbital_period</th>
+      <th>mass</th>
+      <th>distance</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>269.300</td>
+      <td>7.10</td>
+      <td>77.40</td>
+      <td>2006</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>874.774</td>
+      <td>2.21</td>
+      <td>56.95</td>
+      <td>2008</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>763.000</td>
+      <td>2.60</td>
+      <td>19.84</td>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>326.030</td>
+      <td>19.40</td>
+      <td>110.62</td>
+      <td>2007</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Radial Velocity</td>
+      <td>1</td>
+      <td>516.220</td>
+      <td>10.50</td>
+      <td>119.47</td>
+      <td>2009</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This has some details on the 1,000+ extrasolar planets discovered up to 2014.</p>
+</section>
+<section id="simple-aggregation-in-pandas">
+<h2><span class="section-number">1.1.10.2. </span>Simple Aggregation in Pandas<a class="headerlink" href="#simple-aggregation-in-pandas" title="Link to this heading">#</a></h2>
+<p>In <a class="reference internal" href="#02.04-Computation-on-arrays-aggregates.ipynb"><span class="xref myst">“Aggregations: Min, Max, and Everything In Between”</span></a>, we explored some of the data aggregations available for NumPy arrays.
+As with a one-dimensional NumPy array, for a Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> the aggregates return a single value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ser</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.374540
+1    0.950714
+2    0.731994
+3    0.598658
+4    0.156019
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.811925491708157
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5623850983416314
+</pre></div>
+</div>
+</div>
+</div>
+<p>For a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, by default the aggregates return results within each column:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">rng</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span>
+                   <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="n">rng</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">)})</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.155995</td>
+      <td>0.020584</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.058084</td>
+      <td>0.969910</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.866176</td>
+      <td>0.832443</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.601115</td>
+      <td>0.212339</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.708073</td>
+      <td>0.181825</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A    0.477888
+B    0.443420
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>By specifying the <code class="docutils literal notranslate"><span class="pre">axis</span></code> argument, you can instead aggregate within each row:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    0.088290
+1    0.513997
+2    0.849309
+3    0.406727
+4    0.444949
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects include all of the common aggregates mentioned in <a class="reference internal" href="#02.04-Computation-on-arrays-aggregates.ipynb"><span class="xref myst">Aggregations: Min, Max, and Everything In Between</span></a>; in addition, there is a convenience method, <code class="docutils literal notranslate"><span class="pre">describe</span></code>, that computes several common aggregates for each column and returns the result.
+Let’s use this on the Planets data, for now dropping rows with missing values:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>number</th>
+      <th>orbital_period</th>
+      <th>mass</th>
+      <th>distance</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>498.00000</td>
+      <td>498.000000</td>
+      <td>498.000000</td>
+      <td>498.000000</td>
+      <td>498.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1.73494</td>
+      <td>835.778671</td>
+      <td>2.509320</td>
+      <td>52.068213</td>
+      <td>2007.377510</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.17572</td>
+      <td>1469.128259</td>
+      <td>3.636274</td>
+      <td>46.596041</td>
+      <td>4.167284</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.00000</td>
+      <td>1.328300</td>
+      <td>0.003600</td>
+      <td>1.350000</td>
+      <td>1989.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1.00000</td>
+      <td>38.272250</td>
+      <td>0.212500</td>
+      <td>24.497500</td>
+      <td>2005.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1.00000</td>
+      <td>357.000000</td>
+      <td>1.245000</td>
+      <td>39.940000</td>
+      <td>2009.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2.00000</td>
+      <td>999.600000</td>
+      <td>2.867500</td>
+      <td>59.332500</td>
+      <td>2011.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>6.00000</td>
+      <td>17337.500000</td>
+      <td>25.000000</td>
+      <td>354.000000</td>
+      <td>2014.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This method helps us understand the overall properties of a dataset.
+For example, we see in the <code class="docutils literal notranslate"><span class="pre">year</span></code> column that although exoplanets were discovered as far back as 1989, half of all planets in the dataset were not discovered until 2010 or after.
+This is largely thanks to the <em>Kepler</em> mission, which aimed to find eclipsing planets around other stars using a specially designed space telescope.</p>
+<p>The following table summarizes some other built-in Pandas aggregations:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aggregation</p></th>
+<th class="head"><p>Returns</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">count</span></code></p></td>
+<td><p>Total number of items</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">first</span></code>, <code class="docutils literal notranslate"><span class="pre">last</span></code></p></td>
+<td><p>First and last item</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code></p></td>
+<td><p>Mean and median</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code></p></td>
+<td><p>Minimum and maximum</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">std</span></code>, <code class="docutils literal notranslate"><span class="pre">var</span></code></p></td>
+<td><p>Standard deviation and variance</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mad</span></code></p></td>
+<td><p>Mean absolute deviation</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">prod</span></code></p></td>
+<td><p>Product of all items</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sum</span></code></p></td>
+<td><p>Sum of all items</p></td>
+</tr>
+</tbody>
+</table>
+<p>These are all methods of <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects.</p>
+<p>To go deeper into the data, however, simple aggregates are often not enough.
+The next level of data summarization is the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation, which allows you to quickly and efficiently compute aggregates on subsets of data.</p>
+</section>
+<section id="groupby-split-apply-combine">
+<h2><span class="section-number">1.1.10.3. </span>groupby: Split, Apply, Combine<a class="headerlink" href="#groupby-split-apply-combine" title="Link to this heading">#</a></h2>
+<p>Simple aggregations can give you a flavor of your dataset, but often we would prefer to aggregate conditionally on some label or index: this is implemented in the so-called <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation.
+The name “group by” comes from a command in the SQL database language, but it is perhaps more illuminative to think of it in the terms first coined by Hadley Wickham of Rstats fame: <em>split, apply, combine</em>.</p>
+<section id="split-apply-combine">
+<h3><span class="section-number">1.1.10.3.1. </span>Split, Apply, Combine<a class="headerlink" href="#split-apply-combine" title="Link to this heading">#</a></h3>
+<p>A canonical example of this split-apply-combine operation, where the “apply” is a summation aggregation, is illustrated in this figure:</p>
+<p><img alt="" src="data_tools/pandas/figures/03.08-split-apply-combine.png" /></p>
+<p>(<a class="reference external" href="https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/06.00-Figure-Code.ipynb#Split-Apply-Combine">figure source in Appendix</a>)</p>
+<p>This illustrates what the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation accomplishes:</p>
+<ul class="simple">
+<li><p>The <em>split</em> step involves breaking up and grouping a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> depending on the value of the specified key.</p></li>
+<li><p>The <em>apply</em> step involves computing some function, usually an aggregate, transformation, or filtering, within the individual groups.</p></li>
+<li><p>The <em>combine</em> step merges the results of these operations into an output array.</p></li>
+</ul>
+<p>While this could certainly be done manually using some combination of the masking, aggregation, and merging commands covered earlier, an important realization is that <em>the intermediate splits do not need to be explicitly instantiated</em>. Rather, the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> can (often) do this in a single pass over the data, updating the sum, mean, count, min, or other aggregate for each group along the way.
+The power of the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> is that it abstracts away these steps: the user need not think about <em>how</em> the computation is done under the hood, but rather can think about the <em>operation as a whole</em>.</p>
+<p>As a concrete example, let’s take a look at using Pandas for the computation shown in the following figure.
+We’ll start by creating the input <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+                   <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)},</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The most basic split-apply-combine operation can be computed with the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, passing the name of the desired key column:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000028E0448AAC0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that what is returned is a <code class="docutils literal notranslate"><span class="pre">DataFrameGroupBy</span></code> object, not a set of <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects.
+This object is where the magic is: you can think of it as a special view of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, which is poised to dig into the groups but does no actual computation until the aggregation is applied.
+This “lazy evaluation” approach means that common aggregates can be implemented efficiently in a way that is almost transparent to the user.</p>
+<p>To produce a result, we can apply an aggregate to this <code class="docutils literal notranslate"><span class="pre">DataFrameGroupBy</span></code> object, which will perform the appropriate apply/combine steps to produce the desired result:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">sum</span></code> method is just one possibility here; you can apply most Pandas or NumPy aggregation functions, as well as most <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> operations, as you will see in the following discussion.</p>
+</section>
+<section id="the-groupby-object">
+<h3><span class="section-number">1.1.10.3.2. </span>The GroupBy Object<a class="headerlink" href="#the-groupby-object" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object is a flexible abstraction: in many ways, it can be treated as simply a collection of <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s, though it is doing more sophisticated things under the hood. Let’s see some examples using the Planets data.</p>
+<p>Perhaps the most important operations made available by a <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> are <em>aggregate</em>, <em>filter</em>, <em>transform</em>, and <em>apply</em>.
+We’ll discuss each of these more fully in the next section, but before that let’s take a look at some of the other functionality that can be used with the basic <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> operation.</p>
+<section id="column-indexing">
+<h4><span class="section-number">1.1.10.3.2.1. </span>Column indexing<a class="headerlink" href="#column-indexing" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object supports column indexing in the same way as the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and returns a modified <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object.
+For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000028E0448AA90&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">)[</span><span class="s1">&#39;orbital_period&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x0000028E67CF12B0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we’ve selected a particular <code class="docutils literal notranslate"><span class="pre">Series</span></code> group from the original <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> group by reference to its column name.
+As with the <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object, no computation is done until we call some aggregate on the object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">)[</span><span class="s1">&#39;orbital_period&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>method
+Astrometry                         631.180000
+Eclipse Timing Variations         4343.500000
+Imaging                          27500.000000
+Microlensing                      3300.000000
+Orbital Brightness Modulation        0.342887
+Pulsar Timing                       66.541900
+Pulsation Timing Variations       1170.000000
+Radial Velocity                    360.200000
+Transit                              5.714932
+Transit Timing Variations           57.011000
+Name: orbital_period, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>This gives an idea of the general scale of orbital periods (in days) that each method is sensitive to.</p>
+</section>
+<section id="iteration-over-groups">
+<h4><span class="section-number">1.1.10.3.2.2. </span>Iteration over groups<a class="headerlink" href="#iteration-over-groups" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object supports direct iteration over the groups, returning each group as a <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span> <span class="ow">in</span> <span class="n">planets</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0:30s}</span><span class="s2"> shape=</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">group</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Astrometry                     shape=(2, 6)
+Eclipse Timing Variations      shape=(9, 6)
+Imaging                        shape=(38, 6)
+Microlensing                   shape=(23, 6)
+Orbital Brightness Modulation  shape=(3, 6)
+Pulsar Timing                  shape=(5, 6)
+Pulsation Timing Variations    shape=(1, 6)
+Radial Velocity                shape=(553, 6)
+Transit                        shape=(397, 6)
+Transit Timing Variations      shape=(4, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be useful for manual inspection of groups for the sake of debugging, but it is often much faster to use the built-in <code class="docutils literal notranslate"><span class="pre">apply</span></code> functionality, which we will discuss momentarily.</p>
+</section>
+<section id="dispatch-methods">
+<h4><span class="section-number">1.1.10.3.2.3. </span>Dispatch methods<a class="headerlink" href="#dispatch-methods" title="Link to this heading">#</a></h4>
+<p>Through some Python class magic, any method not explicitly implemented by the <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object will be passed through and called on the groups, whether they are <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> or <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects.
+For example, using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method is equivalent to calling <code class="docutils literal notranslate"><span class="pre">describe</span></code> on the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> representing each group:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">planets</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;method&#39;</span><span class="p">)[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       method                       
+count  Astrometry                          2.0
+       Eclipse Timing Variations           9.0
+       Imaging                            38.0
+       Microlensing                       23.0
+       Orbital Brightness Modulation       3.0
+                                         ...  
+max    Pulsar Timing                    2011.0
+       Pulsation Timing Variations      2007.0
+       Radial Velocity                  2014.0
+       Transit                          2014.0
+       Transit Timing Variations        2014.0
+Length: 80, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looking at this table helps us to better understand the data: for example, the vast majority of planets until 2014 were discovered by the Radial Velocity and Transit methods, though the latter method became common more recently.
+The newest methods seem to be Transit Timing Variation and Orbital Brightness Modulation, which were not used to discover a new planet until 2011.</p>
+<p>Notice that these dispatch methods are applied <em>to each individual group</em>, and the results are then combined within <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> and returned.
+Again, any valid <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>/<code class="docutils literal notranslate"><span class="pre">Series</span></code> method can be called in a similar manner on the corresponding <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object.</p>
+</section>
+</section>
+<section id="aggregate-filter-transform-apply">
+<h3><span class="section-number">1.1.10.3.3. </span>Aggregate, Filter, Transform, Apply<a class="headerlink" href="#aggregate-filter-transform-apply" title="Link to this heading">#</a></h3>
+<p>The preceding discussion focused on aggregation for the combine operation, but there are more options available.
+In particular, <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> objects have <code class="docutils literal notranslate"><span class="pre">aggregate</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, <code class="docutils literal notranslate"><span class="pre">transform</span></code>, and <code class="docutils literal notranslate"><span class="pre">apply</span></code> methods that efficiently implement a variety of useful operations before combining the grouped data.</p>
+<p>For the purpose of the following subsections, we’ll use this <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+                   <span class="s1">&#39;data1&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+                   <span class="s1">&#39;data2&#39;</span><span class="p">:</span> <span class="n">rng</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)},</span>
+                   <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;data1&#39;</span><span class="p">,</span> <span class="s1">&#39;data2&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>4</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="aggregation">
+<h4><span class="section-number">1.1.10.3.3.1. </span>Aggregation<a class="headerlink" href="#aggregation" title="Link to this heading">#</a></h4>
+<p>You’re now familiar with <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> aggregations with <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code>, and the like, but the <code class="docutils literal notranslate"><span class="pre">aggregate</span></code> method allows for even more flexibility.
+It can take a string, a function, or a list thereof, and compute all the aggregates at once.
+Here is a quick example combining all of these:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">([</span><span class="s1">&#39;min&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span> <span class="nb">max</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">data1</th>
+      <th colspan="3" halign="left">data2</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>min</th>
+      <th>median</th>
+      <th>max</th>
+      <th>min</th>
+      <th>median</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0</td>
+      <td>1.5</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>1</td>
+      <td>2.5</td>
+      <td>4</td>
+      <td>0</td>
+      <td>3.5</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>2</td>
+      <td>3.5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>6.0</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Another common pattern is to pass a dictionary mapping column names to operations to be applied on that column:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">({</span><span class="s1">&#39;data1&#39;</span><span class="p">:</span> <span class="s1">&#39;min&#39;</span><span class="p">,</span>
+                             <span class="s1">&#39;data2&#39;</span><span class="p">:</span> <span class="s1">&#39;max&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>2</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="filtering">
+<h4><span class="section-number">1.1.10.3.3.2. </span>Filtering<a class="headerlink" href="#filtering" title="Link to this heading">#</a></h4>
+<p>A filtering operation allows you to drop data based on the group properties.
+For example, we might want to keep all groups in which the standard deviation is larger than some critical value:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;data2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">4</span>
+
+<span class="n">display</span><span class="p">(</span><span class="s1">&#39;df&#39;</span><span class="p">,</span> <span class="s2">&quot;df.groupby(&#39;key&#39;).std()&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;df.groupby(&#39;key&#39;).filter(filter_func)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="float: left; padding: 10px;">
+    <p style='font-family:"Courier New", Courier, monospace'>df</p><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>4</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+<div style="float: left; padding: 10px;">
+    <p style='font-family:"Courier New", Courier, monospace'>df.groupby('key').std()</p><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>2.12132</td>
+      <td>1.414214</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>2.12132</td>
+      <td>4.949747</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>2.12132</td>
+      <td>4.242641</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+<div style="float: left; padding: 10px;">
+    <p style='font-family:"Courier New", Courier, monospace'>df.groupby('key').filter(filter_func)</p><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>4</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div></div></div>
+</div>
+<p>The filter function should return a Boolean value specifying whether the group passes the filtering. Here, because group A does not have a standard deviation greater than 4, it is dropped from the result.</p>
+</section>
+<section id="transformation">
+<h4><span class="section-number">1.1.10.3.3.3. </span>Transformation<a class="headerlink" href="#transformation" title="Link to this heading">#</a></h4>
+<p>While aggregation must return a reduced version of the data, transformation can return some transformed version of the full data to recombine.
+For such a transformation, the output is the same shape as the input.
+A common example is to center the data by subtracting the group-wise mean:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">center</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">center</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1.5</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-1.5</td>
+      <td>-3.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-1.5</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.5</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.5</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.5</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="the-apply-method">
+<h4><span class="section-number">1.1.10.3.3.4. </span>The apply method<a class="headerlink" href="#the-apply-method" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">apply</span></code> method lets you apply an arbitrary function to the group results.
+The function should take a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and returns either a Pandas object (e.g., <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, <code class="docutils literal notranslate"><span class="pre">Series</span></code>) or a scalar; the behavior of the combine step will be tailored to the type of output returned.</p>
+<p>For example, here is an <code class="docutils literal notranslate"><span class="pre">apply</span></code> operation that normalizes the first column by the sum of the second:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">norm_by_data2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># x is a DataFrame of group values</span>
+    <span class="n">x</span><span class="p">[</span><span class="s1">&#39;data1&#39;</span><span class="p">]</span> <span class="o">/=</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;data2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">norm_by_data2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>key</th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>0.000000</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>0.142857</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>0.166667</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>0.375000</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>0.571429</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>0.416667</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">apply</span></code> within a <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> is flexible: the only criterion is that the function takes a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and returns a Pandas object or scalar. What you do in between is up to you!</p>
+</section>
+</section>
+<section id="specifying-the-split-key">
+<h3><span class="section-number">1.1.10.3.4. </span>Specifying the Split Key<a class="headerlink" href="#specifying-the-split-key" title="Link to this heading">#</a></h3>
+<p>In the simple examples presented before, we split the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> on a single column name.
+This is just one of many options by which the groups can be defined, and we’ll go through some other options for group specification here.</p>
+<section id="a-list-array-series-or-index-providing-the-grouping-keys">
+<h4><span class="section-number">1.1.10.3.4.1. </span>A list, array, series, or index providing the grouping keys<a class="headerlink" href="#a-list-array-series-or-index-providing-the-grouping-keys" title="Link to this heading">#</a></h4>
+<p>The key can be any series or list with a length matching that of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">L</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>7</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Of course, this means there’s another, more verbose way of accomplishing the <code class="docutils literal notranslate"><span class="pre">df.groupby('key')</span></code> from before:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>5</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>7</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="a-dictionary-or-series-mapping-index-to-group">
+<h4><span class="section-number">1.1.10.3.4.2. </span>A dictionary or series mapping index to group<a class="headerlink" href="#a-dictionary-or-series-mapping-index-to-group" title="Link to this heading">#</a></h4>
+<p>Another method is to provide a dictionary that maps index values to the group keys:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="s1">&#39;vowel&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="s1">&#39;consonant&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="s1">&#39;consonant&#39;</span><span class="p">}</span>
+<span class="n">display</span><span class="p">(</span><span class="s1">&#39;df2&#39;</span><span class="p">,</span> <span class="s1">&#39;df2.groupby(mapping).sum()&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="float: left; padding: 10px;">
+    <p style='font-family:"Courier New", Courier, monospace'>df2</p><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>A</th>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>4</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+<div style="float: left; padding: 10px;">
+    <p style='font-family:"Courier New", Courier, monospace'>df2.groupby(mapping).sum()</p><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>consonant</th>
+      <td>12</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>vowel</th>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    </div></div></div>
+</div>
+</section>
+<section id="any-python-function">
+<h4><span class="section-number">1.1.10.3.4.3. </span>Any Python function<a class="headerlink" href="#any-python-function" title="Link to this heading">#</a></h4>
+<p>Similar to mapping, you can pass any Python function that will input the index value and output the group:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.5</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.5</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>3.5</td>
+      <td>6.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="a-list-of-valid-keys">
+<h4><span class="section-number">1.1.10.3.4.4. </span>A list of valid keys<a class="headerlink" href="#a-list-of-valid-keys" title="Link to this heading">#</a></h4>
+<p>Further, any of the preceding key choices can be combined to group on a multi-index:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">mapping</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>data1</th>
+      <th>data2</th>
+    </tr>
+    <tr>
+      <th>key</th>
+      <th>key</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <th>vowel</th>
+      <td>1.5</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <th>consonant</th>
+      <td>2.5</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <th>consonant</th>
+      <td>3.5</td>
+      <td>6.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="grouping-example">
+<h3><span class="section-number">1.1.10.3.5. </span>Grouping Example<a class="headerlink" href="#grouping-example" title="Link to this heading">#</a></h3>
+<p>As an example of this, in a few lines of Python code we can put all these together and count discovered planets by method and by decade:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">decade</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="p">(</span><span class="n">planets</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">//</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">decade</span> <span class="o">=</span> <span class="n">decade</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;s&#39;</span>
+<span class="n">decade</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;decade&#39;</span>
+<span class="n">planets</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="n">decade</span><span class="p">])[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>decade</th>
+      <th>1980s</th>
+      <th>1990s</th>
+      <th>2000s</th>
+      <th>2010s</th>
+    </tr>
+    <tr>
+      <th>method</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Astrometry</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>Eclipse Timing Variations</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>Imaging</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>Microlensing</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>Orbital Brightness Modulation</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>Pulsar Timing</th>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Pulsation Timing Variations</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Radial Velocity</th>
+      <td>1.0</td>
+      <td>52.0</td>
+      <td>475.0</td>
+      <td>424.0</td>
+    </tr>
+    <tr>
+      <th>Transit</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>64.0</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>Transit Timing Variations</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This shows the power of combining many of the operations we’ve discussed up to this point when looking at realistic datasets: we quickly gain a coarse understanding of when and how extrasolar planets were detected in the years after the first discovery.</p>
+<p>I would suggest digging into these few lines of code and evaluating the individual steps to make sure you understand exactly what they are doing to the result.
+It’s certainly a somewhat complicated example, but understanding these pieces will give you the means to similarly explore your own data.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./data_tools\pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03.07-Merge-and-Join.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.1.9. </span>Combining Datasets: merge and join</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03.09-Pivot-Tables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.1.11. </span>Pivot Tables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planets-data">1.1.10.1. Planets Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-aggregation-in-pandas">1.1.10.2. Simple Aggregation in Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-split-apply-combine">1.1.10.3. groupby: Split, Apply, Combine</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-apply-combine">1.1.10.3.1. Split, Apply, Combine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-groupby-object">1.1.10.3.2. The GroupBy Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-indexing">1.1.10.3.2.1. Column indexing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-over-groups">1.1.10.3.2.2. Iteration over groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-methods">1.1.10.3.2.3. Dispatch methods</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-filter-transform-apply">1.1.10.3.3. Aggregate, Filter, Transform, Apply</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">1.1.10.3.3.1. Aggregation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">1.1.10.3.3.2. Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation">1.1.10.3.3.3. Transformation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">1.1.10.3.3.4. The apply method</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-split-key">1.1.10.3.4. Specifying the Split Key</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-array-series-or-index-providing-the-grouping-keys">1.1.10.3.4.1. A list, array, series, or index providing the grouping keys</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dictionary-or-series-mapping-index-to-group">1.1.10.3.4.2. A dictionary or series mapping index to group</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#any-python-function">1.1.10.3.4.3. Any Python function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-of-valid-keys">1.1.10.3.4.4. A list of valid keys</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-example">1.1.10.3.5. Grouping Example</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeneWang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
