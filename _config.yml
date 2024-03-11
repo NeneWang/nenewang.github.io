@@ -2,8 +2,8 @@
 # Book settings
 title: ""
 logo: images/logo-wide.svg
-author: The Jupyter Book Community
-email: choldgraf@berkeley.edu
+author: Commoner Artisan
+email: nelson.wang80@bcmail.cuny.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This is an example book built with Jupyter Books.
 
@@ -35,7 +35,7 @@ html:
     google_analytics_id = ''
 
 repository:
-  url: https://github.com/executablebooks/jupyter-book
+  url: https://github.com/NeneWang/lecture-notes
   branch: master
   path_to_book: docs
 

@@ -11,6 +11,12 @@ parts:
   chapters:
   - file: algorithms/intro
 
+- caption: Data Tools and Algorithms CISC. 3225
+  chapters:
+  - file: 03.00-Introduction-to-Pandas
+    sections:
+    - file: 03_08_Aggregation_and_Grouping
+
 - caption: Tutorials
   chapters:
   - file: start/your-first-book

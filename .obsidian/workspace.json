@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "1bad80a0682b495a",
+    "type": "split",
+    "children": [
+      {
+        "id": "66697aad3edfad2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48aef78560d1d711",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e1ab5659e5af9bf4",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f20b6998311d541",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "720b4658fe19a1e3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "10fe6cb8a9c5ff70",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "446ea81ea07e2b76",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "839c0b3a0a0bf936",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba43280b7945b8f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6925ea02f3919028",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fa9b44ddedc59e07",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "911a890003d74801",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "323c8060c1145593",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "720b4658fe19a1e3",
+  "lastOpenFiles": [
+    "_build/jupyter_execute/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb",
+    "_build/jupyter_execute/data_tools/02.02-The-Basics-Of-NumPy-Arrays.ipynb",
+    "_build/jupyter_execute/data_tools/02.01-Understanding-Data-Types.ipynb",
+    "_build/jupyter_execute/data_tools/02.00-Introduction-to-NumPy.ipynb",
+    "_build/jupyter_execute/data_tools/01.08-More-IPython-Resources.ipynb",
+    "_build/jupyter_execute/data_tools/01.07-Timing-and-Profiling.ipynb",
+    "data_tools/__pycache__/mprun_demo.cpython-39.pyc",
+    "data_tools/__pycache__",
+    "data_tools/mprun_demo.py",
+    "_build/jupyter_execute/data_tools/01.06-Errors-and-Debugging.ipynb",
+    "_build/html/reports/data_tools/01.06-Errors-and-Debugging.err.log",
+    "_build/jupyter_execute/aca27e98d72f7beaf115950ab4829262522a9e2dd5906c066f18fcf721476378.png",
+    "_build/jupyter_execute/b4ec5d250402d013c20304b04687de04fed433d08942879405e2f8a89b35f9bb.png",
+    "_build/jupyter_execute/28ee7072dd1f4dabb46c812856832774d664cbcc48e7750b03165c6d71593ad3.png",
+    "_build/jupyter_execute/c8355f48dd8ddde5a4313cd9e84b737a1596ba5ef1b5aeabc9fd2c66d6dd0c8b.png",
+    "_build/jupyter_execute/3eacaf6adad1a4305807616181bbee897bb29177e79e2092ddd0264b848ddb4e.png",
+    "data_tools/figures/05.09-digits-pixel-components.png",
+    "data_tools/figures/PDSH-cover.png",
+    "data_tools/figures/PDSH-cover-small.png",
+    "data_tools/figures/cint_vs_pyint.png",
+    "data_tools/figures/Data_Science_VD.png"
+  ]
+}
