@@ -1,52 +1,35 @@
 {
   "main": {
-    "id": "51fe7c9d7620b22d",
+    "id": "1bad80a0682b495a",
     "type": "split",
     "children": [
       {
-        "id": "6b621305a621731a",
+        "id": "66697aad3edfad2e",
         "type": "tabs",
         "children": [
           {
-            "id": "a529782c4ffa2ea3",
+            "id": "48aef78560d1d711",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1-intro/syllabus.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3d90830e494a8403",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1-intro/syllabus.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "847d8605af76bde5",
+    "id": "e1ab5659e5af9bf4",
     "type": "split",
     "children": [
       {
-        "id": "bb710a4387c71910",
+        "id": "5f20b6998311d541",
         "type": "tabs",
         "children": [
           {
-            "id": "899b14bc54f7d39b",
+            "id": "720b4658fe19a1e3",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +39,7 @@
             }
           },
           {
-            "id": "15cac34b1ce6f42c",
+            "id": "10fe6cb8a9c5ff70",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,7 +54,7 @@
             }
           },
           {
-            "id": "1d5d4a987afc6827",
+            "id": "446ea81ea07e2b76",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -85,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "d4bcedad1ee5c4f7",
+    "id": "839c0b3a0a0bf936",
     "type": "split",
     "children": [
       {
-        "id": "b8d9550dd58381c2",
+        "id": "ba43280b7945b8f3",
         "type": "tabs",
         "children": [
           {
-            "id": "eadbd6e9a04068eb",
+            "id": "6925ea02f3919028",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1-intro/syllabus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,19 +92,18 @@
             }
           },
           {
-            "id": "35aa19a7b6a47b61",
+            "id": "fa9b44ddedc59e07",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1-intro/syllabus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8433b4135164d52a",
+            "id": "911a890003d74801",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,13 +114,11 @@
             }
           },
           {
-            "id": "4a15697018ec0249",
+            "id": "323c8060c1145593",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "1-intro/syllabus.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,52 +138,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3d90830e494a8403",
+  "active": "720b4658fe19a1e3",
   "lastOpenFiles": [
-    "algorithms/intro.md",
-    "data_tools/introduction.md",
-    "data_tools/hello.png",
-    "Alternative Careers.md",
-    "_build/html/searchindex.js.tmp",
-    "1-intro/syllabus.md",
     "Pasted image 20240311195130.png",
     "Pasted image 20240311194752.png",
-    "_build/html/_images/b75aa46301d89e51d6ac73f1e24974ad36908dc0f1d4a05162f604119ce19ef0.png",
-    "_build/html/_images/d3e92b55272431768369d2f15e769ae12bc3bce5a80876c46349ec3e51c77d05.png",
-    "_build/html/_images/2b07055cdff69c5a3804fddbccd45303718367937086cc3836aa7d75b3bdd387.png",
-    "_build/html/_images/da457f3d8394d05e23900de2d3bcfb1009caef2487fc10437ce7bdbcb4aef9db.png",
-    "_build/html/_images/e904ad53109575b529373522f27a4da1f9594ded0001320eaeb0c9bf442e6045.png",
-    "_build/html/_images/c87aa941a08ef691294a4661d319bb1f17e8701c9259ca199e0736763cecafe9.png",
-    "_build/html/_images/05.12-covariance-type.png",
+    "Alternative Careers.md",
+    "_build/html/_images/8669be8ad01115bb7cc04ccad347e334c03f02917457ac9670728711044da293.png",
+    "_build/jupyter_execute/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
+    "_build/html/_images/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
+    "_build/html/_images/6032f1ae768b9a788c42026d62e51b5ef2972b98d4d2fc61540d298818e7be72.png",
+    "_build/html/_images/8cc9f1413cd1f31dde78087ac5894b97bd55babe2510bd1c6f2c8fa5452fc594.png",
+    "_build/html/_images/0bd66ba8549a859f621e64052f8915ed44781c573a9e73c8f8a69b57935b410f.png",
+    "_build/html/_images/2f011f82be0768bbc6d5f9ae14ceb8604a98f30b4b51bb5815bf6a5564d73c81.png",
+    "_build/html/_images/aa3feb57d0b9e8e98461246638e994f8af6b8aca919fd2d89bf1f972fceb8c79.png",
+    "_build/html/_images/7df23ceb33ed0fef4aee6fa22cc696ceee59a5e37b7c89b390562eaae606fd2c.png",
+    "_build/html/_sources/data_tools/04.15-Further-Resources.ipynb",
+    "_build/html/data_tools/04.15-Further-Resources.html",
+    "_build/html/_sources/data_tools/04.14-Visualization-With-Seaborn.ipynb",
+    "_build/html/data_tools/04.14-Visualization-With-Seaborn.html",
+    "_build/html/_sources/data_tools/04.12-Three-Dimensional-Plotting.ipynb",
+    "_build/html/data_tools/04.12-Three-Dimensional-Plotting.html",
+    "_build/html/_sources/data_tools/04.11-Settings-and-Stylesheets.ipynb",
+    "_build/html/data_tools/04.11-Settings-and-Stylesheets.html",
+    "_build/html/_sources/data_tools/04.10-Customizing-Ticks.ipynb",
+    "_build/html/data_tools/04.10-Customizing-Ticks.html",
+    "_build/html/_sources/interactive/thebe.md",
+    "_build/html/_sources/interactive/hiding.md",
+    "_build/html/_sources/interactive/comments/utterances.md",
+    "_build/html/_sources/interactive/comments/hypothesis.md",
+    "_build/html/_sources/interactive/comments.md",
     "_build/html/_sources/index.md",
-    "_build/html/_sources/data_tools/pandas.ipynb",
-    "_build/html/data_tools/pandas.html",
     "_build/html/_sources/data_tools/introduction.md",
-    "_build/html/data_tools/introduction.html",
-    "_build/html/_sources/data_tools/05.15-Learning-More.ipynb",
-    "_build/html/data_tools/05.15-Learning-More.html",
-    "_build/html/_sources/data_tools/05.14-Image-Features.ipynb",
-    "_build/html/data_tools/05.14-Image-Features.html",
-    "_build/html/_sources/data_tools/05.13-Kernel-Density-Estimation.ipynb",
-    "_build/html/data_tools/05.13-Kernel-Density-Estimation.html",
-    "index.md",
-    "readme.md",
-    "intro_code.md",
+    "_build/html/_sources/content/references.md",
+    "_build/html/_sources/content/proof.md",
+    "_build/html/_sources/content/myst.md",
+    "_build/html/_sources/content/metadata.md",
+    "_build/html/_sources/content/math.md",
+    "_build/html/_sources/content/layout.md",
+    "_build/html/_sources/content/index.md",
+    "_build/html/_sources/content/figures.md",
+    "_build/html/_sources/content/content-blocks.md",
+    "_build/html/_sources/content/components.md",
+    "_build/html/_sources/1-intro/syllabus.md",
+    "_build/html/_sources/1-intro/about.md",
+    "_build/html/_sources/algorithms/intro.md",
+    "_build/html/_sources/content/citations.md",
     "web/index.md",
     "web/announcements.md",
-    "tutorials/references.md",
-    "start/overview.md",
-    "start/your-first-book.md",
-    "start/publish.md",
-    "start/example-book.md",
-    "start/new-file.md",
-    "start/create.md",
-    "start/build.md",
-    "sphinx/index.md",
-    "reference/glossary.md",
-    "reference/_changelog.md",
-    "reference/cli.md",
-    "reference/cheatsheet.md",
-    "publish/web.md"
+    "content/executable/output-insert.md"
   ]
 }
