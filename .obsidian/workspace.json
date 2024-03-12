@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "1-intro/syllabus.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3d90830e494a8403",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Alternative Careers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "Alternative Careers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "Alternative Careers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "Alternative Careers.md"
               }
             }
           }
@@ -146,33 +159,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a529782c4ffa2ea3",
+  "active": "3d90830e494a8403",
   "lastOpenFiles": [
-    "_build/jupyter_execute/data_tools/02.06-Boolean-Arrays-and-Masks.ipynb",
-    "_build/jupyter_execute/data_tools/02.05-Computation-on-arrays-broadcasting.ipynb",
-    "_build/jupyter_execute/2fefae536e7f86392f79382404ed290f76b34cd857507abe6b058bfbe0644e6f.png",
-    "_build/jupyter_execute/data_tools/02.04-Computation-on-arrays-aggregates.ipynb",
-    "_build/jupyter_execute/013a4649339728882e335c9b009c5356b0a640cc659584d71f25f5f08037891d.png",
-    "_build/jupyter_execute/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb",
-    "_build/jupyter_execute/data_tools/02.02-The-Basics-Of-NumPy-Arrays.ipynb",
-    "_build/jupyter_execute/data_tools/02.01-Understanding-Data-Types.ipynb",
-    "_build/jupyter_execute/data_tools/02.00-Introduction-to-NumPy.ipynb",
-    "_build/jupyter_execute/data_tools",
-    "tocnested.yml",
+    "_build/html/searchindex.js.tmp",
+    "1-intro/syllabus.md",
+    "Pasted image 20240311195130.png",
+    "Alternative Careers.md",
+    "Pasted image 20240311194752.png",
+    "_build/html/_images/b75aa46301d89e51d6ac73f1e24974ad36908dc0f1d4a05162f604119ce19ef0.png",
+    "_build/html/_images/d3e92b55272431768369d2f15e769ae12bc3bce5a80876c46349ec3e51c77d05.png",
+    "_build/html/_images/2b07055cdff69c5a3804fddbccd45303718367937086cc3836aa7d75b3bdd387.png",
+    "_build/html/_images/da457f3d8394d05e23900de2d3bcfb1009caef2487fc10437ce7bdbcb4aef9db.png",
+    "_build/html/_images/e904ad53109575b529373522f27a4da1f9594ded0001320eaeb0c9bf442e6045.png",
+    "_build/html/_images/c87aa941a08ef691294a4661d319bb1f17e8701c9259ca199e0736763cecafe9.png",
+    "_build/html/_images/05.12-covariance-type.png",
+    "_build/html/_images/4eba32b7c1aeed386aa9ec3d222bbd69991b8f62e61e73ee979312fda0a81672.png",
+    "_build/html/_sources/index.md",
+    "_build/html/_sources/data_tools/pandas.ipynb",
+    "_build/html/data_tools/pandas.html",
+    "_build/html/_sources/data_tools/introduction.md",
+    "_build/html/data_tools/introduction.html",
+    "_build/html/_sources/data_tools/05.15-Learning-More.ipynb",
+    "_build/html/data_tools/05.15-Learning-More.html",
+    "_build/html/_sources/data_tools/05.14-Image-Features.ipynb",
+    "_build/html/data_tools/05.14-Image-Features.html",
+    "_build/html/_sources/data_tools/05.13-Kernel-Density-Estimation.ipynb",
+    "_build/html/data_tools/05.13-Kernel-Density-Estimation.html",
+    "index.md",
     "readme.md",
     "intro_code.md",
-    "index.md",
-    "data_tools/pandas.ipynb",
-    "data_tools/my_figure.png",
-    "data_tools/mprun_demo.py",
     "data_tools/introduction.md",
-    "data_tools/images/PDSH-cover.png",
-    "data_tools/images/Data_Science_VD.png",
-    "data_tools/images/PDSH-cover-small.png",
-    "data_tools/images/cint_vs_pyint.png",
-    "data_tools/images/array_vs_list.png",
-    "data_tools/images/05.12-covariance-type.png",
-    "data_tools/images/05.10-LLE-vs-MDS.png",
     "web/index.md",
     "web/announcements.md",
     "tutorials/references.md",
@@ -189,10 +205,6 @@
     "reference/cli.md",
     "reference/cheatsheet.md",
     "publish/web.md",
-    "publish/readthedocs.md",
-    "publish/netlify.md",
-    "publish/gh-pages.md",
-    "explain/sphinx.md",
-    "explain/migration.md"
+    "publish/readthedocs.md"
   ]
 }

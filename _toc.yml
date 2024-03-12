@@ -13,7 +13,6 @@ parts:
   - file: algorithms/intro
 
 - caption: Data Science
-  numbered: true
   chapters:
   - file: data_tools/introduction
     sections:
