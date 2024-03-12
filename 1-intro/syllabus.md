@@ -4,6 +4,7 @@
 
 ### Current Courses
 
+- Analysis of Algorithms
 
 ### Future Courses
 
@@ -14,7 +15,7 @@
 
 
 
-### Strategy
+## Strategy
 
 This are some notes from my college courses. As I started this project I acknowledge that I am behind in the sense that I am writing this docs while coursing through my courses. I am starting this project since last semester studying Computer Science @ CUNY Brooklyn College. But Plan to slowly recover the content from the previous courses.
 
@@ -25,6 +26,23 @@ Common Strategies:
 - Developing Simulations and Modeling
   - Can Inspire by playing a Steam Game and inspiring a development of it.
 
+- Use a combination of:
+	- A well respected book
+	- A well recorded video playlist.
+
+### Lecture Notations Strategy
+
+1. Add all Assigments.
+2. Add a video explaining section by section the assigment.
+3. Add your notes if possible
+
+### Traversal and Priority Queue.
+
+1. 2024 Spring - Finish College Major in CS 
+2. 2024 Fall - 2027 Start Game Dev Argentina
+3. 
+
+## Books
 
 Introduction to Algorithms, 4rth Edition, Carmen, Leiserson, Rivest, Stein
 
@@ -88,13 +106,16 @@ Introduction to Algorithms, 4rth Edition, Carmen, Leiserson, Rivest, Stein
 - [Building Evolutionary Architectures: Automated Software Governance](https://www.amazon.com/Building-Evolutionary-Architectures-Automated-Governance/dp/1492097543/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_39/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1492097543&psc=1)
 
 
+
 ### Intensive Data Engineering
+
 - [Designing Data-Intensive Applications](https://www.amazon.com/Fundamentals-Data-Engineering-Robust-Systems/dp/1098108302/ref=m_crc_dp_lf_d_t1_d_sccl_3_9/133-4588073-5551926?pd_rd_w=ERQ4R&content-id=amzn1.sym.76a0b561-a7b4-41dc-9467-a85a2fa27c1c&pf_rd_p=76a0b561-a7b4-41dc-9467-a85a2fa27c1c&pf_rd_r=9XFENY369YA22T7VMYDV&pd_rd_wg=vzmxg&pd_rd_r=48c7df5a-ab59-4d4c-abd5-4c9896f81625&pd_rd_i=1098108302&psc=1)
 - [Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services.](https://www.amazon.com/Designing-Distributed-Systems-Patterns-Paradigms/dp/1491983647/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_17/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1491983647&psc=1)
 - [Database Internals: A Deep Dive into How Distributed Data Systems Work](https://www.amazon.com/Database-Internals-Deep-Distributed-Systems/dp/1492040347/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_7/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1492040347&psc=1)
 - [Kafka The Definitive Guide: Real-Time Data and Stream Processing at Scale.](https://www.amazon.com/Kafka-Definitive-Real-Time-Stream-Processing/dp/1492043087/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_34/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1492043087&psc=1)
 
 ### Game Dev
+
 - [AI For Game Developers](https://www.amazon.com/AI-Game-Developers-Creating-Intelligent/dp/0596005555/ref=sr_1_1?crid=3O67QE25Z6GD7&dib=eyJ2IjoiMSJ9.rCJk3vDZwm6XiUS-Jc8ZUFdQ6RNr3Si-oIA8DAaKtzVbFsMiPSriDADyqVQ_uCdSI8_zPVgkiLQIb_Z-Ug2m_cMDCgxzMGYdBqym97tEeviPqR2_rxVexc9bHZKno-s0ktUD_b_4N2nrK909lAt-soRn9TDHSBmSCsqrmwI21ciRZ3JoLHJYPv8vdNNfNo9s-zWwS4zCMWwBJBKgjhGlSfJukPg9qJvv3b9Uu87yCeo.gQyvlelXeV4yYqLAsKy9P5cJFSmOh-31F3Pg3dEjGBw&dib_tag=se&keywords=Oreilly+games+ai&qid=1709932685&s=books&sprefix=oreilly+games+ai%2Cstripbooks%2C67&sr=1-1)
 - [Game Programming Patterns](https://www.amazon.com/Game-Programming-Patterns-Robert-Nystrom/dp/0990582906/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_1/133-4588073-5551926?pd_rd_w=DEy8T&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=70WN4P699W3TY7EBN28D&pd_rd_wg=wIhgv&pd_rd_r=9eb223d3-5102-4155-80dc-8536d87124a0&pd_rd_i=0990582906&psc=1#customerReviews) 
 - [Theory of Fun for Game Design](https://www.amazon.com/Theory-Game-Design-Raph-Koster/dp/1449363210/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_3/133-4588073-5551926?pd_rd_w=DEy8T&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=70WN4P699W3TY7EBN28D&pd_rd_wg=wIhgv&pd_rd_r=9eb223d3-5102-4155-80dc-8536d87124a0&pd_rd_i=1449363210&psc=1)
@@ -105,6 +126,7 @@ Introduction to Algorithms, 4rth Edition, Carmen, Leiserson, Rivest, Stein
 
 
 ### Philosophic
+
 - [The Staff Engineer's Path: A Guide for Individual Contributors Navigating Growth and Change](https://www.amazon.com/Staff-Engineers-Path-Individual-Contributors/dp/1098118731/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_14/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1098118731&psc=1)
 - [Observability Engineering: Achieving Production Excellence](https://www.amazon.com/Observability-Engineering-Achieving-Production-Excellence/dp/1492076449/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_24/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1492076449&psc=1)
 - [Learning Domain Driven Design: Aligning Software Architecutre and Business Strategy.](https://www.amazon.com/Learning-Domain-Driven-Design-Aligning-Architecture/dp/1098100131/ref=sims_dp_d_dex_ai_speed_loc_mtl_v4_d_sccl_2_23/133-4588073-5551926?pd_rd_w=f5wAC&content-id=amzn1.sym.f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_p=f8b81522-706a-46d3-a585-5fc6e1682ebe&pf_rd_r=SFGTQ360MDDY5KPSE23X&pd_rd_wg=lkOKn&pd_rd_r=12b25d60-4571-4e23-9a3b-6d103687dc15&pd_rd_i=1098100131&psc=1)

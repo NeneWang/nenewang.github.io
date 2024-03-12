@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Alternative Careers.md",
+                "file": "1-intro/syllabus.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Alternative Careers.md",
+                "file": "1-intro/syllabus.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Alternative Careers.md",
+                "file": "1-intro/syllabus.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Alternative Careers.md"
+                "file": "1-intro/syllabus.md"
               }
             }
           }
@@ -161,10 +161,13 @@
   },
   "active": "3d90830e494a8403",
   "lastOpenFiles": [
+    "algorithms/intro.md",
+    "data_tools/introduction.md",
+    "data_tools/hello.png",
+    "Alternative Careers.md",
     "_build/html/searchindex.js.tmp",
     "1-intro/syllabus.md",
     "Pasted image 20240311195130.png",
-    "Alternative Careers.md",
     "Pasted image 20240311194752.png",
     "_build/html/_images/b75aa46301d89e51d6ac73f1e24974ad36908dc0f1d4a05162f604119ce19ef0.png",
     "_build/html/_images/d3e92b55272431768369d2f15e769ae12bc3bce5a80876c46349ec3e51c77d05.png",
@@ -173,7 +176,6 @@
     "_build/html/_images/e904ad53109575b529373522f27a4da1f9594ded0001320eaeb0c9bf442e6045.png",
     "_build/html/_images/c87aa941a08ef691294a4661d319bb1f17e8701c9259ca199e0736763cecafe9.png",
     "_build/html/_images/05.12-covariance-type.png",
-    "_build/html/_images/4eba32b7c1aeed386aa9ec3d222bbd69991b8f62e61e73ee979312fda0a81672.png",
     "_build/html/_sources/index.md",
     "_build/html/_sources/data_tools/pandas.ipynb",
     "_build/html/data_tools/pandas.html",
@@ -188,7 +190,6 @@
     "index.md",
     "readme.md",
     "intro_code.md",
-    "data_tools/introduction.md",
     "web/index.md",
     "web/announcements.md",
     "tutorials/references.md",
@@ -204,7 +205,6 @@
     "reference/_changelog.md",
     "reference/cli.md",
     "reference/cheatsheet.md",
-    "publish/web.md",
-    "publish/readthedocs.md"
+    "publish/web.md"
   ]
 }
