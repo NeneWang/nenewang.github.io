@@ -1,13 +1,12 @@
 #######################################################################################
 # Book settings
-title: ""
-logo: images/logo-wide.svg
+title: "Docs"
+logo: images/2.svg
 author: NeneWang
 email: nelson.wang80@bcmail.cuny.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  This is an example book built with Jupyter Books.
+  This are my notes and documentation for research.
 
-exclude_patterns: [file-types/include-rst.rst]
 
 only_build_toc_files: true
 
@@ -26,20 +25,20 @@ html:
   # (The documentation says only that HTML is allowed, nothing about the base URL is mentioned.)
   # Then we could link to the changelog in the *same* build of the docs.
   # announcement: '⚠️The 0.13 release refactored our HTML, so double-check your custom CSS rules!⚠️'
-  favicon: images/favicon.ico
-  google_analytics_id: UA-52617120-7
-  home_page_in_navbar: false
+  favicon: images/favicon.png
+  # google_analytics_id: UA-52617120-7
+  home_page_in_navbar: true
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
-  baseurl: https://jupyterbook.org/
-  analytics:
-    google_analytics_id = ''
+  baseurl: https://nenewang.github.io/
+  # analytics:
+  #   google_analytics_id = ''
 
 repository:
-  url: https://github.com/NeneWang/lecture-notes
-  branch: master
-  path_to_book: docs
+  url: https://github.com/NeneWang/nenewang.github.io
+  branch: main
+  path_to_book: /
 
 launch_buttons:
   notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
