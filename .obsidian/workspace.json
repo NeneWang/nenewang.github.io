@@ -11,8 +11,12 @@
             "id": "48aef78560d1d711",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "readme.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "readme.md"
+              }
             }
           }
         ]
@@ -138,11 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "720b4658fe19a1e3",
+  "active": "48aef78560d1d711",
   "lastOpenFiles": [
+    "intro_code.md",
+    "index.md",
+    "cite.md",
+    "Alternative Careers.md",
     "Pasted image 20240311195130.png",
     "Pasted image 20240311194752.png",
-    "Alternative Careers.md",
     "_build/html/_images/8669be8ad01115bb7cc04ccad347e334c03f02917457ac9670728711044da293.png",
     "_build/jupyter_execute/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
     "_build/html/_images/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
@@ -151,7 +162,6 @@
     "_build/html/_images/0bd66ba8549a859f621e64052f8915ed44781c573a9e73c8f8a69b57935b410f.png",
     "_build/html/_images/2f011f82be0768bbc6d5f9ae14ceb8604a98f30b4b51bb5815bf6a5564d73c81.png",
     "_build/html/_images/aa3feb57d0b9e8e98461246638e994f8af6b8aca919fd2d89bf1f972fceb8c79.png",
-    "_build/html/_images/7df23ceb33ed0fef4aee6fa22cc696ceee59a5e37b7c89b390562eaae606fd2c.png",
     "_build/html/_sources/data_tools/04.15-Further-Resources.ipynb",
     "_build/html/data_tools/04.15-Further-Resources.html",
     "_build/html/_sources/data_tools/04.14-Visualization-With-Seaborn.ipynb",
@@ -183,8 +193,6 @@
     "_build/html/_sources/1-intro/about.md",
     "_build/html/_sources/algorithms/intro.md",
     "_build/html/_sources/content/citations.md",
-    "web/index.md",
-    "web/announcements.md",
-    "content/executable/output-insert.md"
+    "web/index.md"
   ]
 }
