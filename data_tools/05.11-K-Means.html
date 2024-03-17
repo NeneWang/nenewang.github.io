@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.3.11. In Depth: k-Means Clustering</title>
+    <title>In Depth: k-Means Clustering &#8212; Docs</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/copybutton.js?v=7f8ff830"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,30 +58,17 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/05.11-K-Means';</script>
-    <link rel="canonical" href="https://jupyterbook.org/data_tools/05.11-K-Means.html" />
-    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://nenewang.github.io/data_tools/05.11-K-Means.html" />
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.3.12. In Depth: Gaussian Mixture Models" href="05.12-Gaussian-Mixtures.html" />
-    <link rel="prev" title="1.3.10. In Depth: Manifold Learning" href="05.10-Manifold-Learning.html" />
+    <link rel="next" title="In Depth: Gaussian Mixture Models" href="05.12-Gaussian-Mixtures.html" />
+    <link rel="prev" title="In Depth: Manifold Learning" href="05.10-Manifold-Learning.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,8 +157,8 @@
       
     
     
-    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
+    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
   
   
 </a></div>
@@ -188,6 +175,14 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Nelson Wang
+                </a>
+            </li>
+        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -199,75 +194,52 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.3.11. In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +298,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/05.11-K-Means.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/05.11-K-Means.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +316,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/05.11-K-Means.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/05.11-K-Means.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,7 +365,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +382,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/05.11-K-Means.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/05.11-K-Means.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -427,7 +399,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/05.11-K-Means.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/05.11-K-Means.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -551,17 +523,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-k-means">1.3.11.1. Introducing k-Means</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectationmaximization">1.3.11.2. Expectation–Maximization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-globally-optimal-result-may-not-be-achieved">1.3.11.2.1. The globally optimal result may not be achieved</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-clusters-must-be-selected-beforehand">1.3.11.2.2. The number of clusters must be selected beforehand</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-is-limited-to-linear-cluster-boundaries">1.3.11.2.3. k-means is limited to linear cluster boundaries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-can-be-slow-for-large-numbers-of-samples">1.3.11.2.4. k-means can be slow for large numbers of samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-k-means">Introducing k-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectationmaximization">Expectation–Maximization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-globally-optimal-result-may-not-be-achieved">The globally optimal result may not be achieved</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-clusters-must-be-selected-beforehand">The number of clusters must be selected beforehand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-is-limited-to-linear-cluster-boundaries">k-means is limited to linear cluster boundaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-can-be-slow-for-large-numbers-of-samples">k-means can be slow for large numbers of samples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">1.3.11.3. Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-k-means-on-digits">1.3.11.3.1. Example 1: k-Means on Digits</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-k-means-for-color-compression">1.3.11.3.2. Example 2: k-Means for Color Compression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-k-means-on-digits">Example 1: k-Means on Digits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-k-means-for-color-compression">Example 2: k-Means for Color Compression</a></li>
 </ul>
 </li>
 </ul>
@@ -576,7 +548,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="in-depth-k-means-clustering">
-<h1><span class="section-number">1.3.11. </span>In Depth: k-Means Clustering<a class="headerlink" href="#in-depth-k-means-clustering" title="Link to this heading">#</a></h1>
+<h1>In Depth: k-Means Clustering<a class="headerlink" href="#in-depth-k-means-clustering" title="Link to this heading">#</a></h1>
 <p>In the previous chapters we explored unsupervised machine learning models for dimensionality reduction.
 Now we will move on to another class of unsupervised machine learning models: clustering algorithms.
 Clustering algorithms seek to learn, from the properties of the data, an optimal division or discrete labeling of groups of points.</p>
@@ -591,9 +563,11 @@ Clustering algorithms seek to learn, from the properties of the data, an optimal
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+</div>
 </div>
 <section id="introducing-k-means">
-<h2><span class="section-number">1.3.11.1. </span>Introducing k-Means<a class="headerlink" href="#introducing-k-means" title="Link to this heading">#</a></h2>
+<h2>Introducing k-Means<a class="headerlink" href="#introducing-k-means" title="Link to this heading">#</a></h2>
 <p>The <em>k</em>-means algorithm searches for a predetermined number of clusters within an unlabeled multidimensional dataset.
 It accomplishes this using a simple conception of what the optimal clustering looks like:</p>
 <ul class="simple">
@@ -614,7 +588,17 @@ To emphasize that this is an unsupervised algorithm, we will leave the labels ou
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4da3c1a6748bfee2a19edd6be1163f080085d2ba8716f04937f1641211602576.png" src="../_images/4da3c1a6748bfee2a19edd6be1163f080085d2ba8716f04937f1641211602576.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">X</span><span class="p">,</span> <span class="n">y_true</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                        <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.60</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">);</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>By eye, it is relatively easy to pick out the four clusters.
@@ -629,6 +613,16 @@ The <em>k</em>-means algorithm does this automatically, and in Scikit-Learn uses
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>Let’s visualize the results by plotting the data colored by these labels (the following figure).
@@ -643,7 +637,16 @@ We will also plot the cluster centers as determined by the <em>k</em>-means esti
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/166bcb613a4e28f86dc63226996af8bacb24c41675e6ef5d5400071bea013317.png" src="../_images/166bcb613a4e28f86dc63226996af8bacb24c41675e6ef5d5400071bea013317.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y_kmeans</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">centers</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">centers</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">centers</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">);</span>
+
+<span class="ne">NameError</span>: name &#39;X&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>The good news is that the <em>k</em>-means algorithm (at least in this simple case) assigns the points to clusters very similarly to how we might assign them by eye.
@@ -651,7 +654,7 @@ But you might wonder how this algorithm finds these clusters so quickly: after a
 Fortunately for us, such an exhaustive search is not necessary: instead, the typical approach to <em>k</em>-means involves an intuitive iterative approach known as <em>expectation–maximization</em>.</p>
 </section>
 <section id="expectationmaximization">
-<h2><span class="section-number">1.3.11.2. </span>Expectation–Maximization<a class="headerlink" href="#expectationmaximization" title="Link to this heading">#</a></h2>
+<h2>Expectation–Maximization<a class="headerlink" href="#expectationmaximization" title="Link to this heading">#</a></h2>
 <p>Expectation–maximization (E–M) is a powerful algorithm that comes up in a variety of contexts within data science.
 <em>k</em>-means is a particularly simple and easy-to-understand application of the algorithm, and we will walk through it briefly here.
 In short, the expectation–maximization approach here consists of the following procedure:</p>
@@ -706,13 +709,23 @@ The following is a very basic implementation (see the following figure):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/48f67194cbe8df1cf6faa6ca770d39e08c6bbb9a81f6efc6fe63abcc4a3d0c99.png" src="../_images/48f67194cbe8df1cf6faa6ca770d39e08c6bbb9a81f6efc6fe63abcc4a3d0c99.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">pairwise_distances_argmin</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">find_clusters</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">n_clusters</span><span class="p">,</span> <span class="n">rseed</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="c1"># 1. Randomly choose clusters</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">rseed</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>Most well-tested implementations will do a bit more than this under the hood, but the preceding function gives the gist of the expectation–maximization approach.</p>
 <p>There are a few caveats to be aware of when using the expectation–maximization algorithm:</p>
 <section id="the-globally-optimal-result-may-not-be-achieved">
-<h3><span class="section-number">1.3.11.2.1. </span>The globally optimal result may not be achieved<a class="headerlink" href="#the-globally-optimal-result-may-not-be-achieved" title="Link to this heading">#</a></h3>
+<h3>The globally optimal result may not be achieved<a class="headerlink" href="#the-globally-optimal-result-may-not-be-achieved" title="Link to this heading">#</a></h3>
 <p>First, although the E–M procedure is guaranteed to improve the result in each step, there is no assurance that it will lead to the <em>global</em> best solution.
 For example, if we use a different random seed in our simple procedure, the particular starting guesses lead to poor results (see the following figure):</p>
 <div class="cell docutils container">
@@ -724,13 +737,22 @@ For example, if we use a different random seed in our simple procedure, the part
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/12b3f596028aced19c42bdc7934e5d85d1c591c451d2a553a6b6eb79aa817db3.png" src="../_images/12b3f596028aced19c42bdc7934e5d85d1c591c451d2a553a6b6eb79aa817db3.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">centers</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">find_clusters</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">rseed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>             <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">);</span>
+
+<span class="ne">NameError</span>: name &#39;find_clusters&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Here the E–M approach has converged, but has not converged to a globally optimal configuration. For this reason, it is common for the algorithm to be run for multiple starting guesses, as indeed Scikit-Learn does by default (the number is set by the <code class="docutils literal notranslate"><span class="pre">n_init</span></code> parameter, which defaults to 10).</p>
 </section>
 <section id="the-number-of-clusters-must-be-selected-beforehand">
-<h3><span class="section-number">1.3.11.2.2. </span>The number of clusters must be selected beforehand<a class="headerlink" href="#the-number-of-clusters-must-be-selected-beforehand" title="Link to this heading">#</a></h3>
+<h3>The number of clusters must be selected beforehand<a class="headerlink" href="#the-number-of-clusters-must-be-selected-beforehand" title="Link to this heading">#</a></h3>
 <p>Another common challenge with <em>k</em>-means is that you must tell it how many clusters you expect: it cannot learn the number of clusters from the data.
 For example, if we ask the algorithm to identify six clusters, it will happily proceed and find the best six clusters, as shown in Figure 47-6:</p>
 <div class="cell docutils container">
@@ -742,14 +764,23 @@ For example, if we ask the algorithm to identify six clusters, it will happily p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9800f8a929af1885745eab07c2563199149b82305457242019cc5b5b0a9d006b.png" src="../_images/9800f8a929af1885745eab07c2563199149b82305457242019cc5b5b0a9d006b.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>             <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">);</span>
+
+<span class="ne">NameError</span>: name &#39;KMeans&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Whether the result is meaningful is a question that is difficult to answer definitively; one approach that is rather intuitive, but that we won’t discuss further here, is called <a class="reference external" href="http://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html">silhouette analysis</a>.</p>
 <p>Alternatively, you might use a more complicated clustering algorithm that has a better quantitative measure of the fitness per number of clusters (e.g., Gaussian mixture models; see <a class="reference internal" href="05.12-Gaussian-Mixtures.html"><span class="std std-doc">In Depth: Gaussian Mixture Models</span></a>) or which <em>can</em> choose a suitable number of clusters (e.g., DBSCAN, mean-shift, or affinity propagation, all available in the <code class="docutils literal notranslate"><span class="pre">sklearn.cluster</span></code> submodule).</p>
 </section>
 <section id="k-means-is-limited-to-linear-cluster-boundaries">
-<h3><span class="section-number">1.3.11.2.3. </span>k-means is limited to linear cluster boundaries<a class="headerlink" href="#k-means-is-limited-to-linear-cluster-boundaries" title="Link to this heading">#</a></h3>
+<h3>k-means is limited to linear cluster boundaries<a class="headerlink" href="#k-means-is-limited-to-linear-cluster-boundaries" title="Link to this heading">#</a></h3>
 <p>The fundamental model assumptions of <em>k</em>-means (points will be closer to their own cluster center than to others) means that the algorithm will often be ineffective if the clusters have complicated geometries.</p>
 <p>In particular, the boundaries between <em>k</em>-means clusters will always be linear, which means that it will fail for more complicated boundaries.
 Consider the following data, along with the cluster labels found by the typical <em>k</em>-means approach (see the following figure):</p>
@@ -757,6 +788,17 @@ Consider the following data, along with the cluster labels found by the typical 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_moons</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_moons</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_moons</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_moons</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>
@@ -770,7 +812,16 @@ Consider the following data, along with the cluster labels found by the typical 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9f19d8c80b130eb34a1cc0f68e8cedc4544b7725ab3275c5b81038cac6f9d041.png" src="../_images/9f19d8c80b130eb34a1cc0f68e8cedc4544b7725ab3275c5b81038cac6f9d041.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>             <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">);</span>
+
+<span class="ne">NameError</span>: name &#39;KMeans&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>This situation is reminiscent of the discussion in <a class="reference internal" href="05.07-Support-Vector-Machines.html"><span class="std std-doc">In-Depth: Support Vector Machines</span></a>, where we used a kernel transformation to project the data into a higher dimension where a linear separation is possible.
@@ -789,13 +840,23 @@ It uses the graph of nearest neighbors to compute a higher-dimensional represent
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/de4d099a7edaa66ea4e472d23a65f862ce75d4e3fd90a2e9cc1c95ed5cf3ab87.png" src="../_images/de4d099a7edaa66ea4e472d23a65f862ce75d4e3fd90a2e9cc1c95ed5cf3ab87.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">SpectralClustering</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">SpectralClustering</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">affinity</span><span class="o">=</span><span class="s1">&#39;nearest_neighbors&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                            <span class="n">assign_labels</span><span class="o">=</span><span class="s1">&#39;kmeans&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>We see that with this kernel transform approach, the kernelized <em>k</em>-means is able to find the more complicated nonlinear boundaries between clusters.</p>
 </section>
 <section id="k-means-can-be-slow-for-large-numbers-of-samples">
-<h3><span class="section-number">1.3.11.2.4. </span>k-means can be slow for large numbers of samples<a class="headerlink" href="#k-means-can-be-slow-for-large-numbers-of-samples" title="Link to this heading">#</a></h3>
+<h3>k-means can be slow for large numbers of samples<a class="headerlink" href="#k-means-can-be-slow-for-large-numbers-of-samples" title="Link to this heading">#</a></h3>
 <p>Because each iteration of <em>k</em>-means must access every point in the dataset, the algorithm can be relatively slow as the number of samples grows.
 You might wonder if this requirement to use all data at each iteration can be relaxed; for example, you might just use a subset of the data to update the cluster centers at each step.
 This is the idea behind batch-based <em>k</em>-means algorithms, one form of which is implemented in <code class="docutils literal notranslate"><span class="pre">sklearn.cluster.MiniBatchKMeans</span></code>.
@@ -803,11 +864,11 @@ The interface for this is the same as for standard <code class="docutils literal
 </section>
 </section>
 <section id="examples">
-<h2><span class="section-number">1.3.11.3. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 <p>Being careful about these limitations of the algorithm, we can use <em>k</em>-means to our advantage in a variety of situations.
 We’ll now take a look at a couple of examples.</p>
 <section id="example-1-k-means-on-digits">
-<h3><span class="section-number">1.3.11.3.1. </span>Example 1: k-Means on Digits<a class="headerlink" href="#example-1-k-means-on-digits" title="Link to this heading">#</a></h3>
+<h3>Example 1: k-Means on Digits<a class="headerlink" href="#example-1-k-means-on-digits" title="Link to this heading">#</a></h3>
 <p>To start, let’s take a look at applying <em>k</em>-means on the same simple digits data that we saw in <a class="reference internal" href="05.08-Random-Forests.html"><span class="std std-doc">In-Depth: Decision Trees and Random Forests</span></a> and <a class="reference internal" href="05.09-Principal-Component-Analysis.html"><span class="std std-doc">In Depth: Principal Component Analysis</span></a>.
 Here we will attempt to use <em>k</em>-means to try to identify similar digits <em>without using the original label information</em>; this might be similar to a first step in extracting meaning from a new dataset about which you don’t have any <em>a priori</em> label information.</p>
 <p>We will start by loading the dataset, then find the clusters.
@@ -821,7 +882,14 @@ Recall that the digits dataset consists of 1,797 samples with 64 features, where
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1797, 64)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>
@@ -836,7 +904,14 @@ Recall that the digits dataset consists of 1,797 samples with 64 features, where
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 64)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">clusters</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">NameError</span>: name &#39;KMeans&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -855,7 +930,18 @@ Let’s see what these cluster centers look like (see the following figure):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/38bc0b344942d9a0c33d4fe5487415e384678d15ce3786b72ed2be48767920a8.png" src="../_images/38bc0b344942d9a0c33d4fe5487415e384678d15ce3786b72ed2be48767920a8.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">centers</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">axi</span><span class="p">,</span> <span class="n">center</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">centers</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">axi</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[])</span>
+
+<span class="ne">NameError</span>: name &#39;kmeans&#39; is not defined
+</pre></div>
+</div>
+<img alt="../_images/4eba32b7c1aeed386aa9ec3d222bbd69991b8f62e61e73ee979312fda0a81672.png" src="../_images/4eba32b7c1aeed386aa9ec3d222bbd69991b8f62e61e73ee979312fda0a81672.png" />
 </div>
 </div>
 <p>We see that <em>even without the labels</em>, <code class="docutils literal notranslate"><span class="pre">KMeans</span></code> is able to find clusters whose centers are recognizable digits, with perhaps the exception of 1 and 8.</p>
@@ -872,6 +958,19 @@ We can fix this by matching each learned cluster label with the true labels foun
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">mode</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">clusters</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">clusters</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;clusters&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now we can check how accurate our unsupervised clustering was in finding similar digits within the data:</p>
 <div class="cell docutils container">
@@ -882,7 +981,13 @@ We can fix this by matching each learned cluster label with the true labels foun
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7935447968836951
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>
@@ -904,7 +1009,16 @@ Let’s check the confusion matrix for this, visualized in the following figure:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d44b4e15371c9c3fd4ec920d9ce2c42d7d63307e2ebb9833d4f516bed3609676.png" src="../_images/d44b4e15371c9c3fd4ec920d9ce2c42d7d63307e2ebb9833d4f516bed3609676.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>As we might expect from the cluster centers we visualized before, the main point of confusion is between the eights and ones.
@@ -938,7 +1052,15 @@ Let’s see how it does:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9415692821368948
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Project the data: this step will take several seconds</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s1">&#39;random&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="n">learning_rate</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
 </pre></div>
 </div>
 </div>
@@ -947,7 +1069,7 @@ Let’s see how it does:</p>
 This is the power of unsupervised learning when used carefully: it can extract information from the dataset that it might be difficult to extract by hand or by eye.</p>
 </section>
 <section id="example-2-k-means-for-color-compression">
-<h3><span class="section-number">1.3.11.3.2. </span>Example 2: k-Means for Color Compression<a class="headerlink" href="#example-2-k-means-for-color-compression" title="Link to this heading">#</a></h3>
+<h3>Example 2: k-Means for Color Compression<a class="headerlink" href="#example-2-k-means-for-color-compression" title="Link to this heading">#</a></h3>
 <p>One interesting application of clustering is in color compression within images (this example is adapted from Scikit-Learn’s <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/cluster/plot_color_quantization.html">“Color Quantization Using K-Means”</a>.
 For example, imagine you have an image with millions of colors.
 In most images, a large number of the colors will be unused, and many of the pixels in the image will have similar or even identical colors.</p>
@@ -964,7 +1086,17 @@ In most images, a large number of the colors will be unused, and many of the pix
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3b7b7cfa74c307491b6ec37685d37f1eaaf4d6dfdddd644ac9b7ecc49d30b4d7.png" src="../_images/3b7b7cfa74c307491b6ec37685d37f1eaaf4d6dfdddd644ac9b7ecc49d30b4d7.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Note: this requires the PIL package to be installed</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_sample_image</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">china</span> <span class="o">=</span> <span class="n">load_sample_image</span><span class="p">(</span><span class="s2">&quot;china.jpg&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>The image itself is stored in a three-dimensional array of size <code class="docutils literal notranslate"><span class="pre">(height,</span> <span class="pre">width,</span> <span class="pre">RGB)</span></code>, containing red/blue/green contributions as integers from 0 to 255:</p>
@@ -975,7 +1107,12 @@ In most images, a large number of the colors will be unused, and many of the pix
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(427, 640, 3)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">china</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">NameError</span>: name &#39;china&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -991,7 +1128,14 @@ We will reshape the data to <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(273280, 3)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">china</span> <span class="o">/</span> <span class="mf">255.0</span>  <span class="c1"># use 0...1 scale</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="ne">NameError</span>: name &#39;china&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1028,7 +1172,14 @@ We will reshape the data to <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/790f0e79ce2587fcfcdff6b23d6c621d9ebef32fc1213d4978551469f62ccb3d.png" src="../_images/790f0e79ce2587fcfcdff6b23d6c621d9ebef32fc1213d4978551469f62ccb3d.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plot_pixels</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Input color space: 16 million possible colors&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Now let’s reduce these 16 million colors to just 16 colors, using a <em>k</em>-means clustering across the pixel space.
@@ -1046,7 +1197,16 @@ Because we are dealing with a very large dataset, we will use the mini-batch <em
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/12c12af3242d0511f138056ea34ae7629f03b93dbd3432b6f40fd462387f803f.png" src="../_images/12c12af3242d0511f138056ea34ae7629f03b93dbd3432b6f40fd462387f803f.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">MiniBatchKMeans</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">kmeans</span> <span class="o">=</span> <span class="n">MiniBatchKMeans</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>The result is a recoloring of the original pixels, where each pixel is assigned the color of its closest cluster center.
@@ -1066,7 +1226,17 @@ Plotting these new colors in the image space rather than the pixel space shows u
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/14e15ece300a5462434ef3ebe98e756c550a50612bdc378c4bb68f7dfe447aab.png" src="../_images/14e15ece300a5462434ef3ebe98e756c550a50612bdc378c4bb68f7dfe447aab.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">china_recolored</span> <span class="o">=</span> <span class="n">new_colors</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">china</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                        <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[]))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;new_colors&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Some detail is certainly lost in the rightmost panel, but the overall image is still easily recognizable.
@@ -1080,8 +1250,8 @@ Now, this kind of approach is not going to match the fidelity of purpose-built i
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/lecture-notes",
-            ref: "master",
+            repo: "NeneWang/nenewang.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1112,7 +1282,7 @@ Now, this kind of approach is not going to match the fidelity of purpose-built i
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.3.10. </span>In Depth: Manifold Learning</p>
+        <p class="prev-next-title">In Depth: Manifold Learning</p>
       </div>
     </a>
     <a class="right-next"
@@ -1120,7 +1290,7 @@ Now, this kind of approach is not going to match the fidelity of purpose-built i
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.3.12. </span>In Depth: Gaussian Mixture Models</p>
+        <p class="prev-next-title">In Depth: Gaussian Mixture Models</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1140,17 +1310,17 @@ Now, this kind of approach is not going to match the fidelity of purpose-built i
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-k-means">1.3.11.1. Introducing k-Means</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectationmaximization">1.3.11.2. Expectation–Maximization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-globally-optimal-result-may-not-be-achieved">1.3.11.2.1. The globally optimal result may not be achieved</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-clusters-must-be-selected-beforehand">1.3.11.2.2. The number of clusters must be selected beforehand</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-is-limited-to-linear-cluster-boundaries">1.3.11.2.3. k-means is limited to linear cluster boundaries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-can-be-slow-for-large-numbers-of-samples">1.3.11.2.4. k-means can be slow for large numbers of samples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-k-means">Introducing k-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectationmaximization">Expectation–Maximization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-globally-optimal-result-may-not-be-achieved">The globally optimal result may not be achieved</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-of-clusters-must-be-selected-beforehand">The number of clusters must be selected beforehand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-is-limited-to-linear-cluster-boundaries">k-means is limited to linear cluster boundaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-means-can-be-slow-for-large-numbers-of-samples">k-means can be slow for large numbers of samples</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">1.3.11.3. Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-k-means-on-digits">1.3.11.3.1. Example 1: k-Means on Digits</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-k-means-for-color-compression">1.3.11.3.2. Example 2: k-Means for Color Compression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-k-means-on-digits">Example 1: k-Means on Digits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-k-means-for-color-compression">Example 2: k-Means for Color Compression</a></li>
 </ul>
 </li>
 </ul>

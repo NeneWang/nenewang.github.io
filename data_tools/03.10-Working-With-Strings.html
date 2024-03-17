@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.2.12. Vectorized String Operations</title>
+    <title>Vectorized String Operations &#8212; Docs</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/copybutton.js?v=7f8ff830"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,30 +58,17 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03.10-Working-With-Strings';</script>
-    <link rel="canonical" href="https://jupyterbook.org/data_tools/03.10-Working-With-Strings.html" />
-    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://nenewang.github.io/data_tools/03.10-Working-With-Strings.html" />
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.2.13. Working with Time Series" href="03.11-Working-with-Time-Series.html" />
-    <link rel="prev" title="1.2.11. Pivot Tables" href="03.09-Pivot-Tables.html" />
+    <link rel="next" title="Working with Time Series" href="03.11-Working-with-Time-Series.html" />
+    <link rel="prev" title="Pivot Tables" href="03.09-Pivot-Tables.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,8 +157,8 @@
       
     
     
-    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
+    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
   
   
 </a></div>
@@ -188,6 +175,14 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Nelson Wang
+                </a>
+            </li>
+        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -199,75 +194,52 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.12. Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +298,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03.10-Working-With-Strings.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/03.10-Working-With-Strings.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +316,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03.10-Working-With-Strings.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/03.10-Working-With-Strings.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,7 +365,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +382,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03.10-Working-With-Strings.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/03.10-Working-With-Strings.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -427,7 +399,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.10-Working-With-Strings.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.10-Working-With-Strings.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -551,20 +523,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-pandas-string-operations">1.2.12.1. Introducing Pandas String Operations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables-of-pandas-string-methods">1.2.12.2. Tables of Pandas String Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-similar-to-python-string-methods">1.2.12.2.1. Methods Similar to Python String Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-using-regular-expressions">1.2.12.2.2. Methods Using Regular Expressions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-methods">1.2.12.2.3. Miscellaneous Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorized-item-access-and-slicing">1.2.12.2.3.1. Vectorized item access and slicing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#indicator-variables">1.2.12.2.3.2. Indicator variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-pandas-string-operations">Introducing Pandas String Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables-of-pandas-string-methods">Tables of Pandas String Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-similar-to-python-string-methods">Methods Similar to Python String Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-using-regular-expressions">Methods Using Regular Expressions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-methods">Miscellaneous Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorized-item-access-and-slicing">Vectorized item access and slicing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#indicator-variables">Indicator variables</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-recipe-database">1.2.12.3. Example: Recipe Database</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-recipe-recommender">1.2.12.3.1. A Simple Recipe Recommender</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further-with-recipes">1.2.12.3.2. Going Further with Recipes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-recipe-database">Example: Recipe Database</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-recipe-recommender">A Simple Recipe Recommender</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further-with-recipes">Going Further with Recipes</a></li>
 </ul>
 </li>
 </ul>
@@ -579,12 +551,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="vectorized-string-operations">
-<h1><span class="section-number">1.2.12. </span>Vectorized String Operations<a class="headerlink" href="#vectorized-string-operations" title="Link to this heading">#</a></h1>
+<h1>Vectorized String Operations<a class="headerlink" href="#vectorized-string-operations" title="Link to this heading">#</a></h1>
 <p>One strength of Python is its relative ease in handling and manipulating string data.
 Pandas builds on this and provides a comprehensive set of <em>vectorized string operations</em> that are an important part of the type of munging required when working with (read: cleaning up) real-world data.
 In this chapter, we’ll walk through some of the Pandas string operations, and then take a look at using them to partially clean up a very messy dataset of recipes collected from the internet.</p>
 <section id="introducing-pandas-string-operations">
-<h2><span class="section-number">1.2.12.1. </span>Introducing Pandas String Operations<a class="headerlink" href="#introducing-pandas-string-operations" title="Link to this heading">#</a></h2>
+<h2>Introducing Pandas String Operations<a class="headerlink" href="#introducing-pandas-string-operations" title="Link to this heading">#</a></h2>
 <p>We saw in previous chapters how tools like NumPy and Pandas generalize arithmetic operations so that we can easily and quickly perform the same operation on many array elements. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -653,7 +625,7 @@ dtype: object
 </div>
 </section>
 <section id="tables-of-pandas-string-methods">
-<h2><span class="section-number">1.2.12.2. </span>Tables of Pandas String Methods<a class="headerlink" href="#tables-of-pandas-string-methods" title="Link to this heading">#</a></h2>
+<h2>Tables of Pandas String Methods<a class="headerlink" href="#tables-of-pandas-string-methods" title="Link to this heading">#</a></h2>
 <p>If you have a good understanding of string manipulation in Python, most of the Pandas string syntax is intuitive enough that it’s probably sufficient to just list the available methods. We’ll start with that here, before diving deeper into a few of the subtleties.
 The examples in this section use the following <code class="docutils literal notranslate"><span class="pre">Series</span></code> object:</p>
 <div class="cell docutils container">
@@ -665,7 +637,7 @@ The examples in this section use the following <code class="docutils literal not
 </div>
 </div>
 <section id="methods-similar-to-python-string-methods">
-<h3><span class="section-number">1.2.12.2.1. </span>Methods Similar to Python String Methods<a class="headerlink" href="#methods-similar-to-python-string-methods" title="Link to this heading">#</a></h3>
+<h3>Methods Similar to Python String Methods<a class="headerlink" href="#methods-similar-to-python-string-methods" title="Link to this heading">#</a></h3>
 <p>Nearly all of Python’s built-in string methods are mirrored by a Pandas vectorized string method. Here is a list of Pandas <code class="docutils literal notranslate"><span class="pre">str</span></code> methods that mirror Python string methods:</p>
 <table class="table">
 <thead>
@@ -797,7 +769,7 @@ dtype: object
 <p>We’ll see further manipulations of this kind of series-of-lists object as we continue our discussion.</p>
 </section>
 <section id="methods-using-regular-expressions">
-<h3><span class="section-number">1.2.12.2.2. </span>Methods Using Regular Expressions<a class="headerlink" href="#methods-using-regular-expressions" title="Link to this heading">#</a></h3>
+<h3>Methods Using Regular Expressions<a class="headerlink" href="#methods-using-regular-expressions" title="Link to this heading">#</a></h3>
 <p>In addition, there are several methods that accept regular expressions (regexps) to examine the content of each string element, and follow some of the API conventions of Python’s built-in <code class="docutils literal notranslate"><span class="pre">re</span></code> module:</p>
 <table class="table">
 <thead>
@@ -874,7 +846,7 @@ dtype: object
 <p>The ability to concisely apply regular expressions across <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> entries opens up many possibilities for analysis and cleaning of data.</p>
 </section>
 <section id="miscellaneous-methods">
-<h3><span class="section-number">1.2.12.2.3. </span>Miscellaneous Methods<a class="headerlink" href="#miscellaneous-methods" title="Link to this heading">#</a></h3>
+<h3>Miscellaneous Methods<a class="headerlink" href="#miscellaneous-methods" title="Link to this heading">#</a></h3>
 <p>Finally, there are some miscellaneous methods that enable other convenient operations:</p>
 <table class="table">
 <thead>
@@ -916,7 +888,7 @@ dtype: object
 </tbody>
 </table>
 <section id="vectorized-item-access-and-slicing">
-<h4><span class="section-number">1.2.12.2.3.1. </span>Vectorized item access and slicing<a class="headerlink" href="#vectorized-item-access-and-slicing" title="Link to this heading">#</a></h4>
+<h4>Vectorized item access and slicing<a class="headerlink" href="#vectorized-item-access-and-slicing" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">get</span></code> and <code class="docutils literal notranslate"><span class="pre">slice</span></code> operations, in particular, enable vectorized element access from each array.
 For example, we can get a slice of the first three characters of each array using <code class="docutils literal notranslate"><span class="pre">str.slice(0,</span> <span class="pre">3)</span></code>.
 Note that this behavior is also available through Python’s normal indexing syntax; for example, <code class="docutils literal notranslate"><span class="pre">df.str.slice(0,</span> <span class="pre">3)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">df.str[0:3]</span></code>:</p>
@@ -961,7 +933,7 @@ dtype: object
 </div>
 </section>
 <section id="indicator-variables">
-<h4><span class="section-number">1.2.12.2.3.2. </span>Indicator variables<a class="headerlink" href="#indicator-variables" title="Link to this heading">#</a></h4>
+<h4>Indicator variables<a class="headerlink" href="#indicator-variables" title="Link to this heading">#</a></h4>
 <p>Another method that requires a bit of extra explanation is the <code class="docutils literal notranslate"><span class="pre">get_dummies</span></code> method.
 This is useful when your data has a column containing some sort of coded indicator.
 For example, we might have a dataset that contains information in the form of codes, such as A = “born in America,” B = “born in the United Kingdom,” C = “likes cheese,” D = “likes spam”:</p>
@@ -1117,7 +1089,7 @@ For example, we might have a dataset that contains information in the form of co
 </section>
 </section>
 <section id="example-recipe-database">
-<h2><span class="section-number">1.2.12.3. </span>Example: Recipe Database<a class="headerlink" href="#example-recipe-database" title="Link to this heading">#</a></h2>
+<h2>Example: Recipe Database<a class="headerlink" href="#example-recipe-database" title="Link to this heading">#</a></h2>
 <p>These vectorized string operations become most useful in the process of cleaning up messy, real-world data.
 Here I’ll walk through an example of that, using an open recipe database compiled from various sources on the web.
 Our goal will be to parse the recipe data into ingredient lists, so we can quickly find a recipe based on some ingredients we have on hand. The scripts used to compile this can be found at <a class="github reference external" href="https://github.com/fictivekin/openrecipes">fictivekin/openrecipes</a>, and the link to the most recent version of the database is found there as well.</p>
@@ -1141,64 +1113,61 @@ Our goal will be to parse the recipe data into ingredient lists, so we can quick
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">recipes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;data/recipeitems.json&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">recipes</span><span class="o">.</span><span class="n">shape</span>
 
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\util\_decorators.py:207,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
-<span class="ne">--&gt; </span><span class="mi">207</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File C:\Python310\lib\site-packages\pandas\io\json\_json.py:791,</span> in <span class="ni">read_json</span><span class="nt">(path_or_buf, orient, typ, dtype, convert_axes, convert_dates, keep_default_dates, precise_float, date_unit, encoding, encoding_errors, lines, chunksize, compression, nrows, storage_options, dtype_backend, engine)</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span> <span class="k">if</span> <span class="n">convert_axes</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">orient</span> <span class="o">!=</span> <span class="s2">&quot;table&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">convert_axes</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">791</span> <span class="n">json_reader</span> <span class="o">=</span> <span class="n">JsonReader</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">path_or_buf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">orient</span><span class="o">=</span><span class="n">orient</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">typ</span><span class="o">=</span><span class="n">typ</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">convert_axes</span><span class="o">=</span><span class="n">convert_axes</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">convert_dates</span><span class="o">=</span><span class="n">convert_dates</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">keep_default_dates</span><span class="o">=</span><span class="n">keep_default_dates</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="n">precise_float</span><span class="o">=</span><span class="n">precise_float</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="n">date_unit</span><span class="o">=</span><span class="n">date_unit</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span>     <span class="n">lines</span><span class="o">=</span><span class="n">lines</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span>     <span class="n">chunksize</span><span class="o">=</span><span class="n">chunksize</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="n">nrows</span><span class="o">=</span><span class="n">nrows</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">807</span>     <span class="n">encoding_errors</span><span class="o">=</span><span class="n">encoding_errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">808</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>     <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span> <span class="k">if</span> <span class="n">chunksize</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">return</span> <span class="n">json_reader</span>
 
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\util\_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="nn">File C:\Python310\lib\site-packages\pandas\io\json\_json.py:904,</span> in <span class="ni">JsonReader.__init__</span><span class="nt">(self, filepath_or_buffer, orient, typ, dtype, convert_axes, convert_dates, keep_default_dates, precise_float, date_unit, encoding, lines, chunksize, compression, nrows, storage_options, encoding_errors, dtype_backend, engine)</span>
+<span class="g g-Whitespace">    </span><span class="mi">902</span>     <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">filepath_or_buffer</span>
+<span class="g g-Whitespace">    </span><span class="mi">903</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">==</span> <span class="s2">&quot;ujson&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">904</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_data_from_filepath</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">905</span>     <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocess_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:612,</span> in <span class="ni">read_json</span><span class="nt">(path_or_buf, orient, typ, dtype, convert_axes, convert_dates, keep_default_dates, numpy, precise_float, date_unit, encoding, encoding_errors, lines, chunksize, compression, nrows, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">609</span>     <span class="k">return</span> <span class="n">json_reader</span>
-<span class="g g-Whitespace">    </span><span class="mi">611</span> <span class="k">with</span> <span class="n">json_reader</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">612</span>     <span class="k">return</span> <span class="n">json_reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nn">File C:\Python310\lib\site-packages\pandas\io\json\_json.py:960,</span> in <span class="ni">JsonReader._get_data_from_filepath</span><span class="nt">(self, filepath_or_buffer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">952</span>     <span class="n">filepath_or_buffer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+<span class="g g-Whitespace">    </span><span class="mi">953</span> <span class="k">elif</span> <span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">954</span>     <span class="nb">isinstance</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">955</span>     <span class="ow">and</span> <span class="n">filepath_or_buffer</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">958</span>     <span class="ow">and</span> <span class="ow">not</span> <span class="n">file_exists</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">959</span> <span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">960</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">filepath_or_buffer</span><span class="si">}</span><span class="s2"> does not exist&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">961</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">962</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">963</span>         <span class="s2">&quot;Passing literal json to &#39;read_json&#39; is deprecated and &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">964</span>         <span class="s2">&quot;will be removed in a future version. To read from a &quot;</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">967</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">968</span>     <span class="p">)</span>
 
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:744,</span> in <span class="ni">JsonReader.read</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">742</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">ensure_str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="n">data_lines</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">744</span>         <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_object_parser</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_combine_lines</span><span class="p">(</span><span class="n">data_lines</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">745</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">746</span>     <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_object_parser</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:768,</span> in <span class="ni">JsonReader._get_object_parser</span><span class="nt">(self, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">766</span> <span class="n">obj</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">767</span> <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="s2">&quot;frame&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">768</span>     <span class="n">obj</span> <span class="o">=</span> <span class="n">FrameParser</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">770</span> <span class="k">if</span> <span class="n">typ</span> <span class="o">==</span> <span class="s2">&quot;series&quot;</span> <span class="ow">or</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">771</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
-
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:880,</span> in <span class="ni">Parser.parse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">878</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parse_numpy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">880</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parse_no_numpy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">883</span>     <span class="k">return</span> <span class="kc">None</span>
-
-<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\json\_json.py:1133,</span> in <span class="ni">FrameParser._parse_no_numpy</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span> <span class="n">orient</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">orient</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span> <span class="k">if</span> <span class="n">orient</span> <span class="o">==</span> <span class="s2">&quot;columns&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span>     <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span>
-<span class="ne">-&gt; </span><span class="mi">1133</span>         <span class="n">loads</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="n">precise_float</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">precise_float</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1134</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1135</span> <span class="k">elif</span> <span class="n">orient</span> <span class="o">==</span> <span class="s2">&quot;split&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1136</span>     <span class="n">decoded</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">   </span><span class="mi">1137</span>         <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="n">v</span>
-<span class="nn">   1138         for k, v</span> in <span class="ni">loads(json, precise_float=self.precise_float).items</span><span class="nt">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1139</span>     <span class="p">}</span>
-
-<span class="ne">ValueError</span>: Expected object or value
+<span class="ne">FileNotFoundError</span>: File data/recipeitems.json does not exist
 </pre></div>
 </div>
 </div>
@@ -1318,7 +1287,7 @@ Let’s start by taking a closer look at the ingredients:</p>
 <p>This is the type of data exploration that is possible with Pandas string tools.
 It is data munging like this that Python really excels at.</p>
 <section id="a-simple-recipe-recommender">
-<h3><span class="section-number">1.2.12.3.1. </span>A Simple Recipe Recommender<a class="headerlink" href="#a-simple-recipe-recommender" title="Link to this heading">#</a></h3>
+<h3>A Simple Recipe Recommender<a class="headerlink" href="#a-simple-recipe-recommender" title="Link to this heading">#</a></h3>
 <p>Let’s go a bit further, and start working on a simple recipe recommendation system: given a list of ingredients, we want to find any recipes that use all those ingredients.
 While conceptually straightforward, the task is complicated by the heterogeneity of the data: there is no easy operation, for example, to extract a clean list of ingredients from each row.
 So, we will cheat a bit: we’ll start with a list of common ingredients, and simply search to see whether they are in each recipe’s ingredient list.
@@ -1406,7 +1375,7 @@ We can compute this very quickly using the <code class="docutils literal notrans
 <p>Now that we have narrowed down our recipe selection from 175,000 to 10, we are in a position to make a more informed decision about what we’d like to cook for dinner.</p>
 </section>
 <section id="going-further-with-recipes">
-<h3><span class="section-number">1.2.12.3.2. </span>Going Further with Recipes<a class="headerlink" href="#going-further-with-recipes" title="Link to this heading">#</a></h3>
+<h3>Going Further with Recipes<a class="headerlink" href="#going-further-with-recipes" title="Link to this heading">#</a></h3>
 <p>Hopefully this example has given you a bit of a flavor (heh) of the types of data cleaning operations that are efficiently enabled by Pandas string methods.
 Of course, building a robust recipe recommendation system would require a <em>lot</em> more work!
 Extracting full ingredient lists from each recipe would be an important piece of the task; unfortunately, the wide variety of formats used makes this a relatively time-consuming process.
@@ -1419,8 +1388,8 @@ This points to the truism that in data science, cleaning and munging of real-wor
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/lecture-notes",
-            ref: "master",
+            repo: "NeneWang/nenewang.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1451,7 +1420,7 @@ This points to the truism that in data science, cleaning and munging of real-wor
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.2.11. </span>Pivot Tables</p>
+        <p class="prev-next-title">Pivot Tables</p>
       </div>
     </a>
     <a class="right-next"
@@ -1459,7 +1428,7 @@ This points to the truism that in data science, cleaning and munging of real-wor
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.2.13. </span>Working with Time Series</p>
+        <p class="prev-next-title">Working with Time Series</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1479,20 +1448,20 @@ This points to the truism that in data science, cleaning and munging of real-wor
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-pandas-string-operations">1.2.12.1. Introducing Pandas String Operations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables-of-pandas-string-methods">1.2.12.2. Tables of Pandas String Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-similar-to-python-string-methods">1.2.12.2.1. Methods Similar to Python String Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-using-regular-expressions">1.2.12.2.2. Methods Using Regular Expressions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-methods">1.2.12.2.3. Miscellaneous Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorized-item-access-and-slicing">1.2.12.2.3.1. Vectorized item access and slicing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#indicator-variables">1.2.12.2.3.2. Indicator variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-pandas-string-operations">Introducing Pandas String Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables-of-pandas-string-methods">Tables of Pandas String Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-similar-to-python-string-methods">Methods Similar to Python String Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods-using-regular-expressions">Methods Using Regular Expressions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-methods">Miscellaneous Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vectorized-item-access-and-slicing">Vectorized item access and slicing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#indicator-variables">Indicator variables</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-recipe-database">1.2.12.3. Example: Recipe Database</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-recipe-recommender">1.2.12.3.1. A Simple Recipe Recommender</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further-with-recipes">1.2.12.3.2. Going Further with Recipes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-recipe-database">Example: Recipe Database</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-recipe-recommender">A Simple Recipe Recommender</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#going-further-with-recipes">Going Further with Recipes</a></li>
 </ul>
 </li>
 </ul>

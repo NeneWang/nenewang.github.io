@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.1.4. Computation on NumPy Arrays: Universal Functions</title>
+    <title>Computation on NumPy Arrays: Universal Functions &#8212; Docs</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/copybutton.js?v=7f8ff830"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,30 +58,17 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/02.03-Computation-on-arrays-ufuncs';</script>
-    <link rel="canonical" href="https://jupyterbook.org/data_tools/02.03-Computation-on-arrays-ufuncs.html" />
-    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://nenewang.github.io/data_tools/02.03-Computation-on-arrays-ufuncs.html" />
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.1.5. Aggregations: min, max, and Everything in Between" href="02.04-Computation-on-arrays-aggregates.html" />
-    <link rel="prev" title="1.1.3. The Basics of NumPy Arrays" href="02.02-The-Basics-Of-NumPy-Arrays.html" />
+    <link rel="next" title="Aggregations: min, max, and Everything in Between" href="02.04-Computation-on-arrays-aggregates.html" />
+    <link rel="prev" title="The Basics of NumPy Arrays" href="02.02-The-Basics-Of-NumPy-Arrays.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,8 +157,8 @@
       
     
     
-    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
+    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
   
   
 </a></div>
@@ -188,6 +175,14 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Nelson Wang
+                </a>
+            </li>
+        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -199,75 +194,52 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.3. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.3.1. What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.3.2. Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.3.3. Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.3.4. Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.3.5. In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.3.6. In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.3.7. In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.3.8. In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.3.9. In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.3.10. In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.3.11. In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.3.12. In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.3.13. In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.3.14. Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.3.15. Further Machine Learning Resources</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -326,7 +298,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +316,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -393,7 +365,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +382,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/02.03-Computation-on-arrays-ufuncs.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/02.03-Computation-on-arrays-ufuncs.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -427,7 +399,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/02.03-Computation-on-arrays-ufuncs.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/02.03-Computation-on-arrays-ufuncs.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -551,23 +523,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slowness-of-loops">1.1.4.1. The Slowness of Loops</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-ufuncs">1.1.4.2. Introducing Ufuncs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-numpys-ufuncs">1.1.4.3. Exploring NumPy’s Ufuncs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-arithmetic">1.1.4.3.1. Array Arithmetic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-value">1.1.4.3.2. Absolute Value</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">1.1.4.3.3. Trigonometric Functions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponents-and-logarithms">1.1.4.3.4. Exponents and Logarithms</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specialized-ufuncs">1.1.4.3.5. Specialized Ufuncs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slowness-of-loops">The Slowness of Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-ufuncs">Introducing Ufuncs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-numpys-ufuncs">Exploring NumPy’s Ufuncs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-arithmetic">Array Arithmetic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-value">Absolute Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponents-and-logarithms">Exponents and Logarithms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specialized-ufuncs">Specialized Ufuncs</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ufunc-features">1.1.4.4. Advanced Ufunc Features</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-output">1.1.4.4.1. Specifying Output</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregations">1.1.4.4.2. Aggregations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-products">1.1.4.4.3. Outer Products</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ufunc-features">Advanced Ufunc Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-output">Specifying Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregations">Aggregations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-products">Outer Products</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ufuncs-learning-more">1.1.4.5. Ufuncs: Learning More</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ufuncs-learning-more">Ufuncs: Learning More</a></li>
 </ul>
             </nav>
         </div>
@@ -580,14 +552,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="computation-on-numpy-arrays-universal-functions">
-<h1><span class="section-number">1.1.4. </span>Computation on NumPy Arrays: Universal Functions<a class="headerlink" href="#computation-on-numpy-arrays-universal-functions" title="Link to this heading">#</a></h1>
+<h1>Computation on NumPy Arrays: Universal Functions<a class="headerlink" href="#computation-on-numpy-arrays-universal-functions" title="Link to this heading">#</a></h1>
 <p>Up until now, we have been discussing some of the basic nuts and bolts of NumPy. In the next few chapters, we will dive into the reasons that NumPy is so important in the Python data science world: namely, because it provides an easy and flexible interface to optimize computation with arrays of data.</p>
 <p>Computation on NumPy arrays can be very fast, or it can be very slow.
 The key to making it fast is to use vectorized operations, generally implemented through NumPy’s <em>universal functions</em> (ufuncs).
 This chapter motivates the need for NumPy’s ufuncs, which can be used to make repeated calculations on array elements much more efficient.
 It then introduces many of the most common and useful arithmetic ufuncs available in the NumPy package.</p>
 <section id="the-slowness-of-loops">
-<h2><span class="section-number">1.1.4.1. </span>The Slowness of Loops<a class="headerlink" href="#the-slowness-of-loops" title="Link to this heading">#</a></h2>
+<h2>The Slowness of Loops<a class="headerlink" href="#the-slowness-of-loops" title="Link to this heading">#</a></h2>
 <p>Python’s default implementation (known as CPython) does some operations very slowly.
 This is partly due to the dynamic, interpreted nature of the language; types are flexible, so sequences of operations cannot be compiled down to efficient machine code as in languages like C and Fortran.
 Recently there have been various attempts to address this weakness: well-known examples are the <a class="reference external" href="http://pypy.org/">PyPy project</a>, a just-in-time compiled implementation of Python; the <a class="reference external" href="http://cython.org">Cython project</a>, which converts Python code to compilable C code; and the <a class="reference external" href="http://numba.pydata.org/">Numba project</a>, which converts snippets of Python code to fast LLVM bytecode.
@@ -628,7 +600,7 @@ We’ll benchmark this with IPython’s <code class="docutils literal notranslat
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.75 s ± 192 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.72 s ± 8.04 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </pre></div>
 </div>
 </div>
@@ -640,7 +612,7 @@ Each time the reciprocal is computed, Python first examines the object’s type 
 If we were working in compiled code instead, this type specification would be known before the code executed and the result could be computed much more efficiently.</p>
 </section>
 <section id="introducing-ufuncs">
-<h2><span class="section-number">1.1.4.2. </span>Introducing Ufuncs<a class="headerlink" href="#introducing-ufuncs" title="Link to this heading">#</a></h2>
+<h2>Introducing Ufuncs<a class="headerlink" href="#introducing-ufuncs" title="Link to this heading">#</a></h2>
 <p>For many types of operations, NumPy provides a convenient interface into just this kind of statically typed, compiled routine. This is known as a <em>vectorized</em> operation.
 For simple operations like the element-wise division here, vectorization is as simple as using Python arithmetic operators directly on the array object.
 This vectorized approach is designed to push the loop into the compiled layer that underlies NumPy, leading to much faster execution.</p>
@@ -667,7 +639,7 @@ This vectorized approach is designed to push the loop into the compiled layer th
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.01 ms ± 476 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.86 ms ± 71.7 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -706,11 +678,11 @@ Ufuncs are extremely flexible—before we saw an operation between a scalar and 
 Any time you see such a loop in a NumPy script, you should consider whether it can be replaced with a vectorized expression.</p>
 </section>
 <section id="exploring-numpys-ufuncs">
-<h2><span class="section-number">1.1.4.3. </span>Exploring NumPy’s Ufuncs<a class="headerlink" href="#exploring-numpys-ufuncs" title="Link to this heading">#</a></h2>
+<h2>Exploring NumPy’s Ufuncs<a class="headerlink" href="#exploring-numpys-ufuncs" title="Link to this heading">#</a></h2>
 <p>Ufuncs exist in two flavors: <em>unary ufuncs</em>, which operate on a single input, and <em>binary ufuncs</em>, which operate on two inputs.
 We’ll see examples of both these types of functions here.</p>
 <section id="array-arithmetic">
-<h3><span class="section-number">1.1.4.3.1. </span>Array Arithmetic<a class="headerlink" href="#array-arithmetic" title="Link to this heading">#</a></h3>
+<h3>Array Arithmetic<a class="headerlink" href="#array-arithmetic" title="Link to this heading">#</a></h3>
 <p>NumPy’s ufuncs feel very natural to use because they make use of Python’s native arithmetic operators.
 The standard addition, subtraction, multiplication, and division can all be used:</p>
 <div class="cell docutils container">
@@ -825,7 +797,7 @@ x % 2  =  [0 1 0 1]
 <p>Additionally, there are Boolean/bitwise operators; we will explore these in <a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html"><span class="std std-doc">Comparisons, Masks, and Boolean Logic</span></a>.</p>
 </section>
 <section id="absolute-value">
-<h3><span class="section-number">1.1.4.3.2. </span>Absolute Value<a class="headerlink" href="#absolute-value" title="Link to this heading">#</a></h3>
+<h3>Absolute Value<a class="headerlink" href="#absolute-value" title="Link to this heading">#</a></h3>
 <p>Just as NumPy understands Python’s built-in arithmetic operators, it also understands Python’s built-in absolute value function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -881,7 +853,7 @@ x % 2  =  [0 1 0 1]
 </div>
 </section>
 <section id="trigonometric-functions">
-<h3><span class="section-number">1.1.4.3.3. </span>Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Link to this heading">#</a></h3>
+<h3>Trigonometric Functions<a class="headerlink" href="#trigonometric-functions" title="Link to this heading">#</a></h3>
 <p>NumPy provides a large number of useful ufuncs, and some of the most useful for the data scientist are the trigonometric functions.
 We’ll start by defining an array of angles:</p>
 <div class="cell docutils container">
@@ -902,7 +874,10 @@ We’ll start by defining an array of angles:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta      =  [0.         1.57079633 3.14159265]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta      = 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [0.         1.57079633 3.14159265]
 sin(theta) =  [0.0000000e+00 1.0000000e+00 1.2246468e-16]
 cos(theta) =  [ 1.000000e+00  6.123234e-17 -1.000000e+00]
 tan(theta) =  [ 0.00000000e+00  1.63312394e+16 -1.22464680e-16]
@@ -933,7 +908,7 @@ arctan(x) =  [-0.78539816  0.          0.78539816]
 </div>
 </section>
 <section id="exponents-and-logarithms">
-<h3><span class="section-number">1.1.4.3.4. </span>Exponents and Logarithms<a class="headerlink" href="#exponents-and-logarithms" title="Link to this heading">#</a></h3>
+<h3>Exponents and Logarithms<a class="headerlink" href="#exponents-and-logarithms" title="Link to this heading">#</a></h3>
 <p>Other common operations available in NumPy ufuncs are the exponentials:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -994,7 +969,7 @@ log(1 + x) = [0.         0.0009995  0.00995033 0.09531018]
 <p>When <code class="docutils literal notranslate"><span class="pre">x</span></code> is very small, these functions give more precise values than if the raw <code class="docutils literal notranslate"><span class="pre">np.log</span></code> or <code class="docutils literal notranslate"><span class="pre">np.exp</span></code> were to be used.</p>
 </section>
 <section id="specialized-ufuncs">
-<h3><span class="section-number">1.1.4.3.5. </span>Specialized Ufuncs<a class="headerlink" href="#specialized-ufuncs" title="Link to this heading">#</a></h3>
+<h3>Specialized Ufuncs<a class="headerlink" href="#specialized-ufuncs" title="Link to this heading">#</a></h3>
 <p>NumPy has many more ufuncs available, including for hyperbolic trigonometry, bitwise arithmetic, comparison operations, conversions from radians to degrees, rounding and remainders, and much more.
 A look through the NumPy documentation reveals a lot of interesting functionality.</p>
 <p>Another excellent source for more specialized ufuncs is the submodule <code class="docutils literal notranslate"><span class="pre">scipy.special</span></code>.
@@ -1049,11 +1024,11 @@ Because the documentation of these packages is available online, a web search al
 </section>
 </section>
 <section id="advanced-ufunc-features">
-<h2><span class="section-number">1.1.4.4. </span>Advanced Ufunc Features<a class="headerlink" href="#advanced-ufunc-features" title="Link to this heading">#</a></h2>
+<h2>Advanced Ufunc Features<a class="headerlink" href="#advanced-ufunc-features" title="Link to this heading">#</a></h2>
 <p>Many NumPy users make use of ufuncs without ever learning their full set of features.
 I’ll outline a few specialized features of ufuncs here.</p>
 <section id="specifying-output">
-<h3><span class="section-number">1.1.4.4.1. </span>Specifying Output<a class="headerlink" href="#specifying-output" title="Link to this heading">#</a></h3>
+<h3>Specifying Output<a class="headerlink" href="#specifying-output" title="Link to this heading">#</a></h3>
 <p>For large calculations, it is sometimes useful to be able to specify the array where the result of the calculation will be stored.
 For all ufuncs, this can be done using the <code class="docutils literal notranslate"><span class="pre">out</span></code> argument of the function:</p>
 <div class="cell docutils container">
@@ -1090,7 +1065,7 @@ For all ufuncs, this can be done using the <code class="docutils literal notrans
 This doesn’t make much of a difference for such a small computation, but for very large arrays the memory savings from careful use of the <code class="docutils literal notranslate"><span class="pre">out</span></code> argument can be significant.</p>
 </section>
 <section id="aggregations">
-<h3><span class="section-number">1.1.4.4.2. </span>Aggregations<a class="headerlink" href="#aggregations" title="Link to this heading">#</a></h3>
+<h3>Aggregations<a class="headerlink" href="#aggregations" title="Link to this heading">#</a></h3>
 <p>For binary ufuncs, aggregations can be computed directly from the object.
 For example, if we’d like to <em>reduce</em> an array with a particular operation, we can use the <code class="docutils literal notranslate"><span class="pre">reduce</span></code> method of any ufunc.
 A reduce repeatedly applies a given operation to the elements of an array until only a single result remains.</p>
@@ -1129,7 +1104,7 @@ A reduce repeatedly applies a given operation to the elements of an array until 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1,  3,  6, 10, 15], dtype=int32)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1,  3,  6, 10, 15])
 </pre></div>
 </div>
 </div>
@@ -1141,7 +1116,7 @@ A reduce repeatedly applies a given operation to the elements of an array until 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  1,   2,   6,  24, 120], dtype=int32)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  1,   2,   6,  24, 120])
 </pre></div>
 </div>
 </div>
@@ -1149,7 +1124,7 @@ A reduce repeatedly applies a given operation to the elements of an array until 
 <p>Note that for these particular cases, there are dedicated NumPy functions to compute the results (<code class="docutils literal notranslate"><span class="pre">np.sum</span></code>, <code class="docutils literal notranslate"><span class="pre">np.prod</span></code>, <code class="docutils literal notranslate"><span class="pre">np.cumsum</span></code>, <code class="docutils literal notranslate"><span class="pre">np.cumprod</span></code>), which we’ll explore in <a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html"><span class="std std-doc">Aggregations: Min, Max, and Everything In Between</span></a>.</p>
 </section>
 <section id="outer-products">
-<h3><span class="section-number">1.1.4.4.3. </span>Outer Products<a class="headerlink" href="#outer-products" title="Link to this heading">#</a></h3>
+<h3>Outer Products<a class="headerlink" href="#outer-products" title="Link to this heading">#</a></h3>
 <p>Finally, any ufunc can compute the output of all pairs of two different inputs using the <code class="docutils literal notranslate"><span class="pre">outer</span></code> method.
 This allows you, in one line, to do things like create a multiplication table:</p>
 <div class="cell docutils container">
@@ -1175,7 +1150,7 @@ This subject is important enough that we will devote a whole chapter to it (see 
 </section>
 </section>
 <section id="ufuncs-learning-more">
-<h2><span class="section-number">1.1.4.5. </span>Ufuncs: Learning More<a class="headerlink" href="#ufuncs-learning-more" title="Link to this heading">#</a></h2>
+<h2>Ufuncs: Learning More<a class="headerlink" href="#ufuncs-learning-more" title="Link to this heading">#</a></h2>
 <p>More information on universal functions (including the full list of available functions) can be found on the <a class="reference external" href="http://www.numpy.org">NumPy</a> and <a class="reference external" href="http://www.scipy.org">SciPy</a> documentation websites.</p>
 <p>Recall that you can also access information directly from within IPython by importing the packages and using IPython’s tab completion and help (<code class="docutils literal notranslate"><span class="pre">?</span></code>) functionality, as described in <span class="xref myst">Help and Documentation in IPython</span>.</p>
 </section>
@@ -1185,8 +1160,8 @@ This subject is important enough that we will devote a whole chapter to it (see 
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/lecture-notes",
-            ref: "master",
+            repo: "NeneWang/nenewang.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1217,7 +1192,7 @@ This subject is important enough that we will devote a whole chapter to it (see 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.1.3. </span>The Basics of NumPy Arrays</p>
+        <p class="prev-next-title">The Basics of NumPy Arrays</p>
       </div>
     </a>
     <a class="right-next"
@@ -1225,7 +1200,7 @@ This subject is important enough that we will devote a whole chapter to it (see 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.1.5. </span>Aggregations: min, max, and Everything in Between</p>
+        <p class="prev-next-title">Aggregations: min, max, and Everything in Between</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1245,23 +1220,23 @@ This subject is important enough that we will devote a whole chapter to it (see 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slowness-of-loops">1.1.4.1. The Slowness of Loops</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-ufuncs">1.1.4.2. Introducing Ufuncs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-numpys-ufuncs">1.1.4.3. Exploring NumPy’s Ufuncs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-arithmetic">1.1.4.3.1. Array Arithmetic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-value">1.1.4.3.2. Absolute Value</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">1.1.4.3.3. Trigonometric Functions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponents-and-logarithms">1.1.4.3.4. Exponents and Logarithms</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specialized-ufuncs">1.1.4.3.5. Specialized Ufuncs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-slowness-of-loops">The Slowness of Loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-ufuncs">Introducing Ufuncs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-numpys-ufuncs">Exploring NumPy’s Ufuncs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#array-arithmetic">Array Arithmetic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#absolute-value">Absolute Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-functions">Trigonometric Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponents-and-logarithms">Exponents and Logarithms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specialized-ufuncs">Specialized Ufuncs</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ufunc-features">1.1.4.4. Advanced Ufunc Features</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-output">1.1.4.4.1. Specifying Output</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregations">1.1.4.4.2. Aggregations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-products">1.1.4.4.3. Outer Products</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-ufunc-features">Advanced Ufunc Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-output">Specifying Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregations">Aggregations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outer-products">Outer Products</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ufuncs-learning-more">1.1.4.5. Ufuncs: Learning More</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ufuncs-learning-more">Ufuncs: Learning More</a></li>
 </ul>
   </nav></div>
 

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Density and Contour Plots</title>
+    <title>Density and Contour Plots &#8212; Docs</title>
   
   
   
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/copybutton.js?v=7f8ff830"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,30 +58,19 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'UA-52617120-7');
-            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/04.04-Density-and-Contour-Plots';</script>
-    <link rel="canonical" href="https://jupyterbook.org/data_tools/04.04-Density-and-Contour-Plots.html" />
-    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://nenewang.github.io/data_tools/04.04-Density-and-Contour-Plots.html" />
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Histograms, Binnings, and Density" href="04.05-Histograms-and-Binnings.html" />
+    <link rel="prev" title="Visualizing Uncertainties" href="04.03-Errorbars.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -143,8 +132,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -161,7 +148,7 @@
 
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="../index.html">
   
   
   
@@ -172,8 +159,8 @@
       
     
     
-    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
-    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
+    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
   
   
 </a></div>
@@ -190,116 +177,75 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Nelson Wang
+                </a>
+            </li>
+        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Current Learning</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../start/your-first-book.html">Create your first book</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../start/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/create.html">Create a template book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/build.html">Build your book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/new-file.html">Create your own content file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/publish.html">Publish your book online</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../start/example-book.html">Build a small example project</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/references.html">Get started with references</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/organize.html">Structure and organize content</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../structure/toc.html">Structure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../file-types/index.html">Types of content source files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../file-types/restructuredtext.html">reStructuredText files</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../basics/create.html">Create books automatically</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/executable/index.html">Write executable content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/interactive.html">Interactive data visualizations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../basics/building/index.html">Build and publish outputs</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/build.html">Build from the command line</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../publish/web.html">Publish your book on the internet</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../publish/gh-pages.html">GitHub Pages and Actions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/netlify.html">Netlify</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../publish/readthedocs.html">Read the Docs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/pdf.html">Build a PDF</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../web/index.html">Web and internet features</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../basics/repository.html">Connect your book to a code repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../web/announcements.html">Announcement banners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/html.html">Advanced HTML outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx/index.html">Sphinx usage and customization</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/sphinx.html">Advanced Sphinx usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/developers.html">Developer workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../explain/sphinx.html">How Jupyter Book and Sphinx relate to one another</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/index.html">Advanced Jupyter Book Usage</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/windows.html">Working on Windows</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute/intro.html">Contribute to Jupyter Book</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../customize/config.html">Configuration reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/cli.html">Command-line interface reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About Jupyter Book</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery">Gallery of Jupyter Books</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/components.html">The Jupyter Book toolchain and components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cite.html">Cite Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../explain/migration.html">Migrating to <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.14</span></code></a></li>
 </ul>
 
     </div>
@@ -354,7 +300,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/04.04-Density-and-Contour-Plots.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/04.04-Density-and-Contour-Plots.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -372,7 +318,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/04.04-Density-and-Contour-Plots.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/04.04-Density-and-Contour-Plots.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -421,7 +367,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -438,7 +384,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/04.04-Density-and-Contour-Plots.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/04.04-Density-and-Contour-Plots.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -455,7 +401,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/04.04-Density-and-Contour-Plots.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/04.04-Density-and-Contour-Plots.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -605,6 +551,8 @@ This chapter looks at several examples of using these. We’ll start by setting 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+</div>
 </div>
 <section id="visualizing-a-three-dimensional-function">
 <h2>Visualizing a Three-Dimensional Function<a class="headerlink" href="#visualizing-a-three-dimensional-function" title="Link to this heading">#</a></h2>
@@ -640,7 +588,7 @@ Perhaps the most straightforward way to prepare such data is to use the <code cl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5e1b57db879661226a5fd735702b02d3c66441cb93149f3a6e5529dbbc24444f.png" src="../_images/5e1b57db879661226a5fd735702b02d3c66441cb93149f3a6e5529dbbc24444f.png" />
+<img alt="../_images/17f03f2c607a91771b07fa574cac8c0b440238238f2371173ded5d3551065bc2.png" src="../_images/17f03f2c607a91771b07fa574cac8c0b440238238f2371173ded5d3551065bc2.png" />
 </div>
 </div>
 <p>Notice that when a single color is used, negative values are represented by dashed lines and positive values by solid lines.
@@ -653,7 +601,7 @@ Here we’ll also specify that we want more lines to be drawn, at 20 equally spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/283f0dd1bff42e015fefc330c8eee70ac7f3dcf9c27bb577db6002a73d3f579f.png" src="../_images/283f0dd1bff42e015fefc330c8eee70ac7f3dcf9c27bb577db6002a73d3f579f.png" />
+<img alt="../_images/5a19286639be3f2c53d6a6c8a1cd44d76fb2bad76e8483a7691104f13476a2af.png" src="../_images/5a19286639be3f2c53d6a6c8a1cd44d76fb2bad76e8483a7691104f13476a2af.png" />
 </div>
 </div>
 <p>Here we chose the <code class="docutils literal notranslate"><span class="pre">RdGy</span></code> (short for <em>Red–Gray</em>) colormap, which is a good choice for divergent data: (i.e., data with positive and negative variation around zero).
@@ -672,7 +620,7 @@ We can change this by switching to a filled contour plot using the <code class="
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d97288b2f5e2013595d1eeea1e21e73ddcb8d7d06af6ec78d003e9f0ffe48000.png" src="../_images/d97288b2f5e2013595d1eeea1e21e73ddcb8d7d06af6ec78d003e9f0ffe48000.png" />
+<img alt="../_images/4353be9f23de1b1fa8d332968d51abec0ffb920744146aeba9059edf499ddfc0.png" src="../_images/4353be9f23de1b1fa8d332968d51abec0ffb920744146aeba9059edf499ddfc0.png" />
 </div>
 </div>
 <p>The colorbar makes it clear that the black regions are “peaks,” while the red regions are “valleys.”</p>
@@ -688,7 +636,7 @@ A better way to generate a smooth representation is to use the <code class="docu
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0b94660f2a35f88ea4a438fd827a06653f1073284059c479672b6d138e0683b7.png" src="../_images/0b94660f2a35f88ea4a438fd827a06653f1073284059c479672b6d138e0683b7.png" />
+<img alt="../_images/b8b4469aaa1d4e3c19359b084a68380ebf945d71b8445a2c9705c47786ea235a.png" src="../_images/b8b4469aaa1d4e3c19359b084a68380ebf945d71b8445a2c9705c47786ea235a.png" />
 </div>
 </div>
 <p>There are a few potential gotchas with <code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code>, however:</p>
@@ -711,7 +659,7 @@ For example, here we’ll use a partially transparent background image (with tra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5c76456453245b01b373245cad422cc69967839db5353316b035b330f30c17cd.png" src="../_images/5c76456453245b01b373245cad422cc69967839db5353316b035b330f30c17cd.png" />
+<img alt="../_images/33f2007e0d3592c6b1e8f81e7f89bca1d56f10b2907f2e846283648e5d02b280.png" src="../_images/33f2007e0d3592c6b1e8f81e7f89bca1d56f10b2907f2e846283648e5d02b280.png" />
 </div>
 </div>
 <p>The combination of these three functions—<code class="docutils literal notranslate"><span class="pre">plt.contour</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.contourf</span></code>, and <code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code>—gives nearly limitless possibilities for displaying this sort of three-dimensional data within a two-dimensional plot.
@@ -724,8 +672,8 @@ If you are interested in three-dimensional visualizations of this type of data, 
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/lecture-notes",
-            ref: "master",
+            repo: "NeneWang/nenewang.github.io",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -750,6 +698,24 @@ If you are interested in three-dimensional visualizations of this type of data, 
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="04.03-Errorbars.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Visualizing Uncertainties</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04.05-Histograms-and-Binnings.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Histograms, Binnings, and Density</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -781,7 +747,7 @@ If you are interested in three-dimensional visualizations of this type of data, 
   <div class="footer-item">
     
 <p class="component-author">
-By Commoner Artisan
+By NeneWang
 </p>
 
   </div>
