@@ -11,26 +11,15 @@
             "id": "48aef78560d1d711",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "images/Pasted image 20240311194752.png"
-              }
-            }
-          },
-          {
-            "id": "67f704d94ff3209f",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Alternative Careers.md",
+                "file": "readme.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Alternative Careers.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Alternative Careers.md",
+                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Alternative Careers.md"
+                "file": "readme.md"
               }
             }
           }
@@ -157,29 +146,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "67f704d94ff3209f",
+  "active": "48aef78560d1d711",
   "lastOpenFiles": [
-    "_build/jupyter_execute/data_tools/04.12-Three-Dimensional-Plotting.ipynb",
-    "_build/jupyter_execute/bedfbf1d143d8cde8b5326dcdf3f5844ad7eefd143ec10f4d4955b1b636ab6b5.png",
-    "_build/jupyter_execute/099fd8530e803482f174bbd0c393f35fc2b42748a6b56d1827df076cf475701e.png",
-    "_build/jupyter_execute/45817c2f716093b2ad4250de017bc04e63126d8f3dac7fa2b423bafad93a8e05.png",
-    "_build/jupyter_execute/c5ecc33dc535fb59717991d8747d58ef8965acf7843310846084c7e64fa02416.png",
-    "_build/jupyter_execute/e5c5d639771dfabe3facf79febc5769f1a0e9daf9e0a4af9470c51fa2ca74c6e.png",
-    "_build/jupyter_execute/7ab04b0a3f725154a033328967f766c606265a62d27b6fbdf879bd99132114f7.png",
-    "_build/jupyter_execute/1b0a10a46f8c3468ae7a5fb9eba6b8762c3098708a224c4cefe90b5739c5e8d1.png",
-    "_build/jupyter_execute/5d7be315402b12a348856a0d0aa3fc9182873daff6077ddcfd01d701cbd93b64.png",
-    "_build/jupyter_execute/70ffdbccb1fa32fd16da7f843a234c31b9f924167c9904190dfb343e22b218a0.png",
-    "_build/jupyter_execute/4d788548f9f6a8fcca5e715cac932eea4e6f0f1a9d3f4fb13ca140d2815c813e.png",
-    "_build/jupyter_execute/data_tools/04.11-Settings-and-Stylesheets.ipynb",
-    "_build/jupyter_execute/data_tools/04.10-Customizing-Ticks.ipynb",
-    "_build/jupyter_execute/data_tools/04.09-Text-and-Annotation.ipynb",
-    "_build/jupyter_execute/data_tools/04.08-Multiple-Subplots.ipynb",
-    "_build/jupyter_execute/data_tools/04.07-Customizing-Colorbars.ipynb",
-    "_build/jupyter_execute/data_tools/04.06-Customizing-Legends.ipynb",
-    "_build/jupyter_execute/data_tools/04.05-Histograms-and-Binnings.ipynb",
-    "_build/jupyter_execute/data_tools/04.04-Density-and-Contour-Plots.ipynb",
-    "_build/jupyter_execute/data_tools/04.03-Errorbars.ipynb",
-    "_build/jupyter_execute/data_tools/04.02-Simple-Scatter-Plots.ipynb",
+    "intro_code.md",
+    "index.md",
+    "cite.md",
+    "Alternative Careers.md",
+    "Pasted image 20240311195130.png",
+    "Pasted image 20240311194752.png",
+    "_build/html/_images/8669be8ad01115bb7cc04ccad347e334c03f02917457ac9670728711044da293.png",
+    "_build/jupyter_execute/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
+    "_build/html/_images/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
+    "_build/html/_images/6032f1ae768b9a788c42026d62e51b5ef2972b98d4d2fc61540d298818e7be72.png",
+    "_build/html/_images/8cc9f1413cd1f31dde78087ac5894b97bd55babe2510bd1c6f2c8fa5452fc594.png",
+    "_build/html/_images/0bd66ba8549a859f621e64052f8915ed44781c573a9e73c8f8a69b57935b410f.png",
+    "_build/html/_images/2f011f82be0768bbc6d5f9ae14ceb8604a98f30b4b51bb5815bf6a5564d73c81.png",
+    "_build/html/_images/aa3feb57d0b9e8e98461246638e994f8af6b8aca919fd2d89bf1f972fceb8c79.png",
+    "_build/html/_sources/data_tools/04.15-Further-Resources.ipynb",
+    "_build/html/data_tools/04.15-Further-Resources.html",
+    "_build/html/_sources/data_tools/04.14-Visualization-With-Seaborn.ipynb",
+    "_build/html/data_tools/04.14-Visualization-With-Seaborn.html",
+    "_build/html/_sources/data_tools/04.12-Three-Dimensional-Plotting.ipynb",
+    "_build/html/data_tools/04.12-Three-Dimensional-Plotting.html",
+    "_build/html/_sources/data_tools/04.11-Settings-and-Stylesheets.ipynb",
+    "_build/html/data_tools/04.11-Settings-and-Stylesheets.html",
+    "_build/html/_sources/data_tools/04.10-Customizing-Ticks.ipynb",
+    "_build/html/data_tools/04.10-Customizing-Ticks.html",
     "_build/html/_sources/interactive/thebe.md",
     "_build/html/_sources/interactive/hiding.md",
     "_build/html/_sources/interactive/comments/utterances.md",
@@ -197,13 +189,10 @@
     "_build/html/_sources/content/figures.md",
     "_build/html/_sources/content/content-blocks.md",
     "_build/html/_sources/content/components.md",
-    "_build/html/_sources/content/citations.md",
-    "_build/html/_sources/algorithms/intro.md",
     "_build/html/_sources/1-intro/syllabus.md",
     "_build/html/_sources/1-intro/about.md",
-    "backlog.md",
-    "cite.md",
-    "Alternative Careers.md",
+    "_build/html/_sources/algorithms/intro.md",
+    "_build/html/_sources/content/citations.md",
     "web/index.md"
   ]
 }
