@@ -4,14 +4,22 @@
 
 ### Current Courses
 
+
+*Current projects + Game plan*
+
 - Analysis of Algorithms
+  - All book's Algorithms shall be recorded
+- Anthropology and Genetics Algorthms
+  - All Genetic Algorthms shall be recorded
+- Data Science Tools
+  - Books Content with Data Tools are to be recorded
+  - Together with Hands-On Machine learning
+
+
 
 ### Future Courses
 
-**Courses from Da Vinci** (Take Next: 2024 August)
-
-![[Pasted image 20240311195130.png]]
-
+- 
 
 
 
