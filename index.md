@@ -1,5 +1,5 @@
 ---
-title: Resume - Nelson Wang
+title: Nelson Wang
 ---
 
 ::::{grid} 2
@@ -46,6 +46,8 @@ Nelson Wang
 
 CLI Assistant to improve as a programmer. Flashcards, DSA Practice, Statistics, and habit hooks.
 +++
+{bdg-primary}`npm` {bdg-primary}`CLI`
++++
 Explore this project {fas}`arrow-right`
 :::
 
@@ -53,7 +55,7 @@ Explore this project {fas}`arrow-right`
 :margin: 3
 :class-body: text-center
 :class-header: bg-light text-center
-:link: https://python.quantecon.org/
+:link: https://github.com/Hmmsien/ECommerce_behavior
 
 **Ecommerce with Recommendation**
 ^^^
@@ -61,9 +63,11 @@ Explore this project {fas}`arrow-right`
 :height: 100
 ```
 
-Ecommerce lab website with a recommendation engine using collaborative filtering..
+Ecommerce lab website with a recommendation engine using collaborative filtering.
 +++
-Explore this Project {fas}`arrow-right`
+{bdg-primary}`FastAPI` {bdg-primary}`Next` {bdg-primary}`Data Sciece`
++++
+Explore this project {fas}`arrow-right`
 :::
 
 
@@ -85,7 +89,9 @@ Explore this Project {fas}`arrow-right`
 
 IOS and Android Application that compares and tracks carbon footprint between reusable and non-reusable items. 
 +++
-Explore this book {fas}`arrow-right`
+{bdg-primary}`Flutter` {bdg-primary}`Firebase`
++++
+Explore this project {fas}`arrow-right`
 :::
 
 :::{card}
@@ -94,7 +100,7 @@ Explore this book {fas}`arrow-right`
 :class-header: bg-light text-center
 :link: https://github.com/Koppelman-Student-Leadership-Council/slc-next
 
-**QuantEcon**
+**Student Leadership Full Stack Website**
 ^^^
 ```{image} https://brooklynslcouncil.com/assets/promotion/logo.png
 :height: 100
@@ -102,7 +108,9 @@ Explore this book {fas}`arrow-right`
 
 Built with NextJS and Laravel - Student Leadership Council website for Koppelman School of Business.
 +++
-Explore this Project {fas}`arrow-right`
+{bdg-primary}`Next` {bdg-primary}`Laravel`
++++
+Explore this project {fas}`arrow-right`
 :::
 
 
