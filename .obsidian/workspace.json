@@ -11,15 +11,26 @@
             "id": "48aef78560d1d711",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "images/Pasted image 20240311194752.png"
+              }
+            }
+          },
+          {
+            "id": "67f704d94ff3209f",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "Alternative Careers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "Alternative Careers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
+                "file": "Alternative Careers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "readme.md"
+                "file": "Alternative Careers.md"
               }
             }
           }
@@ -146,32 +157,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48aef78560d1d711",
+  "active": "67f704d94ff3209f",
   "lastOpenFiles": [
-    "intro_code.md",
-    "index.md",
-    "cite.md",
-    "Alternative Careers.md",
-    "Pasted image 20240311195130.png",
-    "Pasted image 20240311194752.png",
-    "_build/html/_images/8669be8ad01115bb7cc04ccad347e334c03f02917457ac9670728711044da293.png",
-    "_build/jupyter_execute/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
-    "_build/html/_images/05aad2d45523c91593efe7b7a6373bb7cbe93ea6a3f0269a38605bfe3aa91959.png",
-    "_build/html/_images/6032f1ae768b9a788c42026d62e51b5ef2972b98d4d2fc61540d298818e7be72.png",
-    "_build/html/_images/8cc9f1413cd1f31dde78087ac5894b97bd55babe2510bd1c6f2c8fa5452fc594.png",
-    "_build/html/_images/0bd66ba8549a859f621e64052f8915ed44781c573a9e73c8f8a69b57935b410f.png",
-    "_build/html/_images/2f011f82be0768bbc6d5f9ae14ceb8604a98f30b4b51bb5815bf6a5564d73c81.png",
-    "_build/html/_images/aa3feb57d0b9e8e98461246638e994f8af6b8aca919fd2d89bf1f972fceb8c79.png",
-    "_build/html/_sources/data_tools/04.15-Further-Resources.ipynb",
-    "_build/html/data_tools/04.15-Further-Resources.html",
-    "_build/html/_sources/data_tools/04.14-Visualization-With-Seaborn.ipynb",
-    "_build/html/data_tools/04.14-Visualization-With-Seaborn.html",
-    "_build/html/_sources/data_tools/04.12-Three-Dimensional-Plotting.ipynb",
-    "_build/html/data_tools/04.12-Three-Dimensional-Plotting.html",
-    "_build/html/_sources/data_tools/04.11-Settings-and-Stylesheets.ipynb",
-    "_build/html/data_tools/04.11-Settings-and-Stylesheets.html",
-    "_build/html/_sources/data_tools/04.10-Customizing-Ticks.ipynb",
-    "_build/html/data_tools/04.10-Customizing-Ticks.html",
+    "_build/jupyter_execute/data_tools/05.06-Linear-Regression.ipynb",
+    "_build/jupyter_execute/33790075e4a2d31bf1327c8574a233886570b69f63a4366e10754a603886ff92.png",
+    "_build/jupyter_execute/data_tools/05.05-Naive-Bayes.ipynb",
+    "_build/jupyter_execute/data_tools/05.04-Feature-Engineering.ipynb",
+    "_build/jupyter_execute/2f5409335c0465f87e278e93c6a339fbbb95a7fc11289654562edc22ab1f913d.png",
+    "_build/jupyter_execute/data_tools/05.03-Hyperparameters-and-Model-Validation.ipynb",
+    "_build/jupyter_execute/ba7d68369d7f079f4b7e9a83ef4c4a07b1ead2e4ca8ceff97a1acba8714ef9d9.png",
+    "_build/jupyter_execute/08defefb1b83ee24508222d6fbd82d9df5bdb1fe33eea629a1424332b800a6a5.png",
+    "_build/jupyter_execute/eba08e0e480aa7911e2b96f911e5a3593e52cb8bd539960859c443d114320531.png",
+    "_build/jupyter_execute/data_tools/05.02-Introducing-Scikit-Learn.ipynb",
+    "_build/jupyter_execute/c7412f0ceda8a8fc02bdffedca3733dc9ae4e12e3b51c13b8157ae8bc8b3ce3f.png",
+    "_build/jupyter_execute/499130f5a1988790c6ec5c649df49fbfb5a68c856fbd6f1e99370362fdc0d1ae.png",
+    "_build/jupyter_execute/3df836894ce6c5096102094d0b0fbcde4d76a57e2631df2c328e0d472242915d.png",
+    "handson/images/unsupervised_learning/README",
+    "handson/images/unsupervised_learning/ladybug.png",
+    "handson/images/unsupervised_learning",
+    "handson/images/training_linear_models/README",
+    "handson/images/training_linear_models",
+    "handson/images/tensorflow/README",
+    "handson/images/tensorflow",
+    "handson/images/rl/breakout.gif",
     "_build/html/_sources/interactive/thebe.md",
     "_build/html/_sources/interactive/hiding.md",
     "_build/html/_sources/interactive/comments/utterances.md",
@@ -189,10 +197,13 @@
     "_build/html/_sources/content/figures.md",
     "_build/html/_sources/content/content-blocks.md",
     "_build/html/_sources/content/components.md",
+    "_build/html/_sources/content/citations.md",
+    "_build/html/_sources/algorithms/intro.md",
     "_build/html/_sources/1-intro/syllabus.md",
     "_build/html/_sources/1-intro/about.md",
-    "_build/html/_sources/algorithms/intro.md",
-    "_build/html/_sources/content/citations.md",
+    "backlog.md",
+    "cite.md",
+    "Alternative Careers.md",
     "web/index.md"
   ]
 }
