@@ -133,7 +133,7 @@ Dec 2021 - Jul 2022
 - Taught Python and Java in 5 different classes of around 30 students each at least 3 days a week.
 - Created a reactive website for students to use for notes and improve their learning experience. ([learn.wangnelson.xyz](https://learn.wangnelson.xyz))
 +++
-A Free Bird
+Wizara - Nuasin Next Generation
 ````
 
 ````{card} Software Engineer Intern
@@ -146,3 +146,14 @@ January 20220– December 2020
 A Free Bird
 ````
 
+
+## Education
+
+````{card} Bachelor of Science in Computer Science with Minor in Marketing
+3.83GPA, Expected May 2024
+^^^
+Relevant coursework: Discrete Structures and Algorithms, Data Structures, Object-Oriented Programming, Develop-
+ment of Large-Scale Applications, Artificial Intelligence, Multi-variable Calculus
++++
+City University New York, Brooklyn College, NY
+````
