@@ -1,5 +1,5 @@
 ---
-title: Nelson Wang
+title: Resume
 ---
 
 ::::{grid} 2
@@ -157,3 +157,6 @@ ment of Large-Scale Applications, Artificial Intelligence, Multi-variable Calcul
 +++
 City University New York, Brooklyn College, NY
 ````
+
+
+<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
