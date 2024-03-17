@@ -25,11 +25,10 @@ Nelson Wang
 
 :::
 
-
 ::::
 
-**Highlighted Projects**
 
+## Projects Highlights
 
 ::::{card-carousel} 2
 
@@ -87,7 +86,7 @@ Explore this project {fas}`arrow-right`
 :height: 100
 ```
 
-IOS and Android Application that compares and tracks carbon footprint between reusable and non-reusable items. 
+IOS and Android Application that compares and tracks carbon footprint between reusable and non-reusable items.
 +++
 {bdg-primary}`Flutter` {bdg-primary}`Firebase`
 +++
@@ -113,7 +112,37 @@ Built with NextJS and Laravel - Student Leadership Council website for Koppelman
 Explore this project {fas}`arrow-right`
 :::
 
-
-
-
 ::::
+
+## Experience
+
+````{card} Junior Software Engineer
+June 2022 – Present
+^^^
+- Development and documentation of full-stack internal applications using React, FastAPI that reduced manual work and streamlined processes.
+- Implemented a data pipeline that ingested streaming (through WebSockets) data from various external sources utilizing Spark, Lambda, SNS, SQS, Gateway, Elasticsearch, S3, and Python.
+- Deployment and maintenance of applications using EC2, Amplify, AppRunner and Docker.
+- Development of CD/CI pipeline with Unit/Integration/End-to-end testing using Pytest and Jenkins
++++
+Platinum Filings - New York City, NY
+````
+
+````{card} Highschool Programming Instructor
+Dec 2021 - Jul 2022
+^^^
+- Taught Python and Java in 5 different classes of around 30 students each at least 3 days a week.
+- Created a reactive website for students to use for notes and improve their learning experience. ([learn.wangnelson.xyz](https://learn.wangnelson.xyz))
++++
+A Free Bird
+````
+
+````{card} Software Engineer Intern
+January 20220– December 2020
+^^^
+- Developed the organization’s current website using Django.
+- Architected 5 unique games with 35 levels using Unity Engine.
+- Hosted their services using AWS and Google Cloud.
++++
+A Free Bird
+````
+
