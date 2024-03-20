@@ -59,7 +59,6 @@ Common Strategies:
 
 1. 2024 Spring - Finish College Major in CS 
 2. 2024 Fall - 2027 Start Game Dev Argentina
-3. 
 
 ## Books
 
