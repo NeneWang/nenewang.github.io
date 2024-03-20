@@ -146,7 +146,7 @@ Explore this book {fas}`arrow-right`
 :class-header: bg-light text-center
 :link: https://python.quantecon.org/
 
-**QuantEcon**
+**Student Leadership Full Stack Website**
 ^^^
 ```{image} https://python.quantecon.org/_static/qe-logo-large.png
 :height: 100
