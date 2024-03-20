@@ -9,17 +9,28 @@
 
 - Analysis of Algorithms
   - All book's Algorithms shall be recorded
+  - Parallel Algorithmic visualizations are to be developed
 - Anthropology and Genetics Algorthms
   - All Genetic Algorthms shall be recorded
 - Data Science Tools
-  - Books Content with Data Tools are to be recorded
+  - Books Content with Data Tools are to be recorded + Explained.
   - Together with Hands-On Machine learning
 
 
 
 ### Future Courses
 
-- 
+- Elementos de Matemática
+  - Write Down and Study Discrete Math
+- Tratamiento Digital de la Imagen I
+  - Develop Digital Art Everyday with high quality Illustration Art.
+- Animación 2D para Videojuegos
+- lustración Conceptual
+  - Concept Art Everyday.
+- Lógica de la Programación
+  - Document Unity Cookbook
+- Introducción al Diseño de Juegos
+  - Document Game Design Books
 
 
 
