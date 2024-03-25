@@ -4,11 +4,17 @@
 
 Here are some highlights of the different notebooks and ideas drawn from the Book That Can be used for building a recommendation system.
 
+**Datasets**
+
+https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data
+
+
+
 **Backlog**
 
-- [ ] Chapter 1
-- [ ] Chapter 3a: Simple Recommender System
-- [ ] Chapter 3b: Knowledge-Based Recommender System
+- [x] Chapter 1
+- [x] Chapter 3a: Simple Recommender System
+- [x] Chapter 3b: Knowledge-Based Recommender System
 - [ ] Chapter 4: Content-Based Recommender System
 - [ ] Chapter 5: Getting Started with Data mIning Techniques
   - [ ] Similarity Measures
@@ -20,6 +26,19 @@ Here are some highlights of the different notebooks and ideas drawn from the Boo
   - [ ] Item-Based Collaborative Filtering
   - [ ] Model-Based Collaborative Filtering
   
+
+## Chapter 3: Simple Recommender System
+
+It uses a weighted rating system to calculate the score:
+
+```py
+# Function to compute the IMDB weighted rating for each movie
+def weighted_rating(x, m=m, C=C):
+    v = x['vote_count']
+    R = x['vote_average']
+    # Compute the weighted score
+    return (v/(v+m) * R) + (m/(m+v) * C)
+```
 
 ## Chapter 3: Knowledge-Based Recommender System 
 
@@ -79,6 +98,19 @@ def build_chart(gen_df, percentile=0.8):
 ![](./../img/2024-03-25-14-25-26.png)
 
 
+## Chapter 4: Content-Based Recommender System
+
+**TF IDFV Vectorizer**
+
+![](./../img/2024-03-25-14-58-20.png)
+
+**Cosine Similarity**
+
+![](./../img/2024-03-25-14-57-26.png)
+
+**You can see here how depending on the content entered: Provides Similar like content**
+
+![](./../img/2024-03-25-15-00-11.png)
 
 
 
