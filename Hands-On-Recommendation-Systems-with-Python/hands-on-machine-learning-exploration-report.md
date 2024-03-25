@@ -113,6 +113,172 @@ def build_chart(gen_df, percentile=0.8):
 ![](./../img/2024-03-25-15-00-11.png)
 
 
+Process:
+
+- 1. We extract and populate the director using:
+
+```py
+# Extract the director's name. If director is not listed, return NaN
+def get_director(x):
+    for crew_member in x:
+        if crew_member['job'] == 'Director':
+            return crew_member['name']
+    return np.nan
+```
+
+- 2. Fielter for lists that have more than 3 elements.
+
+```py
+
+# Returns the list top 3 elements or entire list; whichever is more.
+def generate_list(x):
+    if isinstance(x, list):
+        names = [i['name'] for i in x]
+        #Check if more than 3 elements exist. If yes, return only first three. If no, return entire list.
+        if len(names) > 3:
+            names = names[:3]
+        return names
+
+    #Return empty list in case of missing/malformed data
+    return []
+```
+
+> Here where the casts applies.
+
+```py
+#Apply the generate_list function to cast and keywords
+df['cast'] = df['cast'].apply(generate_list)
+df['keywords'] = df['keywords'].apply(generate_list)
+```
+
+Sanitation of the ists and makesure they are lowercase
+
+![](./../img/2024-03-25-15-43-20.png)
+
+
+```py
+# Function to sanitize data to prevent ambiguity. It removes spaces and converts to lowercase
+def sanitize(x):
+    if isinstance(x, list):
+        #Strip spaces and convert to lowercase
+        return [str.lower(i.replace(" ", "")) for i in x]
+    else:
+        #Check if director exists. If not, return empty string
+        if isinstance(x, str):
+            return str.lower(x.replace(" ", ""))
+        else:
+            return ''
+```
+
+
+![](./../img/2024-03-25-15-43-40.png)
+
+
+```py
+#Function that creates a soup out of the desired metadata
+def create_soup(x):
+    return ' '.join(x['keywords']) + ' ' + ' '.join(x['cast']) + ' ' + x['director'] + ' ' + ' '.join(x['genres'])
+```
+
+- 3. Create a `soup`
+
+![](./../img/2024-03-25-15-45-12.png)
+
+
+- 4. Soups
+
+```py
+# Import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+
+#Define a new CountVectorizer object and create vectors for the soup
+count = CountVectorizer(stop_words='english')
+count_matrix = count.fit_transform(df['soup'])
+
+#Import cosine_similarity function
+from sklearn.metrics.pairwise import cosine_similarity
+
+#Compute the cosine similarity score (equivalent to dot product for tf-idf vectors)
+cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
+```
+
+> Here uses the soup of director, casts and genres for the recommendation
+
+```py
+# Function that takes in movie title as input and gives recommendations 
+def content_recommender(title, cosine_sim, df, indices):
+    # Obtain the index of the movie that matches the title
+    idx = indices[title]
+
+    # Get the pairwsie similarity scores of all movies with that movie
+    # And convert it into a list of tuples as described above
+    sim_scores = list(enumerate(cosine_sim[idx]))
+
+    # Sort the movies based on the cosine similarity scores
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+
+    # Get the scores of the 10 most similar movies. Ignore the first movie.
+    sim_scores = sim_scores[1:11]
+
+    # Get the movie indices
+    movie_indices = [i[0] for i in sim_scores]
+
+    # Return the top 10 most similar movies
+    return df['title'].iloc[movie_indices]
+```
+
+> Use the following content recommender.
+
+You can see here how it has a more content-based recommendation.
+
+
+```py
+content_recommender('The Lion King', cosine_sim2, df, indices2)
+```
+
+![](./../img/2024-03-25-16-02-32.png)
+
+
+- Experiment with the number of keywords, genres, and cast: In the model that
+we built, we considered at most three keywords, genres, and actors for our
+movies. This was, however, an arbitrary decision. It is a good idea to experiment
+with the number of these features in order to be considered for the metadata
+soup.
+- Come up with more well-defined sub-genres: Our model only considered the
+first three keywords that appeared in the keywords list. There was, however, no
+justification for doing so. In fact, it is entirely possible that certain keywords
+appeared in only one movie (thus rendering them useless). A much more potent
+technique would be to define, as with the genres, a definite number of sub-genres
+and assign only these sub-genres to the movies.
+- Give more weight to the director: Our model gave as much importance to the
+director as to the actors. However, you can argue that the character of a movie is
+determined more by the former. We can give more emphasis to the director by
+mentioning this individual multiple times in our soup instead of just once.
+Experiment with the number of repetitions of the director in the soup.
+Consider other members of the crew: The director isn't the only person that
+gives the movie its character. You can also consider adding other crew members,
+such as producers and screenwriters, to your soup.
+- Experiment with other metadata: We only considered genres, keywords, and
+credits while building our metadata model. However, our dataset contains
+plenty of other features, such as production companies, countries, and languages.
+You may consider these data points, too, as they may be able to capture
+important information (such as if two movies are produced by Pixar).
+- Introduce a popularity filter: It is entirely possible that two movies have the
+same genres and sub-genres, but differ wildly in quality and popularity. In such
+cases, you may want to introduce a popularity filter that considers the n most
+similar movies, computes a weighted rating, and displays the top five results.
+You have already learned how to do this in the previous chapter.
+
+## 5. Getting Started with Data Mining Techniques
+
+
+```py
+from sklearn.datasets import make_blobs
+```
+
+
+
+
 
 
 
