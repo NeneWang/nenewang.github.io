@@ -239,42 +239,105 @@ content_recommender('The Lion King', cosine_sim2, df, indices2)
 ![](./../img/2024-03-25-16-02-32.png)
 
 
-- Experiment with the number of keywords, genres, and cast: In the model that
-we built, we considered at most three keywords, genres, and actors for our
-movies. This was, however, an arbitrary decision. It is a good idea to experiment
-with the number of these features in order to be considered for the metadata
+- **Experiment with the number of keywords, genres, and cast**: In the model that we built, we considered at most three keywords, genres, and actors for our movies. This was, however, an arbitrary decision. It is a good idea to experiment with the number of these features in order to be considered for the metadata
 soup.
-- Come up with more well-defined sub-genres: Our model only considered the
-first three keywords that appeared in the keywords list. There was, however, no
-justification for doing so. In fact, it is entirely possible that certain keywords
-appeared in only one movie (thus rendering them useless). A much more potent
-technique would be to define, as with the genres, a definite number of sub-genres
-and assign only these sub-genres to the movies.
-- Give more weight to the director: Our model gave as much importance to the
-director as to the actors. However, you can argue that the character of a movie is
-determined more by the former. We can give more emphasis to the director by
-mentioning this individual multiple times in our soup instead of just once.
-Experiment with the number of repetitions of the director in the soup.
-Consider other members of the crew: The director isn't the only person that
-gives the movie its character. You can also consider adding other crew members,
-such as producers and screenwriters, to your soup.
-- Experiment with other metadata: We only considered genres, keywords, and
-credits while building our metadata model. However, our dataset contains
-plenty of other features, such as production companies, countries, and languages.
-You may consider these data points, too, as they may be able to capture
-important information (such as if two movies are produced by Pixar).
-- Introduce a popularity filter: It is entirely possible that two movies have the
-same genres and sub-genres, but differ wildly in quality and popularity. In such
-cases, you may want to introduce a popularity filter that considers the n most
-similar movies, computes a weighted rating, and displays the top five results.
+- **Come up with more well-defined sub-genres**: Our model only considered the first three keywords that appeared in the keywords list. There was, however, no justification for doing so. In fact, it is entirely possible that certain keywords appeared in only one movie (thus rendering them useless). A much more potent technique would be to define, as with the genres, a definite number of sub-genres and assign only these sub-genres to the movies.
+
+> In mo some categories are so large that makes sense to break them down
+
+- **Give more weight to the director**: Our model gave as much importance to the director as to the actors. However, you can argue that the character of a movie is determined more by the former. We can give more emphasis to the director by mentioning this individual multiple times in our soup instead of just once. Experiment with the number of repetitions of the director in the soup. Consider other members of the crew: The director isn't the only person that gives the movie its character. You can also consider adding other crew members, such as producers and screenwriters, to your soup.
+- **Experiment with other metadata**: We only considered genres, keywords, and credits while building our metadata model. However, our dataset contains plenty of other features, such as production companies, countries, and languages. You may consider these data points, too, as they may be able to capture important information (such as if two movies are produced by Pixar).
+- **Introduce a popularity filter**: It is entirely possible that two movies have the same genres and sub-genres, but differ wildly in quality and popularity. In such cases, you may want to introduce a popularity filter that considers the n most similar movies, computes a weighted rating, and displays the top five results.
 You have already learned how to do this in the previous chapter.
 
 ## 5. Getting Started with Data Mining Techniques
 
 
+![](./../img/2024-03-25-16-27-40.png)
+
+> Make this conversion first as for (2024)
+
 ```py
 from sklearn.datasets import make_blobs
 ```
+- **Similarity measures**: Given two items, how do we mathematically quantify how different or similar they are to each other? Similarity measures help us in answering this question. We have already made use of a similarity measure (the cosine score) while building our content recommendation engine. In this chapter, we will be looking at a few other popular similarity scores.
+
+
+**Euclidina Distance**
+![](./../img/2024-03-25-16-28-06.png)
+
+> Euclidian Distances using vectors.
+
+
+![](./../img/2024-03-25-16-28-51.png)
+
+**Peason Distance**
+
+![](./../img/2024-03-25-16-31-47.png)
+
+> Here is a better way to calculate similarity as it considers the biases people may have on their data.
+> For this we have 
+
+
+**Cosine Similarity**
+
+![](./../img/2024-03-25-16-36-34.png)
+
+> You can see how the cosine similarity is when we want to find how the vectors differ (in maginutde)
+
+
+
+- **Dimensionality reduction**: When building collaborative filters, we are usually dealing with millions of users rating millions of items. In such cases, our user and item vectors are going to be of a dimension in the order of millions. To improve performance, speed up calculations, and avoid the curse of dimensionality, it is often a good idea to reduce the number of dimensions considerably, while retaining most of the information. This section of the chapter will describe techniques that do just that.
+
+
+
+- **Supervised learning**: Supervised learning is a class of machine learning algorithm that makes use of label data to infer a mapping function that can then be used to predict the label (or class) of unlabeled data. We will be looking at some of the most popular supervised learning algorithms, such as support vector machines, logistic regression, decision trees, and ensembling.
+
+
+
+- **Clustering**: Clustering is a type of unsupervised learning where the algorithm tries to divide all the data points into a certain number of clusters. Therefore, without the use of a label dataset, the clustering algorithm is able to assign classes to all the unlabel points. In this section, we will be looking at k-means
+clustering, a simple but powerful algorithm popularly used in collaborative filters.
+
+
+![](./../img/2024-03-25-16-39-52.png)
+
+
+- Choosing the amount of K is key.
+
+![](./../img/2024-03-25-16-41-14.png)
+
+![](./../img/2024-03-25-16-46-07.png)
+
+> Here you can see that after the thrid iterations there is no much change in the Sum of Squared Values.
+
+
+- **Evaluation methods and metrics**: We will take a look at a few evaluation metrics that are used to gauge the performance of these algorithms. The metrics includeaccuracy, precision, and recall.
+
+- nearest_neighbors
+
+![](./../img/2024-03-25-16-50-04.png)
+
+
+- **Feature selection**: This method involves identifying the features that have the least predictive power and dropping them altogether. Therefore, feature selection involves identifying a subset of features that is most important for that particular use case. An important distinction of feature selection is that it maintains the original meaning of every retained feature. For example, let's say we have a housing dataset with price, area, and number of rooms as features. Now, if we were to drop the area feature, the remaining price and number of rooms features
+will still mean what they did originally.
+
+- **Feature extraction**: Feature extraction takes in m-dimensional data and transforms it into an n-dimensional output space (usually where m >> n), while retaining most of the information. However, in doing so, it creates new features that have no inherent meaning. For example, if we took the same housing dataset and used feature extraction to output it into a 2D space, the new features won't mean price, area, or number of rooms. They will be devoid of any meaning.
+
+
+**Principal Component Analysis**
+
+![](./../img/2024-03-25-16-53-26.png)
+
+
+For this we need to transfor our dataframe:
+
+- Convert into 1, -1 range
+
+![](./../img/2024-03-25-16-58-17.png)
+
+![](./../img/2024-03-25-16-59-27.png)
+
+
 
 
 
