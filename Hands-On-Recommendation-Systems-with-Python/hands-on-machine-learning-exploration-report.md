@@ -250,7 +250,7 @@ soup.
 - **Introduce a popularity filter**: It is entirely possible that two movies have the same genres and sub-genres, but differ wildly in quality and popularity. In such cases, you may want to introduce a popularity filter that considers the n most similar movies, computes a weighted rating, and displays the top five results.
 You have already learned how to do this in the previous chapter.
 
-## 5. Getting Started with Data Mining Techniques
+## Chapter 5. Getting Started with Data Mining Techniques
 
 
 ![](./../img/2024-03-25-16-27-40.png)
@@ -337,7 +337,45 @@ For this we need to transfor our dataframe:
 
 ![](./../img/2024-03-25-16-59-27.png)
 
+### Singular Value Decomposition
 
+
+#### **Supervised Learning**
+- Classification
+- Regression
+
+
+#### K Nearest Neighbors
+
+
+- Lazy in nature
+- hat k-NN does not make any underlying assumptions about the distribution of the data
+-  This also means that the k-NN model needs to have access to the training data at all times and cannot discard it during prediction like its sister algorithms.
+- Usually Odd K's
+
+#### Ensemblling
+
+- Multiple Algorithms is much better than a single one.
+
+**Bagging and Random Forests**
+
+![[../img/Pasted image 20240326170738.png]]
+
+- Selected using the square root of total number of features
+- Percentage Sampling
+- Baseline Treelike classification
+- Until N number of models are trained.
+- Doesn't learn mistakes from other models.
+
+#### Boosting
+
+
+![[../img/Pasted image 20240326171122.png]]
+
+> Here can be seen how Gradient Boosting is used to gauge the predictive power of each. . Achieving 97%
+
+
+### Evaluation Metrics
 
 
 
