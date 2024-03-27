@@ -11,6 +11,7 @@ parts:
 - caption: Software Engineering
   chapters:
   - file: algorithms/intro
+  
 
 - caption: Data Science
   chapters:
