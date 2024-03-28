@@ -653,10 +653,81 @@ Test time         0.19    0.12    0.14    0.21    0.14    0.16    0.04
 
 > A mena of `0.9356` which is the best performance so far.
 
+#### Slope One:
+
+```py
+#Import SVD
+from surprise import SlopeOne
+
+#Define the SVD algorithm object
+slopeOne = SlopeOne()
+
+#Evaluate the performance in terms of RMSE
+cross_validate(slopeOne, data, measures=['RMSE'], verbose=True)
+```
+
+
+```
+Evaluating RMSE of algorithm SlopeOne on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    0.9381  0.9456  0.9505  0.9450  0.9442  0.9447  0.0040  
+Fit time          0.50    0.51    0.60    0.69    0.81    0.62    0.12    
+Test time         2.87    2.65    2.89    3.92    3.52    3.17    0.47 
+```
 
 
 
 
+### More Prediction Algoritms
+
+https://surprise.readthedocs.io/en/stable/prediction_algorithms_package.html
+
+The prediction_algorithms package includes the prediction algorithms available for recommendation. The available prediction algorithms are:
+
+random_pred.NormalPredictor
+
+Algorithm predicting a random rating based on the distribution of the training set, which is assumed to be normal.
+
+baseline_only.BaselineOnly
+
+Algorithm predicting the baseline estimate for given user and item.
+
+knns.KNNBasic
+
+A basic collaborative filtering algorithm.
+
+knns.KNNWithMeans
+
+A basic collaborative filtering algorithm, taking into account the mean ratings of each user.
+
+knns.KNNWithZScore
+
+A basic collaborative filtering algorithm, taking into account the z-score normalization of each user.
+
+knns.KNNBaseline
+
+A basic collaborative filtering algorithm taking into account a baseline rating.
+
+matrix_factorization.SVD
+
+The famous SVD algorithm, as popularized by Simon Funk during the Netflix Prize.
+
+matrix_factorization.SVDpp
+
+The SVD++ algorithm, an extension of SVD taking into account implicit ratings.
+
+matrix_factorization.NMF
+
+A collaborative filtering algorithm based on Non-negative Matrix Factorization.
+
+slope_one.SlopeOne
+
+A simple yet accurate collaborative filtering algorithm.
+
+co_clustering.CoClustering
+
+A collaborative filtering algorithm based on co-clustering.
 
 
 
