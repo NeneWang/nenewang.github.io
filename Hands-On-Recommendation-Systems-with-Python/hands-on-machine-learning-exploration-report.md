@@ -729,11 +729,23 @@ co_clustering.CoClustering
 
 A collaborative filtering algorithm based on co-clustering.
 
-#### Hybrid Recommender
+#### Hybrid Recommender: Cosine Similarity Implementation
+
+https://naomy-gomes.medium.com/the-cosine-similarity-and-its-use-in-recommendation-systems-cb2ebd811ce1
 
 ```
 cosine_sim_map.csv
 ```
+
+
+![](./../img/2024-03-28-17-35-02.png)
+
+Check this repository:
+
+https://github.com/naomyduarteg/LIA-FastAPI-SQL
+
+
+
 
 
 
