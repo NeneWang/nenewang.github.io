@@ -11,7 +11,10 @@ Here as per the actionable insights to add into the project:
   - Content Based:
     - Genres, Titles, Cast, Diretors, Keywords, Genres
     - Goes through Santiation
-    - 
+
+
+
+
 
 
 

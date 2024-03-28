@@ -729,6 +729,17 @@ co_clustering.CoClustering
 
 A collaborative filtering algorithm based on co-clustering.
 
+#### Hybrid Recommender
+
+```
+cosine_sim_map.csv
+```
+
+
+
+
+
+
 
 
 
