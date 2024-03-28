@@ -18,3 +18,4 @@ sphinxext-rediraffe~=0.2.3
 sympy
 ghp-import
 livereload
+scikit-surprise

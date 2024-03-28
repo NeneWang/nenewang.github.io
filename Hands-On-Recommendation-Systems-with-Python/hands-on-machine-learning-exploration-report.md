@@ -387,14 +387,271 @@ For this we need to transfor our dataframe:
 ### 6. Collaborative Filtering
 
 
+```py
+#Function to compute the RMSE score obtained on the testing set by a model
+def score(cf_model):
+    
+    #Construct a list of user-movie tuples from the testing dataset
+    id_pairs = zip(X_test['user_id'], X_test['movie_id'])
+    
+    #Predict the rating for every user-movie tuple
+    y_pred = np.array([cf_model(user, movie) for (user, movie) in id_pairs])
+    
+    #Extract the actual ratings given by the users in the test data
+    y_true = np.array(X_test['rating'])
+    
+    #Return the final RMSE score
+    return rmse(y_true, y_pred)
+```
+
+```py
+score(baseline)
+```
+
+```
+1.2488234462885457
+```
+
+Can RMSE be greater than 1?
+RMSE could be more that 1. that's just mean that your model couldn't find a solution or (optimized very well). It means that the squared root of squared differences between your predictions and observed values is 11. Naturally lower values indicate a better fit of your model.May 31, 2020
+
+https://stackoverflow.com/questions/62122206/what-does-it-mean-if-an-rmse-has-a-value-far-beyond-1#:~:text=RMSE%20could%20be%20more%20that,or%20(optimized%20very%20well).&text=It%20means%20that%20the%20squared,better%20fit%20of%20your%20model.
 
 
+#### Mean
+
+- Just replace the meaan function by the mean if needed
 
 
+```py
+#User Based Collaborative Filter using Mean Ratings
+def cf_user_mean(user_id, movie_id):
+    
+    #Check if movie_id exists in r_matrix
+    if movie_id in r_matrix:
+        #Compute the mean of all the ratings given to the movie
+        mean_rating = r_matrix[movie_id].mean()
+    
+    else:
+        #Default to a rating of 3.0 in the absence of any information
+        mean_rating = 3.0
+    
+    return mean_rating
+```
+
+Score rating:
 
 
+```
+1.0300824802393536
+```
 
 
+#### Weighted Mean
+
+```py
+#User Based Collaborative Filter using Weighted Mean Ratings
+def cf_user_wmean(user_id, movie_id):
+    
+    #Check if movie_id exists in r_matrix
+    if movie_id in r_matrix:
+        try:
+            #Get the similarity scores for the user in question with every other user
+            sim_scores = cosine_sim[user_id]
+            
+            #Get the user ratings for the movie in question
+            m_ratings = r_matrix[movie_id]
+            
+            #Extract the indices containing NaN in the m_ratings series
+            idx = m_ratings[m_ratings.isnull()].index
+            
+            #Drop the NaN values from the m_ratings Series
+            m_ratings = m_ratings.dropna()
+            
+            #Drop the corresponding cosine scores from the sim_scores series
+            sim_scores = sim_scores.drop(idx)
+            
+            #Compute the final weighted mean
+            wmean_rating = np.dot(sim_scores, m_ratings)/ sim_scores.sum()
+        except:
+            #Default to a rating of 3.0 in the absence of any information
+            wmean_rating = 3.0
+    
+    else:
+        #Default to a rating of 3.0 in the absence of any information
+        wmean_rating = 3.0
+    
+    return wmean_rating
+```
+
+End score:
+```
+1.023663367309459
+```
+Not that much of an improvement I would say.
+
+
+#### Demographics Filter?
+
+```py
+#Gender Based Collaborative Filter using Mean Ratings
+def cf_gender(user_id, movie_id):
+    
+    #Check if movie_id exists in r_matrix (or training set)
+    if movie_id in r_matrix:
+        #Identify the gender of the user
+        gender = users.loc[user_id]['sex']
+        
+        #Check if the gender has rated the movie
+        if gender in gender_mean[movie_id]:
+            
+            #Compute the mean rating given by that gender to the movie
+            gender_rating = gender_mean[movie_id][gender]
+        
+        else:
+            gender_rating = 3.0
+    
+    else:
+        #Default to a rating of 3.0 in the absence of any information
+        gender_rating = 3.0
+    
+    return gender_rating
+```
+
+> 1.0392906999935203
+
+**Ocupation Based**
+
+```py
+#Gender and Occupation Based Collaborative Filter using Mean Ratings
+def cf_gen_occ(user_id, movie_id):
+    
+    #Check if movie_id exists in gen_occ_mean
+    if movie_id in gen_occ_mean.index:
+        
+        #Identify the user
+        user = users.loc[user_id]
+        
+        #Identify the gender and occupation
+        gender = user['sex']
+        occ = user['occupation']
+        
+        #Check if the occupation has rated the movie
+        if occ in gen_occ_mean.loc[movie_id]:
+            
+            #Check if the gender has rated the movie
+            if gender in gen_occ_mean.loc[movie_id][occ]:
+                
+                #Extract the required rating
+                rating = gen_occ_mean.loc[movie_id][occ][gender]
+                
+                #Default to 3.0 if the rating is null
+                if np.isnan(rating):
+                    rating = 3.0
+                
+                return rating
+            
+    #Return the default rating    
+    return 3.0
+```
+
+> 1.1419651376788005
+
+Way worse
+
+```
+1. Find the k-nearest neighbors of u who have rated movie m
+2. Output the average rating of the k users for the movie m
+```
+
+Using **Surpise**:
+
+```py
+#Import the required classes and methods from the surprise library
+from surprise import Reader, Dataset, KNNBasic
+from surprise.model_selection import cross_validate
+
+#Define a Reader object
+#The Reader object helps in parsing the file or dataframe containing ratings
+reader = Reader()
+
+#Create the dataset to be used for building the filter
+data = Dataset.load_from_df(ratings, reader)
+
+#Define the algorithm object; in this case kNN
+knn = KNNBasic()
+
+#Evaluate the performance in terms of RMSE
+cross_validate(knn, data, measures=['RMSE'], verbose=True)
+```
+
+```
+Computing the msd similarity matrix...
+Done computing similarity matrix.
+Computing the msd similarity matrix...
+Done computing similarity matrix.
+Computing the msd similarity matrix...
+Done computing similarity matrix.
+Computing the msd similarity matrix...
+Done computing similarity matrix.
+Computing the msd similarity matrix...
+Done computing similarity matrix.
+Evaluating RMSE of algorithm KNNBasic on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    0.9786  0.9799  0.9693  0.9851  0.9832  0.9792  0.0055  
+Fit time          0.76    0.48    0.55    0.48    0.40    0.53    0.12    
+Test time         3.39    3.73    3.32    3.70    3.38    3.50    0.17    
+{'test_rmse': array([0.97864372, 0.97990445, 0.96929669, 0.98507706, 0.98315568]),
+ 'fit_time': (0.7586112022399902,
+  0.4836082458496094,
+  0.5462234020233154,
+  0.48327016830444336,
+  0.4006950855255127),
+ 'test_time': (3.3917348384857178,
+  3.725182056427002,
+  3.3193581104278564,
+  3.700237989425659,
+  3.380105495452881)}
+```
+
+
+> A mean of `0.9792` sustantial improvement.
+
+#### SVD
+
+```py
+#Import SVD
+from surprise import SVD
+
+#Define the SVD algorithm object
+svd = SVD()
+
+#Evaluate the performance in terms of RMSE
+cross_validate(svd, data, measures=['RMSE'], verbose=True)
+```
+
+```
+Evaluating RMSE of algorithm SVD on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    0.9352  0.9264  0.9348  0.9311  0.9505  0.9356  0.0081  
+Fit time          1.48    1.00    1.24    0.98    1.16    1.17    0.18    
+Test time         0.19    0.12    0.14    0.21    0.14    0.16    0.04    
+{'test_rmse': array([0.93517794, 0.92644328, 0.93476948, 0.93105806, 0.95048541]),
+ 'fit_time': (1.4753427505493164,
+  1.0038070678710938,
+  1.2418856620788574,
+  0.9770834445953369,
+  1.1576735973358154),
+ 'test_time': (0.1932990550994873,
+  0.11502718925476074,
+  0.14063382148742676,
+  0.20772171020507812,
+```
+
+
+> A mena of `0.9356` which is the best performance so far.
 
 
 
