@@ -11,48 +11,9 @@
             "id": "b336143f1904d226",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "8537b031f411539e",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "History/The Second Industrial Revolution.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "b997fdc92cf91af7",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ea77a879bcecb724",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "History/Reply.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ffbffcb8420e0db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "History/offciers.md",
+                "file": "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "839c0b3a0a0bf936",
@@ -124,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "History/The Second Industrial Revolution.md",
+                "file": "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "History/The Second Industrial Revolution.md",
+                "file": "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,9 +125,8 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
               "state": {
-                "file": "History/The Second Industrial Revolution.md"
+                "file": "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md"
               }
             }
           }
@@ -174,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,35 +148,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "720b4658fe19a1e3",
+  "active": "b336143f1904d226",
   "lastOpenFiles": [
-    "img/2024-03-25-16-59-27.png",
-    "img/2024-03-25-16-58-17.png",
-    "img/2024-03-25-16-54-05.png",
-    "img/2024-03-25-16-53-26.png",
-    "img/2024-03-25-16-50-04.png",
-    "img/2024-03-25-16-48-53.png",
-    "img/2024-03-25-16-46-07.png",
-    "img/2024-03-25-16-41-41.png",
-    "img/2024-03-25-16-41-14.png",
-    "img/2024-03-25-16-39-52.png",
-    "img/2024-03-25-16-36-34.png",
-    "img",
-    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
-    "Hands-On-Recommendation-Systems-with-Python/data/movies_metadata.csv",
-    "Hands-On-Recommendation-Systems-with-Python/data/metadata_clean.csv",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter5/Data Mining.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter6/Collaborative Filtering.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter4/Content Based Recommenders.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter7/Hybrid Recommender.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter3/Simple Recommender.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter3/Knowledge Recommender.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/Chapter2/Chapter2.ipynb",
-    "Hands-On-Recommendation-Systems-with-Python/README.md",
-    "History/offciers.md",
+    "Hands-On-Recommendation-Systems-with-Python/data/Resume_latest.pdf.crdownload",
+    "Hands-On-Recommendation-Systems-with-Python/data/Resume_latest.pdf",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u1.test",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ub.test",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ua.test",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ub.base",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u5.test",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ua.base",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u5.base",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u4.test",
+    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u3.test",
+    "img/Pasted image 20240327152944.png",
+    "data_tools/bc_lectures/data/readme..md",
     "History/The Second Industrial Revolution.md",
     "History/Reply.md",
+    "History/offciers.md",
+    "1-intro/coursework.md",
+    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
+    "img/Pasted image 20240326171122.png",
+    "img/Pasted image 20240326170738.png",
+    "img/Pasted image 20240326165454.png",
+    "images/Pasted image 20240311194752.png",
     "Alternative Careers.md",
+    "_build/html/_images/logo-square.svg",
+    "_build/html/_images/b75aa46301d89e51d6ac73f1e24974ad36908dc0f1d4a05162f604119ce19ef0.png",
+    "_build/html/_images/d3e92b55272431768369d2f15e769ae12bc3bce5a80876c46349ec3e51c77d05.png",
+    "_build/html/_images/2b07055cdff69c5a3804fddbccd45303718367937086cc3836aa7d75b3bdd387.png",
+    "_build/html/_images/da457f3d8394d05e23900de2d3bcfb1009caef2487fc10437ce7bdbcb4aef9db.png",
     "_build/html/_sources/index.md",
     "_build/html/_sources/data_tools/introduction.md",
     "_build/html/_sources/algorithms/intro.md",
@@ -232,7 +195,6 @@
     "_build/html/_sources/content/math.md",
     "_build/html/_sources/content/layout.md",
     "_build/html/_sources/content/index.md",
-    "_build/html/_sources/content/figures.md",
-    "_build/html/_sources/content/content-blocks.md"
+    "_build/html/_sources/content/figures.md"
   ]
 }

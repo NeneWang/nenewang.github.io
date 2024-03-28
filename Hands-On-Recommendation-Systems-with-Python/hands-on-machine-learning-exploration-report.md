@@ -16,12 +16,12 @@ https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data
 - [x] Chapter 3a: Simple Recommender System
 - [x] Chapter 3b: Knowledge-Based Recommender System
 - [ ] Chapter 4: Content-Based Recommender System
-- [ ] Chapter 5: Getting Started with Data mIning Techniques
+- [ ] Chapter 5: Getting Started with Data mining Techniques
   - [ ] Similarity Measures
   - [ ] Clustering
   - [ ] Dimensionality Reduction
   - [ ] Evaluation Metrics
-- [ ] Chapter 6: Building COllaborative Filtering Recommender System
+- [ ] Chapter 6: Building Collaborative Filtering Recommender System
   - [ ] User-Based Collaborative Filtering
   - [ ] Item-Based Collaborative Filtering
   - [ ] Model-Based Collaborative Filtering
@@ -376,6 +376,40 @@ For this we need to transfor our dataframe:
 
 
 ### Evaluation Metrics
+
+
+# Here the evaluation metrics:
+
+  
+![[../img/Pasted image 20240327152944.png]]
+
+
+### 6. Collaborative Filtering
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
