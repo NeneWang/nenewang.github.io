@@ -1,4 +1,4 @@
-# Hands On Machine Learning Book Reading Reading Report
+#  Recommendation Systems with Python
 
 ![](./../img/2024-03-25-14-13-31.png)
 
@@ -15,16 +15,16 @@ https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset/data
 - [x] Chapter 1
 - [x] Chapter 3a: Simple Recommender System
 - [x] Chapter 3b: Knowledge-Based Recommender System
-- [ ] Chapter 4: Content-Based Recommender System
-- [ ] Chapter 5: Getting Started with Data mining Techniques
-  - [ ] Similarity Measures
-  - [ ] Clustering
-  - [ ] Dimensionality Reduction
-  - [ ] Evaluation Metrics
-- [ ] Chapter 6: Building Collaborative Filtering Recommender System
-  - [ ] User-Based Collaborative Filtering
-  - [ ] Item-Based Collaborative Filtering
-  - [ ] Model-Based Collaborative Filtering
+- [x] Chapter 4: Content-Based Recommender System
+- [x] Chapter 5: Getting Started with Data mining Techniques
+  - [x] Similarity Measures
+  - [x] Clustering
+  - [x] Dimensionality Reduction
+  - [x] Evaluation Metrics
+- [x] Chapter 6: Building Collaborative Filtering Recommender System
+  - [x] User-Based Collaborative Filtering
+  - [x] Item-Based Collaborative Filtering
+  - [x] Model-Based Collaborative Filtering
   
 
 ## Chapter 3: Simple Recommender System
@@ -42,7 +42,7 @@ def weighted_rating(x, m=m, C=C):
 
 ## Chapter 3: Knowledge-Based Recommender System 
 
-> Seems to be exloring basic filtering then rating based on the `vote counts` and `vote average` of the movies. to give the recommendations
+> Seems to be exploring basic filtering then rating based on the `vote counts` and `vote average` of the movies. to give the recommendations
 
 ```py
 def build_chart(gen_df, percentile=0.8):
