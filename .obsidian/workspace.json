@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "737c148a9a5628dd",
+        "id": "b997fdc92cf91af7",
         "type": "tabs",
         "children": [
           {
-            "id": "853279b2f946044c",
+            "id": "1a9dae652188e754",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#x",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md"
+              }
             }
           }
         ],
@@ -126,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -139,53 +146,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "853279b2f946044c",
+  "active": "1a9dae652188e754",
   "lastOpenFiles": [
-    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
-    "img/2024-03-28-11-18-00.png",
-    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
-    "Hands-On-Recommendation-Systems-with-Python/data/Resume_latest.pdf.crdownload",
-    "Hands-On-Recommendation-Systems-with-Python/data/Resume_latest.pdf",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u1.test",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ub.test",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ua.test",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ub.base",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u5.test",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/ua.base",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u5.base",
-    "Hands-On-Recommendation-Systems-with-Python/data/movielens/u4.test",
-    "img/Pasted image 20240327152944.png",
-    "data_tools/bc_lectures/data/readme..md",
-    "History/The Second Industrial Revolution.md",
-    "History/Reply.md",
-    "History/offciers.md",
-    "1-intro/coursework.md",
-    "img/Pasted image 20240326171122.png",
-    "img/Pasted image 20240326170738.png",
-    "img/Pasted image 20240326165454.png",
-    "images/Pasted image 20240311194752.png",
+    "img/Pasted image 20240330130354.png",
+    "Plan.md",
+    "genetic-algorithms/genetic-algorithms-book-report.md",
+    "img/Pasted image 20240330155105.png",
+    "img/Pasted image 20240330155050.png",
+    "img/Pasted image 20240330155034.png",
+    "img/Pasted image 20240330155023.png",
+    "img/Pasted image 20240330155012.png",
+    "img/Pasted image 20240330155004.png",
+    "img/Pasted image 20240330154955.png",
+    "img/Pasted image 20240330154935.png",
+    "img/Pasted image 20240330154921.png",
+    "ios-development/SwiftUI-Backend with Firebase.md",
+    "ios-development/SwiftUI-REST Client.md",
+    "ios-development/Plan.md",
+    "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
     "Alternative Careers.md",
-    "_build/html/_images/logo-square.svg",
-    "_build/html/_images/b75aa46301d89e51d6ac73f1e24974ad36908dc0f1d4a05162f604119ce19ef0.png",
-    "_build/html/_images/d3e92b55272431768369d2f15e769ae12bc3bce5a80876c46349ec3e51c77d05.png",
-    "_build/html/_images/2b07055cdff69c5a3804fddbccd45303718367937086cc3836aa7d75b3bdd387.png",
-    "_build/html/_sources/index.md",
-    "_build/html/_sources/data_tools/introduction.md",
-    "_build/html/_sources/algorithms/intro.md",
-    "_build/html/_sources/1-intro/syllabus.md",
-    "_build/html/_sources/1-intro/about.md",
-    "_build/html/_sources/interactive/thebe.md",
-    "_build/html/_sources/interactive/hiding.md",
-    "_build/html/_sources/interactive/comments/utterances.md",
-    "_build/html/_sources/interactive/comments/hypothesis.md",
-    "_build/html/_sources/interactive/comments.md",
-    "_build/html/_sources/content/references.md",
-    "_build/html/_sources/content/proof.md",
-    "_build/html/_sources/content/myst.md",
-    "_build/html/_sources/content/metadata.md",
-    "_build/html/_sources/content/math.md",
-    "_build/html/_sources/content/layout.md",
-    "_build/html/_sources/content/index.md",
-    "_build/html/_sources/content/figures.md"
+    "data_tools/bc_lectures/data/readme..md",
+    "data_tools/bc_lectures/hw5.pdf",
+    "data_tools/bc_lectures/midterm_review.pdf",
+    "data_tools/introduction.md",
+    "recommendation-systems/abstract.md",
+    "misc/Anthropology/Chapter 6 - The Primates.md",
+    "misc/Anthropology/Chapter 7 - Primate Behavior.md",
+    "misc/History/officers.md",
+    "misc/History/Reply.md",
+    "misc/History/The Second Industrial Revolution.md",
+    "recommendation-systems/README.md",
+    "backlog.md",
+    "corrected small wars.md",
+    "data_tools/bc_lectures/wine-exploration.ipynb",
+    "data_tools/bc_lectures/review.ipynb",
+    "data_tools/bc_lectures/hw_2.ipynb",
+    "data_tools/bc_lectures/hw5.ipynb",
+    "data_tools/bc_lectures/hw4.ipynb",
+    "data_tools/bc_lectures/hw3.ipynb",
+    "data_tools/bc_lectures/hw-1-data-tools.ipynb",
+    "data_tools/bc_lectures/data/students.csv",
+    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
+    "misc/History/Small Wars.md",
+    "Anthropology/Chapter 7 - Primate Behavior.md",
+    "Anthropology/Chapter 6 - The Primates.md",
+    "History/Small Wars.md",
+    "hist/Small Wars.md",
+    "History/officers.md"
   ]
 }
