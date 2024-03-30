@@ -1,5 +1,4 @@
 {
-  "newFileLocation": "root",
-  "attachmentFolderPath": "images",
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "img"
 }
