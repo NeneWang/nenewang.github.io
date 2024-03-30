@@ -18,69 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "55b0cac5a66a20c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Plan.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dc7c947651e2c175",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ios-development/SwiftUI-Backend with Firebase.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0c153d63b4b47876",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ios-development/SwiftUI-REST Client.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dcd32478c00d0ddf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ios-development/Plan.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c8ce35275aa6d277",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "recommendation-systems/abstract.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Plan.md",
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Plan.md",
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Plan.md"
+                "file": "genetic-algorithms/genetic-algorithms-book-report.md"
               }
             }
           }
@@ -207,25 +146,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "55b0cac5a66a20c8",
+  "active": "1a9dae652188e754",
   "lastOpenFiles": [
-    "genetic-algorithms/genetic-algorithms-book-report.md",
-    "Plan.md",
-    "img/Pasted image 20240330130601.png",
-    "img/Pasted image 20240330130539.png",
     "img/Pasted image 20240330130354.png",
-    "img/Pasted image 20240330130250.png",
-    "img/Pasted image 20240330130028.png",
-    "img/Pasted image 20240330130007.png",
-    "img/Pasted image 20240330125444.png",
-    "img/Pasted image 20240330125442.png",
-    "img/Pasted image 20240330125416.png",
-    "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
-    "ios-development/Plan.md",
+    "Plan.md",
+    "genetic-algorithms/genetic-algorithms-book-report.md",
+    "img/Pasted image 20240330155105.png",
+    "img/Pasted image 20240330155050.png",
+    "img/Pasted image 20240330155034.png",
+    "img/Pasted image 20240330155023.png",
+    "img/Pasted image 20240330155012.png",
+    "img/Pasted image 20240330155004.png",
+    "img/Pasted image 20240330154955.png",
+    "img/Pasted image 20240330154935.png",
+    "img/Pasted image 20240330154921.png",
     "ios-development/SwiftUI-Backend with Firebase.md",
     "ios-development/SwiftUI-REST Client.md",
+    "ios-development/Plan.md",
+    "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
     "Alternative Careers.md",
-    "data_tools/images/05.01-classification-1.png",
     "data_tools/bc_lectures/data/readme..md",
     "data_tools/bc_lectures/hw5.pdf",
     "data_tools/bc_lectures/midterm_review.pdf",
@@ -253,7 +192,6 @@
     "Anthropology/Chapter 6 - The Primates.md",
     "History/Small Wars.md",
     "hist/Small Wars.md",
-    "History/officers.md",
-    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md"
+    "History/officers.md"
   ]
 }

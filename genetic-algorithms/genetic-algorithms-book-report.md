@@ -4,36 +4,40 @@
 
 
 
-![[../img/Pasted image 20240330114233.png]]
+![](../img/Pasted%20image%2020240330154921.png)
 
 ### Selection Methods
 
 
-| Selection Method              | Distinction | Advantages | Illustration                                                                                   |
-| ----------------------------- | ----------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| Roulette Wheel Selection      |             |            | ![[../img/Pasted image 20240330114326.png]]<br>![[../img/Pasted image 20240330114444.png]]<br> |
-| Stochastic Universal Sampling |             |            | <br>![[../img/Pasted image 20240330114629.png]]<br>                                            |
-| Rank Based                    |             |            | ![[../img/Pasted image 20240330114648.png]]                                                    |
-| Tournament Selection          |             |            | ![[../img/Pasted image 20240330115113.png]]                                                    |
-|                               |             |            |                                                                                                |
-|                               |             |            |                                                                                                |
+| Selection Method              | Distinction | Advantages | Illustration                                        |
+| ----------------------------- | ----------- | ---------- | --------------------------------------------------- |
+| Roulette Wheel Selection      |             |            | ![](../img/Pasted%20image%2020240330154935.png)     |
+| Stochastic Universal Sampling |             |            | ![](../img/Pasted%20image%2020240330154955.png)<br> |
+| Rank Based                    |             |            | ![](../img/Pasted%20image%2020240330155004.png)     |
+| Tournament Selection          |             |            | ![](../img/Pasted%20image%2020240330155012.png)     |
+|                               |             |            |                                                     |
+|                               |             |            |                                                     |
 
+![../img/Pasted image 20240330114326.png]
 
 ### Cross Over Methods
 #### Single Point Crossover
-![[../img/Pasted image 20240330114941.png]]
+
+![](../img/Pasted%20image%2020240330155023.png)
 
 
 
 #### Cross Over Method
-![[../img/Pasted image 20240330115037.png]]
+
+![](../img/Pasted%20image%2020240330155034.png)
+
 #### Uniform Crossover
 
-![[../img/Pasted image 20240330115208.png]]
+![](../img/Pasted%20image%2020240330155050.png)
 
 ### Ordered Cross Over
 
-![[../img/Pasted image 20240330115556.png]]
+![](../img/Pasted%20image%2020240330155105.png)
 ### Mutation Methods
 
 | Method                 | Picture                                         | Description                                                              |
