@@ -53,3 +53,7 @@
 
 ## 3. Using the DEAP Framework
 
+## 4. Combinatorial Operations
+
+![](../img/Pasted%20image%2020240330192842.png)
+
