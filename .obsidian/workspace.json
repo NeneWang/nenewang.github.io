@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "737c148a9a5628dd",
+        "id": "b997fdc92cf91af7",
         "type": "tabs",
         "children": [
           {
-            "id": "853279b2f946044c",
+            "id": "1a9dae652188e754",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#x",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -134,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,13 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "853279b2f946044c",
+  "active": "1a9dae652188e754",
   "lastOpenFiles": [
-    "ios-development/SwiftUI-REST Client.md",
-    "ios-development/SwiftUI-Backend with Firebase.md",
-    "ios-development/Plan.md",
-    "ios-development",
     "img/Pasted image 20240330192842.png",
+    "img/Pasted image 20240330130354.png",
+    "Plan.md",
+    "genetic-algorithms/genetic-algorithms-book-report.md",
     "img/Pasted image 20240330155105.png",
     "img/Pasted image 20240330155050.png",
     "img/Pasted image 20240330155034.png",
@@ -163,37 +161,38 @@
     "img/Pasted image 20240330154955.png",
     "img/Pasted image 20240330154935.png",
     "img/Pasted image 20240330154921.png",
-    "misc/History/The Second Industrial Revolution.md",
-    "misc/History/Small Wars.md",
-    "misc/History/Reply.md",
-    "misc/History/officers.md",
-    "misc/History",
-    "misc/Anthropology/Chapter 7 - Primate Behavior.md",
-    "misc/Anthropology/Chapter 6 - The Primates.md",
-    "misc/Anthropology",
-    "recommendation-systems/Chapter7/Hybrid Recommender.ipynb",
-    "recommendation-systems/Chapter6/Collaborative Filtering.ipynb",
-    "recommendation-systems/Chapter3/Knowledge Recommender.ipynb",
-    "recommendation-systems/Chapter3/Simple Recommender.ipynb",
-    "recommendation-systems/Chapter5/Data Mining.ipynb",
-    "recommendation-systems/Chapter4/Content Based Recommenders.ipynb",
-    "recommendation-systems/Chapter2/Chapter2.ipynb",
+    "ios-development/SwiftUI-Backend with Firebase.md",
+    "ios-development/SwiftUI-REST Client.md",
+    "ios-development/Plan.md",
     "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
-    "recommendation-systems/abstract.md",
-    "genetic-algorithms/genetic-algorithms-book-report.md",
-    "corrected small wars.md",
-    "Plan.md",
-    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
-    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
-    "data_tools/bc_lectures/data/readme..md",
-    "History/The Second Industrial Revolution.md",
-    "History/Reply.md",
-    "History/offciers.md",
-    "1-intro/coursework.md",
     "Alternative Careers.md",
-    "_build/html/_sources/index.md",
-    "_build/html/_sources/data_tools/introduction.md",
-    "_build/html/_sources/algorithms/intro.md",
-    "_build/html/_sources/1-intro/syllabus.md"
+    "data_tools/bc_lectures/data/readme..md",
+    "data_tools/bc_lectures/hw5.pdf",
+    "data_tools/bc_lectures/midterm_review.pdf",
+    "data_tools/introduction.md",
+    "recommendation-systems/abstract.md",
+    "misc/Anthropology/Chapter 6 - The Primates.md",
+    "misc/Anthropology/Chapter 7 - Primate Behavior.md",
+    "misc/History/officers.md",
+    "misc/History/Reply.md",
+    "misc/History/The Second Industrial Revolution.md",
+    "recommendation-systems/README.md",
+    "backlog.md",
+    "corrected small wars.md",
+    "data_tools/bc_lectures/wine-exploration.ipynb",
+    "data_tools/bc_lectures/review.ipynb",
+    "data_tools/bc_lectures/hw_2.ipynb",
+    "data_tools/bc_lectures/hw5.ipynb",
+    "data_tools/bc_lectures/hw4.ipynb",
+    "data_tools/bc_lectures/hw3.ipynb",
+    "data_tools/bc_lectures/hw-1-data-tools.ipynb",
+    "data_tools/bc_lectures/data/students.csv",
+    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
+    "misc/History/Small Wars.md",
+    "Anthropology/Chapter 7 - Primate Behavior.md",
+    "Anthropology/Chapter 6 - The Primates.md",
+    "History/Small Wars.md",
+    "hist/Small Wars.md",
+    "History/officers.md"
   ]
 }
