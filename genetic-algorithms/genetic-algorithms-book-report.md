@@ -53,6 +53,22 @@
 
 ## 3. Using the DEAP Framework
 
+
+![](../img/Pasted%20image%2020240330201126.png)
+
+
+**Code**
+
+#### 3.1 DEAP Framework Long
+
+Shows the long strategy using loops, and more in depth exploration of a solution
+#### 3.2 DEAP Framework Short
+
+- Literally just defines:
+	- The fitness Sterategies
+
+
+
 ## 4. Combinatorial Operations
 
 ![](../img/Pasted%20image%2020240330192842.png)
