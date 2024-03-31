@@ -73,3 +73,32 @@ Shows the long strategy using loops, and more in depth exploration of a solution
 
 ![](../img/Pasted%20image%2020240330192842.png)
 
+
+### 4.1 Permutations
+
+![](./../img/2024-03-31-01-43-28.png)
+
+![alt text](image.png)
+
+![](./../img/2024-03-31-01-49-19.png)
+
+![](./../img/2024-03-31-01-49-38.png)
+
+
+![](./../img/2024-03-31-01-50-14.png)
+
+#### The Rosetta Knapsack Problem
+
+![](../img/Pasted%20image%2020240331023945.png)
+
+
+
+
+![](../img/Pasted%20image%2020240331024959.png)
+
+
+## The Traveling Salesman
+
+
+
+![](../img/Pasted%20image%2020240331032346.png)
