@@ -97,8 +97,20 @@ Shows the long strategy using loops, and more in depth exploration of a solution
 ![](../img/Pasted%20image%2020240331024959.png)
 
 
-## The Traveling Salesman
+#### The Traveling Salesman
 
 
 
 ![](../img/Pasted%20image%2020240331032346.png)
+
+
+#### The vehicle routing problem
+
+
+Imagine that you now manage a larger fulfillment center. You still need to deliver packages to a list of customers, but now you have a fleet of several vehicles at your disposal. What is the best way to deliver the packages to the customers using these vehicles?
+
+
+
+
+
+

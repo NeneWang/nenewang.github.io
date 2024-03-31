@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "839c0b3a0a0bf936",
@@ -148,6 +149,10 @@
   },
   "active": "1a9dae652188e754",
   "lastOpenFiles": [
+    "genetic-algorithms/__pycache__/elitism.cpython-310.pyc",
+    "genetic-algorithms/elitism.py",
+    "genetic-algorithms/__pycache__/tsp.cpython-310.pyc",
+    "genetic-algorithms/tsp.py",
     "genetic-algorithms/travlingsalesman.ipynb",
     "genetic-algorithms/travlingsalesman.py",
     "genetic-algorithms/tsp-data/bayg29-loc.pickle",
@@ -156,12 +161,8 @@
     "img/Pasted image 20240331032346.png",
     "genetic-algorithms/tsp.ipynb",
     "genetic-algorithms/__pycache__/knapsack.cpython-310.pyc",
-    "genetic-algorithms/__pycache__",
-    "genetic-algorithms/knapsack.py",
     "img/Pasted image 20240331024959.png",
     "img/Pasted image 20240331023945.png",
-    "genetic-algorithms/deap-framework-elitism.ipynb",
-    "genetic-algorithms/deap-framework-short copy.ipynb",
     "img/2024-03-31-01-50-14.png",
     "img/2024-03-31-01-49-38.png",
     "img/2024-03-31-01-49-19.png",
