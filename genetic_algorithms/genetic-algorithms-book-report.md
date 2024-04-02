@@ -1,4 +1,55 @@
 
+## 1. Introduction to Genetic Algorithms
+
+
+Here a small section describing distinctively what Genetic Algorithms are and how they are used in optimization problems.
+
+
+### 1.1 Resources
+
+
+::::{card-carousel} 2
+
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+:link: https://paper.flys.dev/api/documents/429/preview/
+**Hands-On Genetic Algorithms with Python**
+^^^
+```{image} 
+https://pasteboard.co/sCQNSiRcgwcH.png
+:height: 100
+```
+
+CLI Assistant to improve as a programmer. Flashcards, DSA Practice, Statistics, and habit hooks.
++++
+{bdg-primary}`npm` {bdg-primary}`CLI`
++++
+Explore this project {fas}`arrow-right`
+:::
+
+
+:::{card}
+:margin: 3
+:class-body: text-center
+:class-header: bg-light text-center
+:link: https://paper.flys.dev/api/documents/429/preview/
+**Hands-On Genetic Algorithms with Python**
+^^^
+```{image} 
+https://pasteboard.co/sCQNSiRcgwcH.png
+:height: 100
+```
+
+CLI Assistant to improve as a programmer. Flashcards, DSA Practice, Statistics, and habit hooks.
++++
+{bdg-primary}`npm` {bdg-primary}`CLI`
++++
+Explore this project {fas}`arrow-right`
+:::
+
+::::
 
 ## 2. Understanding the Key Components of Genetic Algorithms
 

@@ -6,76 +6,64 @@ parts:
   chapters:
   - file: 1-intro/about
   - file: 1-intro/syllabus
-
-
-- caption: Software Engineering
-  chapters:
-  - file: algorithms/intro
-  
-
 - caption: Data Science
   chapters:
-  - file: data_tools/introduction
+  - file: data_tools/02.00-Introduction-to-NumPy
     sections:
-    - file: data_tools/02.00-Introduction-to-NumPy
-      sections:
-      - file: data_tools/02.01-Understanding-Data-Types
-      - file: data_tools/02.02-The-Basics-Of-NumPy-Arrays
-      - file: data_tools/02.03-Computation-on-arrays-ufuncs
-      - file: data_tools/02.04-Computation-on-arrays-aggregates
-      - file: data_tools/02.05-Computation-on-arrays-broadcasting
-      - file: data_tools/02.06-Boolean-Arrays-and-Masks
-      - file: data_tools/02.07-Fancy-Indexing
-      - file: data_tools/02.08-Sorting
-      - file: data_tools/02.09-Structured-Data-NumPy
-    - file: data_tools/pandas
-      sections:
-      - file: data_tools/03.01-Introducing-Pandas-Objects
-      - file: data_tools/03.02-Data-Indexing-and-Selection
-      - file: data_tools/03.03-Operations-in-Pandas
-      - file: data_tools/03.04-Missing-Values
-      - file: data_tools/03.05-Hierarchical-Indexing
-      - file: data_tools/03.06-Concat-And-Append
-      - file: data_tools/03.07-Merge-and-Join
-      - file: data_tools/03.08-Aggregation-and-Grouping
-      - file: data_tools/03.09-Pivot-Tables
-      - file: data_tools/03.10-Working-With-Strings
-      - file: data_tools/03.11-Working-with-Time-Series
-      - file: data_tools/03.12-Performance-Eval-and-Query
-    - file: data_tools/04.00-Introduction-To-Matplotlib
-      sections:
-      - file: data_tools/04.01-Simple-Line-Plots
-      - file: data_tools/04.02-Simple-Scatter-Plots
-      - file: data_tools/04.03-Errorbars
-      - file: data_tools/04.04-Density-and-Contour-Plots
-      - file: data_tools/04.05-Histograms-and-Binnings
-      - file: data_tools/04.06-Customizing-Legends
-      - file: data_tools/04.07-Customizing-Colorbars
-      - file: data_tools/04.08-Multiple-Subplots
-      - file: data_tools/04.09-Text-and-Annotation
-      - file: data_tools/04.10-Customizing-Ticks
-      - file: data_tools/04.11-Settings-and-Stylesheets
-      - file: data_tools/04.12-Three-Dimensional-Plotting
-      - file: data_tools/04.14-Visualization-With-Seaborn
-      - file: data_tools/04.15-Further-Resources
+    - file: data_tools/02.01-Understanding-Data-Types
+    - file: data_tools/02.02-The-Basics-Of-NumPy-Arrays
+    - file: data_tools/02.03-Computation-on-arrays-ufuncs
+    - file: data_tools/02.04-Computation-on-arrays-aggregates
+    - file: data_tools/02.05-Computation-on-arrays-broadcasting
+    - file: data_tools/02.06-Boolean-Arrays-and-Masks
+    - file: data_tools/02.07-Fancy-Indexing
+    - file: data_tools/02.08-Sorting
+    - file: data_tools/02.09-Structured-Data-NumPy
+  - file: data_tools/pandas
+    sections:
+    - file: data_tools/03.01-Introducing-Pandas-Objects
+    - file: data_tools/03.02-Data-Indexing-and-Selection
+    - file: data_tools/03.03-Operations-in-Pandas
+    - file: data_tools/03.04-Missing-Values
+    - file: data_tools/03.05-Hierarchical-Indexing
+    - file: data_tools/03.06-Concat-And-Append
+    - file: data_tools/03.07-Merge-and-Join
+    - file: data_tools/03.08-Aggregation-and-Grouping
+    - file: data_tools/03.09-Pivot-Tables
+    - file: data_tools/03.10-Working-With-Strings
+    - file: data_tools/03.11-Working-with-Time-Series
+    - file: data_tools/03.12-Performance-Eval-and-Query
+  - file: data_tools/04.00-Introduction-To-Matplotlib
+    sections:
+    - file: data_tools/04.01-Simple-Line-Plots
+    - file: data_tools/04.02-Simple-Scatter-Plots
+    - file: data_tools/04.03-Errorbars
+    - file: data_tools/04.04-Density-and-Contour-Plots
+    - file: data_tools/04.05-Histograms-and-Binnings
+    - file: data_tools/04.06-Customizing-Legends
+    - file: data_tools/04.07-Customizing-Colorbars
+    - file: data_tools/04.08-Multiple-Subplots
+    - file: data_tools/04.09-Text-and-Annotation
+    - file: data_tools/04.10-Customizing-Ticks
+    - file: data_tools/04.11-Settings-and-Stylesheets
+    - file: data_tools/04.12-Three-Dimensional-Plotting
+    - file: data_tools/04.14-Visualization-With-Seaborn
+    - file: data_tools/04.15-Further-Resources
 
-    - file: data_tools/05.00-Machine-Learning
-      sections:
-      - file: data_tools/05.01-What-Is-Machine-Learning
-      - file: data_tools/05.02-Introducing-Scikit-Learn
-      - file: data_tools/05.03-Hyperparameters-and-Model-Validation
-      - file: data_tools/05.04-Feature-Engineering
-      - file: data_tools/05.05-Naive-Bayes
-      - file: data_tools/05.06-Linear-Regression
-      - file: data_tools/05.07-Support-Vector-Machines
-      - file: data_tools/05.08-Random-Forests
-      - file: data_tools/05.09-Principal-Component-Analysis
-      - file: data_tools/05.10-Manifold-Learning
-      - file: data_tools/05.11-K-Means
-      - file: data_tools/05.12-Gaussian-Mixtures
-      - file: data_tools/05.13-Kernel-Density-Estimation
-      - file: data_tools/05.14-Image-Features
-      - file: data_tools/05.15-Learning-More
-        
-
-
+  - file: data_tools/05.00-Machine-Learning
+    sections:
+    - file: data_tools/05.01-What-Is-Machine-Learning
+    - file: data_tools/05.02-Introducing-Scikit-Learn
+    - file: data_tools/05.03-Hyperparameters-and-Model-Validation
+    - file: data_tools/05.04-Feature-Engineering
+    - file: data_tools/05.05-Naive-Bayes
+    - file: data_tools/05.06-Linear-Regression
+    - file: data_tools/05.07-Support-Vector-Machines
+    - file: data_tools/05.08-Random-Forests
+    - file: data_tools/05.09-Principal-Component-Analysis
+    - file: data_tools/05.10-Manifold-Learning
+    - file: data_tools/05.11-K-Means
+    - file: data_tools/05.12-Gaussian-Mixtures
+    - file: data_tools/05.13-Kernel-Density-Estimation
+    - file: data_tools/05.14-Image-Features
+    - file: data_tools/05.15-Learning-More

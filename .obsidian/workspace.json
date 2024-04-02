@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
+                "file": "misc/experience-architecture.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8f041e9b65e6bc39",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/mentorship-Natela.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "839c0b3a0a0bf936",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
+                "file": "misc/mentorship-Natela.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
+                "file": "misc/mentorship-Natela.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md"
+                "file": "misc/mentorship-Natela.md"
               }
             }
           }
@@ -147,31 +159,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1a9dae652188e754",
+  "active": "8f041e9b65e6bc39",
   "lastOpenFiles": [
-    "genetic-algorithms/__pycache__/elitism.cpython-310.pyc",
-    "genetic-algorithms/elitism.py",
-    "genetic-algorithms/__pycache__/tsp.cpython-310.pyc",
-    "genetic-algorithms/tsp.py",
-    "genetic-algorithms/travlingsalesman.ipynb",
-    "genetic-algorithms/travlingsalesman.py",
-    "genetic-algorithms/tsp-data/bayg29-loc.pickle",
-    "genetic-algorithms/tsp-data/bayg29-dist.pickle",
-    "genetic-algorithms/tsp-data",
-    "img/Pasted image 20240331032346.png",
-    "genetic-algorithms/tsp.ipynb",
-    "genetic-algorithms/__pycache__/knapsack.cpython-310.pyc",
-    "img/Pasted image 20240331024959.png",
-    "img/Pasted image 20240331023945.png",
-    "img/2024-03-31-01-50-14.png",
-    "img/2024-03-31-01-49-38.png",
-    "img/2024-03-31-01-49-19.png",
-    "genetic-algorithms/image.png",
-    "img/2024-03-31-01-43-28.png",
-    "img/2024-03-31-00-54-25.png",
-    "img/Pasted image 20240330211835.png",
-    "Plan.md",
+    "_build/html/searchindex.js.tmp",
+    "_build/html/_images/2024-03-31-01-50-14.png",
+    "_build/html/_images/2024-03-31-01-49-38.png",
+    "_build/html/_images/2024-03-31-01-49-19.png",
+    "_build/html/_images/image.png",
+    "_build/html/_images/2024-03-31-01-43-28.png",
+    "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
+    "_build/html/_sources/genetic_algorithms",
+    "_build/html/genetic_algorithms/genetic-algorithms-book-report.html",
+    "_build/html/genetic_algorithms",
+    "misc/mentorship-Natela.md",
+    "misc/experience-architecture.md",
+    "misc/History/The Imperial World at War, part 2.md",
+    "genetic_algorithms/__pycache__/tsp.cpython-310.pyc",
+    "genetic_algorithms/__pycache__/knapsack.cpython-310.pyc",
+    "genetic_algorithms/tsp-data/bayg29-loc.pickle",
+    "genetic_algorithms/__pycache__/elitism.cpython-310.pyc",
+    "genetic_algorithms/tsp-data/bayg29-dist.pickle",
+    "genetic_algorithms/__pycache__",
+    "genetic_algorithms/image.png",
+    "genetic_algorithms/genetic-algorithms-book-report.md",
+    "misc/History/Small Wars.md",
+    "recommendation-systems/abstract.md",
     "genetic-algorithms/genetic-algorithms-book-report.md",
+    "img/2024-03-31-14-46-57.png",
+    "_build/html/_images/2024-03-31-14-23-19.png",
+    "img/2024-03-31-14-23-19.png",
+    "img/2024-03-31-14-23-11.png",
+    "Plan.md",
     "ios-development/SwiftUI-Backend with Firebase.md",
     "ios-development/SwiftUI-REST Client.md",
     "ios-development/Plan.md",
@@ -179,7 +197,6 @@
     "Alternative Careers.md",
     "data_tools/bc_lectures/data/readme..md",
     "data_tools/introduction.md",
-    "recommendation-systems/abstract.md",
     "misc/Anthropology/Chapter 6 - The Primates.md",
     "misc/Anthropology/Chapter 7 - Primate Behavior.md",
     "misc/History/officers.md",
@@ -188,12 +205,6 @@
     "recommendation-systems/README.md",
     "backlog.md",
     "corrected small wars.md",
-    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
-    "misc/History/Small Wars.md",
-    "Anthropology/Chapter 7 - Primate Behavior.md",
-    "Anthropology/Chapter 6 - The Primates.md",
-    "History/Small Wars.md",
-    "hist/Small Wars.md",
-    "History/officers.md"
+    "Hands-On-Recommendation-Systems-with-Python/abstract.md"
   ]
 }
