@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/mentorship-Natela.md",
+                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "misc/mentorship-Natela.md",
+                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "misc/mentorship-Natela.md",
+                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/mentorship-Natela.md"
+                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md"
               }
             }
           }
@@ -161,50 +161,51 @@
   },
   "active": "8f041e9b65e6bc39",
   "lastOpenFiles": [
+    "img/Chapter 7 - Primate Behavior_image_10.png",
+    "img/Chapter 7 - Primate Behavior_image_9.png",
+    "img/Chapter 7 - Primate Behavior_image_8.png",
+    "img/Chapter 7 - Primate Behavior_image_7.png",
+    "img/Chapter 7 - Primate Behavior_image_6.png",
+    "img/Chapter 7 - Primate Behavior_image_5.png",
     "_build/html/searchindex.js.tmp",
-    "_build/html/_images/2024-03-31-01-50-14.png",
-    "_build/html/_images/2024-03-31-01-49-38.png",
-    "_build/html/_images/2024-03-31-01-49-19.png",
-    "_build/html/_images/image.png",
-    "_build/html/_images/2024-03-31-01-43-28.png",
-    "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
-    "_build/html/_sources/genetic_algorithms",
-    "_build/html/genetic_algorithms/genetic-algorithms-book-report.html",
-    "_build/html/genetic_algorithms",
+    "_build/html/_static/images/logo_jupyterhub.svg",
+    "_build/html/_static/images/logo_deepnote.svg",
+    "_build/html/_static/images/logo_colab.png",
+    "_build/html/_static/images/logo_binder.svg",
+    "_build/html/_static/images",
+    "img/Chapter 7 - Primate Behavior_image_4.png",
     "misc/mentorship-Natela.md",
-    "misc/experience-architecture.md",
-    "misc/History/The Imperial World at War, part 2.md",
-    "genetic_algorithms/__pycache__/tsp.cpython-310.pyc",
-    "genetic_algorithms/__pycache__/knapsack.cpython-310.pyc",
-    "genetic_algorithms/tsp-data/bayg29-loc.pickle",
-    "genetic_algorithms/__pycache__/elitism.cpython-310.pyc",
-    "genetic_algorithms/tsp-data/bayg29-dist.pickle",
-    "genetic_algorithms/__pycache__",
-    "genetic_algorithms/image.png",
+    "_build/html/_sources/genetic_algorithms/report.md",
+    "_build/html/genetic_algorithms/report.html",
+    "_build/html/_sources/genetic_algorithms/index.ipynb",
+    "_build/jupyter_execute/genetic_algorithms/index.ipynb",
+    "genetic_algorithms/index.ipynb",
+    "genetic_algorithms/report.md",
+    "_build/html/_sources/genetic_algorithms/index.md",
+    "_build/html/genetic_algorithms/index.html",
     "genetic_algorithms/genetic-algorithms-book-report.md",
-    "misc/History/Small Wars.md",
-    "recommendation-systems/abstract.md",
-    "genetic-algorithms/genetic-algorithms-book-report.md",
-    "img/2024-03-31-14-46-57.png",
-    "_build/html/_images/2024-03-31-14-23-19.png",
-    "img/2024-03-31-14-23-19.png",
-    "img/2024-03-31-14-23-11.png",
-    "Plan.md",
-    "ios-development/SwiftUI-Backend with Firebase.md",
-    "ios-development/SwiftUI-REST Client.md",
-    "ios-development/Plan.md",
-    "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
-    "Alternative Careers.md",
-    "data_tools/bc_lectures/data/readme..md",
-    "data_tools/introduction.md",
-    "misc/Anthropology/Chapter 6 - The Primates.md",
-    "misc/Anthropology/Chapter 7 - Primate Behavior.md",
-    "misc/History/officers.md",
-    "misc/History/Reply.md",
-    "misc/History/The Second Industrial Revolution.md",
-    "recommendation-systems/README.md",
-    "backlog.md",
-    "corrected small wars.md",
-    "Hands-On-Recommendation-Systems-with-Python/abstract.md"
+    "genetic_algorithms/index.md",
+    "_build/html/_static/proof.css",
+    "_build/html/_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css",
+    "_build/html/objects.inv",
+    "_build/html/_sources/index.md",
+    "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
+    "_build/html/_sources/algorithms/search-problems.md",
+    "_build/html/_sources/algorithms/miscellaneus-problems.md",
+    "_build/html/_sources/algorithms/k-means-clustering.md",
+    "_build/html/_sources/algorithms/intro.md",
+    "_build/html/_sources/algorithms/graph-problems.md",
+    "_build/html/_sources/algorithms/genetic-algortihms.md",
+    "_build/html/_sources/algorithms/fair-simple-natural-networks.md",
+    "_build/html/_sources/algorithms/constraint-sastifaction-problems.md",
+    "_build/html/_sources/algorithms/adversarial-search.md",
+    "_build/html/_sources/1-intro/syllabus.md",
+    "_build/html/_sources/1-intro/about.md",
+    "algorithms/genetic-algortihms.md",
+    "algorithms/miscellaneus-problems.md",
+    "algorithms/adversarial-search.md",
+    "algorithms/fair-simple-natural-networks.md",
+    "algorithms/k-means-clustering.md",
+    "algorithms/graph-problems.md"
   ]
 }
