@@ -25,14 +25,64 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md",
+                "file": "misc/History/The Imperial World at War, part 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "479280acd8f45131",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/History/Day 1930s.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8e6e4dfa11586247",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/History/Assignment The Imperial World at War, part 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "6ee35dd8cca6aea5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/experience-versioning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8e1d861aaf0b4440",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/Basta/Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -98,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md",
+                "file": "misc/Basta/Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md",
+                "file": "misc/Basta/Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/Anthropology/Chapter 7 - Primate Behavior.md"
+                "file": "misc/Basta/Notes.md"
               }
             }
           }
@@ -159,21 +209,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8f041e9b65e6bc39",
+  "active": "8e1d861aaf0b4440",
   "lastOpenFiles": [
+    "img/Notes_image_7.png",
+    "img/Notes_image_6.png",
+    "img/Notes_image_5.png",
+    "img/Notes_image_4.png",
+    "img/Notes_image_3.png",
+    "img/Notes_image_2.png",
+    "img/Notes_image_1.png",
+    "img/tmp1712418203633_Notes_image_1.png",
+    "misc/Basta/Note.md",
+    "misc/Basta/Notes.md",
+    "misc/experience-versioning.md",
+    "misc/Basta",
+    "misc/History/Assignment The Imperial World at War, part 2.md",
+    "misc/History/Day 1930s.md",
+    "misc/History/The Imperial World at War, part 2.md",
+    "misc/Anthropology/Chapter 7 - Primate Behavior.md",
     "img/Chapter 7 - Primate Behavior_image_10.png",
     "img/Chapter 7 - Primate Behavior_image_9.png",
     "img/Chapter 7 - Primate Behavior_image_8.png",
-    "img/Chapter 7 - Primate Behavior_image_7.png",
-    "img/Chapter 7 - Primate Behavior_image_6.png",
-    "img/Chapter 7 - Primate Behavior_image_5.png",
     "_build/html/searchindex.js.tmp",
-    "_build/html/_static/images/logo_jupyterhub.svg",
-    "_build/html/_static/images/logo_deepnote.svg",
-    "_build/html/_static/images/logo_colab.png",
-    "_build/html/_static/images/logo_binder.svg",
     "_build/html/_static/images",
-    "img/Chapter 7 - Primate Behavior_image_4.png",
     "misc/mentorship-Natela.md",
     "_build/html/_sources/genetic_algorithms/report.md",
     "_build/html/genetic_algorithms/report.html",
@@ -187,7 +245,6 @@
     "genetic_algorithms/index.md",
     "_build/html/_static/proof.css",
     "_build/html/_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css",
-    "_build/html/objects.inv",
     "_build/html/_sources/index.md",
     "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
     "_build/html/_sources/algorithms/search-problems.md",
@@ -199,13 +256,6 @@
     "_build/html/_sources/algorithms/fair-simple-natural-networks.md",
     "_build/html/_sources/algorithms/constraint-sastifaction-problems.md",
     "_build/html/_sources/algorithms/adversarial-search.md",
-    "_build/html/_sources/1-intro/syllabus.md",
-    "_build/html/_sources/1-intro/about.md",
-    "algorithms/genetic-algortihms.md",
-    "algorithms/miscellaneus-problems.md",
-    "algorithms/adversarial-search.md",
-    "algorithms/fair-simple-natural-networks.md",
-    "algorithms/k-means-clustering.md",
-    "algorithms/graph-problems.md"
+    "_build/html/_sources/1-intro/syllabus.md"
   ]
 }
