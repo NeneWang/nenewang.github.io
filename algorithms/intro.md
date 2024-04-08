@@ -1,6 +1,7 @@
-# Introduction to Analysis of Algorithms
+# Algorithms
 
-Objective: Document every piece of algorithms you find in either assigments or notebook.
+Objective: Document every piece of algorithms you find in either assigments or notebook + Interesting algortihms that I find myself working with.
+
 
 ## Resources
 

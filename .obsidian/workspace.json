@@ -22,7 +22,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -51,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#x",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -137,8 +138,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,7 +196,16 @@
     "1-intro/coursework.md",
     "Alternative Careers.md",
     "_build/html/_sources/index.md",
-    "_build/html/_sources/data_tools/introduction.md",
-    "_build/html/_sources/algorithms/intro.md"
+    "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
+    "_build/html/_sources/algorithms/search-problems.md",
+    "_build/html/_sources/algorithms/miscellaneus-problems.md",
+    "_build/html/_sources/algorithms/k-means-clustering.md",
+    "_build/html/_sources/algorithms/intro.md",
+    "_build/html/_sources/algorithms/graph-problems.md",
+    "_build/html/_sources/algorithms/genetic-algortihms.md",
+    "_build/html/_sources/algorithms/fair-simple-natural-networks.md",
+    "_build/html/_sources/algorithms/constraint-sastifaction-problems.md",
+    "_build/html/_sources/algorithms/adversarial-search.md",
+    "_build/html/_sources/1-intro/syllabus.md"
   ]
 }

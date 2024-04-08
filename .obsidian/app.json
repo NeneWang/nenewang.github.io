@@ -2,5 +2,7 @@
   "newLinkFormat": "relative",
   "attachmentFolderPath": "img",
   "useMarkdownLinks": true,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
 }
