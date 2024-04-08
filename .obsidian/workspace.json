@@ -4,18 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "737c148a9a5628dd",
+        "id": "a60addbc844eb64f",
         "type": "tabs",
         "children": [
           {
-            "id": "853279b2f946044c",
+            "id": "96ebb4237e142256",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
-                "mode": "source",
-                "source": false
+                "file": "misc/History/Union Power.canvas",
+                "viewState": {
+                  "x": 378.57057231962614,
+                  "y": 199.82022775024592,
+                  "zoom": -0.34747857904434204
+                }
               }
             }
           }
@@ -85,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
+                "file": "misc/History/Union Power.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md",
+                "file": "misc/History/Union Power.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "genetic-algorithms/genetic-algorithms-book-report.md"
+                "file": "misc/History/Union Power.canvas"
               }
             }
           }
@@ -147,8 +150,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "853279b2f946044c",
+  "active": "96ebb4237e142256",
   "lastOpenFiles": [
+    "misc/History/Union Power.canvas",
     "genetic-algorithms/deap-framework-explore-selection-parameters.ipynb",
     "genetic-algorithms/deap-framework-short copy.ipynb",
     "img/Pasted image 20240330211835.png",
@@ -178,7 +182,6 @@
     "misc/Anthropology/Chapter 6 - The Primates.md",
     "misc/Anthropology",
     "recommendation-systems/Chapter7/Hybrid Recommender.ipynb",
-    "recommendation-systems/Chapter6/Collaborative Filtering.ipynb",
     "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
     "recommendation-systems/abstract.md",
     "genetic-algorithms/genetic-algorithms-book-report.md",
