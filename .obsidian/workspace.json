@@ -4,94 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b997fdc92cf91af7",
+        "id": "a60addbc844eb64f",
         "type": "tabs",
         "children": [
           {
-            "id": "1a9dae652188e754",
+            "id": "96ebb4237e142256",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "misc/experience-architecture.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8f041e9b65e6bc39",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/History/The Imperial World at War, part 2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "479280acd8f45131",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/History/Day 1930s.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8e6e4dfa11586247",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/History/Assignment The Imperial World at War, part 2.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "6ee35dd8cca6aea5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/experience-versioning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8e1d861aaf0b4440",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "misc/Basta/Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "88eaf7837a50141a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "readme.md",
-                "mode": "source",
-                "source": false
+                "file": "misc/History/Union Power.canvas",
+                "viewState": {
+                  "x": 378.57057231962614,
+                  "y": 199.82022775024592,
+                  "zoom": -0.34747857904434204
+                }
               }
             }
           }
@@ -162,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "misc/History/The Imperial World at War, part 2.md",
+                "file": "misc/History/Union Power.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "misc/History/The Imperial World at War, part 2.md",
+                "file": "misc/History/Union Power.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/History/The Imperial World at War, part 2.md"
+                "file": "misc/History/Union Power.canvas"
               }
             }
           }
@@ -223,48 +150,51 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8f041e9b65e6bc39",
+  "active": "96ebb4237e142256",
   "lastOpenFiles": [
-    "misc/History/Day 1930s.md",
-    "misc/History/Assignment The Imperial World at War, part 2.md",
-    "misc/experience-versioning.md",
-    "misc/Basta/Notes.md",
-    "readme.md",
-    "Plan.md",
-    "index.md",
-    "Alternative Careers.md",
-    "backlog.md",
-    "cite.md",
-    "corrected small wars.md",
-    "img/Notes_image_8.png",
-    "img/Notes_image_7.png",
-    "img/Notes_image_6.png",
-    "img/Notes_image_5.png",
-    "img/Notes_image_4.png",
-    "img/Notes_image_3.png",
-    "img/Notes_image_2.png",
-    "img/Notes_image_1.png",
-    "img/tmp1712418203633_Notes_image_1.png",
-    "misc/Basta/Note.md",
-    "misc/Basta",
-    "misc/History/The Imperial World at War, part 2.md",
+    "misc/History/Union Power.canvas",
+    "genetic-algorithms/deap-framework-explore-selection-parameters.ipynb",
+    "genetic-algorithms/deap-framework-short copy.ipynb",
+    "img/Pasted image 20240330211835.png",
+    "genetic-algorithms/deap-framework-short.ipynb",
+    "genetic-algorithms/combinatorial-optimization-short.ipynb",
+    "genetic-algorithms/combinatorial-optimization copy.ipynb",
+    "genetic-algorithms/deap-framework-long.ipynb",
+    "img/Pasted image 20240330202021.png",
+    "img/Pasted image 20240330201146.png",
+    "img/Pasted image 20240330201126.png",
+    "img/2024-03-30-20-08-04.png",
+    "ios-development/SwiftUI-REST Client.md",
+    "ios-development/SwiftUI-Backend with Firebase.md",
+    "ios-development/Plan.md",
+    "ios-development",
+    "img/Pasted image 20240330192842.png",
+    "img/Pasted image 20240330155105.png",
+    "img/Pasted image 20240330155050.png",
+    "img/Pasted image 20240330155034.png",
+    "img/Pasted image 20240330155023.png",
+    "misc/History/The Second Industrial Revolution.md",
+    "misc/History/Small Wars.md",
+    "misc/History/Reply.md",
+    "misc/History/officers.md",
+    "misc/History",
     "misc/Anthropology/Chapter 7 - Primate Behavior.md",
-    "img/Chapter 7 - Primate Behavior_image_10.png",
-    "_build/html/searchindex.js.tmp",
-    "_build/html/_static/images",
-    "misc/mentorship-Natela.md",
-    "_build/html/_sources/genetic_algorithms/report.md",
-    "_build/html/genetic_algorithms/report.html",
-    "_build/html/_sources/genetic_algorithms/index.ipynb",
-    "_build/jupyter_execute/genetic_algorithms/index.ipynb",
-    "genetic_algorithms/index.ipynb",
-    "genetic_algorithms/report.md",
-    "_build/html/_sources/genetic_algorithms/index.md",
-    "_build/html/genetic_algorithms/index.html",
-    "genetic_algorithms/genetic-algorithms-book-report.md",
-    "genetic_algorithms/index.md",
-    "_build/html/_static/proof.css",
-    "_build/html/_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css",
+    "misc/Anthropology/Chapter 6 - The Primates.md",
+    "misc/Anthropology",
+    "recommendation-systems/Chapter7/Hybrid Recommender.ipynb",
+    "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
+    "recommendation-systems/abstract.md",
+    "genetic-algorithms/genetic-algorithms-book-report.md",
+    "corrected small wars.md",
+    "Plan.md",
+    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
+    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
+    "data_tools/bc_lectures/data/readme..md",
+    "History/The Second Industrial Revolution.md",
+    "History/Reply.md",
+    "History/offciers.md",
+    "1-intro/coursework.md",
+    "Alternative Careers.md",
     "_build/html/_sources/index.md",
     "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
     "_build/html/_sources/algorithms/search-problems.md",
