@@ -59,21 +59,47 @@ Perform K-means clustering with K=2 (3 points). Answer the following questions:
 
 > Given the profiles, the low-count pental period seems to be located at Cluster 1. With an average of rental count of 99. While on cluster 0 seems to posses a mean count of 437
 
-Significant Differences
+Significant Differences from Categorical Columns:
 
-|            | Cluster 0 | Cluster 1 | Inisiht                                            |
-| ---------- | --------- | --------- | -------------------------------------------------- |
-| Mean Count | 437       | 99        | Cluster 0, (yellow) has a higher count of rentals. |
-| Hours rent | 
+|                | Cluster 0 | Cluster 1 | Inisghts                                                    |
+| -------------- | --------- | --------- | ----------------------------------------------------------- |
+| Mean Count     | 437       | 99        | Cluster 0, (yellow) has a higher count of rentals.          |
+| weather_bad    | 0.03      | 0.09      | Bad weather seems to associate with low rentals.            |
+| season_winter  | 0.09      | 0.3       | Winter season seems to associate with low rentals.          |
+| seasons summer | 0.34      | 0.21      | Summer season seems to somehow associate with high rentals. |
+| Season Spring  | 0.3       | 0.22      | Spring season seems to associate with high rentals.          |
+
+What surprised me::
+- In autum, there is almost no difference
+- working day and holiday seems to have almost no impact on the rental count.
+
+For Continuous Data differences can be seen in: 
+
+- temp
+- humidity
+- aTemp
+- windspeed
+- hour
 
 
-Upon Inspection:
+Why do you think fewer people are renting bikes in the low-count rental period?
+
+By plotting in a scatter plot, we can see interestingly that there is a range of prefered continous values.
+- Seems that more rentings appear during the time range: 7-21
+- More rentings during the mid ranging temperatures and humidity
+  - Temperature ranging 10-35
+  - Humidity ranging 20-80
+- Less Windspeed seems to associate with more rentals.
+  - Ranging 0-30 mainly while extreme values are not prefered.
 
 
 
 
+**Reasons why they rent less during those parameters:**
 
-1https://www.kaggle.com/datasets/aguado/bike-rental-data-set-uci
+- Temperature & Seasons: Extreme temperatures are not prefered. And this are associated. This also shows whereas: Spring and Summer are prefered. While Winter not, and autum doesn't seem to have a significant impact. Might make sense as colder temperatures, might make cycling less confortable, perhaps more dangerous as roads might be frozen.
+- Humidity Mid ranging humidity seems to be prefered. While extreme values are not. Makes sense for people to prefer milder levels of Humidity.
+- Windspeed: Less windspeed seems to associate with more rentals. While extreme values are not prefered. Too much wind might make cycling less confortable, and more dangerous as well.
 
 
 ### 4 K=3 (10 points)
