@@ -67,7 +67,7 @@ Significant Differences from Categorical Columns:
 | weather_bad    | 0.03      | 0.09      | Bad weather seems to associate with low rentals.            |
 | season_winter  | 0.09      | 0.3       | Winter season seems to associate with low rentals.          |
 | seasons summer | 0.34      | 0.21      | Summer season seems to somehow associate with high rentals. |
-| Season Spring  | 0.3       | 0.22      | Spring season seems to associate with high rentals.          |
+| Season Spring  | 0.3       | 0.22      | Spring season seems to associate with high rentals.         |
 
 What surprised me::
 - In autum, there is almost no difference
@@ -89,6 +89,7 @@ By plotting in a scatter plot, we can see interestingly that there is a range of
 - More rentings during the mid ranging temperatures and humidity
   - Temperature ranging 10-35
   - Humidity ranging 20-80
+- For Humidity and Temperature ranges, it could ALSO be that extreme humidity and temperatures are also less frequent in nature, thus less recordings appear.
 - Less Windspeed seems to associate with more rentals.
   - Ranging 0-30 mainly while extreme values are not prefered.
 
@@ -106,16 +107,54 @@ By plotting in a scatter plot, we can see interestingly that there is a range of
 Perform K-means clustering with K=3 (3 points). Answer the following questions:
 
 
+
 8. (1 point) How many different rental periods are represented in each cluster?
 
+| Cluster | Periods |
+| ------- | ------- |
+| 0       | 14      |
+| 1       | 24      |
+| 22      | 20      |
 
 9.  (4 points) Using averaged columns within each cluster, give a profile of a low-count rental period and
 a high-count rental period. Why do you think fewer people are renting bikes in the low-count rental
 period?
 
 
-10. (2 points) Based on what you’ve seen so far, which value of K (K=2 or K=3) provides more useful
+|               | Cluster 0 (High) | Cluster 1 (Low) | Cluster 2 (mid+) | Insights                                                  |
+| ------------- | ---------------- | --------------- | ---------------- | --------------------------------------------------------- |
+| Mean Count    | 566              | 59              | 263              | I would consider 0 and 2 as high rentals                  |
+| Season Summer | 0.366914         | 0.201020        | 0.292729         | Summer seems to associate with high rentals.              |
+| Season Winter | 0.076352         | 0.345229        | 0.154930         | Winter seems to associate with low rentals significantly. |
+
+
+**No significant difference**
+
+- Season Autum
+- Weather good
+- Weather moderate
+- Holiday Not
+- Holiday yes
+
+
+**Continuous to look at**
+
+- Hour
+- Temp
+- aTemp
+- Humidity
+- Windspeed
+
+
+> Based on the analysis it seems to capture a very similar image from the last question. Usin k=2.
+
+
+
+1.  (2 points) Based on what you’ve seen so far, which value of K (K=2 or K=3) provides more useful
 insight into bike rental patterns? Why?
+
+- I wasn't able to find large distinctins, 
+
 
 ### 5 Elbow Method (11 points)
 Use the elbow method with inertia scores to approximate an ideal value of K. Once you have done this,
