@@ -50,6 +50,7 @@ The expected format for my notes are:
 - Annotation of Books, Summaries, or any other content. That is to be done on logseq. (Better for handling pictures and connected notes.)
 - Might reference third party notebooks, but will not be included here.
 - Copied Handnotes might be available in the codebase. BUT NOT in `toc.yml` for quick reference
+- If I dont understand it (because I didnt do the assigment) I will not include it in the book. It is not supposed to be a 1 to 1 Cookbook or Documentation reference.
 
 
 
