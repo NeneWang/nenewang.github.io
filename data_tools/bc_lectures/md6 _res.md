@@ -153,20 +153,32 @@ period?
 1.  (2 points) Based on what you’ve seen so far, which value of K (K=2 or K=3) provides more useful
 insight into bike rental patterns? Why?
 
-- I wasn't able to find large distinctins, 
+- I wasn't able to find large distinctins, using  k = 3. However K = 3 seems to define the direction 
 
 
 ### 5 Elbow Method (11 points)
-Use the elbow method with inertia scores to approximate an ideal value of K. Once you have done this,
-perform a K-means clustering with this value of K you discovered (6 points). Answer the following questions:
+Use the elbow method with inertia scores to approximate an ideal value of K. Once you have done this, perform a K-means clustering with this value of K you discovered (6 points). Answer the following questions:
 
 
 11. (1 point) How many different rental periods are represented in each cluster?
 
+| cluster | Periods | Avg. Count | color  |
+| ------- | ------- | ---------- | ------ |
+| 0       | 16      | 388.654531 | orange |
+| 1       | 20      | 199.974887 | yellow |
+| 2       | 24      | 44.215194  | green  |
+| 3       | 12      | 653.370809 | red    |
 
-12. (4 points) Using averaged columns within each cluster, give a profile of a low-count rental period and
-a high-count rental period. Why do you think fewer people are renting bikes in the low-count rental
-period?
+
+
+1.  (4 points) Using averaged columns within each cluster, give a profile of a low-count rental period and a high-count rental period. Why do you think fewer people are renting bikes in the low-count rental period?
+
+The tendency highlighted is very similar to the previous clusters explorations:
+
+In general, the high count rentals seem to be associated with: during periods of 7 to 22. Preferably from 10-35 degrees of temperature, 20-80 humidity, and 0-30 windspeed. While the low count rentals seem to be associated with extreme values of temperature, humidity, and windspeed.
+
+However highest count seems to be during the times:
+- 7 and 15-20. Which is interesting. It could be because during8-11 people might be eating breakfast. 
 
 
 ### Submission Instructions
