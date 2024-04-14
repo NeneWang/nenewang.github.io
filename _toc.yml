@@ -16,7 +16,8 @@ parts:
     - file: genetic_algorithms/vrp
     - file: genetic_algorithms/nqueens
     - file: genetic_algorithms/nurses
-    - file: genetic_algorithms/6-optimizing-continuous-functions
+    - file: genetic_algorithms/graphs-coloring-problem
+    - file: genetic_algorithms/optimizing-continuous-functions
   - file: algorithms/search-problems
   - file: algorithms/genetic-algortihms
   - file: algorithms/intro
