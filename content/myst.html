@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MyST Markdown overview</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/myst';</script>
+    <link rel="canonical" href="https://jupyterbook.org/content/myst.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Special content blocks" href="content-blocks.html" />
+    <link rel="prev" title="Write narrative content" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Introduction to Analysis of Algorithms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_tools/introduction.html">1. Data Tools for Data Science</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../data_tools/02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../data_tools/pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_tools/04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
+
+<li class="toctree-l2 has-children"><a class="reference internal" href="../data_tools/05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_tools/05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Write narrative content</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/content/myst.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fcontent/myst.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/myst.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MyST Markdown overview</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-and-roles">Directives and roles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#more-arguments-and-metadata-in-directives">More arguments and metadata in directives</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-roles-and-directives-are-available">What roles and directives are available?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nesting-content-blocks-in-markdown">Nesting content blocks in Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-myst-markdown-syntax">Other MyST Markdown syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-i-create-with-myst-markdown">What can I create with MyST Markdown?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-writing-myst-markdown">Tools for writing MyST Markdown</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-interfaces">Jupyter interfaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupytext-and-text-sync">Jupytext and text sync</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code">VS Code</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="myst-markdown-overview">
+<span id="content-myst"></span><h1>MyST Markdown overview<a class="headerlink" href="#myst-markdown-overview" title="Link to this heading">#</a></h1>
+<p>In addition to <span class="xref myst">Jupyter Notebook Markdown</span>,
+Jupyter Book also supports a special flavour of Markdown called <strong>MyST (or
+Markedly Structured Text)</strong>.
+It was designed to make it easier to create publishable computational documents written with Markdown notation.
+It is a superset of <a class="reference external" href="https://commonmark.org/">CommonMark Markdown</a> and draws heavy inspiration from the fantastic <a class="reference external" href="https://rmarkdown.rstudio.com/">RMarkdown language from RStudio</a>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>For those who are familiar with Sphinx, MyST Markdown is basically
+CommonMark + Markdown extensions + Sphinx roles and directives</p>
+</aside>
+<p>Whether you write your book’s content in Jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or in regular Markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>),
+you’ll write in the same flavour of <strong>MyST Markdown</strong>. Jupyter Book will know how to parse both of them.</p>
+<p>This page contains a few pieces of information about MyST Markdown and how it relates to Jupyter Book.
+You can find much more information about this flavour of Markdown at
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-core" title="MyST Parser 2.0.0">the Myst Parser documentation</a>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Want to use RMarkdown directly?</p>
+<p>See <span class="xref myst"></span></p>
+</div>
+<section id="directives-and-roles">
+<h2>Directives and roles<a class="headerlink" href="#directives-and-roles" title="Link to this heading">#</a></h2>
+<p>Roles and directives are two of the most powerful tools in Jupyter Book.
+They are kind of like <em>functions</em>, but written in a markup language.
+They both serve a similar purpose, but <strong>roles are written in one line</strong> whereas <strong>directives span many lines</strong>.
+They both accept different kinds of inputs, and what they do with those inputs depends on the specific role or directive being used.</p>
+<section id="directives">
+<span id="content-myst-directives"></span><h3>Directives<a class="headerlink" href="#directives" title="Link to this heading">#</a></h3>
+<p>Directives customize the look, feel, and behaviour of your book.
+They are kind of like <em>functions</em>, and come in a variety of names with different behaviour.
+This section covers how to structure and use them.</p>
+<p>At its simplest, you can use directives in your book like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
+My directive content
+```
+</pre></div>
+</div>
+<p>This will only work if a directive with name <code class="docutils literal notranslate"><span class="pre">mydirectivename</span></code> already exists (which it doesn’t).
+There are many pre-defined directives associated with Jupyter Book.
+For example, to insert a note box into your content, you can use the following directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
+Here is a note
+```
+</pre></div>
+</div>
+<p>This results in:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here is a note</p>
+</div>
+<p>being inserted in your built book.</p>
+<p>For more information on using directives, see the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#syntax-directives" title="MyST Parser 2.0.0">MyST documentation</a>.</p>
+<section id="more-arguments-and-metadata-in-directives">
+<span id="directive-arguments"></span><h4>More arguments and metadata in directives<a class="headerlink" href="#more-arguments-and-metadata-in-directives" title="Link to this heading">#</a></h4>
+<p>Many directives allow you to control their behaviour with extra pieces of
+information. In addition to the directive name and the directive content,
+directives allow two other configuration points:</p>
+<p><strong>directive arguments</strong> - a list of words that come just after the <code class="docutils literal notranslate"><span class="pre">{directivename}</span></code>.</p>
+<p>Here’s an example usage of directive arguments:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{directivename} arg1 arg2
+My directive content.
+```
+</pre></div>
+</div>
+<p><strong>directive keywords</strong> - a collection of flags or key/value pairs
+that come just underneath <code class="docutils literal notranslate"><span class="pre">{directivename}</span></code>.</p>
+<p>There are two ways to write directive keywords, either as <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> pairs, or
+as <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">val</span></code> pairs enclosed by <code class="docutils literal notranslate"><span class="pre">---</span></code> lines. They both work the same way:</p>
+<p>Here’s an example of directive keywords using the <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{directivename}
+:key1: metadata1
+:key2: metadata2
+My directive content.
+```
+</pre></div>
+</div>
+<p>and here’s an example of directive keywords using the enclosing <code class="docutils literal notranslate"><span class="pre">---</span></code> syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{directivename}</span>
+<span class="gu">---</span>
+metadata1: metadata2
+<span class="gu">metadata3: metadata4</span>
+<span class="gu">---</span>
+My directive content.
+```
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember, specifying directive keywords with <code class="docutils literal notranslate"><span class="pre">:key:</span></code> or <code class="docutils literal notranslate"><span class="pre">---</span></code> will make no difference.
+We recommend using <code class="docutils literal notranslate"><span class="pre">---</span></code> if you have many keywords you wish to specify, or if some values
+will span multiple lines. Use the <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> syntax as a shorthand for just one or two
+keywords.</p>
+</div>
+<p>For examples of how this is used, see the sections below.</p>
+</section>
+</section>
+<section id="roles">
+<span id="content-myst-roles"></span><h3>Roles<a class="headerlink" href="#roles" title="Link to this heading">#</a></h3>
+<p>Roles are very similar to directives, but they are less complex and written
+entirely in one line. You can use a role in your book with
+this syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Some content {rolename}`and here is my role&#39;s content!`
+</pre></div>
+</div>
+<p>Again, roles will only work if <code class="docutils literal notranslate"><span class="pre">rolename</span></code> is a valid role name.
+For example, the <code class="docutils literal notranslate"><span class="pre">doc</span></code> role can be used to refer to another page in your book.
+You can refer directly to another page by its relative path.
+For example, the syntax <code class="docutils literal notranslate"><span class="pre">{doc}`../intro`</span></code> will result in: <span class="xref std std-doc">../intro</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is currently a requirement for roles to be on the <strong>same line</strong> in your source file. It will
+not be parsed correctly if it spans more than one line. Progress towards supporting roles
+that span multiple lines can be tracked <a class="reference external" href="https://github.com/executablebooks/MyST-Parser/issues/269">by this issue</a></p>
+</div>
+<p>For more information on using roles, see the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#syntax-roles" title="MyST Parser 2.0.0">MyST documentation</a>.</p>
+</section>
+</section>
+<section id="what-roles-and-directives-are-available">
+<h2>What roles and directives are available?<a class="headerlink" href="#what-roles-and-directives-are-available" title="Link to this heading">#</a></h2>
+<p>There is currently no single list of roles / directives to use as a reference, but this
+section tries to give as much as information as possible. For those who are familiar
+with the Sphinx ecosystem, <strong>you may use any directive / role that is available in Sphinx</strong>.
+This is because Jupyter Book uses Sphinx to build your book, and MyST Markdown supports
+all syntax that Sphinx supports (think of it as a Markdown version of reStructuredText).</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>If you search the internet (and the links below) for information about roles and directives,
+the documentation will generally be written with reStructuredText in mind. MyST Markdown
+is different from reStructuredText, but all of the functionality should be the same.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/intro.html#intro-get-started" title="MyST Parser 2.0.0">the MyST Sphinx parser documentation</a> for more information about the differences between MyST and rST.</p>
+</div>
+<p>For a list of directives that are available to you, there are three places to check:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html" title="Sphinx 7.3.0">The Sphinx directives page</a>
+has a list of directives that are available by default in Sphinx.</p></li>
+<li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">The reStructuredText directives page</a>
+has a list of directives in the Python “docutils” module.</p></li>
+<li><p>This documentation has several additional directives that are specific to Jupyter Book.</p></li>
+</ol>
+<div class="tip admonition">
+<p class="admonition-title">What if it exists in rST but not MyST?</p>
+<p>In some unusual cases, MyST may be incompatible with a certain role or directive.
+In this case, you can use the special <code class="docutils literal notranslate"><span class="pre">eval-rst</span></code> directive, to directly parse reStructuredText:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
+.. note::
+
+   A note written in reStructuredText.
+```
+</pre></div>
+</div>
+<p>which produces</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A note written in reStructuredText.</p>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The MyST-Parser documentation on <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#syntax-directives-parsing" title="MyST Parser 2.0.0">how directives parse content</a>, and its use for <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/faq/index.html#howto-include-rst" title="MyST Parser 2.0.0">including rST files into a Markdown file</a>, and <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/faq/index.html#howto-autodoc" title="MyST Parser 2.0.0">using <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> in Markdown files</a>.</p>
+</div>
+</section>
+<section id="nesting-content-blocks-in-markdown">
+<span id="markdown-nesting"></span><h2>Nesting content blocks in Markdown<a class="headerlink" href="#nesting-content-blocks-in-markdown" title="Link to this heading">#</a></h2>
+<p>If you’d like to nest content blocks inside one another in Markdown (for
+example, to put a <code class="docutils literal notranslate"><span class="pre">{note}</span></code> inside of a <code class="docutils literal notranslate"><span class="pre">{margin}</span></code>), you may do so by adding
+extra backticks (<code class="docutils literal notranslate"><span class="pre">`</span></code>) to the outer-most block. This works for literal
+code blocks as well.</p>
+<p>For example, the following syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````
+<span class="sb">```</span>
+<span class="sb">```</span>
+````
+</pre></div>
+</div>
+<p>yields</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span>
+<span class="sb">```</span>
+</pre></div>
+</div>
+<p>Thus, if you’d like to nest directives inside one another, you can take the same
+approach. For example, the following syntax:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````{margin}
+```{note}
+Here&#39;s my note!
+```
+````
+</pre></div>
+</div>
+<p>produces:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here’s my note!</p>
+</div>
+</aside>
+</section>
+<section id="other-myst-markdown-syntax">
+<h2>Other MyST Markdown syntax<a class="headerlink" href="#other-myst-markdown-syntax" title="Link to this heading">#</a></h2>
+<p>In addition to roles and directives, there are numerous other kinds of syntax
+that MyST Markdown supports.
+MyST supports all syntax of CommonMark Markdown (the kind of Markdown that Jupyter notebooks use), as well as an extended syntax that is used for scientific publishing.</p>
+<p>The <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/intro.html#intro-get-started" title="MyST Parser 2.0.0">MyST-Parser</a> is the tool that Jupyter Book uses to allow you to write your book content in MyST.
+It is also a good source of information about the MyST syntax.
+Here are some links you can use as a reference:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#commonmark-block-tokens" title="MyST Parser 2.0.0">CommonMark block syntax</a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#extended-block-tokens" title="MyST Parser 2.0.0">Extended MyST block syntax in MyST</a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#commonmark-span-tokens" title="MyST Parser 2.0.0">CommonMark in-line syntax</a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#extended-span-tokens" title="MyST Parser 2.0.0">Extended in-line syntax in MyST</a></p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>For information about enabling extended MyST syntax, see <a class="reference internal" href="content-blocks.html#content-blocks-myst-extensions"><span class="std std-ref">MyST syntax extensions</span></a>.
+In addition, see other examples of this extended syntax (and how to enable each) throughout this documentation.</p>
+</div>
+</section>
+<section id="what-can-i-create-with-myst-markdown">
+<h2>What can I create with MyST Markdown?<a class="headerlink" href="#what-can-i-create-with-myst-markdown" title="Link to this heading">#</a></h2>
+<p>See <a class="reference internal" href="content-blocks.html"><span class="std std-doc">Special content blocks</span></a> for an introduction to what you can do with MyST Markdown
+in Jupyter Book.
+In addition, the other pages in this site cover many more use-cases for how to use directives with MyST.</p>
+</section>
+<section id="tools-for-writing-myst-markdown">
+<h2>Tools for writing MyST Markdown<a class="headerlink" href="#tools-for-writing-myst-markdown" title="Link to this heading">#</a></h2>
+<p>There is some support for MyST Markdown in tools across the community. Here we include
+a few prominent ones.</p>
+<section id="jupyter-interfaces">
+<h3>Jupyter interfaces<a class="headerlink" href="#jupyter-interfaces" title="Link to this heading">#</a></h3>
+<p>While MyST Markdown does not (yet) render in traditional Jupyter interfaces, most
+of its syntax should “gracefully degrade”, meaning that you can still work with
+MyST in Jupyter, and then build your book with Jupyter Book.</p>
+</section>
+<section id="jupytext-and-text-sync">
+<h3>Jupytext and text sync<a class="headerlink" href="#jupytext-and-text-sync" title="Link to this heading">#</a></h3>
+<p>For working with Jupyter notebook and Markdown files, we recommend <a class="reference external" href="https://jupytext.readthedocs.io/en/latest">jupytext</a>,
+an open source tool for two-way conversion between <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> and text files.
+Jupytext <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown">supports the MyST Markdown format</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For full compatibility with <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code>, it is necessary to use <code class="docutils literal notranslate"><span class="pre">jupytext&gt;=1.6.0</span></code>.</p>
+<p>See also <a class="reference internal" href="#file-types:custom:jupytext"><code class="xref myst docutils literal notranslate"><span class="pre">file-types:custom:jupytext</span></code></a>.</p>
+</div>
+</section>
+<section id="vs-code">
+<h3>VS Code<a class="headerlink" href="#vs-code" title="Link to this heading">#</a></h3>
+<p>If editing the Markdown files using VS Code, the
+<a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight">VS Code MyST Markdown extension</a>
+provides syntax highlighting and other features.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Write narrative content</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="content-blocks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Special content blocks</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-and-roles">Directives and roles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#more-arguments-and-metadata-in-directives">More arguments and metadata in directives</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-roles-and-directives-are-available">What roles and directives are available?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nesting-content-blocks-in-markdown">Nesting content blocks in Markdown</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-myst-markdown-syntax">Other MyST Markdown syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-can-i-create-with-myst-markdown">What can I create with MyST Markdown?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-for-writing-myst-markdown">Tools for writing MyST Markdown</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-interfaces">Jupyter interfaces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupytext-and-text-sync">Jupytext and text sync</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code">VS Code</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeneWang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

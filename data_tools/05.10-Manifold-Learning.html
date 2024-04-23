@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>In Depth: Manifold Learning &#8212; Docs</title>
+    <title>1.5.10. In Depth: Manifold Learning</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,19 +58,32 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/05.10-Manifold-Learning';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/05.10-Manifold-Learning.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/05.10-Manifold-Learning.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="In Depth: k-Means Clustering" href="05.11-K-Means.html" />
-    <link rel="prev" title="In Depth: Principal Component Analysis" href="05.09-Principal-Component-Analysis.html" />
+    <link rel="next" title="1.5.11. In Depth: k-Means Clustering" href="05.11-K-Means.html" />
+    <link rel="prev" title="1.5.9. In Depth: Principal Component Analysis" href="05.09-Principal-Component-Analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,8 +172,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -177,14 +190,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -196,52 +201,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -300,7 +330,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/05.10-Manifold-Learning.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/05.10-Manifold-Learning.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +348,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/05.10-Manifold-Learning.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/05.10-Manifold-Learning.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +397,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +414,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/05.10-Manifold-Learning.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/05.10-Manifold-Learning.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -401,7 +431,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/05.10-Manifold-Learning.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/05.10-Manifold-Learning.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -525,16 +555,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manifold-learning-hello">Manifold Learning: “HELLO”</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-scaling">Multidimensional Scaling</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mds-as-manifold-learning">MDS as Manifold Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-embeddings-where-mds-fails">Nonlinear Embeddings: Where MDS Fails</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manifold-learning-hello">1.5.10.1. Manifold Learning: “HELLO”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-scaling">1.5.10.2. Multidimensional Scaling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mds-as-manifold-learning">1.5.10.2.1. MDS as Manifold Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-embeddings-where-mds-fails">1.5.10.2.2. Nonlinear Embeddings: Where MDS Fails</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-manifolds-locally-linear-embedding">Nonlinear Manifolds: Locally Linear Embedding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-thoughts-on-manifold-methods">Some Thoughts on Manifold Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-isomap-on-faces">Example: Isomap on Faces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-structure-in-digits">Example: Visualizing Structure in Digits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-manifolds-locally-linear-embedding">1.5.10.3. Nonlinear Manifolds: Locally Linear Embedding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-thoughts-on-manifold-methods">1.5.10.4. Some Thoughts on Manifold Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-isomap-on-faces">1.5.10.5. Example: Isomap on Faces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-structure-in-digits">1.5.10.6. Example: Visualizing Structure in Digits</a></li>
 </ul>
             </nav>
         </div>
@@ -547,7 +577,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="in-depth-manifold-learning">
-<h1>In Depth: Manifold Learning<a class="headerlink" href="#in-depth-manifold-learning" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.5.10. </span>In Depth: Manifold Learning<a class="headerlink" href="#in-depth-manifold-learning" title="Link to this heading">#</a></h1>
 <p>In the previous chapter we saw how PCA can be used for dimensionality reduction, reducing the number of features of a dataset while maintaining the essential relationships between the points.
 While PCA is flexible, fast, and easily interpretable, it does not perform so well when there are <em>nonlinear</em> relationships within the data, some examples of which we will see shortly.</p>
 <p>To address this deficiency, we can turn to <em>manifold learning algorithms</em>—a class of unsupervised estimators that seek to describe datasets as low-dimensional manifolds embedded in high-dimensional spaces.
@@ -566,11 +596,9 @@ Manifold learning algorithms seek to learn about the fundamental two-dimensional
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-</div>
 </div>
 <section id="manifold-learning-hello">
-<h2>Manifold Learning: “HELLO”<a class="headerlink" href="#manifold-learning-hello" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.10.1. </span>Manifold Learning: “HELLO”<a class="headerlink" href="#manifold-learning-hello" title="Link to this heading">#</a></h2>
 <p>To make these concepts more clear, let’s start by generating some two-dimensional data that we can use to define a manifold.
 Here is a function that will create data in the shape of the word “HELLO”:</p>
 <div class="cell docutils container">
@@ -610,14 +638,14 @@ Here is a function that will create data in the shape of the word “HELLO”:</
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7fd277ea0e58732f27ca881fc2c5d5a7e21b9e223556d5cea272f0329a1b6611.png" src="../_images/7fd277ea0e58732f27ca881fc2c5d5a7e21b9e223556d5cea272f0329a1b6611.png" />
+<img alt="../_images/222bdc3630d71aec1561a73b9e9660c41cdea612dd57e3c0f9525910da6a2bcd.png" src="../_images/222bdc3630d71aec1561a73b9e9660c41cdea612dd57e3c0f9525910da6a2bcd.png" />
 </div>
 </div>
 <p>The output is two dimensional, and consists of points drawn in the shape of the word “HELLO”.
 This data form will help us to see visually what these algorithms are doing.</p>
 </section>
 <section id="multidimensional-scaling">
-<h2>Multidimensional Scaling<a class="headerlink" href="#multidimensional-scaling" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.10.2. </span>Multidimensional Scaling<a class="headerlink" href="#multidimensional-scaling" title="Link to this heading">#</a></h2>
 <p>Looking at data like this, we can see that the particular choices of <em>x</em> and <em>y</em> values of the dataset are not the most fundamental description of the data: we can scale, shrink, or rotate the data, and the “HELLO” will still be apparent.
 For example, if we use a rotation matrix to rotate the data, the <em>x</em> and <em>y</em> values change, but the data is still fundamentally the same (see the following figure):</p>
 <div class="cell docutils container">
@@ -635,7 +663,7 @@ For example, if we use a rotation matrix to rotate the data, the <em>x</em> and 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cd0f8bc43c381eabfd76f48b8c9ddf82e2de0ed3efd0cd0d3a2a43b1d63ab646.png" src="../_images/cd0f8bc43c381eabfd76f48b8c9ddf82e2de0ed3efd0cd0d3a2a43b1d63ab646.png" />
+<img alt="../_images/23ee92e46c75d04d77438153e2945e5baab2bfd14d50d50b6285995613468777.png" src="../_images/23ee92e46c75d04d77438153e2945e5baab2bfd14d50d50b6285995613468777.png" />
 </div>
 </div>
 <p>This confirms that the <em>x</em> and <em>y</em> values are not necessarily fundamental to the relationships in the data.
@@ -651,14 +679,7 @@ Let’s use Scikit-Learn’s efficient <code class="docutils literal notranslate
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">pairwise_distances</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">D</span> <span class="o">=</span> <span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">D</span><span class="o">.</span><span class="n">shape</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1000, 1000)
 </pre></div>
 </div>
 </div>
@@ -672,15 +693,7 @@ Let’s use Scikit-Learn’s efficient <code class="docutils literal notranslate
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">();</span>
-
-<span class="ne">NameError</span>: name &#39;D&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/17753af1487ad357e19dcf4108c7a8a2d2f81522bce9db12447704248b633f41.png" src="../_images/17753af1487ad357e19dcf4108c7a8a2d2f81522bce9db12447704248b633f41.png" />
 </div>
 </div>
 <p>If we similarly construct a distance matrix for our rotated and translated data, we see that it is the same:</p>
@@ -692,13 +705,7 @@ Let’s use Scikit-Learn’s efficient <code class="docutils literal notranslate
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">D2</span> <span class="o">=</span> <span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">D2</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;pairwise_distances&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -719,21 +726,12 @@ Let’s see how it works for our distance matrix, using the <code class="docutil
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">MDS</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">MDS</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dissimilarity</span><span class="o">=</span><span class="s1">&#39;precomputed&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1701</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">out</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
+<img alt="../_images/a906455148a13a0d66dccfc44d82ab619ca76046e802ee667570936384f8a714.png" src="../_images/a906455148a13a0d66dccfc44d82ab619ca76046e802ee667570936384f8a714.png" />
 </div>
 </div>
 <p>The MDS algorithm recovers one of the possible two-dimensional coordinate representations of our data, using <em>only</em> the <span class="math notranslate nohighlight">\(N\times N\)</span> distance matrix describing the relationship between the data points.</p>
 <section id="mds-as-manifold-learning">
-<h3>MDS as Manifold Learning<a class="headerlink" href="#mds-as-manifold-learning" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.5.10.2.1. </span>MDS as Manifold Learning<a class="headerlink" href="#mds-as-manifold-learning" title="Link to this heading">#</a></h3>
 <p>The usefulness of this becomes more apparent when we consider the fact that distance matrices can be computed from data in <em>any</em> dimension.
 So, for example, instead of simply rotating the data in the two-dimensional plane, we can project it into three dimensions using the following function (essentially a three-dimensional generalization of the rotation matrix used earlier):</p>
 <div class="cell docutils container">
@@ -767,7 +765,7 @@ So, for example, instead of simply rotating the data in the two-dimensional plan
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/952b6df7409c557799bb24f9e9d9ff5a0cc700cc2039dad9749e5c3e46f72625.png" src="../_images/952b6df7409c557799bb24f9e9d9ff5a0cc700cc2039dad9749e5c3e46f72625.png" />
+<img alt="../_images/09bbe646eb97b55016ef485af3629aeef1c323a0dfa6384b97aaf81efbc5c797.png" src="../_images/09bbe646eb97b55016ef485af3629aeef1c323a0dfa6384b97aaf81efbc5c797.png" />
 </div>
 </div>
 <p>We can now ask the <code class="docutils literal notranslate"><span class="pre">MDS</span></code> estimator to input this three-dimensional data, compute the distance matrix, and then determine the optimal two-dimensional embedding for this distance matrix.
@@ -782,23 +780,14 @@ The result recovers a representation of the original data, as shown in the follo
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span> <span class="o">=</span> <span class="n">MDS</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1701</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">out3</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X3</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">out3</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">out3</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="o">**</span><span class="n">colorize</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;MDS&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/a906455148a13a0d66dccfc44d82ab619ca76046e802ee667570936384f8a714.png" src="../_images/a906455148a13a0d66dccfc44d82ab619ca76046e802ee667570936384f8a714.png" />
 </div>
 </div>
 <p>This is essentially the goal of a manifold learning estimator: given high-dimensional embedded data, it seeks a low-dimensional representation of the data that preserves certain relationships within the data.
 In the case of MDS, the quantity preserved is the distance between every pair of points.</p>
 </section>
 <section id="nonlinear-embeddings-where-mds-fails">
-<h3>Nonlinear Embeddings: Where MDS Fails<a class="headerlink" href="#nonlinear-embeddings-where-mds-fails" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.5.10.2.2. </span>Nonlinear Embeddings: Where MDS Fails<a class="headerlink" href="#nonlinear-embeddings-where-mds-fails" title="Link to this heading">#</a></h3>
 <p>Our discussion thus far has considered <em>linear</em> embeddings, which essentially consist of rotations, translations, and scalings of data into higher-dimensional spaces.
 Where MDS breaks down is when the embedding is nonlinear—that is, when it goes beyond this simple set of operations.
 Consider the following embedding, which takes the input and contorts it into an “S” shape in three dimensions:</p>
@@ -827,7 +816,7 @@ Consider the following embedding, which takes the input and contorts it into an 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/08edd0d6911aa65956fca59b9e5c957eef975ca175bc9ea22f0480e2bdab45db.png" src="../_images/08edd0d6911aa65956fca59b9e5c957eef975ca175bc9ea22f0480e2bdab45db.png" />
+<img alt="../_images/118f45f1999341ca6d53c8a5d6917f37b3dda26eab8b36fee4eb5674f633ec6d.png" src="../_images/118f45f1999341ca6d53c8a5d6917f37b3dda26eab8b36fee4eb5674f633ec6d.png" />
 </div>
 </div>
 <p>The fundamental relationships between the data points are still there, but this time the data has been transformed in a nonlinear way: it has been wrapped up into the shape of an “S.”</p>
@@ -843,23 +832,14 @@ Consider the following embedding, which takes the input and contorts it into an 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">MDS</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">MDS</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">outS</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">XS</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
+<img alt="../_images/763b00d9a65de6a2528293f1913a799b7cc592077844224c4fa9d67b0dd9aef6.png" src="../_images/763b00d9a65de6a2528293f1913a799b7cc592077844224c4fa9d67b0dd9aef6.png" />
 </div>
 </div>
 <p>The best two-dimensional <em>linear</em> embedding does not unwrap the S-curve, but instead discards the original y-axis.</p>
 </section>
 </section>
 <section id="nonlinear-manifolds-locally-linear-embedding">
-<h2>Nonlinear Manifolds: Locally Linear Embedding<a class="headerlink" href="#nonlinear-manifolds-locally-linear-embedding" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.10.3. </span>Nonlinear Manifolds: Locally Linear Embedding<a class="headerlink" href="#nonlinear-manifolds-locally-linear-embedding" title="Link to this heading">#</a></h2>
 <p>How can we move forward here? Stepping back, we can see that the source of the problem is that MDS tries to preserve distances between faraway points when constructing the embedding.
 But what if we instead modified the algorithm such that it only preserves distances between nearby points?
 The resulting embedding would be closer to what we want.</p>
@@ -889,24 +869,13 @@ In general, modified LLE does better than other flavors of the algorithm at reco
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">LocallyLinearEmbedding</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">LocallyLinearEmbedding</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">n_neighbors</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">method</span><span class="o">=</span><span class="s1">&#39;modified&#39;</span><span class="p">,</span> <span class="n">eigen_solver</span><span class="o">=</span><span class="s1">&#39;dense&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">out</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">XS</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
+<img alt="../_images/019013b67ff9edb39a58b38932c6702bb36995a8b11d0529fdb0953d54a3161a.png" src="../_images/019013b67ff9edb39a58b38932c6702bb36995a8b11d0529fdb0953d54a3161a.png" />
 </div>
 </div>
 <p>The result remains somewhat distorted compared to our original manifold, but captures the essential relationships in the data!</p>
 </section>
 <section id="some-thoughts-on-manifold-methods">
-<h2>Some Thoughts on Manifold Methods<a class="headerlink" href="#some-thoughts-on-manifold-methods" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.10.4. </span>Some Thoughts on Manifold Methods<a class="headerlink" href="#some-thoughts-on-manifold-methods" title="Link to this heading">#</a></h2>
 <p>Compelling as these examples may be, in practice manifold learning techniques tend to be finicky enough that they are rarely used for anything more than simple qualitative visualization of high-dimensional data.</p>
 <p>The following are some of the particular challenges of manifold learning, which all contrast poorly with PCA:</p>
 <ul class="simple">
@@ -928,7 +897,7 @@ Based on my own experience, I would give the following recommendations:</p>
 <p>If you’re interested in getting a feel for how these work, I’d suggest running each of the methods on the data in this section.</p>
 </section>
 <section id="example-isomap-on-faces">
-<h2>Example: Isomap on Faces<a class="headerlink" href="#example-isomap-on-faces" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.10.5. </span>Example: Isomap on Faces<a class="headerlink" href="#example-isomap-on-faces" title="Link to this heading">#</a></h2>
 <p>One place manifold learning is often used is in understanding the relationship between high-dimensional data points.
 A common case of high-dimensional data is images: for example, a set of images with 1,000 pixels each can be thought of as a collection of points in 1,000 dimensions, with the brightness of each pixel in each image defining the coordinate in that dimension.</p>
 <p>To illustrate, let’s apply Isomap on some data from the Labeled Faces in the Wild dataset, which we previously saw in <a class="reference internal" href="05.07-Support-Vector-Machines.html"><span class="std std-doc">In-Depth: Support Vector Machines</span></a> and <a class="reference internal" href="05.09-Principal-Component-Analysis.html"><span class="std std-doc">In Depth: Principal Component Analysis</span></a>.
@@ -943,13 +912,161 @@ Running this command will download the dataset and cache it in your home directo
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_lfw_people</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">faces</span> <span class="o">=</span> <span class="n">fetch_lfw_people</span><span class="p">(</span><span class="n">min_faces_per_person</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="ne">gaierror</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1346,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1345</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1346</span>     <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>               <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1285,</span> in <span class="ni">HTTPConnection.request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1285</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1331,</span> in <span class="ni">HTTPConnection._send_request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1330</span>     <span class="n">body</span> <span class="o">=</span> <span class="n">_encode</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1331</span> <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1280,</span> in <span class="ni">HTTPConnection.endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1280</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1040,</span> in <span class="ni">HTTPConnection._send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span> <span class="k">if</span> <span class="n">message_body</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1044</span>     <span class="c1"># create a consistent interface to message_body</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:980,</span> in <span class="ni">HTTPConnection.send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">979</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">980</span>     <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">981</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1447,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span> <span class="s2">&quot;Connect to a host on a given (SSL) port.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1447</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1449</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tunnel_host</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:946,</span> in <span class="ni">HTTPConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">945</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Connect to the host and port specified in __init__.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">946</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span>     <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_address</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="c1"># Might fail in OSs that don&#39;t implement TCP_NODELAY</span>
+
+<span class="nn">File ~\anaconda3\lib\socket.py:823,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address)</span>
+<span class="g g-Whitespace">    </span><span class="mi">822</span> <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">823</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">824</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="nn">File ~\anaconda3\lib\socket.py:954,</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">953</span> <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">--&gt; </span><span class="mi">954</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">955</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="ne">gaierror</span>: [Errno 11001] getaddrinfo failed
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_lfw_people</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">faces</span> <span class="o">=</span> <span class="n">fetch_lfw_people</span><span class="p">(</span><span class="n">min_faces_per_person</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_lfw.py:321,</span> in <span class="ni">fetch_lfw_people</span><span class="nt">(data_home, funneled, resize, min_faces_per_person, color, slice_, download_if_missing, return_X_y)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="k">def</span> <span class="nf">fetch_lfw_people</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="o">*</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="n">data_home</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span>     <span class="n">return_X_y</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Load the Labeled Faces in the Wild (LFW) people dataset \</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span><span class="sd"> (classification).</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="sd">         .. versionadded:: 0.20</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">lfw_home</span><span class="p">,</span> <span class="n">data_folder_path</span> <span class="o">=</span> <span class="n">_check_fetch_lfw</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>         <span class="n">data_home</span><span class="o">=</span><span class="n">data_home</span><span class="p">,</span> <span class="n">funneled</span><span class="o">=</span><span class="n">funneled</span><span class="p">,</span> <span class="n">download_if_missing</span><span class="o">=</span><span class="n">download_if_missing</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Loading LFW people faces from </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">lfw_home</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="c1"># wrap the loader in a memoizing function that will return memmaped data</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>     <span class="c1"># arrays for optimal memory usage</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_lfw.py:88,</span> in <span class="ni">_check_fetch_lfw</span><span class="nt">(data_home, funneled, download_if_missing)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="k">if</span> <span class="n">download_if_missing</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Downloading LFW metadata: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">target</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>     <span class="n">_fetch_remote</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">lfw_home</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is missing&quot;</span> <span class="o">%</span> <span class="n">target_filepath</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_base.py:1511,</span> in <span class="ni">_fetch_remote</span><span class="nt">(remote, dirname)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1489</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Helper function to download a remote dataset into path</span>
+<span class="g g-Whitespace">   </span><span class="mi">1490</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1491</span><span class="sd"> Fetch a dataset pointed by remote&#39;s url, save into path using remote&#39;s</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1507</span><span class="sd">     Full path of the created file.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1508</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1510</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">remote</span><span class="o">.</span><span class="n">filename</span> <span class="k">if</span> <span class="n">dirname</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">remote</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1511</span> <span class="n">urlretrieve</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1512</span> <span class="n">checksum</span> <span class="o">=</span> <span class="n">_sha256</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1513</span> <span class="k">if</span> <span class="n">remote</span><span class="o">.</span><span class="n">checksum</span> <span class="o">!=</span> <span class="n">checksum</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:239,</span> in <span class="ni">urlretrieve</span><span class="nt">(url, filename, reporthook, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="sd"> Retrieve a URL into a temporary location on disk.</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span><span class="sd"> data file as well as the resulting HTTPMessage object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span> <span class="n">url_type</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_splittype</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">239</span> <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">closing</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span>     <span class="n">headers</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="c1"># Just return the local path and the &quot;headers&quot; for file://</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>     <span class="c1"># URLs. No sense in performing a copy unless requested.</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:214,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">214</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:517,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">516</span> <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s1">&#39;urllib.Request&#39;</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">())</span>
+<span class="ne">--&gt; </span><span class="mi">517</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">519</span> <span class="c1"># post-process response</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">meth_name</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">+</span><span class="s2">&quot;_response&quot;</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:534,</span> in <span class="ni">OpenerDirector._open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="ne">--&gt; </span><span class="mi">534</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span>                           <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:494,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">494</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1389,</span> in <span class="ni">HTTPSHandler.https_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1388</span> <span class="k">def</span> <span class="nf">https_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1389</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1390</span>         <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">,</span> <span class="n">check_hostname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_check_hostname</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1349,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1346</span>         <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>                   <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+<span class="ne">-&gt; </span><span class="mi">1349</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1350</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1351</span> <span class="k">except</span><span class="p">:</span>
+
+<span class="ne">URLError</span>: &lt;urlopen error [Errno 11001] getaddrinfo failed&gt;
 </pre></div>
 </div>
 </div>
@@ -976,7 +1093,7 @@ In other words, the images can be thought of as data points in a 2,914-dimension
 <span class="ne">NameError</span>: name &#39;faces&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/68d85bf6709c30ad6d3a935b304a66b03ff5f2ea074c6907558e38a711fbdf8b.png" src="../_images/68d85bf6709c30ad6d3a935b304a66b03ff5f2ea074c6907558e38a711fbdf8b.png" />
+<img alt="../_images/25da8edb26bc7e0e26e5bba2da3855bf509c168fc4106d34523c06499a9ed518.png" src="../_images/25da8edb26bc7e0e26e5bba2da3855bf509c168fc4106d34523c06499a9ed518.png" />
 </div>
 </div>
 <p>When we encountered this data in <a class="reference internal" href="05.09-Principal-Component-Analysis.html"><span class="std std-doc">In Depth: Principal Component Analysis</span></a>, our goal was essentially compression: to use the components to reconstruct the inputs from the lower-dimensional representation.</p>
@@ -993,13 +1110,14 @@ In other words, the images can be thought of as data points in a 2,914-dimension
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">svd_solver</span><span class="o">=</span><span class="s1">&#39;randomized&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">svd_solver</span><span class="o">=</span><span class="s1">&#39;randomized&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;n components&#39;</span><span class="p">)</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ne">NameError</span>: name &#39;faces&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1018,13 +1136,14 @@ We can compute an Isomap embedding on these faces using the same pattern shown b
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">Isomap</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">Isomap</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">Isomap</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">proj</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">proj</span><span class="o">.</span><span class="n">shape</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ne">NameError</span>: name &#39;faces&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1081,7 +1200,7 @@ To get a better idea of what the projection tells us, let’s define a function 
 <span class="ne">NameError</span>: name &#39;faces&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/85ebe75c24502f06f67db5e7110b5dbbe35c22fe390423a6af0116a4072055ff.png" src="../_images/85ebe75c24502f06f67db5e7110b5dbbe35c22fe390423a6af0116a4072055ff.png" />
+<img alt="../_images/1209b65d10771d41cb076c88d86e1f92b3c4d5b6c248c0d5327a91fd6fda9c68.png" src="../_images/1209b65d10771d41cb076c88d86e1f92b3c4d5b6c248c0d5327a91fd6fda9c68.png" />
 </div>
 </div>
 <p>The result is interesting. The first two Isomap dimensions seem to describe global image features: the overall brightness of the image from left to right, and the general orientation of the face from bottom to top.
@@ -1089,7 +1208,7 @@ This gives us a nice visual indication of some of the fundamental features in ou
 <p>From here, we could then go on to classify this data (perhaps using manifold features as inputs to the classification algorithm) as we did in <a class="reference internal" href="05.07-Support-Vector-Machines.html"><span class="std std-doc">In-Depth: Support Vector Machines</span></a>.</p>
 </section>
 <section id="example-visualizing-structure-in-digits">
-<h2>Example: Visualizing Structure in Digits<a class="headerlink" href="#example-visualizing-structure-in-digits" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.10.6. </span>Example: Visualizing Structure in Digits<a class="headerlink" href="#example-visualizing-structure-in-digits" title="Link to this heading">#</a></h2>
 <p>As another example of using manifold learning for visualization, let’s take a look at the MNIST handwritten digits dataset.
 This is similar to the digits dataset we saw in <a class="reference internal" href="05.08-Random-Forests.html"><span class="std std-doc">In-Depth: Decision Trees and Random Forests</span></a>, but with many more pixels per image.
 It can be downloaded from <a class="reference external" href="http://openml.org/">http://openml.org/</a> with the Scikit-Learn utility:</p>
@@ -1103,13 +1222,183 @@ It can be downloaded from <a class="reference external" href="http://openml.org/
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">mnist</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="s1">&#39;mnist_784&#39;</span><span class="p">)</span>
+<span class="ne">gaierror</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1346,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1345</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1346</span>     <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>               <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1285,</span> in <span class="ni">HTTPConnection.request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1285</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1331,</span> in <span class="ni">HTTPConnection._send_request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1330</span>     <span class="n">body</span> <span class="o">=</span> <span class="n">_encode</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1331</span> <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1280,</span> in <span class="ni">HTTPConnection.endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1280</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1040,</span> in <span class="ni">HTTPConnection._send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span> <span class="k">if</span> <span class="n">message_body</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1044</span>     <span class="c1"># create a consistent interface to message_body</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:980,</span> in <span class="ni">HTTPConnection.send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">979</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">980</span>     <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">981</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1447,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span> <span class="s2">&quot;Connect to a host on a given (SSL) port.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1447</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1449</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tunnel_host</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:946,</span> in <span class="ni">HTTPConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">945</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Connect to the host and port specified in __init__.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">946</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span>     <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_address</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="c1"># Might fail in OSs that don&#39;t implement TCP_NODELAY</span>
+
+<span class="nn">File ~\anaconda3\lib\socket.py:823,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address)</span>
+<span class="g g-Whitespace">    </span><span class="mi">822</span> <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">823</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">824</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="nn">File ~\anaconda3\lib\socket.py:954,</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">953</span> <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">--&gt; </span><span class="mi">954</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">955</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="ne">gaierror</span>: [Errno 11001] getaddrinfo failed
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">mnist</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="s1">&#39;mnist_784&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">mnist</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:744,</span> in <span class="ni">fetch_openml</span><span class="nt">(name, version, data_id, data_home, target_column, cache, return_X_y, as_frame, n_retries, delay)</span>
+<span class="g g-Whitespace">    </span><span class="mi">738</span>     <span class="k">if</span> <span class="n">data_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">739</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">740</span>             <span class="s2">&quot;Dataset data_id=</span><span class="si">{}</span><span class="s2"> and name=</span><span class="si">{}</span><span class="s2"> passed, but you can only &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">741</span>             <span class="s2">&quot;specify a numeric data_id or a name, not &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">742</span>             <span class="s2">&quot;both.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data_id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">744</span>     <span class="n">data_info</span> <span class="o">=</span> <span class="n">_get_data_info_by_name</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span>         <span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">data_home</span><span class="p">,</span> <span class="n">n_retries</span><span class="o">=</span><span class="n">n_retries</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="n">delay</span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">747</span>     <span class="n">data_id</span> <span class="o">=</span> <span class="n">data_info</span><span class="p">[</span><span class="s2">&quot;did&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">748</span> <span class="k">elif</span> <span class="n">data_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">749</span>     <span class="c1"># from the previous if statement, it is given that name is None</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:283,</span> in <span class="ni">_get_data_info_by_name</span><span class="nt">(name, version, data_home, n_retries, delay)</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="n">url</span> <span class="o">=</span> <span class="n">_SEARCH_NAME</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/status/active/&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span> <span class="n">error_msg</span> <span class="o">=</span> <span class="s2">&quot;No active dataset </span><span class="si">{}</span><span class="s2"> found.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">283</span> <span class="n">json_data</span> <span class="o">=</span> <span class="n">_get_json_content_from_openml_api</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">284</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span>     <span class="n">error_msg</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span>     <span class="n">data_home</span><span class="o">=</span><span class="n">data_home</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span>     <span class="n">n_retries</span><span class="o">=</span><span class="n">n_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span>     <span class="n">delay</span><span class="o">=</span><span class="n">delay</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">289</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">290</span> <span class="n">res</span> <span class="o">=</span> <span class="n">json_data</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;dataset&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:227,</span> in <span class="ni">_get_json_content_from_openml_api</span><span class="nt">(url, error_message, data_home, n_retries, delay)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>         <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">226</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">227</span>     <span class="k">return</span> <span class="n">_load_json</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span> <span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="c1"># 412 is an OpenML specific error code, indicating a generic error</span>
+<span class="g g-Whitespace">    </span><span class="mi">230</span>     <span class="c1"># (e.g., data not found)</span>
+<span class="g g-Whitespace">    </span><span class="mi">231</span>     <span class="k">if</span> <span class="n">error</span><span class="o">.</span><span class="n">code</span> <span class="o">!=</span> <span class="mi">412</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:52,</span> in <span class="ni">_retry_with_clean_cache.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kw)</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">52</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="k">except</span> <span class="n">URLError</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="k">raise</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:222,</span> in <span class="ni">_get_json_content_from_openml_api.&lt;locals&gt;._load_json</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="nd">@_retry_with_clean_cache</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data_home</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="k">def</span> <span class="nf">_load_json</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="k">with</span> <span class="n">closing</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">222</span>         <span class="n">_open_openml_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data_home</span><span class="p">,</span> <span class="n">n_retries</span><span class="o">=</span><span class="n">n_retries</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="n">delay</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>     <span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>         <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:154,</span> in <span class="ni">_open_openml_url</span><span class="nt">(openml_path, data_home, n_retries, delay)</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span>     <span class="c1"># Create a tmpdir as a subfolder of dir_name where the final file will</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>     <span class="c1"># be moved to if the download is successful. This guarantees that the</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>     <span class="c1"># renaming operation to the final location is atomic to ensure the</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>     <span class="c1"># concurrence safety of the dataset caching mechanism.</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>     <span class="k">with</span> <span class="n">TemporaryDirectory</span><span class="p">(</span><span class="nb">dir</span><span class="o">=</span><span class="n">dir_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">tmpdir</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span>         <span class="k">with</span> <span class="n">closing</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">154</span>             <span class="n">_retry_on_network_error</span><span class="p">(</span><span class="n">n_retries</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">)(</span><span class="n">urlopen</span><span class="p">)(</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>                 <span class="n">req</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span>         <span class="p">)</span> <span class="k">as</span> <span class="n">fsrc</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">158</span>             <span class="n">opener</span><span class="p">:</span> <span class="n">Callable</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>             <span class="k">if</span> <span class="n">is_gzip_encoded</span><span class="p">(</span><span class="n">fsrc</span><span class="p">):</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_openml.py:84,</span> in <span class="ni">_retry_on_network_error.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">84</span>         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="k">except</span> <span class="p">(</span><span class="n">URLError</span><span class="p">,</span> <span class="ne">TimeoutError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>         <span class="c1"># 412 is a specific OpenML error code.</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">HTTPError</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="mi">412</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:214,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">214</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:517,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">516</span> <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s1">&#39;urllib.Request&#39;</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">())</span>
+<span class="ne">--&gt; </span><span class="mi">517</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">519</span> <span class="c1"># post-process response</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">meth_name</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">+</span><span class="s2">&quot;_response&quot;</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:534,</span> in <span class="ni">OpenerDirector._open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="ne">--&gt; </span><span class="mi">534</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span>                           <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:494,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">494</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1389,</span> in <span class="ni">HTTPSHandler.https_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1388</span> <span class="k">def</span> <span class="nf">https_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1389</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1390</span>         <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">,</span> <span class="n">check_hostname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_check_hostname</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1349,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1346</span>         <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>                   <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+<span class="ne">-&gt; </span><span class="mi">1349</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1350</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1351</span> <span class="k">except</span><span class="p">:</span>
+
+<span class="ne">URLError</span>: &lt;urlopen error [Errno 11001] getaddrinfo failed&gt;
 </pre></div>
 </div>
 </div>
@@ -1213,8 +1502,8 @@ The projection lets us identify outliers that have data issues: for example, pie
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1245,7 +1534,7 @@ The projection lets us identify outliers that have data issues: for example, pie
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">In Depth: Principal Component Analysis</p>
+        <p class="prev-next-title"><span class="section-number">1.5.9. </span>In Depth: Principal Component Analysis</p>
       </div>
     </a>
     <a class="right-next"
@@ -1253,7 +1542,7 @@ The projection lets us identify outliers that have data issues: for example, pie
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">In Depth: k-Means Clustering</p>
+        <p class="prev-next-title"><span class="section-number">1.5.11. </span>In Depth: k-Means Clustering</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1273,16 +1562,16 @@ The projection lets us identify outliers that have data issues: for example, pie
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manifold-learning-hello">Manifold Learning: “HELLO”</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-scaling">Multidimensional Scaling</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mds-as-manifold-learning">MDS as Manifold Learning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-embeddings-where-mds-fails">Nonlinear Embeddings: Where MDS Fails</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manifold-learning-hello">1.5.10.1. Manifold Learning: “HELLO”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multidimensional-scaling">1.5.10.2. Multidimensional Scaling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mds-as-manifold-learning">1.5.10.2.1. MDS as Manifold Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-embeddings-where-mds-fails">1.5.10.2.2. Nonlinear Embeddings: Where MDS Fails</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-manifolds-locally-linear-embedding">Nonlinear Manifolds: Locally Linear Embedding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-thoughts-on-manifold-methods">Some Thoughts on Manifold Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-isomap-on-faces">Example: Isomap on Faces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-structure-in-digits">Example: Visualizing Structure in Digits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-manifolds-locally-linear-embedding">1.5.10.3. Nonlinear Manifolds: Locally Linear Embedding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-thoughts-on-manifold-methods">1.5.10.4. Some Thoughts on Manifold Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-isomap-on-faces">1.5.10.5. Example: Isomap on Faces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-structure-in-digits">1.5.10.6. Example: Visualizing Structure in Digits</a></li>
 </ul>
   </nav></div>
 

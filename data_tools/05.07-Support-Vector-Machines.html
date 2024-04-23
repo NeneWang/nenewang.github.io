@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>In Depth: Support Vector Machines &#8212; Docs</title>
+    <title>1.5.7. In Depth: Support Vector Machines</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,22 +58,35 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="application/vnd.jupyter.widget-state+json">{"state": {"1443968ba6704c269129db3006999b3a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4133038b05574c17a457a2e125f9f78d": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_c9a4fbc27fb84c54958baa119b6edb33", "IPY_MODEL_50e3b88a416649e08f23d0c21e696e99"], "layout": "IPY_MODEL_1443968ba6704c269129db3006999b3a", "tabbable": null, "tooltip": null}}, "353756a25af3454a950ae0b9cace3e34": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "689c98ddde2f4849aed73a344494922c": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "c9a4fbc27fb84c54958baa119b6edb33": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "IntSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "N", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_353756a25af3454a950ae0b9cace3e34", "max": 200, "min": 10, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_689c98ddde2f4849aed73a344494922c", "tabbable": null, "tooltip": null, "value": 10}}, "1ed3458318e24511b146fa79bbc2aebf": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "50e3b88a416649e08f23d0c21e696e99": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_1ed3458318e24511b146fa79bbc2aebf", "msg_id": "", "outputs": [{"output_type": "error", "ename": "NameError", "evalue": "name 'make_blobs' is not defined", "traceback": ["\u001b[1;31m---------------------------------------------------------------------------\u001b[0m", "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)", "File \u001b[1;32mC:\\Python310\\lib\\site-packages\\ipywidgets\\widgets\\interaction.py:240\u001b[0m, in \u001b[0;36minteractive.update\u001b[1;34m(self, *args)\u001b[0m\n\u001b[0;32m    238\u001b[0m     value \u001b[38;5;241m=\u001b[39m widget\u001b[38;5;241m.\u001b[39mget_interact_value()\n\u001b[0;32m    239\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mkwargs[widget\u001b[38;5;241m.\u001b[39m_kwarg] \u001b[38;5;241m=\u001b[39m value\n\u001b[1;32m--> 240\u001b[0m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mresult \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mf(\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39m\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mkwargs)\n\u001b[0;32m    241\u001b[0m show_inline_matplotlib_plots()\n\u001b[0;32m    242\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mauto_display \u001b[38;5;129;01mand\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mresult \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n", "Cell \u001b[1;32mIn[9], line 2\u001b[0m, in \u001b[0;36mplot_svm\u001b[1;34m(N, ax)\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mplot_svm\u001b[39m(N\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m10\u001b[39m, ax\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mNone\u001b[39;00m):\n\u001b[1;32m----> 2\u001b[0m     X, y \u001b[38;5;241m=\u001b[39m \u001b[43mmake_blobs\u001b[49m(n_samples\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m200\u001b[39m, centers\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m2\u001b[39m,\n\u001b[0;32m      3\u001b[0m                       random_state\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m0\u001b[39m, cluster_std\u001b[38;5;241m=\u001b[39m\u001b[38;5;241m0.60\u001b[39m)\n\u001b[0;32m      4\u001b[0m     X \u001b[38;5;241m=\u001b[39m X[:N]\n\u001b[0;32m      5\u001b[0m     y \u001b[38;5;241m=\u001b[39m y[:N]\n", "\u001b[1;31mNameError\u001b[0m: name 'make_blobs' is not defined"]}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"7c78f830670546d7b5ad943ada9935d6": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8ce203f539b94ec0948f9fec50076ba7": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "VBoxModel", "state": {"_dom_classes": ["widget-interact"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_eff4382937a24fb2b9af944bc5a36c94", "IPY_MODEL_971adea12cfa485484879ff6d5faf02a"], "layout": "IPY_MODEL_f0d132f07fcf4f80ae6f826f98b8e8a0", "tabbable": null, "tooltip": null}}, "971adea12cfa485484879ff6d5faf02a": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_7c78f830670546d7b5ad943ada9935d6", "msg_id": "", "outputs": [{"data": {"image/png": "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JPziF78gMTGRX/ziF6M/adMmePxxWLsWrFY4+WS47jqYNeuwp1osFp544gmKi4t57LHHSElJoampyXw8NTWV6upqDMMgOzs7EF+SSMRpbW0152UcWv3uO55U/S6jUeCQoOvs7OT3v/89t95668ilSy4XfPvb8NBDYLN5PwZ491348Y/hJz+Bu++Gz64L9/b2smXLFioqKrjssst47LHH+MlPfkJra6u5JHJ+fr6WGBcZh76+PrP6fdu2beZ2Vb/LRClwSNC9+eabdHR0cO211478hLvvhocf9v730MV/fP/9ve/hSkyk8eyzh1VV33zzzVx77bU8/fTT5OTkcPHFF6uqWmQc3G63Wf2+YcOGYdXv+fn5ZvV7fHx8kEcq4USBQ4Ju1apVzJw587CqdgA+/RQeeAA8nsMe8gB7AAdQe/fddDU1wWcT07Kzs+nq6mLRokXExMSwYcMGPv/5zwfwqxAJbx6Ph3379plLjHd2dpqP+arfq6urSUtLC+IoJZwpcEjQORwO5s+fP/KDTz456udtBp7xfdDXR3JjI9XXXINhGMOq3ysqKnA4HH4ds0ik6OjoMOdlDJ3nlJSUZM7LUPW7+IMChwRdW1sbpaWlIz9YXw8WC/1APWAFqj97qBCYAswBjJgYigoKsH7xi4e9REZGxrCFh0SiXX9/Pxs2bMDhcLBlyxY8n51BjImJoaysDLvdTnFxsZbsF79S4JCgs1qtIxYzud1utvb04PB4qAcGgGlAFWDB+8N7O2D+Shxlfobb7dYvTol6Y1W/z549G8MwqKysVBurBIwChwRdbm4uO3bsMD/2VVU7nU463G74rOApAzAAF//6wTVjxOAgLFky4utv376dhQsXBmj0IqFt//795vF0aPW7b8n+qVOnBnGEEi38HjhWrlzJr371KxobG0lMTOSLX/wiy5cvV2qWUR133HHcf//9Zv37hx9+yLp16wBIXLiQqrffxujuZibeMxuHsVqhsBBOO+2wh5qbm9m2bRsLFiwI5JcgElK6urqoqanB6XSye/duc3tCQgJVVVWHVb+LTAa/Bo6Wlhauv/56fvSjH3HhhRdy4MABvvnNb/L4449z6623+vOtJAIMDAywceNGOjs76ejoYOXKlSxevJh58+bR29uLYRjequqqKvjyl713qhx6t4rV6r0z5Q9/MNfhGOrNN98E4MQTT5yM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qOZyubjqqqv47ne/O6HPC4kzHFosLHhuv/12kpKS+Mc//sEf//hHVq5cyVNPPRXsYUWt1atXc/nll7Njx45gDyVq9fb2cu211zJ//nw++OAD/vKXv9Da2so999wT7KFFnZaWFq6//nq+8pWvsGrVKl5++WU+/vhjHn/88WAPLao9/PDDrFq1asKfF/TAsXLlSr7+9a9z0UUXMWPGjGAPJ6ps376djz/+mOXLl5OYmEheXh433ngjK1asCPbQotLLL7/MnXfeybe//e1gDyWq7d69m/Lycm666Sbi4uKYOnUql19+OZ988kmwhxZ1pk2bxocffsjFF1+MxWKhtbWVvr4+pk2bFuyhRa2VK1fy1ltvsXTp0gl/rl9XGh3JkRYLKy8v59133yU+Pp4nn3wy0MORITZv3kx6ejrTp083txUVFbF7927a29tJTU0N4uiiz+c+9znOP/98YmJiFDqCqLCwkN/85jfDtr355ptUVlYGaUTRzXf75ZIlS9i3bx8LFy6c0OV68Z/m5ma+//3v88gjjxzVmfCABw5/LhYm/tXV1UViYuKwbb6Pu7u7FTgmWVZWVrCHIIfweDz813/9F++++y5PP/10sIcT1d566y3a2tq48847ufXWWw8LhRJYbreb5cuXs2zZMsrLy4/qNQIeOPy5WJj4V1JSEj09PcO2+T5OTk4OxpBEQkZnZyff+973qKur4+mnn6asrCzYQ4pqCQkJJCQksHz5ci699FLa2tomvNKlHL3HHnuMuLg4rrrqqqN+jYAHDgldJSUltLa2cuDAATIzMwFobGwkJyeHKVOmBHl0IsGzY8cOrrvuOmbMmMEf//hHzRkIkjVr1nDPPffw6quvEhcXB0B/fz+xsbGHnZ2VwHrllVdoampi4cKFAOadQu+88864J5AGfdKoBE9+fj4LFizg/vvvp7Ozk507d/LII49wySWXBHtoIkHT1tbG17/+dY477jh++9vfKmwEUVlZGb29vfzyl7+kv7+fTz/9lJ/97GdccsklZgCRyfHGG2+wZs0aVq1axapVqzjvvPM477zzJnS3is5wRLkHH3yQe++9lzPOOAOr1cqFF17IjTfeGOxhiQTNSy+9xO7du3n99dd54403hj22du3aII0qOiUnJ/Ob3/yG+++/n8WLFzNlyhTOP/98brrppmAPTY7ChOrpRURERI6GLqmIiIhIwClwiIiISMApcIiIiEjAKXCIiIhIwClwiIiISMApcIiIiEjAKXCIiIhIwClwiIiISMApcIiIiEjAKXCIiIhIwClwiIiISMD9/8LJ4KI3ylIiAAAAAElFTkSuQmCC\n", "text/plain": "<Figure size 640x480 with 1 Axes>"}, "metadata": {}, "output_type": "display_data"}], "tabbable": null, "tooltip": null}}, "a3a14932b0854a5f8b954e98467b8d93": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c3561b0faba64439b17869fcf6553eb3": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "SliderStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "eff4382937a24fb2b9af944bc5a36c94": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "IntSliderModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "IntSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "N", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_a3a14932b0854a5f8b954e98467b8d93", "max": 200, "min": 10, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_c3561b0faba64439b17869fcf6553eb3", "tabbable": null, "tooltip": null, "value": 10}}, "f0d132f07fcf4f80ae6f826f98b8e8a0": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}}, "version_major": 2, "version_minor": 0}</script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/05.07-Support-Vector-Machines';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/05.07-Support-Vector-Machines.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/05.07-Support-Vector-Machines.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="In Depth: Decision Trees and Random Forests" href="05.08-Random-Forests.html" />
-    <link rel="prev" title="In Depth: Linear Regression" href="05.06-Linear-Regression.html" />
+    <link rel="next" title="1.5.8. In Depth: Decision Trees and Random Forests" href="05.08-Random-Forests.html" />
+    <link rel="prev" title="1.5.6. In Depth: Linear Regression" href="05.06-Linear-Regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,8 +175,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -180,14 +193,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -199,52 +204,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -303,7 +333,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/05.07-Support-Vector-Machines.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/05.07-Support-Vector-Machines.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,7 +351,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/05.07-Support-Vector-Machines.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/05.07-Support-Vector-Machines.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +400,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,7 +417,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/05.07-Support-Vector-Machines.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/05.07-Support-Vector-Machines.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +434,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/05.07-Support-Vector-Machines.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/05.07-Support-Vector-Machines.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -528,15 +558,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-support-vector-machines">Motivating Support Vector Machines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machines-maximizing-the-margin">Support Vector Machines: Maximizing the Margin</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-a-support-vector-machine">Fitting a Support Vector Machine</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-linear-boundaries-kernel-svm">Beyond Linear Boundaries: Kernel SVM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-the-svm-softening-margins">Tuning the SVM: Softening Margins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-support-vector-machines">1.5.7.1. Motivating Support Vector Machines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machines-maximizing-the-margin">1.5.7.2. Support Vector Machines: Maximizing the Margin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-a-support-vector-machine">1.5.7.2.1. Fitting a Support Vector Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-linear-boundaries-kernel-svm">1.5.7.2.2. Beyond Linear Boundaries: Kernel SVM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-the-svm-softening-margins">1.5.7.2.3. Tuning the SVM: Softening Margins</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-face-recognition">Example: Face Recognition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-face-recognition">1.5.7.3. Example: Face Recognition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">1.5.7.4. Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -549,7 +579,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="in-depth-support-vector-machines">
-<h1>In Depth: Support Vector Machines<a class="headerlink" href="#in-depth-support-vector-machines" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.5.7. </span>In Depth: Support Vector Machines<a class="headerlink" href="#in-depth-support-vector-machines" title="Link to this heading">#</a></h1>
 <p>Support vector machines (SVMs) are a particularly powerful and flexible class of supervised algorithms for both classification and regression.
 In this chapter, we will explore the intuition behind SVMs and their use in classification problems.</p>
 <p>We begin with the standard imports:</p>
@@ -563,11 +593,9 @@ In this chapter, we will explore the intuition behind SVMs and their use in clas
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-</div>
 </div>
 <section id="motivating-support-vector-machines">
-<h2>Motivating Support Vector Machines<a class="headerlink" href="#motivating-support-vector-machines" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.7.1. </span>Motivating Support Vector Machines<a class="headerlink" href="#motivating-support-vector-machines" title="Link to this heading">#</a></h2>
 <p>As part of our discussion of Bayesian classification (see <a class="reference internal" href="05.05-Naive-Bayes.html"><span class="std std-doc">In Depth: Naive Bayes Classification</span></a>), we learned about a simple kind of model that describes the distribution of each underlying class, and experimented with using it to probabilistically determine labels for new points.
 That was an example of <em>generative classification</em>; here we will consider instead <em>discriminative classification</em>. That is, rather than modeling each class, we will simply find a line or curve (in two dimensions) or manifold (in multiple dimensions) that divides the classes from each other.</p>
 <p>As an example of this, consider the simple case of a classification task in which the two classes of points are well separated (see the following figure):</p>
@@ -581,17 +609,7 @@ That was an example of <em>generative classification</em>; here we will consider
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_blobs</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                   <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.60</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">);</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
+<img alt="../_images/66f120678ba16eba064f3817ff6df5a03d738e073859f5c30629f8733cf1e9da.png" src="../_images/66f120678ba16eba064f3817ff6df5a03d738e073859f5c30629f8733cf1e9da.png" />
 </div>
 </div>
 <p>A linear discriminative classifier would attempt to draw a straight line separating the two sets of data, and thereby create a model for classification.
@@ -612,17 +630,7 @@ But immediately we see a problem: there is more than one possible dividing line 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">xfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mf">0.6</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.1</span><span class="p">],</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">markeredgewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">)]:</span>
-
-<span class="ne">NameError</span>: name &#39;X&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/69ba3dee0589c519eeb20cf5d3c7db0a7205ddee4a9b645ee9d18ebd4c5fe7d9.png" src="../_images/69ba3dee0589c519eeb20cf5d3c7db0a7205ddee4a9b645ee9d18ebd4c5fe7d9.png" />
 </div>
 </div>
 <p>These are three <em>very</em> different separators which, nevertheless, perfectly discriminate between these samples.
@@ -630,7 +638,7 @@ Depending on which you choose, a new data point (e.g., the one marked by the “
 Evidently our simple intuition of “drawing a line between classes” is not good enough, and we need to think a bit more deeply.</p>
 </section>
 <section id="support-vector-machines-maximizing-the-margin">
-<h2>Support Vector Machines: Maximizing the Margin<a class="headerlink" href="#support-vector-machines-maximizing-the-margin" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.7.2. </span>Support Vector Machines: Maximizing the Margin<a class="headerlink" href="#support-vector-machines-maximizing-the-margin" title="Link to this heading">#</a></h2>
 <p>Support vector machines offer one way to improve on this.
 The intuition is this: rather than simply drawing a zero-width line between the classes, we can draw around each line a <em>margin</em> of some width, up to the nearest point.
 Here is an example of how this might look (see the following figure):</p>
@@ -650,22 +658,12 @@ Here is an example of how this might look (see the following figure):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">xfit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)]:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">yfit</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">xfit</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="ne">NameError</span>: name &#39;X&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/3fd71a258b7f0e6531ae7c8bb7d25d1521bda6f9fa161a5523f8fd233855c3d2.png" src="../_images/3fd71a258b7f0e6531ae7c8bb7d25d1521bda6f9fa161a5523f8fd233855c3d2.png" />
 </div>
 </div>
 <p>The line that maximizes this margin is the one we will choose as the optimal model.</p>
 <section id="fitting-a-support-vector-machine">
-<h3>Fitting a Support Vector Machine<a class="headerlink" href="#fitting-a-support-vector-machine" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.5.7.2.1. </span>Fitting a Support Vector Machine<a class="headerlink" href="#fitting-a-support-vector-machine" title="Link to this heading">#</a></h3>
 <p>Let’s see the result of an actual fit to this data: we will use Scikit-Learn’s support vector classifier (<code class="docutils literal notranslate"><span class="pre">SVC</span></code>) to train an SVM model on this data.
 For the time being, we will use a linear kernel and set the <code class="docutils literal notranslate"><span class="pre">C</span></code> parameter to a very large number (we’ll discuss the meaning of these in more depth momentarily):</p>
 <div class="cell docutils container">
@@ -677,17 +675,7 @@ For the time being, we will use a linear kernel and set the <code class="docutil
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span> <span class="c1"># &quot;Support vector classifier&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">1E10</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>SVC(C=10000000000.0, kernel=&#x27;linear&#x27;)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">SVC</label><div class="sk-toggleable__content"><pre>SVC(C=10000000000.0, kernel=&#x27;linear&#x27;)</pre></div></div></div></div></div></div></div>
 </div>
 <p>To better visualize what’s happening here, let’s create a quick convenience function that will plot SVM decision boundaries for us (see the following figure):</p>
 <div class="cell docutils container">
@@ -731,15 +719,7 @@ For the time being, we will use a linear kernel and set the <code class="docutil
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plot_svc_decision_function</span><span class="p">(</span><span class="n">model</span><span class="p">);</span>
-
-<span class="ne">NameError</span>: name &#39;X&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/d603db20439616a3ff26f7b4011058a2813efbb04e2ad22bc6c31b3fd30bbc6e.png" src="../_images/d603db20439616a3ff26f7b4011058a2813efbb04e2ad22bc6c31b3fd30bbc6e.png" />
 </div>
 </div>
 <p>This is the dividing line that maximizes the margin between the two sets of points.
@@ -753,12 +733,9 @@ In Scikit-Learn, the identities of these points are stored in the <code class="d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span><span class="o">.</span><span class="n">support_vectors_</span>
-
-<span class="ne">NameError</span>: name &#39;model&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.44359863, 3.11530945],
+       [2.33812285, 3.43116792],
+       [2.06156753, 1.96918596]])
 </pre></div>
 </div>
 </div>
@@ -791,25 +768,7 @@ Technically, this is because these points do not contribute to the loss function
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.0625</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="k">for</span> <span class="n">axi</span><span class="p">,</span> <span class="n">N</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">]):</span>
-<span class="ne">---&gt; </span><span class="mi">18</span>     <span class="n">plot_svm</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">axi</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">axi</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;N = </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
-
-<span class="nn">Cell In[9], line 2,</span> in <span class="ni">plot_svm</span><span class="nt">(N, ax)</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">plot_svm</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                       <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.60</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:</span><span class="n">N</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:</span><span class="n">N</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;make_blobs&#39; is not defined
-</pre></div>
-</div>
-<img alt="../_images/aeb0b57bbcf2c8c42aa9c7f422f324dc9ccfea551470bd9cb9199f5f66970366.png" src="../_images/aeb0b57bbcf2c8c42aa9c7f422f324dc9ccfea551470bd9cb9199f5f66970366.png" />
+<img alt="../_images/40e48e20d0043974bcfa08c98f46276e0e07b84edf3aaa4e4cf9728fe6dc4a9f.png" src="../_images/40e48e20d0043974bcfa08c98f46276e0e07b84edf3aaa4e4cf9728fe6dc4a9f.png" />
 </div>
 </div>
 <p>In the left panel, we see the model and the support vectors for 60 training points.
@@ -824,11 +783,11 @@ This insensitivity to the exact behavior of distant points is one of the strengt
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "4133038b05574c17a457a2e125f9f78d"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "8ce203f539b94ec0948f9fec50076ba7", "version_major": 2, "version_minor": 0}</script></div>
 </div>
 </section>
 <section id="beyond-linear-boundaries-kernel-svm">
-<h3>Beyond Linear Boundaries: Kernel SVM<a class="headerlink" href="#beyond-linear-boundaries-kernel-svm" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.5.7.2.2. </span>Beyond Linear Boundaries: Kernel SVM<a class="headerlink" href="#beyond-linear-boundaries-kernel-svm" title="Link to this heading">#</a></h3>
 <p>Where SVM can become quite powerful is when it is combined with <em>kernels</em>.
 We have seen a version of kernels before, in the basis function regressions of <a class="reference internal" href="05.06-Linear-Regression.html"><span class="std std-doc">In Depth: Linear Regression</span></a>.
 There we projected our data into a higher-dimensional space defined by polynomials and Gaussian basis functions, and thereby were able to fit for nonlinear relationships with a linear classifier.</p>
@@ -847,16 +806,7 @@ To motivate the need for kernels, let’s look at some data that is not linearly
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_circles</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_circles</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">.1</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
+<img alt="../_images/81dc94b6ebe109109b4cb1153cbf8f0b7f2610956169c0957fbbb8618eca2791.png" src="../_images/81dc94b6ebe109109b4cb1153cbf8f0b7f2610956169c0957fbbb8618eca2791.png" />
 </div>
 </div>
 <p>It is clear that no linear discrimination will <em>ever</em> be able to separate this data.
@@ -865,16 +815,6 @@ For example, one simple projection we could use would be to compute a <em>radial
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">X</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">X</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;X&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -894,19 +834,7 @@ For example, one simple projection we could use would be to compute a <em>radial
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">mpl_toolkits</span> <span class="kn">import</span> <span class="n">mplot3d</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter3D</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;X&#39; is not defined
-</pre></div>
-</div>
-<img alt="../_images/9bc229f7d664db8932092cf625c083b6c8745c0771a1e7f308ec755d756e6b26.png" src="../_images/9bc229f7d664db8932092cf625c083b6c8745c0771a1e7f308ec755d756e6b26.png" />
+<img alt="../_images/028a0e8237bde34f702fedfda02e5658ea35c36442f43acda485337cc910a635.png" src="../_images/028a0e8237bde34f702fedfda02e5658ea35c36442f43acda485337cc910a635.png" />
 </div>
 </div>
 <p>We can see that with this additional dimension, the data becomes trivially linearly separable, by drawing a separating plane at, say, <em>r</em>=0.7.</p>
@@ -926,16 +854,7 @@ This kernel trick is built into the SVM, and is one of the reasons the method is
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;rbf&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">1E6</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;SVC&#39; is not defined
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>SVC(C=1000000.0)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">SVC</label><div class="sk-toggleable__content"><pre>SVC(C=1000000.0)</pre></div></div></div></div></div></div></div>
 </div>
 <p>Let’s use our previously defined function to visualize the fit and identify the support vectors (see the following figure):</p>
 <div class="cell docutils container">
@@ -948,24 +867,14 @@ This kernel trick is built into the SVM, and is one of the reasons the method is
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plot_svc_decision_function</span><span class="p">(</span><span class="n">clf</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">support_vectors_</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">clf</span><span class="o">.</span><span class="n">support_vectors_</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>             <span class="n">s</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">);</span>
-
-<span class="ne">NameError</span>: name &#39;X&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/16830fe242ad1ff6d03d608f3e0410ce69d9af140f07d251ef43f8d7093d9267.png" src="../_images/16830fe242ad1ff6d03d608f3e0410ce69d9af140f07d251ef43f8d7093d9267.png" />
 </div>
 </div>
 <p>Using this kernelized support vector machine, we learn a suitable nonlinear decision boundary.
 This kernel transformation strategy is used often in machine learning to turn fast linear methods into fast nonlinear methods, especially for models in which the kernel trick can be used.</p>
 </section>
 <section id="tuning-the-svm-softening-margins">
-<h3>Tuning the SVM: Softening Margins<a class="headerlink" href="#tuning-the-svm-softening-margins" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.5.7.2.3. </span>Tuning the SVM: Softening Margins<a class="headerlink" href="#tuning-the-svm-softening-margins" title="Link to this heading">#</a></h3>
 <p>Our discussion thus far has centered around very clean datasets, in which a perfect decision boundary exists.
 But what if your data has some amount of overlap?
 For example, you may have data like this (see the following figure):</p>
@@ -978,16 +887,7 @@ For example, you may have data like this (see the following figure):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                   <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">1.2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;autumn&#39;</span><span class="p">);</span>
-
-<span class="ne">NameError</span>: name &#39;make_blobs&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/17ba2a0c49f7c88345f732ef4d4b18afd901fd848959af15cfeb43155f76848c.png" src="../_images/17ba2a0c49f7c88345f732ef4d4b18afd901fd848959af15cfeb43155f76848c.png" />
 </div>
 </div>
 <p>To handle this case, the SVM implementation has a bit of a fudge factor that “softens” the margin: that is, it allows some of the points to creep into the margin if that allows a better fit.
@@ -1015,24 +915,14 @@ For a smaller <code class="docutils literal notranslate"><span class="pre">C</sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                   <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.0625</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;make_blobs&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/e292edd1047071ebc39009eb7ab218efb7e67538a628a16585544a5b6282fba4.png" src="../_images/e292edd1047071ebc39009eb7ab218efb7e67538a628a16585544a5b6282fba4.png" />
 </div>
 </div>
 <p>The optimal value of <code class="docutils literal notranslate"><span class="pre">C</span></code> will depend on your dataset, and you should tune this parameter using cross-validation or a similar procedure (refer back to <a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html"><span class="std std-doc">Hyperparameters and Model Validation</span></a>).</p>
 </section>
 </section>
 <section id="example-face-recognition">
-<h2>Example: Face Recognition<a class="headerlink" href="#example-face-recognition" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.7.3. </span>Example: Face Recognition<a class="headerlink" href="#example-face-recognition" title="Link to this heading">#</a></h2>
 <p>As an example of support vector machines in action, let’s take a look at the facial recognition problem.
 We will use the Labeled Faces in the Wild dataset, which consists of several thousand collated photos of various public figures.
 A fetcher for the dataset is built into Scikit-Learn:</p>
@@ -1047,13 +937,162 @@ A fetcher for the dataset is built into Scikit-Learn:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_lfw_people</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">faces</span> <span class="o">=</span> <span class="n">fetch_lfw_people</span><span class="p">(</span><span class="n">min_faces_per_person</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<span class="ne">gaierror</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1346,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1345</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1346</span>     <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>               <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="nn">File ~\anaconda3\lib\http\client.py:1285,</span> in <span class="ni">HTTPConnection.request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1285</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1331,</span> in <span class="ni">HTTPConnection._send_request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1330</span>     <span class="n">body</span> <span class="o">=</span> <span class="n">_encode</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1331</span> <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1280,</span> in <span class="ni">HTTPConnection.endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span>     <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1280</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1040,</span> in <span class="ni">HTTPConnection._send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1040</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span> <span class="k">if</span> <span class="n">message_body</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1044</span>     <span class="c1"># create a consistent interface to message_body</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:980,</span> in <span class="ni">HTTPConnection.send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">979</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">980</span>     <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">981</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:1447,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span> <span class="s2">&quot;Connect to a host on a given (SSL) port.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1447</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1449</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tunnel_host</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\http\client.py:946,</span> in <span class="ni">HTTPConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">945</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Connect to the host and port specified in __init__.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">946</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span>     <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_address</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="c1"># Might fail in OSs that don&#39;t implement TCP_NODELAY</span>
+
+<span class="nn">File ~\anaconda3\lib\socket.py:823,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address)</span>
+<span class="g g-Whitespace">    </span><span class="mi">822</span> <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">823</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">824</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="nn">File ~\anaconda3\lib\socket.py:954,</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">953</span> <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">--&gt; </span><span class="mi">954</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">955</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="ne">gaierror</span>: [Errno 11001] getaddrinfo failed
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_lfw_people</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">faces</span> <span class="o">=</span> <span class="n">fetch_lfw_people</span><span class="p">(</span><span class="n">min_faces_per_person</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_lfw.py:321,</span> in <span class="ni">fetch_lfw_people</span><span class="nt">(data_home, funneled, resize, min_faces_per_person, color, slice_, download_if_missing, return_X_y)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="k">def</span> <span class="nf">fetch_lfw_people</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>     <span class="o">*</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="n">data_home</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span>     <span class="n">return_X_y</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span> <span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Load the Labeled Faces in the Wild (LFW) people dataset \</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span><span class="sd"> (classification).</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span><span class="sd">         .. versionadded:: 0.20</span>
+<span class="g g-Whitespace">    </span><span class="mi">320</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">321</span>     <span class="n">lfw_home</span><span class="p">,</span> <span class="n">data_folder_path</span> <span class="o">=</span> <span class="n">_check_fetch_lfw</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>         <span class="n">data_home</span><span class="o">=</span><span class="n">data_home</span><span class="p">,</span> <span class="n">funneled</span><span class="o">=</span><span class="n">funneled</span><span class="p">,</span> <span class="n">download_if_missing</span><span class="o">=</span><span class="n">download_if_missing</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span>     <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Loading LFW people faces from </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">lfw_home</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="c1"># wrap the loader in a memoizing function that will return memmaped data</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>     <span class="c1"># arrays for optimal memory usage</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_lfw.py:88,</span> in <span class="ni">_check_fetch_lfw</span><span class="nt">(data_home, funneled, download_if_missing)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span> <span class="k">if</span> <span class="n">download_if_missing</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span>     <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Downloading LFW metadata: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">target</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>     <span class="n">_fetch_remote</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">dirname</span><span class="o">=</span><span class="n">lfw_home</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is missing&quot;</span> <span class="o">%</span> <span class="n">target_filepath</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\sklearn\datasets\_base.py:1511,</span> in <span class="ni">_fetch_remote</span><span class="nt">(remote, dirname)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1489</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Helper function to download a remote dataset into path</span>
+<span class="g g-Whitespace">   </span><span class="mi">1490</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1491</span><span class="sd"> Fetch a dataset pointed by remote&#39;s url, save into path using remote&#39;s</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1507</span><span class="sd">     Full path of the created file.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1508</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1510</span> <span class="n">file_path</span> <span class="o">=</span> <span class="n">remote</span><span class="o">.</span><span class="n">filename</span> <span class="k">if</span> <span class="n">dirname</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">remote</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1511</span> <span class="n">urlretrieve</span><span class="p">(</span><span class="n">remote</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1512</span> <span class="n">checksum</span> <span class="o">=</span> <span class="n">_sha256</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1513</span> <span class="k">if</span> <span class="n">remote</span><span class="o">.</span><span class="n">checksum</span> <span class="o">!=</span> <span class="n">checksum</span><span class="p">:</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:239,</span> in <span class="ni">urlretrieve</span><span class="nt">(url, filename, reporthook, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="sd"> Retrieve a URL into a temporary location on disk.</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span><span class="sd"> data file as well as the resulting HTTPMessage object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span> <span class="n">url_type</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="n">_splittype</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">239</span> <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">closing</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span>     <span class="n">headers</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="c1"># Just return the local path and the &quot;headers&quot; for file://</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>     <span class="c1"># URLs. No sense in performing a copy unless requested.</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:214,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">214</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:517,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">516</span> <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s1">&#39;urllib.Request&#39;</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">())</span>
+<span class="ne">--&gt; </span><span class="mi">517</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">519</span> <span class="c1"># post-process response</span>
+<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="n">meth_name</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">+</span><span class="s2">&quot;_response&quot;</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:534,</span> in <span class="ni">OpenerDirector._open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="ne">--&gt; </span><span class="mi">534</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span>                           <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:494,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">494</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1389,</span> in <span class="ni">HTTPSHandler.https_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1388</span> <span class="k">def</span> <span class="nf">https_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1389</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1390</span>         <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">,</span> <span class="n">check_hostname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_check_hostname</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\urllib\request.py:1349,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1346</span>         <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1347</span>                   <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+<span class="ne">-&gt; </span><span class="mi">1349</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1350</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1351</span> <span class="k">except</span><span class="p">:</span>
+
+<span class="ne">URLError</span>: &lt;urlopen error [Errno 11001] getaddrinfo failed&gt;
 </pre></div>
 </div>
 </div>
@@ -1082,7 +1121,7 @@ A fetcher for the dataset is built into Scikit-Learn:</p>
 <span class="ne">NameError</span>: name &#39;faces&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/316761f8b028cecfe0f1f2273d67be3185bd9ecf30f6d7e5f1984f1afce1675c.png" src="../_images/316761f8b028cecfe0f1f2273d67be3185bd9ecf30f6d7e5f1984f1afce1675c.png" />
+<img alt="../_images/b6679beb6576e4c52b96d990662ed9f0b7817cb0edcb3794e6aa3793e9bfd526.png" src="../_images/b6679beb6576e4c52b96d990662ed9f0b7817cb0edcb3794e6aa3793e9bfd526.png" />
 </div>
 </div>
 <p>Each image contains 62 × 47, or around 3,000, pixels.
@@ -1101,18 +1140,6 @@ We can do this most straightforwardly by packaging the preprocessor and the clas
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">make_pipeline</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>For the sake of testing our classifier output, we will split the data into a training set and a testing set:</p>
 <div class="cell docutils container">
@@ -1125,13 +1152,13 @@ We can do this most straightforwardly by packaging the preprocessor and the clas
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">Xtrain</span><span class="p">,</span> <span class="n">Xtest</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">,</span> <span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">faces</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Xtrain</span><span class="p">,</span> <span class="n">Xtest</span><span class="p">,</span> <span class="n">ytrain</span><span class="p">,</span> <span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">faces</span><span class="o">.</span><span class="n">target</span><span class="p">,</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>                                                 <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ne">NameError</span>: name &#39;faces&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1152,14 +1179,20 @@ Here we will adjust <code class="docutils literal notranslate"><span class="pre"
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;svc__C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>               <span class="s1">&#39;svc__gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.0005</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">]}</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">)</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">File</span> <span class="o">&lt;</span><span class="n">timed</span> <span class="nb">eval</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ne">NameError</span>: name &#39;Xtrain&#39; is not defined
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">param_grid</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;grid.fit(Xtrain, ytrain)&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: &#39;GridSearchCV&#39; object has no attribute &#39;best_params_&#39;
 </pre></div>
 </div>
 </div>
@@ -1175,12 +1208,12 @@ Here we will adjust <code class="docutils literal notranslate"><span class="pre"
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">best_estimator_</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">yfit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xtest</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name &#39;grid&#39; is not defined
+<span class="ne">AttributeError</span>: &#39;GridSearchCV&#39; object has no attribute &#39;best_estimator_&#39;
 </pre></div>
 </div>
 </div>
@@ -1212,7 +1245,7 @@ Here we will adjust <code class="docutils literal notranslate"><span class="pre"
 <span class="ne">NameError</span>: name &#39;Xtest&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/35e07a13d1edbd549a98fbbcfd668149d857e2de0eabe74a1414ea66f8a330df.png" src="../_images/35e07a13d1edbd549a98fbbcfd668149d857e2de0eabe74a1414ea66f8a330df.png" />
+<img alt="../_images/87a9ce9ca8a84adb600714261a64c7498cb2fc08df10c22a96e093b394cbb09e.png" src="../_images/87a9ce9ca8a84adb600714261a64c7498cb2fc08df10c22a96e093b394cbb09e.png" />
 </div>
 </div>
 <p>Out of this small sample, our optimal estimator mislabeled only a single face (Bush’s
@@ -1228,13 +1261,13 @@ We can get a better sense of our estimator’s performance using the classificat
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">ytest</span><span class="p">,</span> <span class="n">yfit</span><span class="p">,</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">ytest</span><span class="p">,</span> <span class="n">yfit</span><span class="p">,</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>                             <span class="n">target_names</span><span class="o">=</span><span class="n">faces</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ne">NameError</span>: name &#39;ytest&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1256,13 +1289,18 @@ We can get a better sense of our estimator’s performance using the classificat
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">ytest</span><span class="p">,</span> <span class="n">yfit</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">ytest</span><span class="p">,</span> <span class="n">yfit</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">mat</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>             <span class="n">xticklabels</span><span class="o">=</span><span class="n">faces</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="n">yticklabels</span><span class="o">=</span><span class="n">faces</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;true label&#39;</span><span class="p">)</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ne">NameError</span>: name &#39;ytest&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1272,7 +1310,7 @@ We can get a better sense of our estimator’s performance using the classificat
 For this kind of application, one good option is to make use of <a class="reference external" href="http://opencv.org">OpenCV</a>, which, among other things, includes pretrained implementations of state-of-the-art feature extraction tools for images in general and faces in particular.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.5.7.4. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>This has been a brief intuitive introduction to the principles behind support vector machines.
 These models are a powerful classification method, for a number of reasons:</p>
 <ul class="simple">
@@ -1296,8 +1334,8 @@ Nevertheless, if you have the CPU cycles to commit to training and cross-validat
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1328,7 +1366,7 @@ Nevertheless, if you have the CPU cycles to commit to training and cross-validat
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">In Depth: Linear Regression</p>
+        <p class="prev-next-title"><span class="section-number">1.5.6. </span>In Depth: Linear Regression</p>
       </div>
     </a>
     <a class="right-next"
@@ -1336,7 +1374,7 @@ Nevertheless, if you have the CPU cycles to commit to training and cross-validat
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">In Depth: Decision Trees and Random Forests</p>
+        <p class="prev-next-title"><span class="section-number">1.5.8. </span>In Depth: Decision Trees and Random Forests</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1356,15 +1394,15 @@ Nevertheless, if you have the CPU cycles to commit to training and cross-validat
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-support-vector-machines">Motivating Support Vector Machines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machines-maximizing-the-margin">Support Vector Machines: Maximizing the Margin</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-a-support-vector-machine">Fitting a Support Vector Machine</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-linear-boundaries-kernel-svm">Beyond Linear Boundaries: Kernel SVM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-the-svm-softening-margins">Tuning the SVM: Softening Margins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-support-vector-machines">1.5.7.1. Motivating Support Vector Machines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support-vector-machines-maximizing-the-margin">1.5.7.2. Support Vector Machines: Maximizing the Margin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-a-support-vector-machine">1.5.7.2.1. Fitting a Support Vector Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-linear-boundaries-kernel-svm">1.5.7.2.2. Beyond Linear Boundaries: Kernel SVM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuning-the-svm-softening-margins">1.5.7.2.3. Tuning the SVM: Softening Margins</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-face-recognition">Example: Face Recognition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-face-recognition">1.5.7.3. Example: Face Recognition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">1.5.7.4. Summary</a></li>
 </ul>
   </nav></div>
 

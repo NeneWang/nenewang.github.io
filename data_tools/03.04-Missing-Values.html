@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Handling Missing Data &#8212; Docs</title>
+    <title>1.2.6. Handling Missing Data</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,17 +58,30 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03.04-Missing-Values';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/03.04-Missing-Values.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/03.04-Missing-Values.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Hierarchical Indexing" href="03.05-Hierarchical-Indexing.html" />
-    <link rel="prev" title="Operating on Data in Pandas" href="03.03-Operations-in-Pandas.html" />
+    <link rel="next" title="1.2.7. Hierarchical Indexing" href="03.05-Hierarchical-Indexing.html" />
+    <link rel="prev" title="1.2.5. Operating on Data in Pandas" href="03.03-Operations-in-Pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +170,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -175,14 +188,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -194,52 +199,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +328,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/03.04-Missing-Values.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03.04-Missing-Values.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +346,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/03.04-Missing-Values.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03.04-Missing-Values.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +395,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +412,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/03.04-Missing-Values.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03.04-Missing-Values.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +429,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.04-Missing-Values.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.04-Missing-Values.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -523,18 +553,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-offs-in-missing-data-conventions">Trade-offs in Missing Data Conventions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data-in-pandas">Missing Data in Pandas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#none-as-a-sentinel-value">None as a Sentinel Value</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-missing-numerical-data">NaN: Missing Numerical Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-and-none-in-pandas">NaN and None in Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-offs-in-missing-data-conventions">1.2.6.1. Trade-offs in Missing Data Conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data-in-pandas">1.2.6.2. Missing Data in Pandas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#none-as-a-sentinel-value">1.2.6.2.1. None as a Sentinel Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-missing-numerical-data">1.2.6.2.2. NaN: Missing Numerical Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-and-none-in-pandas">1.2.6.2.3. NaN and None in Pandas</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-nullable-dtypes">Pandas Nullable Dtypes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-on-null-values">Operating on Null Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detecting-null-values">Detecting Null Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropping-null-values">Dropping Null Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filling-null-values">Filling Null Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-nullable-dtypes">1.2.6.3. Pandas Nullable Dtypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-on-null-values">1.2.6.4. Operating on Null Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detecting-null-values">1.2.6.4.1. Detecting Null Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropping-null-values">1.2.6.4.2. Dropping Null Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filling-null-values">1.2.6.4.3. Filling Null Values</a></li>
 </ul>
 </li>
 </ul>
@@ -549,14 +579,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="handling-missing-data">
-<h1>Handling Missing Data<a class="headerlink" href="#handling-missing-data" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.6. </span>Handling Missing Data<a class="headerlink" href="#handling-missing-data" title="Link to this heading">#</a></h1>
 <p>The difference between data found in many tutorials and data in the real world is that real-world data is rarely clean and homogeneous.
 In particular, many interesting datasets will have some amount of data missing.
 To make matters even more complicated, different data sources may indicate missing data in different ways.</p>
 <p>In this chapter, we will discuss some general considerations for missing data, look at how Pandas chooses to represent it, and explore some built-in Pandas tools for handling missing data in Python.
 Here and throughout the book, I will refer to missing data in general as <em>null</em>, <em>NaN</em>, or <em>NA</em> values.</p>
 <section id="trade-offs-in-missing-data-conventions">
-<h2>Trade-offs in Missing Data Conventions<a class="headerlink" href="#trade-offs-in-missing-data-conventions" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.6.1. </span>Trade-offs in Missing Data Conventions<a class="headerlink" href="#trade-offs-in-missing-data-conventions" title="Link to this heading">#</a></h2>
 <p>A number of approaches have been developed to track the presence of missing data in a table or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.
 Generally, they revolve around one of two strategies: using a <em>mask</em> that globally indicates missing values, or choosing a <em>sentinel value</em> that indicates a missing entry.</p>
 <p>In the masking approach, the mask might be an entirely separate Boolean array, or it might involve appropriation of one bit in the data representation to locally indicate the null status of a value.</p>
@@ -566,7 +596,7 @@ Generally, they revolve around one of two strategies: using a <em>mask</em> that
 For example, the R language uses reserved bit patterns within each data type as sentinel values indicating missing data, while the SciDB system uses an extra byte attached to every cell to indicate an NA state.</p>
 </section>
 <section id="missing-data-in-pandas">
-<h2>Missing Data in Pandas<a class="headerlink" href="#missing-data-in-pandas" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.6.2. </span>Missing Data in Pandas<a class="headerlink" href="#missing-data-in-pandas" title="Link to this heading">#</a></h2>
 <p>The way in which Pandas handles missing values is constrained by its reliance on the NumPy package, which does not have a built-in notion of NA values for non-floating-point data types.</p>
 <p>Perhaps Pandas could have followed R’s lead in specifying bit patterns for each individual data type to indicate nullness, but this approach turns out to be rather unwieldy.
 While R has just 4 main data types, NumPy supports <em>far</em> more than this: for example, while R has a single integer type, NumPy supports 14 basic integer types once you account for available bit widths, signedness, and endianness of the encoding.
@@ -586,7 +616,7 @@ Reserving a specific bit pattern in all available NumPy types would lead to an u
 </div>
 </div>
 <section id="none-as-a-sentinel-value">
-<h3>None as a Sentinel Value<a class="headerlink" href="#none-as-a-sentinel-value" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6.2.1. </span>None as a Sentinel Value<a class="headerlink" href="#none-as-a-sentinel-value" title="Link to this heading">#</a></h3>
 <p>For some data types, Pandas uses <code class="docutils literal notranslate"><span class="pre">None</span></code> as a sentinel value. <code class="docutils literal notranslate"><span class="pre">None</span></code> is a Python object, which means that any array containing <code class="docutils literal notranslate"><span class="pre">None</span></code> must have <code class="docutils literal notranslate"><span class="pre">dtype=object</span></code>—that is, it must be a sequence of Python objects.</p>
 <p>For example, observe what happens if you pass <code class="docutils literal notranslate"><span class="pre">None</span></code> to a NumPy array:</p>
 <div class="cell docutils container">
@@ -611,7 +641,7 @@ The downside of using <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.69 ms ± 46.5 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.82 ms ± 169 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -623,7 +653,7 @@ The downside of using <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42.2 ms ± 474 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45.5 ms ± 5.96 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -641,7 +671,7 @@ The downside of using <code class="docutils literal notranslate"><span class="pr
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">vals1</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\numpy\core\_methods.py:48,</span> in <span class="ni">_sum</span><span class="nt">(a, axis, dtype, out, keepdims, initial, where)</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\numpy\core\_methods.py:48,</span> in <span class="ni">_sum</span><span class="nt">(a, axis, dtype, out, keepdims, initial, where)</span>
 <span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="k">def</span> <span class="nf">_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="g g-Whitespace">     </span><span class="mi">47</span>          <span class="n">initial</span><span class="o">=</span><span class="n">_NoValue</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="ne">---&gt; </span><span class="mi">48</span>     <span class="k">return</span> <span class="n">umr_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">keepdims</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">where</span><span class="p">)</span>
@@ -654,7 +684,7 @@ The downside of using <code class="docutils literal notranslate"><span class="pr
 <p>For this reason, Pandas does not use <code class="docutils literal notranslate"><span class="pre">None</span></code> as a sentinel in its numerical arrays.</p>
 </section>
 <section id="nan-missing-numerical-data">
-<h3>NaN: Missing Numerical Data<a class="headerlink" href="#nan-missing-numerical-data" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6.2.2. </span>NaN: Missing Numerical Data<a class="headerlink" href="#nan-missing-numerical-data" title="Link to this heading">#</a></h3>
 <p>The other missing data sentinel, <code class="docutils literal notranslate"><span class="pre">NaN</span></code> is different; it is a special floating-point value recognized by all systems that use the standard IEEE floating-point representation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -725,7 +755,7 @@ Regardless of the operation, the result of arithmetic with <code class="docutils
 <p>The main downside of <code class="docutils literal notranslate"><span class="pre">NaN</span></code> is that it is specifically a floating-point value; there is no equivalent <code class="docutils literal notranslate"><span class="pre">NaN</span></code> value for integers, strings, or other types.</p>
 </section>
 <section id="nan-and-none-in-pandas">
-<h3>NaN and None in Pandas<a class="headerlink" href="#nan-and-none-in-pandas" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6.2.3. </span>NaN and None in Pandas<a class="headerlink" href="#nan-and-none-in-pandas" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">NaN</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code> both have their place, and Pandas is built to handle the two of them nearly interchangeably, converting between them where appropriate:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -808,7 +838,7 @@ dtype: float64
 </section>
 </section>
 <section id="pandas-nullable-dtypes">
-<h2>Pandas Nullable Dtypes<a class="headerlink" href="#pandas-nullable-dtypes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.6.3. </span>Pandas Nullable Dtypes<a class="headerlink" href="#pandas-nullable-dtypes" title="Link to this heading">#</a></h2>
 <p>In early versions of Pandas, <code class="docutils literal notranslate"><span class="pre">NaN</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code> as sentinel values were the only missing data representations available. The primary difficulty this introduced was with regard to the implicit type casting: for example, there was no way to represent a true integer array with missing data.</p>
 <p>To address this difficulty, Pandas later added <em>nullable dtypes</em>, which are distinguished from regular dtypes by capitalization of their names (e.g., <code class="docutils literal notranslate"><span class="pre">pd.Int32</span></code> versus <code class="docutils literal notranslate"><span class="pre">np.int32</span></code>). For backward compatibility, these nullable dtypes are only used if specifically requested.</p>
 <p>For example, here is a <code class="docutils literal notranslate"><span class="pre">Series</span></code> of integers with missing data, created from a list containing all three available markers of missing data:</p>
@@ -832,7 +862,7 @@ dtype: Int32
 <p>This representation can be used interchangeably with the others in all the operations explored through the rest of this chapter.</p>
 </section>
 <section id="operating-on-null-values">
-<h2>Operating on Null Values<a class="headerlink" href="#operating-on-null-values" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.6.4. </span>Operating on Null Values<a class="headerlink" href="#operating-on-null-values" title="Link to this heading">#</a></h2>
 <p>As we have seen, Pandas treats <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, and <code class="docutils literal notranslate"><span class="pre">NA</span></code> as essentially interchangeable for indicating missing or null values.
 To facilitate this convention, Pandas provides several methods for detecting, removing, and replacing null values in Pandas data structures.
 They are:</p>
@@ -844,7 +874,7 @@ They are:</p>
 </ul>
 <p>We will conclude this chapter with a brief exploration and demonstration of these routines.</p>
 <section id="detecting-null-values">
-<h3>Detecting Null Values<a class="headerlink" href="#detecting-null-values" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6.4.1. </span>Detecting Null Values<a class="headerlink" href="#detecting-null-values" title="Link to this heading">#</a></h3>
 <p>Pandas data structures have two useful methods for detecting null data: <code class="docutils literal notranslate"><span class="pre">isnull</span></code> and <code class="docutils literal notranslate"><span class="pre">notnull</span></code>.
 Either one will return a Boolean mask over the data. For example:</p>
 <div class="cell docutils container">
@@ -888,7 +918,7 @@ dtype: object
 <p>The <code class="docutils literal notranslate"><span class="pre">isnull()</span></code> and <code class="docutils literal notranslate"><span class="pre">notnull()</span></code> methods produce similar Boolean results for <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects.</p>
 </section>
 <section id="dropping-null-values">
-<h3>Dropping Null Values<a class="headerlink" href="#dropping-null-values" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6.4.2. </span>Dropping Null Values<a class="headerlink" href="#dropping-null-values" title="Link to this heading">#</a></h3>
 <p>In addition to these masking methods, there are the convenience methods <code class="docutils literal notranslate"><span class="pre">dropna</span></code>
 (which removes NA values) and <code class="docutils literal notranslate"><span class="pre">fillna</span></code> (which fills in NA values). For a <code class="docutils literal notranslate"><span class="pre">Series</span></code>,
 the result is straightforward:</p>
@@ -1216,7 +1246,7 @@ You can also specify <code class="docutils literal notranslate"><span class="pre
 <p>Here, the first and last rows have been dropped because they each contain only two non-null values.</p>
 </section>
 <section id="filling-null-values">
-<h3>Filling Null Values<a class="headerlink" href="#filling-null-values" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6.4.3. </span>Filling Null Values<a class="headerlink" href="#filling-null-values" title="Link to this heading">#</a></h3>
 <p>Sometimes rather than dropping NA values, you’d like to replace them with a valid value.
 This value might be a single number like zero, or it might be some sort of imputation or interpolation from the good values.
 You could do this in-place using the <code class="docutils literal notranslate"><span class="pre">isnull</span></code> method as a mask, but because it is such a common operation Pandas provides the <code class="docutils literal notranslate"><span class="pre">fillna</span></code> method, which returns a copy of the array with the null values replaced.</p>
@@ -1419,8 +1449,8 @@ dtype: Int32
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1451,7 +1481,7 @@ dtype: Int32
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Operating on Data in Pandas</p>
+        <p class="prev-next-title"><span class="section-number">1.2.5. </span>Operating on Data in Pandas</p>
       </div>
     </a>
     <a class="right-next"
@@ -1459,7 +1489,7 @@ dtype: Int32
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hierarchical Indexing</p>
+        <p class="prev-next-title"><span class="section-number">1.2.7. </span>Hierarchical Indexing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1479,18 +1509,18 @@ dtype: Int32
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-offs-in-missing-data-conventions">Trade-offs in Missing Data Conventions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data-in-pandas">Missing Data in Pandas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#none-as-a-sentinel-value">None as a Sentinel Value</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-missing-numerical-data">NaN: Missing Numerical Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-and-none-in-pandas">NaN and None in Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trade-offs-in-missing-data-conventions">1.2.6.1. Trade-offs in Missing Data Conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-data-in-pandas">1.2.6.2. Missing Data in Pandas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#none-as-a-sentinel-value">1.2.6.2.1. None as a Sentinel Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-missing-numerical-data">1.2.6.2.2. NaN: Missing Numerical Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nan-and-none-in-pandas">1.2.6.2.3. NaN and None in Pandas</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-nullable-dtypes">Pandas Nullable Dtypes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-on-null-values">Operating on Null Values</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detecting-null-values">Detecting Null Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropping-null-values">Dropping Null Values</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filling-null-values">Filling Null Values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-nullable-dtypes">1.2.6.3. Pandas Nullable Dtypes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-on-null-values">1.2.6.4. Operating on Null Values</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#detecting-null-values">1.2.6.4.1. Detecting Null Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropping-null-values">1.2.6.4.2. Dropping Null Values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filling-null-values">1.2.6.4.3. Filling Null Values</a></li>
 </ul>
 </li>
 </ul>

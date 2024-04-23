@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Understanding Data Types in Python &#8212; Docs</title>
+    <title>1.1.2. Understanding Data Types in Python</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,17 +58,30 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/02.01-Understanding-Data-Types';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/02.01-Understanding-Data-Types.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/02.01-Understanding-Data-Types.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Basics of NumPy Arrays" href="02.02-The-Basics-Of-NumPy-Arrays.html" />
-    <link rel="prev" title="Introduction to NumPy" href="02.00-Introduction-to-NumPy.html" />
+    <link rel="next" title="1.1.3. The Basics of NumPy Arrays" href="02.02-The-Basics-Of-NumPy-Arrays.html" />
+    <link rel="prev" title="1.1. Introduction to NumPy" href="02.00-Introduction-to-NumPy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +170,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -175,14 +188,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -194,52 +199,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +328,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/02.01-Understanding-Data-Types.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/02.01-Understanding-Data-Types.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +346,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/02.01-Understanding-Data-Types.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/02.01-Understanding-Data-Types.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +395,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +412,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/02.01-Understanding-Data-Types.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/02.01-Understanding-Data-Types.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +429,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/02.01-Understanding-Data-Types.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/02.01-Understanding-Data-Types.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -523,12 +553,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-integer-is-more-than-just-an-integer">A Python Integer Is More Than Just an Integer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-list-is-more-than-just-a-list">A Python List Is More Than Just a List</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-type-arrays-in-python">Fixed-Type Arrays in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-python-lists">Creating Arrays from Python Lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-scratch">Creating Arrays from Scratch</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-standard-data-types">NumPy Standard Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-integer-is-more-than-just-an-integer">1.1.2.1. A Python Integer Is More Than Just an Integer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-list-is-more-than-just-a-list">1.1.2.2. A Python List Is More Than Just a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-type-arrays-in-python">1.1.2.3. Fixed-Type Arrays in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-python-lists">1.1.2.4. Creating Arrays from Python Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-scratch">1.1.2.5. Creating Arrays from Scratch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-standard-data-types">1.1.2.6. NumPy Standard Data Types</a></li>
 </ul>
             </nav>
         </div>
@@ -541,7 +571,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="understanding-data-types-in-python">
-<h1>Understanding Data Types in Python<a class="headerlink" href="#understanding-data-types-in-python" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.1.2. </span>Understanding Data Types in Python<a class="headerlink" href="#understanding-data-types-in-python" title="Link to this heading">#</a></h1>
 <p>Effective data-driven science and computation requires understanding how data is stored and manipulated.
 This chapter outlines and contrasts how arrays of data are handled in the Python language itself, and how NumPy improves on this.
 Understanding this difference is fundamental to understanding much of the material throughout the rest of the book.</p>
@@ -577,7 +607,7 @@ While a statically typed language like C or Java requires each variable to be ex
 Understanding <em>how</em> this works is an important piece of learning to analyze data efficiently and effectively with Python.
 But what this type flexibility also points to is the fact that Python variables are more than just their values; they also contain extra information about the <em>type</em> of the value. We’ll explore this more in the sections that follow.</p>
 <section id="a-python-integer-is-more-than-just-an-integer">
-<h2>A Python Integer Is More Than Just an Integer<a class="headerlink" href="#a-python-integer-is-more-than-just-an-integer" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.2.1. </span>A Python Integer Is More Than Just an Integer<a class="headerlink" href="#a-python-integer-is-more-than-just-an-integer" title="Link to this heading">#</a></h2>
 <p>The standard Python implementation is written in C.
 This means that every Python object is simply a cleverly disguised C structure, which contains not only its value, but other information as well. For example, when we define an integer in Python, such as <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">10000</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> is not just a “raw” integer. It’s actually a pointer to a compound C structure, which contains several values.
 Looking through the Python 3.10 source code, we find that the integer (long) type definition effectively looks like this (once the C macros are expanded):</p>
@@ -605,7 +635,7 @@ This extra information in the Python integer structure is what allows Python to 
 All this additional information in Python types comes at a cost, however, which becomes especially apparent in structures that combine many of these objects.</p>
 </section>
 <section id="a-python-list-is-more-than-just-a-list">
-<h2>A Python List Is More Than Just a List<a class="headerlink" href="#a-python-list-is-more-than-just-a-list" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.2.2. </span>A Python List Is More Than Just a List<a class="headerlink" href="#a-python-list-is-more-than-just-a-list" title="Link to this heading">#</a></h2>
 <p>Let’s consider now what happens when we use a Python data structure that holds many Python objects.
 The standard mutable multielement container in Python is the list.
 We can create a list of integers as follows:</p>
@@ -684,7 +714,7 @@ Again, the advantage of the list is flexibility: because each list element is a 
 Fixed-type NumPy-style arrays lack this flexibility, but are much more efficient for storing and manipulating data.</p>
 </section>
 <section id="fixed-type-arrays-in-python">
-<h2>Fixed-Type Arrays in Python<a class="headerlink" href="#fixed-type-arrays-in-python" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.2.3. </span>Fixed-Type Arrays in Python<a class="headerlink" href="#fixed-type-arrays-in-python" title="Link to this heading">#</a></h2>
 <p>Python offers several different options for storing data in efficient, fixed-type data buffers.
 The built-in <code class="docutils literal notranslate"><span class="pre">array</span></code> module (available since Python 3.3) can be used to create dense arrays of a uniform type:</p>
 <div class="cell docutils container">
@@ -708,7 +738,7 @@ While Python’s <code class="docutils literal notranslate"><span class="pre">ar
 We will explore these operations in later chapters; next, I’ll show you a few different ways of creating a NumPy array.</p>
 </section>
 <section id="creating-arrays-from-python-lists">
-<h2>Creating Arrays from Python Lists<a class="headerlink" href="#creating-arrays-from-python-lists" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.2.4. </span>Creating Arrays from Python Lists<a class="headerlink" href="#creating-arrays-from-python-lists" title="Link to this heading">#</a></h2>
 <p>We’ll start with the standard NumPy import, under the alias <code class="docutils literal notranslate"><span class="pre">np</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -777,7 +807,7 @@ If the types do not match, NumPy will upcast them according to its type promotio
 <p>The inner lists are treated as rows of the resulting two-dimensional array.</p>
 </section>
 <section id="creating-arrays-from-scratch">
-<h2>Creating Arrays from Scratch<a class="headerlink" href="#creating-arrays-from-scratch" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.2.5. </span>Creating Arrays from Scratch<a class="headerlink" href="#creating-arrays-from-scratch" title="Link to this heading">#</a></h2>
 <p>Especially for larger arrays, it is more efficient to create arrays from scratch using routines built into NumPy.
 Here are several examples:</p>
 <div class="cell docutils container">
@@ -860,9 +890,9 @@ Here are several examples:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.77327144, 0.58194411, 0.18494287],
-       [0.94515786, 0.66261356, 0.82464929],
-       [0.94609347, 0.33821713, 0.72313412]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.35917599, 0.36080699, 0.52881038],
+       [0.59269038, 0.80471562, 0.91207406],
+       [0.70926147, 0.66663045, 0.95252228]])
 </pre></div>
 </div>
 </div>
@@ -876,9 +906,9 @@ Here are several examples:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.1937535 , -0.96639476, -1.34024455],
-       [ 0.4662369 , -0.06077284, -0.68396621],
-       [-1.03770875, -0.79650668,  0.17747329]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.62221034, -0.45381972, -1.55615357],
+       [ 0.65902813, -1.43440177,  0.31675307],
+       [-0.07881273, -0.62491949,  0.21290854]])
 </pre></div>
 </div>
 </div>
@@ -891,9 +921,9 @@ Here are several examples:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5, 9, 5],
-       [9, 3, 7],
-       [9, 5, 3]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[9, 7, 8],
+       [5, 8, 0],
+       [4, 4, 4]])
 </pre></div>
 </div>
 </div>
@@ -929,7 +959,7 @@ Here are several examples:</p>
 </div>
 </section>
 <section id="numpy-standard-data-types">
-<h2>NumPy Standard Data Types<a class="headerlink" href="#numpy-standard-data-types" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.1.2.6. </span>NumPy Standard Data Types<a class="headerlink" href="#numpy-standard-data-types" title="Link to this heading">#</a></h2>
 <p>NumPy arrays contain values of a single type, so it is important to have detailed knowledge of those types and their limitations.
 Because NumPy is built in C, the types will be familiar to users of C, Fortran, and other related languages.</p>
 <p>The standard NumPy data types are listed in the following table.
@@ -1016,8 +1046,8 @@ NumPy also supports compound data types, which will be covered in <a class="refe
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1048,7 +1078,7 @@ NumPy also supports compound data types, which will be covered in <a class="refe
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to NumPy</p>
+        <p class="prev-next-title"><span class="section-number">1.1. </span>Introduction to NumPy</p>
       </div>
     </a>
     <a class="right-next"
@@ -1056,7 +1086,7 @@ NumPy also supports compound data types, which will be covered in <a class="refe
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Basics of NumPy Arrays</p>
+        <p class="prev-next-title"><span class="section-number">1.1.3. </span>The Basics of NumPy Arrays</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1076,12 +1106,12 @@ NumPy also supports compound data types, which will be covered in <a class="refe
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-integer-is-more-than-just-an-integer">A Python Integer Is More Than Just an Integer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-list-is-more-than-just-a-list">A Python List Is More Than Just a List</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-type-arrays-in-python">Fixed-Type Arrays in Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-python-lists">Creating Arrays from Python Lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-scratch">Creating Arrays from Scratch</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-standard-data-types">NumPy Standard Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-integer-is-more-than-just-an-integer">1.1.2.1. A Python Integer Is More Than Just an Integer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-python-list-is-more-than-just-a-list">1.1.2.2. A Python List Is More Than Just a List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-type-arrays-in-python">1.1.2.3. Fixed-Type Arrays in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-python-lists">1.1.2.4. Creating Arrays from Python Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-arrays-from-scratch">1.1.2.5. Creating Arrays from Scratch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy-standard-data-types">1.1.2.6. NumPy Standard Data Types</a></li>
 </ul>
   </nav></div>
 

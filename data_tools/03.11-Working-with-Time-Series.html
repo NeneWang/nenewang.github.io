@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Working with Time Series &#8212; Docs</title>
+    <title>1.2.13. Working with Time Series</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,19 +58,32 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03.11-Working-with-Time-Series';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/03.11-Working-with-Time-Series.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/03.11-Working-with-Time-Series.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="High-Performance Pandas: eval and query" href="03.12-Performance-Eval-and-Query.html" />
-    <link rel="prev" title="Vectorized String Operations" href="03.10-Working-With-Strings.html" />
+    <link rel="next" title="1.2.14. High-Performance Pandas: eval and query" href="03.12-Performance-Eval-and-Query.html" />
+    <link rel="prev" title="1.2.12. Vectorized String Operations" href="03.10-Working-With-Strings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,8 +172,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -177,14 +190,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -196,52 +201,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -300,7 +330,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/03.11-Working-with-Time-Series.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03.11-Working-with-Time-Series.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +348,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/03.11-Working-with-Time-Series.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03.11-Working-with-Time-Series.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,7 +397,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +414,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/03.11-Working-with-Time-Series.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03.11-Working-with-Time-Series.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -401,7 +431,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.11-Working-with-Time-Series.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.11-Working-with-Time-Series.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -525,26 +555,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-python">Dates and Times in Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#native-python-dates-and-times-datetime-and-dateutil">Native Python Dates and Times: datetime and dateutil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typed-arrays-of-times-numpys-datetime64">Typed Arrays of Times: NumPy’s datetime64</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-pandas-the-best-of-both-worlds">Dates and Times in Pandas: The Best of Both Worlds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-python">1.2.13.1. Dates and Times in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#native-python-dates-and-times-datetime-and-dateutil">1.2.13.1.1. Native Python Dates and Times: datetime and dateutil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typed-arrays-of-times-numpys-datetime64">1.2.13.1.2. Typed Arrays of Times: NumPy’s datetime64</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-pandas-the-best-of-both-worlds">1.2.13.1.3. Dates and Times in Pandas: The Best of Both Worlds</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-indexing-by-time">Pandas Time Series: Indexing by Time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-data-structures">Pandas Time Series Data Structures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-sequences-pd-date-range">Regular Sequences: pd.date_range</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequencies-and-offsets">Frequencies and Offsets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-shifting-and-windowing">Resampling, Shifting, and Windowing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-and-converting-frequencies">Resampling and Converting Frequencies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-shifts">Time Shifts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-windows">Rolling Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-indexing-by-time">1.2.13.2. Pandas Time Series: Indexing by Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-data-structures">1.2.13.3. Pandas Time Series Data Structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-sequences-pd-date-range">1.2.13.4. Regular Sequences: pd.date_range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequencies-and-offsets">1.2.13.5. Frequencies and Offsets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-shifting-and-windowing">1.2.13.6. Resampling, Shifting, and Windowing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-and-converting-frequencies">1.2.13.6.1. Resampling and Converting Frequencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-shifts">1.2.13.6.2. Time Shifts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-windows">1.2.13.6.3. Rolling Windows</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more">Where to Learn More</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-seattle-bicycle-counts">Example: Visualizing Seattle Bicycle Counts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-data">Visualizing the Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digging-into-the-data">Digging into the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more">1.2.13.7. Where to Learn More</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-seattle-bicycle-counts">1.2.13.8. Example: Visualizing Seattle Bicycle Counts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-data">1.2.13.8.1. Visualizing the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digging-into-the-data">1.2.13.8.2. Digging into the Data</a></li>
 </ul>
 </li>
 </ul>
@@ -559,7 +589,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="working-with-time-series">
-<h1>Working with Time Series<a class="headerlink" href="#working-with-time-series" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.13. </span>Working with Time Series<a class="headerlink" href="#working-with-time-series" title="Link to this heading">#</a></h1>
 <p>Pandas was originally developed in the context of financial modeling, so as you might expect, it contains an extensive set of tools for working with dates, times, and time-indexed data.
 Date and time data comes in a few flavors, which we will discuss here:</p>
 <ul class="simple">
@@ -572,11 +602,11 @@ This is by no means a complete guide to the time series tools available in Pytho
 We will start with a brief discussion of tools for dealing with dates and times in Python, before moving more specifically to a discussion of the tools provided by Pandas.
 After listing some resources that go into more depth, we will review some short examples of working with time series data in Pandas.</p>
 <section id="dates-and-times-in-python">
-<h2>Dates and Times in Python<a class="headerlink" href="#dates-and-times-in-python" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.1. </span>Dates and Times in Python<a class="headerlink" href="#dates-and-times-in-python" title="Link to this heading">#</a></h2>
 <p>The Python world has a number of available representations of dates, times, deltas, and time spans.
 While the time series tools provided by Pandas tend to be the most useful for data science applications, it is helpful to see their relationship to other tools used in Python.</p>
 <section id="native-python-dates-and-times-datetime-and-dateutil">
-<h3>Native Python Dates and Times: datetime and dateutil<a class="headerlink" href="#native-python-dates-and-times-datetime-and-dateutil" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.1.1. </span>Native Python Dates and Times: datetime and dateutil<a class="headerlink" href="#native-python-dates-and-times-datetime-and-dateutil" title="Link to this heading">#</a></h3>
 <p>Python’s basic objects for working with dates and times reside in the built-in <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module.
 Along with the third-party <code class="docutils literal notranslate"><span class="pre">dateutil</span></code> module, you can use this to quickly perform a host of useful functionalities on dates and times.
 For example, you can manually build a date using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> type:</p>
@@ -629,7 +659,7 @@ Where they break down is when you wish to work with large arrays of dates and ti
 just as lists of Python numerical variables are suboptimal compared to NumPy-style typed numerical arrays, lists of Python <code class="docutils literal notranslate"><span class="pre">datetime</span></code> objects are suboptimal compared to typed arrays of encoded dates.</p>
 </section>
 <section id="typed-arrays-of-times-numpys-datetime64">
-<h3>Typed Arrays of Times: NumPy’s datetime64<a class="headerlink" href="#typed-arrays-of-times-numpys-datetime64" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.1.2. </span>Typed Arrays of Times: NumPy’s datetime64<a class="headerlink" href="#typed-arrays-of-times-numpys-datetime64" title="Link to this heading">#</a></h3>
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">datetime64</span></code> dtype encodes dates as 64-bit integers, and thus allows arrays of dates to be represented compactly and operated on in an efficient manner.
 The <code class="docutils literal notranslate"><span class="pre">datetime64</span></code> requires a specific input format:</p>
 <div class="cell docutils container">
@@ -789,7 +819,7 @@ NumPy will infer the desired unit from the input; for example, here is a day-bas
 More information can be found in <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/arrays.datetime.html">NumPy’s <code class="docutils literal notranslate"><span class="pre">datetime64</span></code> documentation</a>.</p>
 </section>
 <section id="dates-and-times-in-pandas-the-best-of-both-worlds">
-<h3>Dates and Times in Pandas: The Best of Both Worlds<a class="headerlink" href="#dates-and-times-in-pandas-the-best-of-both-worlds" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.1.3. </span>Dates and Times in Pandas: The Best of Both Worlds<a class="headerlink" href="#dates-and-times-in-pandas-the-best-of-both-worlds" title="Link to this heading">#</a></h3>
 <p>Pandas builds upon all the tools just discussed to provide a <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> object, which combines the ease of use of <code class="docutils literal notranslate"><span class="pre">datetime</span></code> and <code class="docutils literal notranslate"><span class="pre">dateutil</span></code> with the efficient storage and vectorized interface of <code class="docutils literal notranslate"><span class="pre">numpy.datetime64</span></code>.
 From a group of these <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> objects, Pandas can construct a <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code> that can be used to index data in a <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
 <p>For example, we can use Pandas tools to repeat the demonstration from earlier.
@@ -840,7 +870,7 @@ We can parse a flexibly formatted string date and use format codes to output the
 </section>
 </section>
 <section id="pandas-time-series-indexing-by-time">
-<h2>Pandas Time Series: Indexing by Time<a class="headerlink" href="#pandas-time-series-indexing-by-time" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.2. </span>Pandas Time Series: Indexing by Time<a class="headerlink" href="#pandas-time-series-indexing-by-time" title="Link to this heading">#</a></h2>
 <p>The Pandas time series tools really become useful when you begin to index data by timestamps.
 For example, we can construct a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object that has time-indexed data:</p>
 <div class="cell docutils container">
@@ -897,7 +927,7 @@ dtype: int64
 But first, let’s take a closer look at the available time series data structures.</p>
 </section>
 <section id="pandas-time-series-data-structures">
-<h2>Pandas Time Series Data Structures<a class="headerlink" href="#pandas-time-series-data-structures" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.3. </span>Pandas Time Series Data Structures<a class="headerlink" href="#pandas-time-series-data-structures" title="Link to this heading">#</a></h2>
 <p>This section will introduce the fundamental Pandas data structures for working with time series data:</p>
 <ul class="simple">
 <li><p>For <em>timestamps</em>, Pandas provides the <code class="docutils literal notranslate"><span class="pre">Timestamp</span></code> type. As mentioned before, this is essentially a replacement for Python’s native <code class="docutils literal notranslate"><span class="pre">datetime</span></code>, but it’s based on the more efficient <code class="docutils literal notranslate"><span class="pre">numpy.datetime64</span></code> data type. The associated <code class="docutils literal notranslate"><span class="pre">Index</span></code> structure is <code class="docutils literal notranslate"><span class="pre">DatetimeIndex</span></code>.</p></li>
@@ -953,7 +983,7 @@ Passing a single date to <code class="docutils literal notranslate"><span class=
 </div>
 </section>
 <section id="regular-sequences-pd-date-range">
-<h2>Regular Sequences: pd.date_range<a class="headerlink" href="#regular-sequences-pd-date-range" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.4. </span>Regular Sequences: pd.date_range<a class="headerlink" href="#regular-sequences-pd-date-range" title="Link to this heading">#</a></h2>
 <p>To make creation of regular date sequences more convenient, Pandas offers a few functions for this purpose: <code class="docutils literal notranslate"><span class="pre">pd.date_range</span></code> for timestamps, <code class="docutils literal notranslate"><span class="pre">pd.period_range</span></code> for periods, and <code class="docutils literal notranslate"><span class="pre">pd.timedelta_range</span></code> for time deltas.
 We’ve seen that Python’s <code class="docutils literal notranslate"><span class="pre">range</span></code> and NumPy’s <code class="docutils literal notranslate"><span class="pre">np.arange</span></code> take a start point, end point, and optional step size and return a sequence.
 Similarly, <code class="docutils literal notranslate"><span class="pre">pd.date_range</span></code> accepts a start date, an end date, and an optional frequency code to create a regular sequence of dates:</p>
@@ -999,7 +1029,7 @@ For example, here we construct a range of hourly timestamps:</p>
                &#39;2015-07-03 02:00:00&#39;, &#39;2015-07-03 03:00:00&#39;,
                &#39;2015-07-03 04:00:00&#39;, &#39;2015-07-03 05:00:00&#39;,
                &#39;2015-07-03 06:00:00&#39;, &#39;2015-07-03 07:00:00&#39;],
-              dtype=&#39;datetime64[ns]&#39;, freq=&#39;h&#39;)
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;H&#39;)
 </pre></div>
 </div>
 </div>
@@ -1030,7 +1060,7 @@ Here are some monthly periods:</p>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TimedeltaIndex([&#39;0 days 00:00:00&#39;, &#39;0 days 01:00:00&#39;, &#39;0 days 02:00:00&#39;,
                 &#39;0 days 03:00:00&#39;, &#39;0 days 04:00:00&#39;, &#39;0 days 05:00:00&#39;],
-               dtype=&#39;timedelta64[ns]&#39;, freq=&#39;h&#39;)
+               dtype=&#39;timedelta64[ns]&#39;, freq=&#39;H&#39;)
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1068,7 @@ Here are some monthly periods:</p>
 <p>All of these require an understanding of Pandas frequency codes, which are summarized in the next section.</p>
 </section>
 <section id="frequencies-and-offsets">
-<h2>Frequencies and Offsets<a class="headerlink" href="#frequencies-and-offsets" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.5. </span>Frequencies and Offsets<a class="headerlink" href="#frequencies-and-offsets" title="Link to this heading">#</a></h2>
 <p>Fundamental to these Pandas time series tools is the concept of a <em>frequency</em> or <em>date offset</em>. The following table summarizes the main codes available; as with the <code class="docutils literal notranslate"><span class="pre">D</span></code> (day) and <code class="docutils literal notranslate"><span class="pre">H</span></code> (hour) codes demonstrated in the previous sections, we can use these to specify any desired frequency spacing:</p>
 <table class="table">
 <thead>
@@ -1154,7 +1184,7 @@ For example, for a frequency of 2 hours and 30 minutes, we can combine the hour 
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TimedeltaIndex([&#39;0 days 00:00:00&#39;, &#39;0 days 02:30:00&#39;, &#39;0 days 05:00:00&#39;,
                 &#39;0 days 07:30:00&#39;, &#39;0 days 10:00:00&#39;, &#39;0 days 12:30:00&#39;],
-               dtype=&#39;timedelta64[ns]&#39;, freq=&#39;150min&#39;)
+               dtype=&#39;timedelta64[ns]&#39;, freq=&#39;150T&#39;)
 </pre></div>
 </div>
 </div>
@@ -1179,7 +1209,7 @@ For example, we can create a business day offset directly as follows:</p>
 <p>For more discussion of the use of frequencies and offsets, see the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects"><code class="docutils literal notranslate"><span class="pre">DateOffset</span></code> section</a> of the Pandas documentation.</p>
 </section>
 <section id="resampling-shifting-and-windowing">
-<h2>Resampling, Shifting, and Windowing<a class="headerlink" href="#resampling-shifting-and-windowing" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.6. </span>Resampling, Shifting, and Windowing<a class="headerlink" href="#resampling-shifting-and-windowing" title="Link to this heading">#</a></h2>
 <p>The ability to use dates and times as indices to intuitively organize and access data is an important aspect of the Pandas time series tools.
 The benefits of indexed data in general (automatic alignment during operations, intuitive data slicing and access, etc.) still apply, and Pandas provides several additional time series–specific operations.</p>
 <p>We will take a look at a few of those here, using some stock price data as an example.
@@ -1244,7 +1274,7 @@ Here we will load part of the S&amp;P 500 price history:</p>
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-whitegrid&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">sp500</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">sp500</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;sp500&#39; is not defined
 </pre></div>
@@ -1252,7 +1282,7 @@ Here we will load part of the S&amp;P 500 price history:</p>
 </div>
 </div>
 <section id="resampling-and-converting-frequencies">
-<h3>Resampling and Converting Frequencies<a class="headerlink" href="#resampling-and-converting-frequencies" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.6.1. </span>Resampling and Converting Frequencies<a class="headerlink" href="#resampling-and-converting-frequencies" title="Link to this heading">#</a></h3>
 <p>One common need when dealing with time series data is resampling at a higher or lower frequency.
 This can be done using the <code class="docutils literal notranslate"><span class="pre">resample</span></code> method, or the much simpler <code class="docutils literal notranslate"><span class="pre">asfreq</span></code> method.
 The primary difference between the two is that <code class="docutils literal notranslate"><span class="pre">resample</span></code> is fundamentally a <em>data aggregation</em>, while <code class="docutils literal notranslate"><span class="pre">asfreq</span></code> is fundamentally a <em>data selection</em>.</p>
@@ -1311,14 +1341,14 @@ Here, we will resample the business day data at a daily frequency (i.e., includi
 <span class="ne">NameError</span>: name &#39;sp500&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/4036186264a673af6240081778fada5850f29218b03bf72451b2436b632c0dc4.png" src="../_images/4036186264a673af6240081778fada5850f29218b03bf72451b2436b632c0dc4.png" />
+<img alt="../_images/7b728eca8dbb624ee800db33a4ff00ba48987db5ea9b723a28d3d230fb63a30a.png" src="../_images/7b728eca8dbb624ee800db33a4ff00ba48987db5ea9b723a28d3d230fb63a30a.png" />
 </div>
 </div>
 <p>Because the S&amp;P 500 data only exists for business days, the top panel has gaps representing NA values.
 The bottom panel shows the differences between two strategies for filling the gaps: forward filling and backward filling.</p>
 </section>
 <section id="time-shifts">
-<h3>Time Shifts<a class="headerlink" href="#time-shifts" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.6.2. </span>Time Shifts<a class="headerlink" href="#time-shifts" title="Link to this heading">#</a></h3>
 <p>Another common time series–specific operation is shifting of data in time.
 For this, Pandas provides the <code class="docutils literal notranslate"><span class="pre">shift</span></code> method, which can be used to shift data by a given number of entries.
 With time series data sampled at a regular frequency, this can give us a way to explore trends over time.</p>
@@ -1349,7 +1379,7 @@ With time series data sampled at a regular frequency, this can give us a way to 
 <p>The worst one-year return was around March 2019, with the coronavirus-related market crash exactly a year later. As you might expect, the best one-year return was to be found in March 2020, for those with enough foresight or luck to buy low.</p>
 </section>
 <section id="rolling-windows">
-<h3>Rolling Windows<a class="headerlink" href="#rolling-windows" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.6.3. </span>Rolling Windows<a class="headerlink" href="#rolling-windows" title="Link to this heading">#</a></h3>
 <p>Calculating rolling statistics is a third type of time series–specific operation implemented by Pandas.
 This can be accomplished via the <code class="docutils literal notranslate"><span class="pre">rolling</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects, which returns a view similar to what we saw with the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation (see <a class="reference internal" href="03.08-Aggregation-and-Grouping.html"><span class="std std-doc">Aggregation and Grouping</span></a>).
 This rolling view makes available a number of aggregation operations by default.</p>
@@ -1385,7 +1415,7 @@ This rolling view makes available a number of aggregation operations by default.
 </section>
 </section>
 <section id="where-to-learn-more">
-<h2>Where to Learn More<a class="headerlink" href="#where-to-learn-more" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.7. </span>Where to Learn More<a class="headerlink" href="#where-to-learn-more" title="Link to this heading">#</a></h2>
 <p>This chapter has provided only a brief summary of some of the most essential features of time series tools provided by Pandas; for a more complete discussion, you can refer to the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/timeseries.html">“Time Series/Date Functionality” section</a> of the Pandas online documentation.</p>
 <p>Another excellent resource is the book <a class="reference external" href="https://learning.oreilly.com/library/view/python-for-data/9781098104023/"><em>Python for Data Analysis</em></a> by Wes McKinney (O’Reilly).
 It is an invaluable resource on the use of Pandas.
@@ -1393,7 +1423,7 @@ In particular, this book emphasizes time series tools in the context of business
 <p>As always, you can also use the IPython help functionality to explore and try out further options available to the functions and methods discussed here. I find this often is the best way to learn a new Python tool.</p>
 </section>
 <section id="example-visualizing-seattle-bicycle-counts">
-<h2>Example: Visualizing Seattle Bicycle Counts<a class="headerlink" href="#example-visualizing-seattle-bicycle-counts" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13.8. </span>Example: Visualizing Seattle Bicycle Counts<a class="headerlink" href="#example-visualizing-seattle-bicycle-counts" title="Link to this heading">#</a></h2>
 <p>As a more involved example of working with time series data, let’s take a look at bicycle counts on Seattle’s <a class="reference external" href="http://www.openstreetmap.org/#map=17/47.64813/-122.34965">Fremont Bridge</a>.
 This data comes from an automated bicycle counter installed in late 2012, which has inductive sensors on the east and west sidewalks of the bridge.
 The hourly bicycle counts can be downloaded from <a class="reference external" href="http://data.seattle.gov">http://data.seattle.gov</a>; the Fremont Bridge Bicycle Counter dataset is available under the Transportation category.</p>
@@ -1423,60 +1453,71 @@ We will specify that we want the <code class="docutils literal notranslate"><spa
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;FremontBridge.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\io\parsers\readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\util\_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\parsers\readers.py:678,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">663</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">665</span>     <span class="n">delimiter</span><span class="p">,</span>
    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">674</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">675</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">676</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">678</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\io\parsers\readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\parsers\readers.py:575,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">572</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">575</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">577</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">578</span>     <span class="k">return</span> <span class="n">parser</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\io\parsers\readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\parsers\readers.py:932,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">929</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">931</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">932</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\io\parsers\readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\parsers\readers.py:1216,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1212</span>     <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;rb&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1213</span> <span class="c1"># error: No overload variant of &quot;get_handle&quot; matches argument types</span>
+<span class="g g-Whitespace">   </span><span class="mi">1214</span> <span class="c1"># &quot;Union[str, PathLike[str], ReadCsvBuffer[bytes], ReadCsvBuffer[str]]&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1215</span> <span class="c1"># , &quot;str&quot;, &quot;bool&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;, &quot;Any&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1216</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>  <span class="c1"># type: ignore[call-overload]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1217</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1218</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1219</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1220</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1221</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1222</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1223</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1224</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1225</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1226</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1227</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\io\common.py:873,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\io\common.py:786,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">781</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">782</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">783</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">784</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">785</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">786</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">787</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
 
 <span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;FremontBridge.csv&#39;
 </pre></div>
@@ -1513,7 +1554,7 @@ dtype: float64
 </div>
 </div>
 <section id="visualizing-the-data">
-<h3>Visualizing the Data<a class="headerlink" href="#visualizing-the-data" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.8.1. </span>Visualizing the Data<a class="headerlink" href="#visualizing-the-data" title="Link to this heading">#</a></h3>
 <p>We can gain some insight into the dataset by visualizing it.
 Let’s start by plotting the raw data (see the following figure):</p>
 <div class="cell docutils container">
@@ -1524,7 +1565,7 @@ Let’s start by plotting the raw data (see the following figure):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8b3d4549d59d769481129c0192fcd2e3a50a8af9fdf995b5984582219634da06.png" src="../_images/8b3d4549d59d769481129c0192fcd2e3a50a8af9fdf995b5984582219634da06.png" />
+<img alt="../_images/aecf16f3fd6824fb8ca9cf73d8400eb935cc42c48acbd94450cc8dea7992931c.png" src="../_images/aecf16f3fd6824fb8ca9cf73d8400eb935cc42c48acbd94450cc8dea7992931c.png" />
 </div>
 </div>
 <p>The ~150,000 hourly samples are far too dense for us to make much sense of.
@@ -1539,7 +1580,7 @@ Let’s resample by week (see the following figure):</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d9f30c1a57361594c41c7c8fe2b570aef49113d8a21558de1f69412d9c075c60.png" src="../_images/d9f30c1a57361594c41c7c8fe2b570aef49113d8a21558de1f69412d9c075c60.png" />
+<img alt="../_images/3479511d26d67d189cafce3acaed9af171d0c67a9ebad1f49a2255021d2998e6.png" src="../_images/3479511d26d67d189cafce3acaed9af171d0c67a9ebad1f49a2255021d2998e6.png" />
 </div>
 </div>
 <p>This reveals some trends: as you might expect, people bicycle more in the summer than in the winter, and even within a particular season the bicycle use varies from week to week (likely dependent on weather; see <a class="reference internal" href="05.06-Linear-Regression.html"><span class="std std-doc">In Depth: Linear Regression</span></a>, where we explore this further). Further, the effect of the COVID-19 pandemic on commuting patterns is quite clear, starting in early 2020.</p>
@@ -1554,7 +1595,7 @@ Here we’ll examine the 30-day rolling mean of our data, making sure to center 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a006157ea57d71cd92fa4a2d0759cbd0856c4cb539babf9786b0eb1ebb71886b.png" src="../_images/a006157ea57d71cd92fa4a2d0759cbd0856c4cb539babf9786b0eb1ebb71886b.png" />
+<img alt="../_images/9e608337010b13903ae7be8368dcfc4191884e5de8397b73c8fe9820afd21323.png" src="../_images/9e608337010b13903ae7be8368dcfc4191884e5de8397b73c8fe9820afd21323.png" />
 </div>
 </div>
 <p>The jaggedness of the result is due to the hard cutoff of the window.
@@ -1568,12 +1609,12 @@ The following code specifies both the width of the window (here, 50 days) and th
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a6c27cdf3f9dba169eab2b92171962950c29a1dd5530b17348f87c9cb28a48dd.png" src="../_images/a6c27cdf3f9dba169eab2b92171962950c29a1dd5530b17348f87c9cb28a48dd.png" />
+<img alt="../_images/103a8e494d9bf4a6d381cfca9f931f95857627fb7878616faf6d4ff28a21a99f.png" src="../_images/103a8e494d9bf4a6d381cfca9f931f95857627fb7878616faf6d4ff28a21a99f.png" />
 </div>
 </div>
 </section>
 <section id="digging-into-the-data">
-<h3>Digging into the Data<a class="headerlink" href="#digging-into-the-data" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.13.8.2. </span>Digging into the Data<a class="headerlink" href="#digging-into-the-data" title="Link to this heading">#</a></h3>
 <p>While these smoothed data views are useful to get an idea of the general trend in the data, they hide much of the structure.
 For example, we might want to look at the average traffic as a function of the time of day.
 We can do this using the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> functionality discussed in <a class="reference internal" href="03.08-Aggregation-and-Grouping.html"><span class="std std-doc">Aggregation and Grouping</span></a> (see the following figure):</p>
@@ -1586,7 +1627,7 @@ We can do this using the <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/64a0bedbb40d6f9302128ce85c151285bdbe02ffe49021d22123bb85363a65d1.png" src="../_images/64a0bedbb40d6f9302128ce85c151285bdbe02ffe49021d22123bb85363a65d1.png" />
+<img alt="../_images/3f15a3f1b5d32e2746ce697c494f866fdfe02c51ee0bd5c50b471b7659b3b349.png" src="../_images/3f15a3f1b5d32e2746ce697c494f866fdfe02c51ee0bd5c50b471b7659b3b349.png" />
 </div>
 </div>
 <p>The hourly traffic is a strongly bimodal sequence, with peaks around 8:00 a.m. and 5:00 p.m.
@@ -1607,39 +1648,36 @@ There is a directional component as well: according to the data, the east sidewa
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">by_weekday</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">dayofweek</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">by_weekday</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mon&#39;</span><span class="p">,</span> <span class="s1">&#39;Tues&#39;</span><span class="p">,</span> <span class="s1">&#39;Wed&#39;</span><span class="p">,</span> <span class="s1">&#39;Thurs&#39;</span><span class="p">,</span> <span class="s1">&#39;Fri&#39;</span><span class="p">,</span> <span class="s1">&#39;Sat&#39;</span><span class="p">,</span> <span class="s1">&#39;Sun&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">by_weekday</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">]);</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">by_weekday</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">])</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\core\generic.py:6310,</span> in <span class="ni">NDFrame.__setattr__</span><span class="nt">(self, name, value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6308</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">6309</span>     <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">6310</span>     <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">6311</span> <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">6312</span>     <span class="k">pass</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\core\generic.py:5588,</span> in <span class="ni">NDFrame.__setattr__</span><span class="nt">(self, name, value)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5586</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5587</span>     <span class="nb">object</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">5588</span>     <span class="k">return</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5589</span> <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5590</span>     <span class="k">pass</span>
 
-<span class="nn">File properties.pyx:69,</span> in <span class="ni">pandas._libs.properties.AxisProperty.__set__</span><span class="nt">()</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\_libs\properties.pyx:70,</span> in <span class="ni">pandas._libs.properties.AxisProperty.__set__</span><span class="nt">()</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\core\generic.py:813,</span> in <span class="ni">NDFrame._set_axis</span><span class="nt">(self, axis, labels)</span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span><span class="sd"> This is called from the cython code when we set the `index` attribute</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span><span class="sd"> directly, e.g. `series.index = [1, 2, 3]`.</span>
-<span class="g g-Whitespace">    </span><span class="mi">811</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ensure_index</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">813</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">set_axis</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">814</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clear_item_cache</span><span class="p">()</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\core\series.py:572,</span> in <span class="ni">Series._set_axis</span><span class="nt">(self, axis, labels, fastpath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fastpath</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">571</span>     <span class="c1"># The ensure_index call above ensures we have an Index object</span>
+<span class="ne">--&gt; </span><span class="mi">572</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">set_axis</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\core\internals\managers.py:238,</span> in <span class="ni">BaseBlockManager.set_axis</span><span class="nt">(self, axis, new_labels)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">def</span> <span class="nf">set_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="n">AxisInt</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">:</span> <span class="n">Index</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="c1"># Caller is responsible for ensuring we have an Index object.</span>
-<span class="ne">--&gt; </span><span class="mi">238</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_validate_set_axis</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">239</span>     <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_labels</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\core\internals\managers.py:214,</span> in <span class="ni">BaseBlockManager.set_axis</span><span class="nt">(self, axis, new_labels)</span>
+<span class="g g-Whitespace">    </span><span class="mi">212</span> <span class="k">def</span> <span class="nf">set_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">:</span> <span class="n">Index</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span>     <span class="c1"># Caller is responsible for ensuring we have an Index object.</span>
+<span class="ne">--&gt; </span><span class="mi">214</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_validate_set_axis</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">215</span>     <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_labels</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\core\internals\base.py:98,</span> in <span class="ni">DataManager._validate_set_axis</span><span class="nt">(self, axis, new_labels)</span>
-<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">pass</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span> <span class="k">elif</span> <span class="n">new_len</span> <span class="o">!=</span> <span class="n">old_len</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">98</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">99</span>         <span class="sa">f</span><span class="s2">&quot;Length mismatch: Expected axis has </span><span class="si">{</span><span class="n">old_len</span><span class="si">}</span><span class="s2"> elements, new &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span>         <span class="sa">f</span><span class="s2">&quot;values have </span><span class="si">{</span><span class="n">new_len</span><span class="si">}</span><span class="s2"> elements&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="p">)</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\core\internals\base.py:69,</span> in <span class="ni">DataManager._validate_set_axis</span><span class="nt">(self, axis, new_labels)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="k">pass</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="k">elif</span> <span class="n">new_len</span> <span class="o">!=</span> <span class="n">old_len</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">69</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span>         <span class="sa">f</span><span class="s2">&quot;Length mismatch: Expected axis has </span><span class="si">{</span><span class="n">old_len</span><span class="si">}</span><span class="s2"> elements, new &quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>         <span class="sa">f</span><span class="s2">&quot;values have </span><span class="si">{</span><span class="n">new_len</span><span class="si">}</span><span class="s2"> elements&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="p">)</span>
 
 <span class="ne">ValueError</span>: Length mismatch: Expected axis has 4 elements, new values have 7 elements
 </pre></div>
@@ -1670,7 +1708,7 @@ We’ll start by grouping by flags marking the weekend and the time of day:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f9e90841a1fe49e170011f1c35fa6ae5aa7a18689d812df30fbbba412dcdfb5b.png" src="../_images/f9e90841a1fe49e170011f1c35fa6ae5aa7a18689d812df30fbbba412dcdfb5b.png" />
+<img alt="../_images/2e58ea3b845beb666598f443a4eff47fe867674a260c913bdf4b0625ecd669a6.png" src="../_images/2e58ea3b845beb666598f443a4eff47fe867674a260c913bdf4b0625ecd669a6.png" />
 </div>
 </div>
 <p>The result shows a bimodal commuting pattern during the work week, and a unimodal recreational pattern during the weekends.
@@ -1684,8 +1722,8 @@ We will also revisit this dataset in the context of modeling in <a class="refere
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1716,7 +1754,7 @@ We will also revisit this dataset in the context of modeling in <a class="refere
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Vectorized String Operations</p>
+        <p class="prev-next-title"><span class="section-number">1.2.12. </span>Vectorized String Operations</p>
       </div>
     </a>
     <a class="right-next"
@@ -1724,7 +1762,7 @@ We will also revisit this dataset in the context of modeling in <a class="refere
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">High-Performance Pandas: eval and query</p>
+        <p class="prev-next-title"><span class="section-number">1.2.14. </span>High-Performance Pandas: eval and query</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1744,26 +1782,26 @@ We will also revisit this dataset in the context of modeling in <a class="refere
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-python">Dates and Times in Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#native-python-dates-and-times-datetime-and-dateutil">Native Python Dates and Times: datetime and dateutil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typed-arrays-of-times-numpys-datetime64">Typed Arrays of Times: NumPy’s datetime64</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-pandas-the-best-of-both-worlds">Dates and Times in Pandas: The Best of Both Worlds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-python">1.2.13.1. Dates and Times in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#native-python-dates-and-times-datetime-and-dateutil">1.2.13.1.1. Native Python Dates and Times: datetime and dateutil</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typed-arrays-of-times-numpys-datetime64">1.2.13.1.2. Typed Arrays of Times: NumPy’s datetime64</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dates-and-times-in-pandas-the-best-of-both-worlds">1.2.13.1.3. Dates and Times in Pandas: The Best of Both Worlds</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-indexing-by-time">Pandas Time Series: Indexing by Time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-data-structures">Pandas Time Series Data Structures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-sequences-pd-date-range">Regular Sequences: pd.date_range</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequencies-and-offsets">Frequencies and Offsets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-shifting-and-windowing">Resampling, Shifting, and Windowing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-and-converting-frequencies">Resampling and Converting Frequencies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-shifts">Time Shifts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-windows">Rolling Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-indexing-by-time">1.2.13.2. Pandas Time Series: Indexing by Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-time-series-data-structures">1.2.13.3. Pandas Time Series Data Structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-sequences-pd-date-range">1.2.13.4. Regular Sequences: pd.date_range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequencies-and-offsets">1.2.13.5. Frequencies and Offsets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-shifting-and-windowing">1.2.13.6. Resampling, Shifting, and Windowing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling-and-converting-frequencies">1.2.13.6.1. Resampling and Converting Frequencies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-shifts">1.2.13.6.2. Time Shifts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rolling-windows">1.2.13.6.3. Rolling Windows</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more">Where to Learn More</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-seattle-bicycle-counts">Example: Visualizing Seattle Bicycle Counts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-data">Visualizing the Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digging-into-the-data">Digging into the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-learn-more">1.2.13.7. Where to Learn More</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-visualizing-seattle-bicycle-counts">1.2.13.8. Example: Visualizing Seattle Bicycle Counts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-data">1.2.13.8.1. Visualizing the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digging-into-the-data">1.2.13.8.2. Digging into the Data</a></li>
 </ul>
 </li>
 </ul>

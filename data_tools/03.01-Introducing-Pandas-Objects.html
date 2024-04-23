@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introducing Pandas Objects &#8212; Docs</title>
+    <title>1.2.3. Introducing Pandas Objects</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,17 +58,30 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03.01-Introducing-Pandas-Objects';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/03.01-Introducing-Pandas-Objects.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/03.01-Introducing-Pandas-Objects.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Indexing and Selection" href="03.02-Data-Indexing-and-Selection.html" />
-    <link rel="prev" title="Data Manipulation with Pandas" href="pandas.html" />
+    <link rel="next" title="1.2.4. Data Indexing and Selection" href="03.02-Data-Indexing-and-Selection.html" />
+    <link rel="prev" title="1.2. Data Manipulation with Pandas" href="pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +170,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -175,14 +188,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -194,52 +199,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +328,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/03.01-Introducing-Pandas-Objects.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03.01-Introducing-Pandas-Objects.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +346,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/03.01-Introducing-Pandas-Objects.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03.01-Introducing-Pandas-Objects.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +395,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +412,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/03.01-Introducing-Pandas-Objects.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03.01-Introducing-Pandas-Objects.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +429,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.01-Introducing-Pandas-Objects.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.01-Introducing-Pandas-Objects.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -523,28 +553,28 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-series-object">The Pandas Series Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-generalized-numpy-array">Series as Generalized NumPy Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-specialized-dictionary">Series as Specialized Dictionary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-series-objects">Constructing Series Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-series-object">1.2.3.1. The Pandas Series Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-generalized-numpy-array">1.2.3.1.1. Series as Generalized NumPy Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-specialized-dictionary">1.2.3.1.2. Series as Specialized Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-series-objects">1.2.3.1.3. Constructing Series Objects</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-dataframe-object">The Pandas DataFrame Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-generalized-numpy-array">DataFrame as Generalized NumPy Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-specialized-dictionary">DataFrame as Specialized Dictionary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-dataframe-objects">Constructing DataFrame Objects</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-single-series-object">From a single Series object</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-list-of-dicts">From a list of dicts</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-dictionary-of-series-objects">From a dictionary of Series objects</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-two-dimensional-numpy-array">From a two-dimensional NumPy array</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-numpy-structured-array">From a NumPy structured array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-dataframe-object">1.2.3.2. The Pandas DataFrame Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-generalized-numpy-array">1.2.3.2.1. DataFrame as Generalized NumPy Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-specialized-dictionary">1.2.3.2.2. DataFrame as Specialized Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-dataframe-objects">1.2.3.2.3. Constructing DataFrame Objects</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-single-series-object">1.2.3.2.3.1. From a single Series object</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-list-of-dicts">1.2.3.2.3.2. From a list of dicts</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-dictionary-of-series-objects">1.2.3.2.3.3. From a dictionary of Series objects</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-two-dimensional-numpy-array">1.2.3.2.3.4. From a two-dimensional NumPy array</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-numpy-structured-array">1.2.3.2.3.5. From a NumPy structured array</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-index-object">The Pandas Index Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-immutable-array">Index as Immutable Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-ordered-set">Index as Ordered Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-index-object">1.2.3.3. The Pandas Index Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-immutable-array">1.2.3.3.1. Index as Immutable Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-ordered-set">1.2.3.3.2. Index as Ordered Set</a></li>
 </ul>
 </li>
 </ul>
@@ -559,7 +589,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introducing-pandas-objects">
-<h1>Introducing Pandas Objects<a class="headerlink" href="#introducing-pandas-objects" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.3. </span>Introducing Pandas Objects<a class="headerlink" href="#introducing-pandas-objects" title="Link to this heading">#</a></h1>
 <p>At a very basic level, Pandas objects can be thought of as enhanced versions of NumPy structured arrays in which the rows and columns are identified with labels rather than simple integer indices.
 As we will see during the course of this chapter, Pandas provides a host of useful tools, methods, and functionality on top of the basic data structures, but nearly everything that follows will require an understanding of what these structures are.
 Thus, before we go any further, let’s take a look at these three fundamental Pandas data structures: the <code class="docutils literal notranslate"><span class="pre">Series</span></code>, <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and <code class="docutils literal notranslate"><span class="pre">Index</span></code>.</p>
@@ -573,7 +603,7 @@ Thus, before we go any further, let’s take a look at these three fundamental P
 </div>
 </div>
 <section id="the-pandas-series-object">
-<h2>The Pandas Series Object<a class="headerlink" href="#the-pandas-series-object" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.3.1. </span>The Pandas Series Object<a class="headerlink" href="#the-pandas-series-object" title="Link to this heading">#</a></h2>
 <p>A Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> is a one-dimensional array of indexed data.
 It can be created from a list or array as follows:</p>
 <div class="cell docutils container">
@@ -649,7 +679,7 @@ dtype: float64
 </div>
 <p>As we will see, though, the Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> is much more general and flexible than the one-dimensional NumPy array that it emulates.</p>
 <section id="series-as-generalized-numpy-array">
-<h3>Series as Generalized NumPy Array<a class="headerlink" href="#series-as-generalized-numpy-array" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.1.1. </span>Series as Generalized NumPy Array<a class="headerlink" href="#series-as-generalized-numpy-array" title="Link to this heading">#</a></h3>
 <p>From what we’ve seen so far, the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object may appear to be basically interchangeable with a one-dimensional NumPy array.
 The essential difference is that while the NumPy array has an <em>implicitly defined</em> integer index used to access the values, the Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> has an <em>explicitly defined</em> index associated with the values.</p>
 <p>This explicit index definition gives the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object additional capabilities. For example, the index need not be an integer, but can consist of values of any desired type.
@@ -718,7 +748,7 @@ dtype: float64
 </div>
 </section>
 <section id="series-as-specialized-dictionary">
-<h3>Series as Specialized Dictionary<a class="headerlink" href="#series-as-specialized-dictionary" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.1.2. </span>Series as Specialized Dictionary<a class="headerlink" href="#series-as-specialized-dictionary" title="Link to this heading">#</a></h3>
 <p>In this way, you can think of a Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> a bit like a specialization of a Python dictionary.
 A dictionary is a structure that maps arbitrary keys to a set of arbitrary values, and a <code class="docutils literal notranslate"><span class="pre">Series</span></code> is a structure that maps typed keys to a set of typed values.
 This typing is important: just as the type-specific compiled code behind a NumPy array makes it more efficient than a Python list for certain operations, the type information of a Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> makes it more efficient than Python dictionaries for certain operations.</p>
@@ -776,7 +806,7 @@ dtype: int64
 <p>We’ll discuss some of the quirks of Pandas indexing and slicing in <a class="reference internal" href="03.02-Data-Indexing-and-Selection.html"><span class="std std-doc">Data Indexing and Selection</span></a>.</p>
 </section>
 <section id="constructing-series-objects">
-<h3>Constructing Series Objects<a class="headerlink" href="#constructing-series-objects" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.1.3. </span>Constructing Series Objects<a class="headerlink" href="#constructing-series-objects" title="Link to this heading">#</a></h3>
 <p>We’ve already seen a few ways of constructing a Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> from scratch. All of them are some version of the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">)</span>
 </pre></div>
@@ -848,12 +878,12 @@ dtype: object
 </section>
 </section>
 <section id="the-pandas-dataframe-object">
-<h2>The Pandas DataFrame Object<a class="headerlink" href="#the-pandas-dataframe-object" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.3.2. </span>The Pandas DataFrame Object<a class="headerlink" href="#the-pandas-dataframe-object" title="Link to this heading">#</a></h2>
 <p>The next fundamental structure in Pandas is the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.
 Like the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object discussed in the previous section, the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be thought of either as a generalization of a NumPy array, or as a specialization of a Python dictionary.
 We’ll now take a look at each of these perspectives.</p>
 <section id="dataframe-as-generalized-numpy-array">
-<h3>DataFrame as Generalized NumPy Array<a class="headerlink" href="#dataframe-as-generalized-numpy-array" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.2.1. </span>DataFrame as Generalized NumPy Array<a class="headerlink" href="#dataframe-as-generalized-numpy-array" title="Link to this heading">#</a></h3>
 <p>If a <code class="docutils literal notranslate"><span class="pre">Series</span></code> is an analog of a one-dimensional array with explicit indices, a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is an analog of a two-dimensional array with explicit row and column indices.
 Just as you might think of a two-dimensional array as an ordered sequence of aligned one-dimensional columns, you can think of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as a sequence of aligned <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects.
 Here, by “aligned” we mean that they share the same index.</p>
@@ -969,7 +999,7 @@ dtype: int64
 <p>Thus the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be thought of as a generalization of a two-dimensional NumPy array, where both the rows and columns have a generalized index for accessing the data.</p>
 </section>
 <section id="dataframe-as-specialized-dictionary">
-<h3>DataFrame as Specialized Dictionary<a class="headerlink" href="#dataframe-as-specialized-dictionary" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.2.2. </span>DataFrame as Specialized Dictionary<a class="headerlink" href="#dataframe-as-specialized-dictionary" title="Link to this heading">#</a></h3>
 <p>Similarly, we can also think of a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> as a specialization of a dictionary.
 Where a dictionary maps a key to a value, a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> maps a column name to a <code class="docutils literal notranslate"><span class="pre">Series</span></code> of column data.
 For example, asking for the <code class="docutils literal notranslate"><span class="pre">'area'</span></code> attribute returns the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object containing the areas we saw earlier:</p>
@@ -995,11 +1025,11 @@ Because of this, it is probably better to think about <code class="docutils lite
 We’ll explore more flexible means of indexing <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s in <a class="reference internal" href="03.02-Data-Indexing-and-Selection.html"><span class="std std-doc">Data Indexing and Selection</span></a>.</p>
 </section>
 <section id="constructing-dataframe-objects">
-<h3>Constructing DataFrame Objects<a class="headerlink" href="#constructing-dataframe-objects" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.2.3. </span>Constructing DataFrame Objects<a class="headerlink" href="#constructing-dataframe-objects" title="Link to this heading">#</a></h3>
 <p>A Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be constructed in a variety of ways.
 Here we’ll explore several examples.</p>
 <section id="from-a-single-series-object">
-<h4>From a single Series object<a class="headerlink" href="#from-a-single-series-object" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.3.2.3.1. </span>From a single Series object<a class="headerlink" href="#from-a-single-series-object" title="Link to this heading">#</a></h4>
 <p>A <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is a collection of <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects, and a single-column <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be constructed from a single <code class="docutils literal notranslate"><span class="pre">Series</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1056,7 +1086,7 @@ Here we’ll explore several examples.</p>
 </div>
 </section>
 <section id="from-a-list-of-dicts">
-<h4>From a list of dicts<a class="headerlink" href="#from-a-list-of-dicts" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.3.2.3.2. </span>From a list of dicts<a class="headerlink" href="#from-a-list-of-dicts" title="Link to this heading">#</a></h4>
 <p>Any list of dictionaries can be made into a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.
 We’ll use a simple list comprehension to create some data:</p>
 <div class="cell docutils container">
@@ -1160,7 +1190,7 @@ We’ll use a simple list comprehension to create some data:</p>
 </div>
 </section>
 <section id="from-a-dictionary-of-series-objects">
-<h4>From a dictionary of Series objects<a class="headerlink" href="#from-a-dictionary-of-series-objects" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.3.2.3.3. </span>From a dictionary of Series objects<a class="headerlink" href="#from-a-dictionary-of-series-objects" title="Link to this heading">#</a></h4>
 <p>As we saw before, a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be constructed from a dictionary of <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects as well:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1224,7 +1254,7 @@ We’ll use a simple list comprehension to create some data:</p>
 </div>
 </section>
 <section id="from-a-two-dimensional-numpy-array">
-<h4>From a two-dimensional NumPy array<a class="headerlink" href="#from-a-two-dimensional-numpy-array" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.3.2.3.4. </span>From a two-dimensional NumPy array<a class="headerlink" href="#from-a-two-dimensional-numpy-array" title="Link to this heading">#</a></h4>
 <p>Given a two-dimensional array of data, we can create a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with any specified column and index names.
 If omitted, an integer index will be used for each:</p>
 <div class="cell docutils container">
@@ -1261,18 +1291,18 @@ If omitted, an integer index will be used for each:</p>
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.089693</td>
-      <td>0.303774</td>
+      <td>0.221959</td>
+      <td>0.394670</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.216340</td>
-      <td>0.343367</td>
+      <td>0.463184</td>
+      <td>0.305563</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.008738</td>
-      <td>0.518684</td>
+      <td>0.499208</td>
+      <td>0.389799</td>
     </tr>
   </tbody>
 </table>
@@ -1280,7 +1310,7 @@ If omitted, an integer index will be used for each:</p>
 </div>
 </section>
 <section id="from-a-numpy-structured-array">
-<h4>From a NumPy structured array<a class="headerlink" href="#from-a-numpy-structured-array" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.3.2.3.5. </span>From a NumPy structured array<a class="headerlink" href="#from-a-numpy-structured-array" title="Link to this heading">#</a></h4>
 <p>We covered structured arrays in <a class="reference internal" href="02.09-Structured-Data-NumPy.html"><span class="std std-doc">Structured Data: NumPy’s Structured Arrays</span></a>.
 A Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> operates much like a structured array, and can be created directly from one:</p>
 <div class="cell docutils container">
@@ -1349,7 +1379,7 @@ A Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame<
 </section>
 </section>
 <section id="the-pandas-index-object">
-<h2>The Pandas Index Object<a class="headerlink" href="#the-pandas-index-object" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.3.3. </span>The Pandas Index Object<a class="headerlink" href="#the-pandas-index-object" title="Link to this heading">#</a></h2>
 <p>As you’ve seen, the <code class="docutils literal notranslate"><span class="pre">Series</span></code> and <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects both contain an explicit <em>index</em> that lets you reference and modify data.
 This <code class="docutils literal notranslate"><span class="pre">Index</span></code> object is an interesting structure in itself, and it can be thought of either as an <em>immutable array</em> or as an <em>ordered set</em> (technically a multiset, as <code class="docutils literal notranslate"><span class="pre">Index</span></code> objects may contain repeated values).
 Those views have some interesting consequences in terms of the operations available on <code class="docutils literal notranslate"><span class="pre">Index</span></code> objects.
@@ -1362,13 +1392,13 @@ As a simple example, let’s construct an <code class="docutils literal notransl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([2, 3, 5, 7, 11], dtype=&#39;int64&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([2, 3, 5, 7, 11], dtype=&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <section id="index-as-immutable-array">
-<h3>Index as Immutable Array<a class="headerlink" href="#index-as-immutable-array" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.3.1. </span>Index as Immutable Array<a class="headerlink" href="#index-as-immutable-array" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Index</span></code> in many ways operates like an array.
 For example, we can use standard Python indexing notation to retrieve values or slices:</p>
 <div class="cell docutils container">
@@ -1390,7 +1420,7 @@ For example, we can use standard Python indexing notation to retrieve values or 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([2, 5, 11], dtype=&#39;int64&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([2, 5, 11], dtype=&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
@@ -1421,10 +1451,10 @@ For example, we can use standard Python indexing notation to retrieve values or 
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nn">File C:\Python310\lib\site-packages\pandas\core\indexes\base.py:5371,</span> in <span class="ni">Index.__setitem__</span><span class="nt">(self, key, value)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5369</span> <span class="nd">@final</span>
-<span class="g g-Whitespace">   </span><span class="mi">5370</span> <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">5371</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Index does not support mutable operations&quot;</span><span class="p">)</span>
+<span class="nn">File ~\anaconda3\lib\site-packages\pandas\core\indexes\base.py:5035,</span> in <span class="ni">Index.__setitem__</span><span class="nt">(self, key, value)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5033</span> <span class="nd">@final</span>
+<span class="g g-Whitespace">   </span><span class="mi">5034</span> <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">5035</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Index does not support mutable operations&quot;</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: Index does not support mutable operations
 </pre></div>
@@ -1434,7 +1464,7 @@ For example, we can use standard Python indexing notation to retrieve values or 
 <p>This immutability makes it safer to share indices between multiple <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s and arrays, without the potential for side effects from inadvertent index modification.</p>
 </section>
 <section id="index-as-ordered-set">
-<h3>Index as Ordered Set<a class="headerlink" href="#index-as-ordered-set" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3.3.2. </span>Index as Ordered Set<a class="headerlink" href="#index-as-ordered-set" title="Link to this heading">#</a></h3>
 <p>Pandas objects are designed to facilitate operations such as joins across datasets, which depend on many aspects of set arithmetic.
 The <code class="docutils literal notranslate"><span class="pre">Index</span></code> object follows many of the conventions used by Python’s built-in <code class="docutils literal notranslate"><span class="pre">set</span></code> data structure, so that unions, intersections, differences, and other combinations can be computed in a familiar way:</p>
 <div class="cell docutils container">
@@ -1452,7 +1482,7 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([3, 5, 7], dtype=&#39;int64&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([3, 5, 7], dtype=&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
@@ -1464,7 +1494,7 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([1, 2, 3, 5, 7, 9, 11], dtype=&#39;int64&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([1, 2, 3, 5, 7, 9, 11], dtype=&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
@@ -1476,7 +1506,7 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([1, 2, 9, 11], dtype=&#39;int64&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64Index([1, 2, 9, 11], dtype=&#39;int64&#39;)
 </pre></div>
 </div>
 </div>
@@ -1489,8 +1519,8 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1521,7 +1551,7 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Manipulation with Pandas</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Data Manipulation with Pandas</p>
       </div>
     </a>
     <a class="right-next"
@@ -1529,7 +1559,7 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Indexing and Selection</p>
+        <p class="prev-next-title"><span class="section-number">1.2.4. </span>Data Indexing and Selection</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1549,28 +1579,28 @@ The <code class="docutils literal notranslate"><span class="pre">Index</span></c
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-series-object">The Pandas Series Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-generalized-numpy-array">Series as Generalized NumPy Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-specialized-dictionary">Series as Specialized Dictionary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-series-objects">Constructing Series Objects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-series-object">1.2.3.1. The Pandas Series Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-generalized-numpy-array">1.2.3.1.1. Series as Generalized NumPy Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-as-specialized-dictionary">1.2.3.1.2. Series as Specialized Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-series-objects">1.2.3.1.3. Constructing Series Objects</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-dataframe-object">The Pandas DataFrame Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-generalized-numpy-array">DataFrame as Generalized NumPy Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-specialized-dictionary">DataFrame as Specialized Dictionary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-dataframe-objects">Constructing DataFrame Objects</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-single-series-object">From a single Series object</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-list-of-dicts">From a list of dicts</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-dictionary-of-series-objects">From a dictionary of Series objects</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-two-dimensional-numpy-array">From a two-dimensional NumPy array</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-numpy-structured-array">From a NumPy structured array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-dataframe-object">1.2.3.2. The Pandas DataFrame Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-generalized-numpy-array">1.2.3.2.1. DataFrame as Generalized NumPy Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-as-specialized-dictionary">1.2.3.2.2. DataFrame as Specialized Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-dataframe-objects">1.2.3.2.3. Constructing DataFrame Objects</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-single-series-object">1.2.3.2.3.1. From a single Series object</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-list-of-dicts">1.2.3.2.3.2. From a list of dicts</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-dictionary-of-series-objects">1.2.3.2.3.3. From a dictionary of Series objects</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-two-dimensional-numpy-array">1.2.3.2.3.4. From a two-dimensional NumPy array</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#from-a-numpy-structured-array">1.2.3.2.3.5. From a NumPy structured array</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-index-object">The Pandas Index Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-immutable-array">Index as Immutable Array</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-ordered-set">Index as Ordered Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pandas-index-object">1.2.3.3. The Pandas Index Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-immutable-array">1.2.3.3.1. Index as Immutable Array</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#index-as-ordered-set">1.2.3.3.2. Index as Ordered Set</a></li>
 </ul>
 </li>
 </ul>

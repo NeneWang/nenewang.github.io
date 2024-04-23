@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aggregation and Grouping &#8212; Docs</title>
+    <title>1.2.10. Aggregation and Grouping</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,17 +58,30 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03.08-Aggregation-and-Grouping';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/03.08-Aggregation-and-Grouping.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/03.08-Aggregation-and-Grouping.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Pivot Tables" href="03.09-Pivot-Tables.html" />
-    <link rel="prev" title="Combining Datasets: merge and join" href="03.07-Merge-and-Join.html" />
+    <link rel="next" title="1.2.11. Pivot Tables" href="03.09-Pivot-Tables.html" />
+    <link rel="prev" title="1.2.9. Combining Datasets: merge and join" href="03.07-Merge-and-Join.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +170,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -175,14 +188,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -194,52 +199,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.12-Performance-Eval-and-Query.html">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +328,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +346,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +395,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +412,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03.08-Aggregation-and-Grouping.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +429,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.08-Aggregation-and-Grouping.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.08-Aggregation-and-Grouping.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -523,31 +553,31 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planets-data">Planets Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-aggregation-in-pandas">Simple Aggregation in Pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-split-apply-combine">groupby: Split, Apply, Combine</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-apply-combine">Split, Apply, Combine</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-groupby-object">The GroupBy Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-indexing">Column indexing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-over-groups">Iteration over groups</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-methods">Dispatch methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planets-data">1.2.10.1. Planets Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-aggregation-in-pandas">1.2.10.2. Simple Aggregation in Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-split-apply-combine">1.2.10.3. groupby: Split, Apply, Combine</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-apply-combine">1.2.10.3.1. Split, Apply, Combine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-groupby-object">1.2.10.3.2. The GroupBy Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-indexing">1.2.10.3.2.1. Column indexing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-over-groups">1.2.10.3.2.2. Iteration over groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-methods">1.2.10.3.2.3. Dispatch methods</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-filter-transform-apply">Aggregate, Filter, Transform, Apply</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">Aggregation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation">Transformation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">The apply method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-filter-transform-apply">1.2.10.3.3. Aggregate, Filter, Transform, Apply</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">1.2.10.3.3.1. Aggregation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">1.2.10.3.3.2. Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation">1.2.10.3.3.3. Transformation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">1.2.10.3.3.4. The apply method</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-split-key">Specifying the Split Key</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-array-series-or-index-providing-the-grouping-keys">A list, array, series, or index providing the grouping keys</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dictionary-or-series-mapping-index-to-group">A dictionary or series mapping index to group</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#any-python-function">Any Python function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-of-valid-keys">A list of valid keys</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-split-key">1.2.10.3.4. Specifying the Split Key</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-array-series-or-index-providing-the-grouping-keys">1.2.10.3.4.1. A list, array, series, or index providing the grouping keys</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dictionary-or-series-mapping-index-to-group">1.2.10.3.4.2. A dictionary or series mapping index to group</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#any-python-function">1.2.10.3.4.3. Any Python function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-of-valid-keys">1.2.10.3.4.4. A list of valid keys</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-example">Grouping Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-example">1.2.10.3.5. Grouping Example</a></li>
 </ul>
 </li>
 </ul>
@@ -562,7 +592,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="aggregation-and-grouping">
-<h1>Aggregation and Grouping<a class="headerlink" href="#aggregation-and-grouping" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.10. </span>Aggregation and Grouping<a class="headerlink" href="#aggregation-and-grouping" title="Link to this heading">#</a></h1>
 <p>A fundamental piece of many data analysis tasks is efficient summarization: computing aggregations like <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">mean</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, and <code class="docutils literal notranslate"><span class="pre">max</span></code>, in which a single number summarizes aspects of a potentially large dataset.
 In this chapter, we’ll explore aggregations in Pandas, from simple operations akin to what we’ve seen on NumPy arrays to more sophisticated operations based on the concept of a <code class="docutils literal notranslate"><span class="pre">groupby</span></code>.</p>
 <p>For convenience, we’ll use the same <code class="docutils literal notranslate"><span class="pre">display</span></code> magic function that we used in the previous chapters:</p>
@@ -591,7 +621,7 @@ In this chapter, we’ll explore aggregations in Pandas, from simple operations 
 </div>
 </div>
 <section id="planets-data">
-<h2>Planets Data<a class="headerlink" href="#planets-data" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.10.1. </span>Planets Data<a class="headerlink" href="#planets-data" title="Link to this heading">#</a></h2>
 <p>Here we will use the Planets dataset, available via the <a class="reference external" href="http://seaborn.pydata.org/">Seaborn package</a> (see <a class="reference internal" href="04.14-Visualization-With-Seaborn.html"><span class="std std-doc">Visualization With Seaborn</span></a>).
 It gives information on planets that astronomers have discovered around other stars (known as <em>extrasolar planets</em>, or <em>exoplanets</em> for short). It can be downloaded with a simple Seaborn command:</p>
 <div class="cell docutils container">
@@ -694,7 +724,7 @@ It gives information on planets that astronomers have discovered around other st
 <p>This has some details on the 1,000+ extrasolar planets discovered up to 2014.</p>
 </section>
 <section id="simple-aggregation-in-pandas">
-<h2>Simple Aggregation in Pandas<a class="headerlink" href="#simple-aggregation-in-pandas" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.10.2. </span>Simple Aggregation in Pandas<a class="headerlink" href="#simple-aggregation-in-pandas" title="Link to this heading">#</a></h2>
 <p>In <a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html"><span class="std std-doc">“Aggregations: Min, Max, and Everything In Between”</span></a>, we explored some of the data aggregations available for NumPy arrays.
 As with a one-dimensional NumPy array, for a Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> the aggregates return a single value:</p>
 <div class="cell docutils container">
@@ -979,11 +1009,11 @@ This is largely thanks to the <em>Kepler</em> mission, which aimed to find eclip
 The next level of data summarization is the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation, which allows you to quickly and efficiently compute aggregates on subsets of data.</p>
 </section>
 <section id="groupby-split-apply-combine">
-<h2>groupby: Split, Apply, Combine<a class="headerlink" href="#groupby-split-apply-combine" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.10.3. </span>groupby: Split, Apply, Combine<a class="headerlink" href="#groupby-split-apply-combine" title="Link to this heading">#</a></h2>
 <p>Simple aggregations can give you a flavor of your dataset, but often we would prefer to aggregate conditionally on some label or index: this is implemented in the so-called <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation.
 The name “group by” comes from a command in the SQL database language, but it is perhaps more illuminative to think of it in the terms first coined by Hadley Wickham of Rstats fame: <em>split, apply, combine</em>.</p>
 <section id="split-apply-combine">
-<h3>Split, Apply, Combine<a class="headerlink" href="#split-apply-combine" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.10.3.1. </span>Split, Apply, Combine<a class="headerlink" href="#split-apply-combine" title="Link to this heading">#</a></h3>
 <p>A canonical example of this split-apply-combine operation, where the “apply” is a summation aggregation, is illustrated in this figure:</p>
 <p><img alt="" src="../_images/03.08-split-apply-combine.png" /></p>
 <p>(<a class="reference external" href="https://github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/06.00-Figure-Code.ipynb#Split-Apply-Combine">figure source in Appendix</a>)</p>
@@ -1071,7 +1101,7 @@ We’ll start by creating the input <code class="docutils literal notranslate"><
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001DBFB0BB9A0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000028E0448AAC0&gt;
 </pre></div>
 </div>
 </div>
@@ -1132,12 +1162,12 @@ This “lazy evaluation” approach means that common aggregates can be implemen
 <p>The <code class="docutils literal notranslate"><span class="pre">sum</span></code> method is just one possibility here; you can apply most Pandas or NumPy aggregation functions, as well as most <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> operations, as you will see in the following discussion.</p>
 </section>
 <section id="the-groupby-object">
-<h3>The GroupBy Object<a class="headerlink" href="#the-groupby-object" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.10.3.2. </span>The GroupBy Object<a class="headerlink" href="#the-groupby-object" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object is a flexible abstraction: in many ways, it can be treated as simply a collection of <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s, though it is doing more sophisticated things under the hood. Let’s see some examples using the Planets data.</p>
 <p>Perhaps the most important operations made available by a <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> are <em>aggregate</em>, <em>filter</em>, <em>transform</em>, and <em>apply</em>.
 We’ll discuss each of these more fully in the next section, but before that let’s take a look at some of the other functionality that can be used with the basic <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> operation.</p>
 <section id="column-indexing">
-<h4>Column indexing<a class="headerlink" href="#column-indexing" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.2.1. </span>Column indexing<a class="headerlink" href="#column-indexing" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object supports column indexing in the same way as the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, and returns a modified <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object.
 For example:</p>
 <div class="cell docutils container">
@@ -1147,7 +1177,7 @@ For example:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001DBFB0BBC10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000028E0448AA90&gt;
 </pre></div>
 </div>
 </div>
@@ -1159,7 +1189,7 @@ For example:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x000001DBBA153580&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.SeriesGroupBy object at 0x0000028E67CF12B0&gt;
 </pre></div>
 </div>
 </div>
@@ -1192,7 +1222,7 @@ Name: orbital_period, dtype: float64
 <p>This gives an idea of the general scale of orbital periods (in days) that each method is sensitive to.</p>
 </section>
 <section id="iteration-over-groups">
-<h4>Iteration over groups<a class="headerlink" href="#iteration-over-groups" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.2.2. </span>Iteration over groups<a class="headerlink" href="#iteration-over-groups" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object supports direct iteration over the groups, returning each group as a <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1219,7 +1249,7 @@ Transit Timing Variations      shape=(4, 6)
 <p>This can be useful for manual inspection of groups for the sake of debugging, but it is often much faster to use the built-in <code class="docutils literal notranslate"><span class="pre">apply</span></code> functionality, which we will discuss momentarily.</p>
 </section>
 <section id="dispatch-methods">
-<h4>Dispatch methods<a class="headerlink" href="#dispatch-methods" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.2.3. </span>Dispatch methods<a class="headerlink" href="#dispatch-methods" title="Link to this heading">#</a></h4>
 <p>Through some Python class magic, any method not explicitly implemented by the <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> object will be passed through and called on the groups, whether they are <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> or <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects.
 For example, using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method is equivalent to calling <code class="docutils literal notranslate"><span class="pre">describe</span></code> on the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> representing each group:</p>
 <div class="cell docutils container">
@@ -1253,7 +1283,7 @@ Again, any valid <code class="docutils literal notranslate"><span class="pre">Da
 </section>
 </section>
 <section id="aggregate-filter-transform-apply">
-<h3>Aggregate, Filter, Transform, Apply<a class="headerlink" href="#aggregate-filter-transform-apply" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.10.3.3. </span>Aggregate, Filter, Transform, Apply<a class="headerlink" href="#aggregate-filter-transform-apply" title="Link to this heading">#</a></h3>
 <p>The preceding discussion focused on aggregation for the combine operation, but there are more options available.
 In particular, <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> objects have <code class="docutils literal notranslate"><span class="pre">aggregate</span></code>, <code class="docutils literal notranslate"><span class="pre">filter</span></code>, <code class="docutils literal notranslate"><span class="pre">transform</span></code>, and <code class="docutils literal notranslate"><span class="pre">apply</span></code> methods that efficiently implement a variety of useful operations before combining the grouped data.</p>
 <p>For the purpose of the following subsections, we’ll use this <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>:</p>
@@ -1334,7 +1364,7 @@ In particular, <code class="docutils literal notranslate"><span class="pre">Grou
 </div></div></div>
 </div>
 <section id="aggregation">
-<h4>Aggregation<a class="headerlink" href="#aggregation" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.3.1. </span>Aggregation<a class="headerlink" href="#aggregation" title="Link to this heading">#</a></h4>
 <p>You’re now familiar with <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code> aggregations with <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">median</span></code>, and the like, but the <code class="docutils literal notranslate"><span class="pre">aggregate</span></code> method allows for even more flexibility.
 It can take a string, a function, or a list thereof, and compute all the aggregates at once.
 Here is a quick example combining all of these:</p>
@@ -1479,7 +1509,7 @@ Here is a quick example combining all of these:</p>
 </div>
 </section>
 <section id="filtering">
-<h4>Filtering<a class="headerlink" href="#filtering" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.3.2. </span>Filtering<a class="headerlink" href="#filtering" title="Link to this heading">#</a></h4>
 <p>A filtering operation allows you to drop data based on the group properties.
 For example, we might want to keep all groups in which the standard deviation is larger than some critical value:</p>
 <div class="cell docutils container">
@@ -1663,7 +1693,7 @@ For example, we might want to keep all groups in which the standard deviation is
 <p>The filter function should return a Boolean value specifying whether the group passes the filtering. Here, because group A does not have a standard deviation greater than 4, it is dropped from the result.</p>
 </section>
 <section id="transformation">
-<h4>Transformation<a class="headerlink" href="#transformation" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.3.3. </span>Transformation<a class="headerlink" href="#transformation" title="Link to this heading">#</a></h4>
 <p>While aggregation must return a reduced version of the data, transformation can return some transformed version of the full data to recombine.
 For such a transformation, the output is the same shape as the input.
 A common example is to center the data by subtracting the group-wise mean:</p>
@@ -1735,7 +1765,7 @@ A common example is to center the data by subtracting the group-wise mean:</p>
 </div>
 </section>
 <section id="the-apply-method">
-<h4>The apply method<a class="headerlink" href="#the-apply-method" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.3.4. </span>The apply method<a class="headerlink" href="#the-apply-method" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">apply</span></code> method lets you apply an arbitrary function to the group results.
 The function should take a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and returns either a Pandas object (e.g., <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, <code class="docutils literal notranslate"><span class="pre">Series</span></code>) or a scalar; the behavior of the combine step will be tailored to the type of output returned.</p>
 <p>For example, here is an <code class="docutils literal notranslate"><span class="pre">apply</span></code> operation that normalizes the first column by the sum of the second:</p>
@@ -1769,26 +1799,29 @@ The function should take a <code class="docutils literal notranslate"><span clas
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th></th>
       <th>key</th>
       <th>data1</th>
       <th>data2</th>
     </tr>
-    <tr>
-      <th>key</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2" valign="top">A</th>
       <th>0</th>
       <td>A</td>
       <td>0.000000</td>
       <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>0.142857</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>0.166667</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1797,24 +1830,10 @@ The function should take a <code class="docutils literal notranslate"><span clas
       <td>3</td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">B</th>
-      <th>1</th>
-      <td>B</td>
-      <td>0.142857</td>
-      <td>0</td>
-    </tr>
-    <tr>
       <th>4</th>
       <td>B</td>
       <td>0.571429</td>
       <td>7</td>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">C</th>
-      <th>2</th>
-      <td>C</td>
-      <td>0.166667</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1830,11 +1849,11 @@ The function should take a <code class="docutils literal notranslate"><span clas
 </section>
 </section>
 <section id="specifying-the-split-key">
-<h3>Specifying the Split Key<a class="headerlink" href="#specifying-the-split-key" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.10.3.4. </span>Specifying the Split Key<a class="headerlink" href="#specifying-the-split-key" title="Link to this heading">#</a></h3>
 <p>In the simple examples presented before, we split the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> on a single column name.
 This is just one of many options by which the groups can be defined, and we’ll go through some other options for group specification here.</p>
 <section id="a-list-array-series-or-index-providing-the-grouping-keys">
-<h4>A list, array, series, or index providing the grouping keys<a class="headerlink" href="#a-list-array-series-or-index-providing-the-grouping-keys" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.4.1. </span>A list, array, series, or index providing the grouping keys<a class="headerlink" href="#a-list-array-series-or-index-providing-the-grouping-keys" title="Link to this heading">#</a></h4>
 <p>The key can be any series or list with a length matching that of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1862,7 +1881,6 @@ This is just one of many options by which the groups can be defined, and we’ll
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>key</th>
       <th>data1</th>
       <th>data2</th>
     </tr>
@@ -1870,19 +1888,16 @@ This is just one of many options by which the groups can be defined, and we’ll
   <tbody>
     <tr>
       <th>0</th>
-      <td>ACC</td>
       <td>7</td>
       <td>17</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>BA</td>
       <td>4</td>
       <td>3</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>B</td>
       <td>4</td>
       <td>7</td>
     </tr>
@@ -1947,7 +1962,7 @@ This is just one of many options by which the groups can be defined, and we’ll
 </div>
 </section>
 <section id="a-dictionary-or-series-mapping-index-to-group">
-<h4>A dictionary or series mapping index to group<a class="headerlink" href="#a-dictionary-or-series-mapping-index-to-group" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.4.2. </span>A dictionary or series mapping index to group<a class="headerlink" href="#a-dictionary-or-series-mapping-index-to-group" title="Link to this heading">#</a></h4>
 <p>Another method is to provide a dictionary that maps index values to the group keys:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2067,7 +2082,7 @@ This is just one of many options by which the groups can be defined, and we’ll
 </div>
 </section>
 <section id="any-python-function">
-<h4>Any Python function<a class="headerlink" href="#any-python-function" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.4.3. </span>Any Python function<a class="headerlink" href="#any-python-function" title="Link to this heading">#</a></h4>
 <p>Similar to mapping, you can pass any Python function that will input the index value and output the group:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2125,7 +2140,7 @@ This is just one of many options by which the groups can be defined, and we’ll
 </div>
 </section>
 <section id="a-list-of-valid-keys">
-<h4>A list of valid keys<a class="headerlink" href="#a-list-of-valid-keys" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">1.2.10.3.4.4. </span>A list of valid keys<a class="headerlink" href="#a-list-of-valid-keys" title="Link to this heading">#</a></h4>
 <p>Further, any of the preceding key choices can be combined to group on a multi-index:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2189,7 +2204,7 @@ This is just one of many options by which the groups can be defined, and we’ll
 </section>
 </section>
 <section id="grouping-example">
-<h3>Grouping Example<a class="headerlink" href="#grouping-example" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.10.3.5. </span>Grouping Example<a class="headerlink" href="#grouping-example" title="Link to this heading">#</a></h3>
 <p>As an example of this, in a few lines of Python code we can put all these together and count discovered planets by method and by decade:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2318,8 +2333,8 @@ It’s certainly a somewhat complicated example, but understanding these pieces 
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2350,7 +2365,7 @@ It’s certainly a somewhat complicated example, but understanding these pieces 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Combining Datasets: merge and join</p>
+        <p class="prev-next-title"><span class="section-number">1.2.9. </span>Combining Datasets: merge and join</p>
       </div>
     </a>
     <a class="right-next"
@@ -2358,7 +2373,7 @@ It’s certainly a somewhat complicated example, but understanding these pieces 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pivot Tables</p>
+        <p class="prev-next-title"><span class="section-number">1.2.11. </span>Pivot Tables</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2378,31 +2393,31 @@ It’s certainly a somewhat complicated example, but understanding these pieces 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planets-data">Planets Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-aggregation-in-pandas">Simple Aggregation in Pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-split-apply-combine">groupby: Split, Apply, Combine</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-apply-combine">Split, Apply, Combine</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-groupby-object">The GroupBy Object</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-indexing">Column indexing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-over-groups">Iteration over groups</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-methods">Dispatch methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planets-data">1.2.10.1. Planets Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-aggregation-in-pandas">1.2.10.2. Simple Aggregation in Pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#groupby-split-apply-combine">1.2.10.3. groupby: Split, Apply, Combine</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-apply-combine">1.2.10.3.1. Split, Apply, Combine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-groupby-object">1.2.10.3.2. The GroupBy Object</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#column-indexing">1.2.10.3.2.1. Column indexing</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-over-groups">1.2.10.3.2.2. Iteration over groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-methods">1.2.10.3.2.3. Dispatch methods</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-filter-transform-apply">Aggregate, Filter, Transform, Apply</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">Aggregation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">Filtering</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation">Transformation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">The apply method</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregate-filter-transform-apply">1.2.10.3.3. Aggregate, Filter, Transform, Apply</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregation">1.2.10.3.3.1. Aggregation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering">1.2.10.3.3.2. Filtering</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation">1.2.10.3.3.3. Transformation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apply-method">1.2.10.3.3.4. The apply method</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-split-key">Specifying the Split Key</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-array-series-or-index-providing-the-grouping-keys">A list, array, series, or index providing the grouping keys</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dictionary-or-series-mapping-index-to-group">A dictionary or series mapping index to group</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#any-python-function">Any Python function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-of-valid-keys">A list of valid keys</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specifying-the-split-key">1.2.10.3.4. Specifying the Split Key</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-array-series-or-index-providing-the-grouping-keys">1.2.10.3.4.1. A list, array, series, or index providing the grouping keys</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-dictionary-or-series-mapping-index-to-group">1.2.10.3.4.2. A dictionary or series mapping index to group</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#any-python-function">1.2.10.3.4.3. Any Python function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-list-of-valid-keys">1.2.10.3.4.4. A list of valid keys</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-example">Grouping Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-example">1.2.10.3.5. Grouping Example</a></li>
 </ul>
 </li>
 </ul>

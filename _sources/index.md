@@ -1,162 +1,84 @@
----
-title: Resume
----
+# Rogue Docs
 
-::::{grid} 2
-:reverse:
+The website is organized as a digital book contains an exploration of Algorithms, Data Science, Math, Artificial Intellegence, Classical Computer Science, and Financial modeling using Python. Here is the current [coverage status](current-coverage).
 
-:::{grid-item}
-:columns: 4
-:class: sd-m-auto
+## What makes this Ebook Different from others?
 
-
-:::
-
-:::{grid-item}
-:columns: 8
-:class: sd-fs-3
-Nelson Wang
+  | This Book                                                   | Others                                   |
+  | ----------------------------------------------------------- | ---------------------------------------- |
+  | Focuses on Assigments & Problem Solving                     | Focuses on Theory                        |
+  | Concise and understandable concepts                         | Long and very technical text             |
+  | Requires Internet and laptop setup                          | Usually self-contained in the book.      |
+  | Prioritizes User Friendliness                               | Prioritizes Completeness                 |
+  | Free & Constant Updates on Material                         | Paid & Updates by version                |
+  | We don't shy away from linking to external resources        | Good luck searching on the glossary      |
+  | [Provide a Recall based lab learning environemnt](Practice) | Up to you to Create your own study cards |
+  | Meme alive each chapter                                     | No memes                                 |
 
 
-% The SVG rendering breaks latex builds for the GitHub badge, so only include in HTML
-```{only} html
-[![](https://img.shields.io/badge/github_profile-blue)](https://github.com/NeneWang)
-```
+  
 
-:::
+## How to use the Book
 
-::::
+### Page by Page Learning
 
+TODO - Add a video tutorial on how to use the book page by page.
 
-## Projects Highlights
+1. Watch the Introduction Video/Short Tutorial 
+1. Some chapters have [Anki Cards](anki-coverage) to help you remember the concepts.
+   1. Watch the Introduction Video/Short Tutorial 
+   2. Try to solve the Anki Cards
+3.  Each Page chapter has an assigment with resources to help you finish the assigments. 
+    1.  Try completing the assigment on your own.
+    2.  Use the references to help you finish your assigment.
+4.  Use the book to check your answers and solutions.
 
-::::{card-carousel} 2
+(practice)=
+### Practice Mode.
 
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/NeneWang/mastery-cli
-**Mastery CLI**
-^^^
-```{image} https://camo.githubusercontent.com/1f55a28fa6d2351dd4f3c9483cddd1a11859af487f6eb883dfacaaff7718ad4d/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f657665426b3070744b7a6a715565306954672f67697068792e676966
-:height: 100
-```
-
-CLI Assistant to improve as a programmer. Flashcards, DSA Practice, Statistics, and habit hooks.
-+++
-{bdg-primary}`npm` {bdg-primary}`CLI`
-+++
-Explore this project {fas}`arrow-right`
-:::
-
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/Hmmsien/ECommerce_behavior
-
-**Ecommerce with Recommendation**
-^^^
-```{image} https://user-images.githubusercontent.com/29577570/214152850-342421e7-5e2f-48bd-a841-bb00c3e7edba.png
-:height: 100
-```
-
-Ecommerce lab website with a recommendation engine using collaborative filtering.
-+++
-{bdg-primary}`FastAPI` {bdg-primary}`Next` {bdg-primary}`Data Sciece`
-+++
-Explore this project {fas}`arrow-right`
-:::
+TODO - Add a video tutorial on how to use the practice mode.
 
 
-::::
+1. Clone the repository and go to the `notebooks` folder.
+   1. We have Practice Notebooks for each chapter.
+2. If you want to practice feel free to create a new branch e.g. `practice` from the `unstarted-assgiments` branch.
+3. Select a Random Assigmnet to work on.
+4. once Completed your study session, you can reset or remove the `practice`branch.
+
+## Misc
+
+(current-coverage)=
+### Current Coverage
+
+[Check Syllaubus](./1-intro/syllabus.md)
+
+| Topic                   | State       |
+| ----------------------- | ----------- |
+| Genetic Algorithms      | IN PROGRESS |
+| Graph Problems          |             |
+| Artificial Intelligence |             |
+| Probability             |             |
 
 
-::::{card-carousel} 2
+(anki-coverage)=
+### Anki Cards Coverage
 
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/elisvcodes/Offset
-**Offset**
-^^^
-```{image} https://www.notion.so/image/https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FU58DaSaJYV1GBWaH78%2Fgiphy.gif
-:height: 100
-```
-
-IOS and Android Application that compares and tracks carbon footprint between reusable and non-reusable items.
-+++
-{bdg-primary}`Flutter` {bdg-primary}`Firebase`
-+++
-Explore this project {fas}`arrow-right`
-:::
-
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/Koppelman-Student-Leadership-Council/slc-next
-
-**Student Leadership Full Stack Website**
-^^^
-```{image} https://brooklynslcouncil.com/assets/promotion/logo.png
-:height: 100
-```
-
-Built with NextJS and Laravel - Student Leadership Council website for Koppelman School of Business.
-+++
-{bdg-primary}`Next` {bdg-primary}`Laravel`
-+++
-Explore this project {fas}`arrow-right`
-:::
-
-::::
-
-## Experience
-
-````{card} Junior Software Engineer
-June 2022 – Present
-^^^
-- Development and documentation of full-stack internal applications using React, FastAPI that reduced manual work and streamlined processes.
-- Implemented a data pipeline that ingested streaming (through WebSockets) data from various external sources utilizing Spark, Lambda, SNS, SQS, Gateway, Elasticsearch, S3, and Python.
-- Deployment and maintenance of applications using EC2, Amplify, AppRunner and Docker.
-- Development of CD/CI pipeline with Unit/Integration/End-to-end testing using Pytest and Jenkins
-+++
-Platinum Filings - New York City, NY
-````
-
-````{card} Highschool Programming Instructor
-Dec 2021 - Jul 2022
-^^^
-- Taught Python and Java in 5 different classes of around 30 students each at least 3 days a week.
-- Created a reactive website for students to use for notes and improve their learning experience. ([learn.wangnelson.xyz](https://learn.wangnelson.xyz))
-+++
-Wizara - Nuasin Next Generation
-````
-
-````{card} Software Engineer Intern
-January 20220– December 2020
-^^^
-- Developed the organization’s current website using Django.
-- Architected 5 unique games with 35 levels using Unity Engine.
-- Hosted their services using AWS and Google Cloud.
-+++
-A Free Bird
-````
+| Topic              | State       |
+| ------------------ | ----------- |
+| Genetic Algorithms | IN PROGRESS |
 
 
-## Education
+(stage-tags)=
+### Page Stage Tag
 
-````{card} Bachelor of Science in Computer Science with Minor in Marketing
-3.83GPA, Expected May 2024
-^^^
-Relevant coursework: Discrete Structures and Algorithms, Data Structures, Object-Oriented Programming, Develop-
-ment of Large-Scale Applications, Artificial Intelligence, Multi-variable Calculus
-+++
-City University New York, Brooklyn College, NY
-````
+## Inspiration
+
+| Book                                                               | Screenshot                         |
+| ------------------------------------------------------------------ | ---------------------------------- |
+| [The Nature of code by Daniel Shiffman](https://natureofcode.com/) | ![](./img/2024-04-23-16-49-11.png) |
+| Grokking Series                                                    | ![](./img/2024-04-23-17-05-37.png) |
 
 
-<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>
+
+
+

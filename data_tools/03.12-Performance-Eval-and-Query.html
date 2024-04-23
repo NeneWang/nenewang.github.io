@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>High-Performance Pandas: eval and query &#8212; Docs</title>
+    <title>1.2.14. High-Performance Pandas: eval and query</title>
   
   
   
@@ -28,14 +28,14 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ebe79ad7" />
@@ -49,7 +49,7 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=7f8ff830"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
@@ -58,17 +58,30 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-52617120-7"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-52617120-7');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data_tools/03.12-Performance-Eval-and-Query';</script>
-    <link rel="canonical" href="https://nenewang.github.io/data_tools/03.12-Performance-Eval-and-Query.html" />
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://jupyterbook.org/data_tools/03.12-Performance-Eval-and-Query.html" />
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualization with Matplotlib" href="04.00-Introduction-To-Matplotlib.html" />
-    <link rel="prev" title="Working with Time Series" href="03.11-Working-with-Time-Series.html" />
+    <link rel="next" title="1.3. Visualization with Matplotlib" href="04.00-Introduction-To-Matplotlib.html" />
+    <link rel="prev" title="1.2.13. Working with Time Series" href="03.11-Working-with-Time-Series.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +170,8 @@
       
     
     
-    <img src="../_static/2.svg" class="logo__image only-light" alt="Docs - Home"/>
-    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Docs - Home"/>`);</script>
+    <img src="../_static/logo-wide.svg" class="logo__image only-light" alt=" - Home"/>
+    <script>document.write(`<img src="../_static/logo-wide.svg" class="logo__image only-dark" alt=" - Home"/>`);</script>
   
   
 </a></div>
@@ -175,14 +188,6 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    Nelson Wang
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1-intro/about.html">About</a></li>
@@ -194,52 +199,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">Understanding Data Types in Python</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">The Basics of NumPy Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">Computation on NumPy Arrays: Universal Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">Aggregations: min, max, and Everything in Between</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">Computation on Arrays: Broadcasting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">Comparisons, Masks, and Boolean Logic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">Fancy Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">Sorting Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">Structured Data: NumPy’s Structured Arrays</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">1. Data Tools for Data Science</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="02.00-Introduction-to-NumPy.html">1.1. Introduction to NumPy</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01-Understanding-Data-Types.html">1.1.2. Understanding Data Types in Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02-The-Basics-Of-NumPy-Arrays.html">1.1.3. The Basics of NumPy Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.03-Computation-on-arrays-ufuncs.html">1.1.4. Computation on NumPy Arrays: Universal Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.04-Computation-on-arrays-aggregates.html">1.1.5. Aggregations: min, max, and Everything in Between</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.05-Computation-on-arrays-broadcasting.html">1.1.6. Computation on Arrays: Broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.06-Boolean-Arrays-and-Masks.html">1.1.7. Comparisons, Masks, and Boolean Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.07-Fancy-Indexing.html">1.1.8. Fancy Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.08-Sorting.html">1.1.9. Sorting Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.09-Structured-Data-NumPy.html">1.1.10. Structured Data: NumPy’s Structured Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">Introducing Pandas Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">Data Indexing and Selection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">Operating on Data in Pandas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">Handling Missing Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">Hierarchical Indexing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">Combining Datasets: concat and append</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">Combining Datasets: merge and join</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">Aggregation and Grouping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">Pivot Tables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">Vectorized String Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">Working with Time Series</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">High-Performance Pandas: eval and query</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pandas.html">1.2. Data Manipulation with Pandas</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="03.01-Introducing-Pandas-Objects.html">1.2.3. Introducing Pandas Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02-Data-Indexing-and-Selection.html">1.2.4. Data Indexing and Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.03-Operations-in-Pandas.html">1.2.5. Operating on Data in Pandas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.04-Missing-Values.html">1.2.6. Handling Missing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.05-Hierarchical-Indexing.html">1.2.7. Hierarchical Indexing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.06-Concat-And-Append.html">1.2.8. Combining Datasets: concat and append</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.07-Merge-and-Join.html">1.2.9. Combining Datasets: merge and join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.08-Aggregation-and-Grouping.html">1.2.10. Aggregation and Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.09-Pivot-Tables.html">1.2.11. Pivot Tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.10-Working-With-Strings.html">1.2.12. Vectorized String Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.11-Working-with-Time-Series.html">1.2.13. Working with Time Series</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.2.14. High-Performance Pandas: eval and query</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">Visualization with Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.00-Introduction-To-Matplotlib.html">1.3. Visualization with Matplotlib</a></li>
 
-<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">What Is Machine Learning?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">Introducing Scikit-Learn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">Hyperparameters and Model Validation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">Feature Engineering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">In Depth: Naive Bayes Classification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">In Depth: Linear Regression</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">In Depth: Support Vector Machines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">In Depth: Decision Trees and Random Forests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">In Depth: Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">In Depth: Manifold Learning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">In Depth: k-Means Clustering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">In Depth: Gaussian Mixture Models</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">In Depth: Kernel Density Estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">Application: A Face Detection Pipeline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">Further Machine Learning Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="05.00-Machine-Learning.html">1.5. Machine Learning</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="05.01-What-Is-Machine-Learning.html">1.5.1. What Is Machine Learning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.02-Introducing-Scikit-Learn.html">1.5.2. Introducing Scikit-Learn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.03-Hyperparameters-and-Model-Validation.html">1.5.3. Hyperparameters and Model Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.04-Feature-Engineering.html">1.5.4. Feature Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.05-Naive-Bayes.html">1.5.5. In Depth: Naive Bayes Classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.06-Linear-Regression.html">1.5.6. In Depth: Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.07-Support-Vector-Machines.html">1.5.7. In Depth: Support Vector Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.08-Random-Forests.html">1.5.8. In Depth: Decision Trees and Random Forests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.09-Principal-Component-Analysis.html">1.5.9. In Depth: Principal Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.10-Manifold-Learning.html">1.5.10. In Depth: Manifold Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.11-K-Means.html">1.5.11. In Depth: k-Means Clustering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.12-Gaussian-Mixtures.html">1.5.12. In Depth: Gaussian Mixture Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.13-Kernel-Density-Estimation.html">1.5.13. In Depth: Kernel Density Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.14-Image-Features.html">1.5.14. Application: A Face Detection Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05.15-Learning-More.html">1.5.15. Further Machine Learning Resources</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../content/index.html">Write narrative content</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../content/myst.html">MyST Markdown overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/content-blocks.html">Special content blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/components.html">Components and UI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/references.html">References and cross-references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/layout.html">Control the page layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/citations.html">Citations and bibliographies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/math.html">Math and equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/proof.html">Proofs, Theorems, and Algorithms</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../content/figures.html">Images and figures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/hiding.html">Hide or remove content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/thebe.html">Make your code cells executable</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../interactive/comments.html">Commenting and annotating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/hypothesis.html">Hypothesis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +328,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/data_tools/03.12-Performance-Eval-and-Query.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/lecture-notes/master?urlpath=tree/docs/data_tools/03.12-Performance-Eval-and-Query.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +346,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/data_tools/03.12-Performance-Eval-and-Query.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/NeneWang/lecture-notes/blob/master/docs/data_tools/03.12-Performance-Eval-and-Query.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +395,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +412,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//data_tools/03.12-Performance-Eval-and-Query.ipynb" target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/edit/master/docs/data_tools/03.12-Performance-Eval-and-Query.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +429,7 @@
       
       
       
-      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.12-Performance-Eval-and-Query.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/NeneWang/lecture-notes/issues/new?title=Issue%20on%20page%20%2Fdata_tools/03.12-Performance-Eval-and-Query.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -523,22 +553,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-query-and-eval-compound-expressions">Motivating query and eval: Compound Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-eval-for-efficient-operations">pandas.eval for Efficient Operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">Bitwise operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-attributes-and-indices">Object attributes and indices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-operations">Other operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-query-and-eval-compound-expressions">1.2.14.1. Motivating query and eval: Compound Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-eval-for-efficient-operations">1.2.14.2. pandas.eval for Efficient Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">1.2.14.2.1. Arithmetic operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">1.2.14.2.2. Comparison operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">1.2.14.2.3. Bitwise operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-attributes-and-indices">1.2.14.2.4. Object attributes and indices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-operations">1.2.14.2.5. Other operations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-eval-for-column-wise-operations">DataFrame.eval for Column-Wise Operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-in-dataframe-eval">Assignment in DataFrame.eval</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-in-dataframe-eval">Local Variables in DataFrame.eval</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-eval-for-column-wise-operations">1.2.14.3. DataFrame.eval for Column-Wise Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-in-dataframe-eval">1.2.14.3.1. Assignment in DataFrame.eval</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-in-dataframe-eval">1.2.14.3.2. Local Variables in DataFrame.eval</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataframe-query-method">The DataFrame.query Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-when-to-use-these-functions">Performance: When to Use These Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataframe-query-method">1.2.14.4. The DataFrame.query Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-when-to-use-these-functions">1.2.14.5. Performance: When to Use These Functions</a></li>
 </ul>
             </nav>
         </div>
@@ -551,13 +581,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="high-performance-pandas-eval-and-query">
-<h1>High-Performance Pandas: eval and query<a class="headerlink" href="#high-performance-pandas-eval-and-query" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">1.2.14. </span>High-Performance Pandas: eval and query<a class="headerlink" href="#high-performance-pandas-eval-and-query" title="Link to this heading">#</a></h1>
 <p>As we’ve already seen in previous chapters, the power of the PyData stack is built upon the ability of NumPy and Pandas to push basic operations into lower-level compiled code via an intuitive higher-level syntax: examples are vectorized/broadcasted operations in NumPy, and grouping-type operations in Pandas.
 While these abstractions are efficient and effective for many common use cases, they often rely on the creation of temporary intermediate objects, which can cause undue overhead in computational time and memory use.</p>
 <p>To address this, Pandas includes some methods that allow you to directly access C-speed operations without costly allocation of intermediate arrays: <code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">query</span></code>, which rely on the <a class="reference external" href="https://github.com/pydata/numexpr">NumExpr package</a>.
 In this chapter I will walk you through their use and give some rules of thumb about when you might think about using them.</p>
 <section id="motivating-query-and-eval-compound-expressions">
-<h2>Motivating query and eval: Compound Expressions<a class="headerlink" href="#motivating-query-and-eval-compound-expressions" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.14.1. </span>Motivating query and eval: Compound Expressions<a class="headerlink" href="#motivating-query-and-eval-compound-expressions" title="Link to this heading">#</a></h2>
 <p>We’ve seen previously that NumPy and Pandas support fast vectorized operations; for example, when adding the elements of two arrays:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -570,7 +600,7 @@ In this chapter I will walk you through their use and give some rules of thumb a
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.05 ms ± 149 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.58 ms ± 168 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -623,14 +653,7 @@ The <a class="reference external" href="https://github.com/pydata/numexpr">NumEx
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numexpr</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">mask_numexpr</span> <span class="o">=</span> <span class="n">numexpr</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="s1">&#39;(x &gt; 0.5) &amp; (y &lt; 0.5)&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="n">mask_numexpr</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numexpr&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
 </div>
@@ -639,7 +662,7 @@ The <a class="reference external" href="https://github.com/pydata/numexpr">NumEx
 The Pandas <code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">query</span></code> tools that we will discuss here are conceptually similar, and are essentially Pandas-specific wrappers of NumExpr functionality.</p>
 </section>
 <section id="pandas-eval-for-efficient-operations">
-<h2>pandas.eval for Efficient Operations<a class="headerlink" href="#pandas-eval-for-efficient-operations" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.14.2. </span>pandas.eval for Efficient Operations<a class="headerlink" href="#pandas-eval-for-efficient-operations" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">eval</span></code> function in Pandas uses string expressions to efficiently compute operations on <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects.
 For example, consider the following data:</p>
 <div class="cell docutils container">
@@ -660,7 +683,7 @@ For example, consider the following data:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90.5 ms ± 1.47 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>87.6 ms ± 8.59 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -673,7 +696,7 @@ For example, consider the following data:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>90.7 ms ± 2.68 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.9 ms ± 1.57 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -703,7 +726,7 @@ To demonstrate these, we’ll use the following integer data:</p>
 </div>
 </div>
 <section id="arithmetic-operators">
-<h3>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.2.1. </span>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">pd.eval</span></code> supports all arithmetic operators. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -721,7 +744,7 @@ To demonstrate these, we’ll use the following integer data:</p>
 </div>
 </section>
 <section id="comparison-operators">
-<h3>Comparison operators<a class="headerlink" href="#comparison-operators" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.2.2. </span>Comparison operators<a class="headerlink" href="#comparison-operators" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">pd.eval</span></code> supports all comparison operators, including chained expressions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -739,7 +762,7 @@ To demonstrate these, we’ll use the following integer data:</p>
 </div>
 </section>
 <section id="bitwise-operators">
-<h3>Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.2.3. </span>Bitwise operators<a class="headerlink" href="#bitwise-operators" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">pd.eval</span></code> supports the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> and <code class="docutils literal notranslate"><span class="pre">|</span></code> bitwise operators:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -771,7 +794,7 @@ To demonstrate these, we’ll use the following integer data:</p>
 </div>
 </section>
 <section id="object-attributes-and-indices">
-<h3>Object attributes and indices<a class="headerlink" href="#object-attributes-and-indices" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.2.4. </span>Object attributes and indices<a class="headerlink" href="#object-attributes-and-indices" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">pd.eval</span></code> supports access to object attributes via the <code class="docutils literal notranslate"><span class="pre">obj.attr</span></code> syntax and indexes via the <code class="docutils literal notranslate"><span class="pre">obj[index]</span></code> syntax:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -789,13 +812,13 @@ To demonstrate these, we’ll use the following integer data:</p>
 </div>
 </section>
 <section id="other-operations">
-<h3>Other operations<a class="headerlink" href="#other-operations" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.2.5. </span>Other operations<a class="headerlink" href="#other-operations" title="Link to this heading">#</a></h3>
 <p>Other operations, such as function calls, conditional statements, loops, and other more involved constructs are currently <em>not</em> implemented in <code class="docutils literal notranslate"><span class="pre">pd.eval</span></code>.
 If you’d like to execute these more complicated types of expressions, you can use the NumExpr library itself.</p>
 </section>
 </section>
 <section id="dataframe-eval-for-column-wise-operations">
-<h2>DataFrame.eval for Column-Wise Operations<a class="headerlink" href="#dataframe-eval-for-column-wise-operations" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.14.3. </span>DataFrame.eval for Column-Wise Operations<a class="headerlink" href="#dataframe-eval-for-column-wise-operations" title="Link to this heading">#</a></h2>
 <p>Just as Pandas has a top-level <code class="docutils literal notranslate"><span class="pre">pd.eval</span></code> function, <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> objects have an <code class="docutils literal notranslate"><span class="pre">eval</span></code> method that works in similar ways.
 The benefit of the <code class="docutils literal notranslate"><span class="pre">eval</span></code> method is that columns can be referred to by name.
 We’ll use this labeled array as an example:</p>
@@ -896,7 +919,7 @@ We’ll use this labeled array as an example:</p>
 </div>
 <p>Notice here that we treat <em>column names as variables</em> within the evaluated expression, and the result is what we would wish.</p>
 <section id="assignment-in-dataframe-eval">
-<h3>Assignment in DataFrame.eval<a class="headerlink" href="#assignment-in-dataframe-eval" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.3.1. </span>Assignment in DataFrame.eval<a class="headerlink" href="#assignment-in-dataframe-eval" title="Link to this heading">#</a></h3>
 <p>In addition to the options just discussed, <code class="docutils literal notranslate"><span class="pre">DataFrame.eval</span></code>  also allows assignment to any column.
 Let’s use the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from before, which has columns <code class="docutils literal notranslate"><span class="pre">'A'</span></code>, <code class="docutils literal notranslate"><span class="pre">'B'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'C'</span></code>:</p>
 <div class="cell docutils container">
@@ -1112,7 +1135,7 @@ Let’s use the <code class="docutils literal notranslate"><span class="pre">Dat
 </div>
 </section>
 <section id="local-variables-in-dataframe-eval">
-<h3>Local Variables in DataFrame.eval<a class="headerlink" href="#local-variables-in-dataframe-eval" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">1.2.14.3.2. </span>Local Variables in DataFrame.eval<a class="headerlink" href="#local-variables-in-dataframe-eval" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">DataFrame.eval</span></code> method supports an additional syntax that lets it work with local Python variables.
 Consider the following:</p>
 <div class="cell docutils container">
@@ -1135,7 +1158,7 @@ Notice that this <code class="docutils literal notranslate"><span class="pre">&#
 </section>
 </section>
 <section id="the-dataframe-query-method">
-<h2>The DataFrame.query Method<a class="headerlink" href="#the-dataframe-query-method" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.14.4. </span>The DataFrame.query Method<a class="headerlink" href="#the-dataframe-query-method" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> has another method based on evaluated strings, called <code class="docutils literal notranslate"><span class="pre">query</span></code>.
 Consider the following:</p>
 <div class="cell docutils container">
@@ -1187,7 +1210,7 @@ Note that the <code class="docutils literal notranslate"><span class="pre">query
 </div>
 </section>
 <section id="performance-when-to-use-these-functions">
-<h2>Performance: When to Use These Functions<a class="headerlink" href="#performance-when-to-use-these-functions" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">1.2.14.5. </span>Performance: When to Use These Functions<a class="headerlink" href="#performance-when-to-use-these-functions" title="Link to this heading">#</a></h2>
 <p>When considering whether to use <code class="docutils literal notranslate"><span class="pre">eval</span></code> and <code class="docutils literal notranslate"><span class="pre">query</span></code>, there are two considerations: <em>computation time</em> and <em>memory use</em>.
 Memory use is the most predictable aspect. As already mentioned, every compound expression involving NumPy arrays or Pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s will result in implicit creation of temporary arrays. For example, this:</p>
 <div class="cell docutils container">
@@ -1235,8 +1258,8 @@ In particular, different parsers and engines can be specified for running these 
     {
         requestKernel: true,
         binderOptions: {
-            repo: "NeneWang/nenewang.github.io",
-            ref: "main",
+            repo: "NeneWang/lecture-notes",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1267,7 +1290,7 @@ In particular, different parsers and engines can be specified for running these 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Working with Time Series</p>
+        <p class="prev-next-title"><span class="section-number">1.2.13. </span>Working with Time Series</p>
       </div>
     </a>
     <a class="right-next"
@@ -1275,7 +1298,7 @@ In particular, different parsers and engines can be specified for running these 
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualization with Matplotlib</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Visualization with Matplotlib</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1295,22 +1318,22 @@ In particular, different parsers and engines can be specified for running these 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-query-and-eval-compound-expressions">Motivating query and eval: Compound Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-eval-for-efficient-operations">pandas.eval for Efficient Operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">Bitwise operators</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-attributes-and-indices">Object attributes and indices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-operations">Other operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-query-and-eval-compound-expressions">1.2.14.1. Motivating query and eval: Compound Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-eval-for-efficient-operations">1.2.14.2. pandas.eval for Efficient Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">1.2.14.2.1. Arithmetic operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">1.2.14.2.2. Comparison operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">1.2.14.2.3. Bitwise operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-attributes-and-indices">1.2.14.2.4. Object attributes and indices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-operations">1.2.14.2.5. Other operations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-eval-for-column-wise-operations">DataFrame.eval for Column-Wise Operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-in-dataframe-eval">Assignment in DataFrame.eval</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-in-dataframe-eval">Local Variables in DataFrame.eval</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-eval-for-column-wise-operations">1.2.14.3. DataFrame.eval for Column-Wise Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-in-dataframe-eval">1.2.14.3.1. Assignment in DataFrame.eval</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local-variables-in-dataframe-eval">1.2.14.3.2. Local Variables in DataFrame.eval</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataframe-query-method">The DataFrame.query Method</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-when-to-use-these-functions">Performance: When to Use These Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dataframe-query-method">1.2.14.4. The DataFrame.query Method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-when-to-use-these-functions">1.2.14.5. Performance: When to Use These Functions</a></li>
 </ul>
   </nav></div>
 

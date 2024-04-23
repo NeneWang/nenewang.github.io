@@ -1,0 +1,2229 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>The Traveling Salesman &#8212; Rogue Docs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genetic_algorithms/travlingsalesman';</script>
+    <link rel="canonical" href="https://nenewang.github.io/genetic_algorithms/travlingsalesman.html" />
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Knacksack Problem" href="knacksack.html" />
+    <link rel="prev" title="Introduction to Genetic Algorithms" href="report.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/2.svg" class="logo__image only-light" alt="Rogue Docs - Home"/>
+    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Rogue Docs - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Rogue Docs
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../author.html">Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Genetic Algorithms</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="report.html">Introduction to Genetic Algorithms</a></li>
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">The Traveling Salesman</a></li>
+<li class="toctree-l2"><a class="reference internal" href="knacksack.html">Knacksack Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vrp.html">The Vehicle Routing Problem (VRP)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/search-problems.html">Search Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/genetic-algortihms.html">Genetic Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/constraint-sastifaction-problems.html">Constraint Sastifaction Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/graph-problems.html">Graph Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/k-means-clustering.html">K Means Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/fair-simple-natural-networks.html">Fair Simple Natural  Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/adversarial-search.html">Adversarial Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/miscellaneus-problems.html">Miscellaneus Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/genetic_algorithms/travlingsalesman.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/genetic_algorithms/travlingsalesman.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//genetic_algorithms/travlingsalesman.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fgenetic_algorithms/travlingsalesman.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/genetic_algorithms/travlingsalesman.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Traveling Salesman</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-building-the-traveling-salesman-problem">1. Activity Building the Traveling Salesman Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem">Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-tsp-using-deap-framework">2. Solving TSP Using DEAP Framework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tsp-modifying-tour-size-3">TSP Modifying Tour Size: 3</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-traveling-salesman">
+<h1>The Traveling Salesman<a class="headerlink" href="#the-traveling-salesman" title="Link to this heading">#</a></h1>
+<p>“Given a list of cities and the distances between each pair of the cities, find the shortest
+possible path that goes through all the cities, and returns to the starting city.”</p>
+<p><img alt="" src="../_images/2024-03-31-14-23-19.png" /></p>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=1pmBjIZ20pE&amp;amp;ab_channel=AlphaOpt">Youtube: What is the Traveling Salesman Problem? - AlphaOpt</a></p></li>
+</ul>
+</section>
+<section id="activity-building-the-traveling-salesman-problem">
+<h2>1. Activity Building the Traveling Salesman Problem<a class="headerlink" href="#activity-building-the-traveling-salesman-problem" title="Link to this heading">#</a></h2>
+<section id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic simple">
+<li><p>Create a class named <code class="docutils literal notranslate"><span class="pre">TravelingSalesmanProblem</span></code> that will have the following methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">__init__(self,</span> <span class="pre">name):</span></code> Creates Instances</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">__len__(self):</span></code>  Returns the length of the number of cities.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">__createData(self):</span></code> Creates the data from the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">getTotalDistance(self,</span> <span class="pre">indices):</span></code> Returns the total distance of the path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">plotData(self,</span> <span class="pre">indices):</span></code> Plots the data.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<p>Test it with the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tsp</span> <span class="o">=</span> <span class="n">TravelingSalesmanProblem</span><span class="p">(</span><span class="s2">&quot;bayg29&quot;</span><span class="p">)</span>
+
+<span class="c1"># generate a random solution and evaluate it:</span>
+<span class="c1">#randomSolution = random.sample(range(len(tsp)), len(tsp))</span>
+
+<span class="c1"># see http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/bayg29.opt.tour</span>
+<span class="n">optimalSolution</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Problem name: &quot;</span> <span class="o">+</span> <span class="n">tsp</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal solution = &quot;</span><span class="p">,</span> <span class="n">optimalSolution</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal distance = &quot;</span><span class="p">,</span> <span class="n">tsp</span><span class="o">.</span><span class="n">getTotalDistance</span><span class="p">(</span><span class="n">optimalSolution</span><span class="p">))</span>
+
+<span class="c1"># plot the solution:</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">tsp</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">optimalSolution</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>It should print the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Problem</span> <span class="n">name</span><span class="p">:</span> <span class="n">bayg29</span>
+<span class="n">Optimal</span> <span class="n">solution</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
+<span class="n">Optimal</span> <span class="n">distance</span> <span class="o">=</span>  <span class="mf">9074.147</span>
+</pre></div>
+</div>
+<p><img alt="" src="../_images/2024-04-23-15-35-43.png" /></p>
+</section>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TravelingSalesmanProblem</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class encapsulates the Traveling Salesman Problem.</span>
+<span class="sd">    City coordinates are read from an online file and distance matrix is calculated.</span>
+<span class="sd">    The data is serialized to disk.</span>
+<span class="sd">    The total distance can be calculated for a path represented by a list of city indices.</span>
+<span class="sd">    A plot can be created for a path represented by a list of city indices.</span>
+
+<span class="sd">    :param name: The name of the corresponding TSPLIB problem, e.g. &#39;burma14&#39; or &#39;bayg29&#39;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates an instance of a TSP</span>
+
+<span class="sd">        :param name: name of the TSP problem</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># initialize instance variables:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locations</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># initialize the data:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__initData</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns the length of the underlying TSP</span>
+<span class="sd">        :return: the length of the underlying TSP (number of cities)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span>
+
+    <span class="k">def</span> <span class="nf">__initData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reads the serialized data, and if not available - calls __create_data() to prepare it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># attempt to read serialized data:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">locations</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;tsp-data&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;-loc.pickle&quot;</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distances</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;tsp-data&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;-dist.pickle&quot;</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">))</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="ne">IOError</span><span class="p">):</span>
+            <span class="k">pass</span>
+
+        <span class="c1"># serailized data not found - create the data from scratch:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">locations</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">distances</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__createData</span><span class="p">()</span>
+
+        <span class="c1"># set the problem &#39;size&#39;:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__createData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reads the desired TSP file from the Internet, extracts the city coordinates, calculates the distances</span>
+<span class="sd">        between every two cities and uses them to populate a distance matrix (two-dimensional array).</span>
+<span class="sd">        It then serializes the city locations and the calculated distances to disk using the pickle utility.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">locations</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># print(&quot;http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/&quot; + self.name + &quot;.tsp&quot;)</span>
+        
+        <span class="c1"># Use the following instead: https://raw.githubusercontent.com/mastqe/tsplib/master/a280.tsp</span>
+        <span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/mastqe/tsplib/master/&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">URL</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;.tsp&quot;</span><span class="p">)</span>
+        <span class="c1"># open whitespace-delimited file from url and read lines from it:</span>
+        <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">URL</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;.tsp&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">codecs</span><span class="o">.</span><span class="n">iterdecode</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="c1"># skip lines until one of these lines is found:</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;DISPLAY_DATA_SECTION&#39;</span><span class="p">,</span> <span class="s1">&#39;NODE_COORD_SECTION&#39;</span><span class="p">):</span>
+                    <span class="k">break</span>
+
+            <span class="c1"># read data lines until &#39;EOF&#39; found:</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;EOF&#39;</span><span class="p">:</span>
+                    <span class="c1"># remove index at beginning of line:</span>
+                    <span class="k">del</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+                    <span class="c1"># convert x,y coordinates to ndarray:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">break</span>
+
+            <span class="c1"># set the problem &#39;size&#39;:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">)</span>
+
+            <span class="c1"># print data:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length = </span><span class="si">{}</span><span class="s2">, locations = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">))</span>
+
+            <span class="c1"># initialize distance matrix by filling it with 0&#39;s:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distances</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span><span class="p">)]</span>
+
+            <span class="c1"># populate the distance matrix with calculated distances:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tspSize</span><span class="p">):</span>
+                    <span class="c1"># calculate euclidean distance between two ndarrays:</span>
+                    <span class="n">distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">distance</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">distances</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">distance</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">: location1 = </span><span class="si">{}</span><span class="s2">, location2 = </span><span class="si">{}</span><span class="s2"> =&gt; distance = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">distance</span><span class="p">))</span>
+
+            <span class="c1"># serialize locations and distances:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;tsp-data&quot;</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;tsp-data&quot;</span><span class="p">)</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;tsp-data&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;-loc.pickle&quot;</span><span class="p">),</span> <span class="s2">&quot;wb&quot;</span><span class="p">))</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distances</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;tsp-data&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;-dist.pickle&quot;</span><span class="p">),</span> <span class="s2">&quot;wb&quot;</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">getTotalDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculates the total distance of the path described by the given indices of the cities</span>
+
+<span class="sd">        :param indices: A list of ordered city indices describing the given path.</span>
+<span class="sd">        :return: total distance of the path described by the given indices</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># distance between th elast and first city:</span>
+        <span class="n">distance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distances</span><span class="p">[</span><span class="n">indices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]][</span><span class="n">indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+        <span class="c1"># add the distance between each pair of consequtive cities:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">distance</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distances</span><span class="p">[</span><span class="n">indices</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="n">indices</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
+
+        <span class="k">return</span> <span class="n">distance</span>
+
+    <span class="k">def</span> <span class="nf">plotData</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;plots the path described by the given indices of the cities</span>
+
+<span class="sd">        :param indices: A list of ordered city indices describing the given path.</span>
+<span class="sd">        :return: the resulting plot</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># plot the dots representing the cities:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+        <span class="c1"># create a list of the corresponding city locations:</span>
+        <span class="n">locs</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+        <span class="n">locs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">locs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># plot a line between each pair of consequtive cities:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">locs</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsp</span> <span class="o">=</span> <span class="n">TravelingSalesmanProblem</span><span class="p">(</span><span class="s2">&quot;bayg29&quot;</span><span class="p">)</span>
+
+<span class="c1"># generate a random solution and evaluate it:</span>
+<span class="c1">#randomSolution = random.sample(range(len(tsp)), len(tsp))</span>
+
+<span class="c1"># see http://elib.zib.de/pub/mp-testdata/tsp/tsplib/tsp/bayg29.opt.tour</span>
+<span class="n">optimalSolution</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">23</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Problem name: &quot;</span> <span class="o">+</span> <span class="n">tsp</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal solution = &quot;</span><span class="p">,</span> <span class="n">optimalSolution</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal distance = &quot;</span><span class="p">,</span> <span class="n">tsp</span><span class="o">.</span><span class="n">getTotalDistance</span><span class="p">(</span><span class="n">optimalSolution</span><span class="p">))</span>
+
+<span class="c1"># plot the solution:</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">tsp</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">optimalSolution</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Problem name: bayg29
+Optimal solution =  [0, 27, 5, 11, 8, 25, 2, 28, 4, 20, 1, 19, 9, 3, 14, 17, 13, 16, 21, 10, 18, 24, 6, 22, 7, 26, 15, 12, 23]
+Optimal distance =  9074.147
+</pre></div>
+</div>
+<img alt="../_images/65e4421667ab5518cedd4935a5ea3c16cac0bf578b252b8fcb80028a6a5cf5e5.png" src="../_images/65e4421667ab5518cedd4935a5ea3c16cac0bf578b252b8fcb80028a6a5cf5e5.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="solving-tsp-using-deap-framework">
+<h2>2. Solving TSP Using DEAP Framework<a class="headerlink" href="#solving-tsp-using-deap-framework" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Problem<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Now you will use the Deap framework to evaluate and find the best solutions.
+Use the following parameters:</p>
+<ul class="simple">
+<li><p>POPULATION SIZE = 300</p></li>
+<li><p>NUMBER OF GENERATIONS = 100</p></li>
+<li><p>HALL_OF_FAME_SIZE = 1</p></li>
+<li><p>Probability of crossover = 0.9</p></li>
+<li><p>Probability of mutation = 0.1</p></li>
+<li><p>Which is the idea fitness strategy?</p></li>
+<li><p>Create a class of individual, whichuses the min fitness class as a fitness calculation.</p></li>
+<li><p>Register an operator named <code class="docutils literal notranslate"><span class="pre">randomOrder</span></code> that generates a random permutation of the cities.</p></li>
+<li><p>Register an operator named <code class="docutils literal notranslate"><span class="pre">individualCreator</span></code> which responsability is to use individual and randomOrder tool.</p></li>
+<li><p>Create a populationCreator that generates the list of individuals</p></li>
+<li><p>Make the evaluation as the total distance of the path.</p></li>
+<li><p>Use tournament selection with a tournament size of 3.</p></li>
+<li><p>Use <a class="reference external" href="https://deap.readthedocs.io/en/master/api/tools.html#deap.tools.cxOrdered">cxOrdered</a> crossover and <a class="reference external" href="https://deap.readthedocs.io/en/master/api/tools.html#deap.tools.mutShuffleIndexes">mutationShuffleIndexes</a> mutation.</p></li>
+<li></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>deap.tools.mutShuffleIndexes(individual, indpb)[source]</strong></p>
+<p>Shuffle the attributes of the input individual and return the mutant. The individual is expected to be a sequence. The indpb argument is the probability of each attribute to be moved. Usually this mutation is applied on vector of indices.</p>
+<p><strong>deap.tools.cxOrdered(ind1, ind2)[source]</strong></p>
+<p>Executes an ordered crossover (OX) on the input individuals. The two individuals are modified in place. This crossover expects sequence individuals of indices, the result for any other type of individuals is unpredictable.</p>
+<p>More Operators:</p>
+<p><img alt="" src="../_images/2024-04-23-16-12-03.png" /></p>
+</div>
+</section>
+<section id="id2">
+<h3>Solution<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">creator</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">tools</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">algorithms</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">array</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set the random seed for repeatable results</span>
+<span class="n">RANDOM_SEED</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">RANDOM_SEED</span><span class="p">)</span>
+
+<span class="c1"># create the desired traveling salesman problem instace:</span>
+<span class="n">TSP_NAME</span> <span class="o">=</span> <span class="s2">&quot;bayg29&quot;</span>  <span class="c1"># name of problem</span>
+<span class="n">tsp</span> <span class="o">=</span> <span class="n">TravelingSalesmanProblem</span><span class="p">(</span><span class="n">TSP_NAME</span><span class="p">)</span>
+
+<span class="c1"># Genetic Algorithm constants:</span>
+<span class="n">POPULATION_SIZE</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">MAX_GENERATIONS</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">HALL_OF_FAME_SIZE</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">P_CROSSOVER</span> <span class="o">=</span> <span class="mf">0.9</span>  <span class="c1"># probability for crossover</span>
+<span class="n">P_MUTATION</span> <span class="o">=</span> <span class="mf">0.1</span>   <span class="c1"># probability for mutating an individual</span>
+
+<span class="n">toolbox</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Toolbox</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a single objective, minimizing fitness strategy:</span>
+<span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMin&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,))</span>
+
+<span class="c1"># create the Individual class based on list of integers:</span>
+<span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Individual&quot;</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">typecode</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">FitnessMin</span><span class="p">)</span>
+
+<span class="c1"># create an operator that generates randomly shuffled indices:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;randomOrder&quot;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">))</span>
+
+<span class="c1"># create the individual creation operator to fill up an Individual instance with shuffled indices:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individualCreator&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initIterate</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">Individual</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">randomOrder</span><span class="p">)</span>
+
+<span class="c1"># create the population creation operator to generate a list of individuals:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;populationCreator&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individualCreator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating The Distance as the TSP Distance.</span>
+
+
+<span class="c1"># fitness calculation - compute the total distance of the list of cities represented by indices:</span>
+<span class="k">def</span> <span class="nf">tpsDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tsp</span><span class="o">.</span><span class="n">getTotalDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span>  <span class="c1"># return a tuple</span>
+
+
+
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">tpsDistance</span><span class="p">)</span>
+
+<span class="c1"># Genetic operators:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxOrdered</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">mutShuffleIndexes</span><span class="p">,</span> <span class="n">indpb</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create initial population (generation 0):</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">populationCreator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">POPULATION_SIZE</span><span class="p">)</span>
+
+<span class="c1"># prepare the statistics object:</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Statistics</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ind</span><span class="p">:</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the hall-of-fame object:</span>
+<span class="n">hof</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">HallOfFame</span><span class="p">(</span><span class="n">HALL_OF_FAME_SIZE</span><span class="p">)</span>
+<span class="c1"># perform the Genetic Algorithm flow with hof feature added:</span>
+<span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">algorithms</span><span class="o">.</span><span class="n">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="n">P_CROSSOVER</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="n">P_MUTATION</span><span class="p">,</span>
+                                            <span class="n">ngen</span><span class="o">=</span><span class="n">MAX_GENERATIONS</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">hof</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># print best individual info:</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">hof</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Individual = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Fitness = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gen	nevals	min    	avg  
+0  	300   	21103.3	26457
+1  	279   	19562.4	25128.9
+2  	275   	19456.5	24267.3
+3  	279   	19760.9	23592  
+4  	278   	19406.4	22963.5
+5  	276   	19105.2	22480.7
+6  	281   	17802.4	22129.9
+7  	279   	18160.2	21581.5
+8  	274   	17691.3	21253.6
+9  	277   	16011.9	20877.8
+10 	268   	16011.9	20597.9
+11 	279   	15878.8	20413.2
+12 	269   	14589.1	20188.2
+13 	272   	14589.1	19987.8
+14 	281   	15182.9	19910.4
+15 	276   	15836.2	19437  
+16 	276   	15687.4	19117.2
+17 	282   	15426.5	19039.4
+18 	282   	14905.2	18696.7
+19 	269   	15020.4	18614.9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 	275   	13346.3	18424  
+21 	276   	14711.4	18330.1
+22 	275   	13139.1	18312  
+23 	274   	13139.1	18005  
+24 	278   	13002.5	17725.6
+25 	262   	12203.5	17543.2
+26 	274   	13157.3	17285.2
+27 	260   	12918.6	16946.3
+28 	271   	12918.6	16646  
+29 	262   	12918.6	16441  
+30 	279   	12652.9	16194.2
+31 	265   	12652.9	15910.6
+32 	278   	12565.6	15942.4
+33 	278   	12520.5	15682  
+34 	283   	12436.1	15569.5
+35 	272   	12214  	15441.9
+36 	265   	12278.3	15353.6
+37 	271   	12302.9	15371.8
+38 	273   	12037.5	15182  
+39 	271   	11969.4	14974.3
+40 	267   	12081.2	14825  
+41 	266   	11785.8	14612.3
+42 	282   	11477  	14591.8
+43 	269   	10869.8	14446  
+44 	270   	11475  	14452.8
+45 	277   	11796.8	14491.9
+46 	277   	11262.8	14324.7
+47 	277   	11333.1	14183.2
+48 	281   	11311  	14135.4
+49 	271   	10921.8	14212.2
+50 	274   	11172.8	14137.9
+51 	279   	11295.1	13945  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52 	280   	10870.6	14044.3
+53 	278   	11225.2	14167.9
+54 	270   	11336.3	13993.6
+55 	268   	10472.9	13886.4
+56 	285   	10637.9	13841.5
+57 	285   	10885.9	13732.8
+58 	273   	10885.9	13634.4
+59 	277   	10885.9	13478.8
+60 	265   	10835.7	13253.8
+61 	264   	10526.5	13286.8
+62 	268   	10445.5	12951.3
+63 	276   	10501.6	12833.3
+64 	267   	10484.8	12683.7
+65 	280   	10501.6	12505  
+66 	277   	10355.2	12469.2
+67 	268   	10231.6	12586.4
+68 	273   	10367.5	12436.2
+69 	281   	10355.2	12450.7
+70 	274   	10281.8	12607.8
+71 	261   	10281.8	12339.2
+72 	269   	10163.3	12328.2
+73 	276   	10048.3	12238.8
+74 	272   	10048.3	12162.9
+75 	270   	10029.8	12178.7
+76 	273   	9957.92	12117  
+77 	272   	9957.92	12131.7
+78 	276   	9852.51	11973.6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79 	273   	9852.51	11883.2
+80 	268   	9775.74	11853.7
+81 	288   	9775.74	11715.1
+82 	276   	9775.74	11806.3
+83 	276   	9775.74	11826.1
+84 	268   	9775.74	11618.9
+85 	271   	9775.74	11430.3
+86 	265   	9775.74	11586.3
+87 	269   	9775.74	11394.7
+88 	259   	9775.74	11172.9
+89 	275   	9775.74	11210.5
+90 	275   	9775.74	11081.7
+91 	272   	9775.74	11051.4
+92 	277   	9775.74	11065  
+93 	274   	9775.74	11113.7
+94 	276   	9775.74	11010  
+95 	272   	9775.74	10886.1
+96 	272   	9771.1 	10758.8
+97 	267   	9771.1 	10639.7
+98 	279   	9771.1 	10681.8
+99 	262   	9771.1 	10511.1
+100	279   	9771.1 	10403.5
+101	284   	9771.1 	10424.7
+102	275   	9767.79	10432.8
+103	266   	9767.79	10418  
+104	272   	9767.79	10264.2
+105	285   	9767.79	10185.9
+106	277   	9767.79	10167.7
+107	279   	9767.79	10131.7
+108	269   	9763.16	10109.5
+109	273   	9734.57	10126.7
+110	282   	9729.93	10360.6
+111	268   	9729.93	10356.4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>112	272   	9729.93	10529.1
+113	271   	9729.93	10511.3
+114	275   	9729.93	10510.6
+115	270   	9729.93	10166.8
+116	280   	9729.93	10064.7
+117	257   	9729.93	9985.98
+118	273   	9729.93	9935.52
+119	281   	9729.93	9893.57
+120	268   	9729.93	9936.33
+121	282   	9729.93	10072.7
+122	285   	9729.93	9927.8 
+123	270   	9729.93	9995.76
+124	266   	9729.93	9932.75
+125	274   	9729.93	9938.32
+126	284   	9729.93	9972.79
+127	263   	9616.16	9979.21
+128	275   	9616.16	9910.33
+129	277   	9616.16	9975.06
+130	272   	9616.16	10001.9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>131	279   	9616.16	9999.09
+132	284   	9616.16	9969.31
+133	271   	9616.16	9917.73
+134	262   	9616.16	9953.55
+135	273   	9616.16	9877.65
+136	266   	9616.16	9874.04
+137	256   	9616.16	9737.42
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>138	274   	9616.16	9825.19
+139	272   	9616.16	9901.44
+140	269   	9616.16	9846.18
+141	266   	9558.06	9843.06
+142	263   	9558.06	9804.26
+143	261   	9558.06	9871.85
+144	279   	9558.06	9829.84
+145	273   	9558.06	9939.57
+146	268   	9558.06	9771.86
+147	278   	9558.06	9779.87
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>148	278   	9556.72	9787.78
+149	281   	9549.99	9779   
+150	272   	9549.99	9803.48
+151	278   	9549.99	9809.74
+152	270   	9549.99	9780.88
+153	271   	9549.99	9686.82
+154	269   	9549.99	9880.91
+155	265   	9549.99	9899.8 
+156	282   	9549.99	9978.31
+157	277   	9549.99	9823.43
+158	273   	9549.99	10009.3
+159	279   	9549.99	9954.48
+160	273   	9549.99	9980.84
+161	273   	9549.99	9985.32
+162	282   	9549.99	9923.51
+163	284   	9549.99	9981.25
+164	273   	9549.99	10222.2
+165	263   	9549.99	10151  
+166	271   	9549.99	10154.6
+167	279   	9549.99	10073.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>168	267   	9549.99	9895.51
+169	277   	9549.99	9781.48
+170	270   	9549.99	9840.1 
+171	273   	9549.99	9744.42
+172	273   	9549.99	9811.11
+173	277   	9549.99	9792.8 
+174	284   	9549.99	9860.57
+175	273   	9549.99	9668.35
+176	266   	9549.99	9705.16
+177	275   	9549.99	9800.14
+178	270   	9549.99	9751.82
+179	281   	9549.99	9816.48
+180	269   	9549.99	9743.48
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>181	280   	9549.99	9715.93
+182	278   	9549.99	9792.3 
+183	280   	9549.99	9716.09
+184	290   	9549.99	9811.45
+185	281   	9549.99	9758.04
+186	269   	9549.99	9693.11
+187	281   	9549.99	9761.23
+188	273   	9549.99	9712.46
+189	262   	9549.99	9786.26
+190	276   	9549.99	9805.2 
+191	282   	9549.99	9675.81
+192	269   	9549.99	9733.11
+193	258   	9549.99	9981.48
+194	273   	9549.99	9722.19
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>195	267   	9549.99	9694.95
+196	281   	9549.99	9845.83
+197	262   	9549.99	9903.02
+198	274   	9549.99	9749.83
+199	270   	9549.99	9886.32
+200	277   	9549.99	9837.95
+-- Best Ever Individual =  Individual(&#39;i&#39;, [0, 27, 11, 5, 20, 4, 8, 25, 2, 28, 1, 19, 9, 3, 14, 17, 13, 16, 21, 10, 18, 12, 23, 7, 26, 22, 6, 24, 15])
+-- Best Ever Fitness =  9549.9853515625
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot best solution:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tsp</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+
+<span class="c1"># plot statistics:</span>
+<span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">meanFitnessValues</span> <span class="o">=</span> <span class="n">logbook</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;avg&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meanFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Generation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Min / Average Fitness&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Min and Average fitness over Generations&#39;</span><span class="p">)</span>
+
+<span class="c1"># show both plots:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4dd0c6d7180327ef18976284d10a14ad94237505d9213b562939113cfaa1baa0.png" src="../_images/4dd0c6d7180327ef18976284d10a14ad94237505d9213b562939113cfaa1baa0.png" />
+<img alt="../_images/2bd08e71b1c7d2635be574be0bb32d9ba97fec230385ceda494c452d3cb99b41.png" src="../_images/2bd08e71b1c7d2635be574be0bb32d9ba97fec230385ceda494c452d3cb99b41.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="tsp-modifying-tour-size-3">
+<h2>TSP Modifying Tour Size: 3<a class="headerlink" href="#tsp-modifying-tour-size-3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Experimenting with the Tournament Size reveals that: When the size is increasing the size of the torunament, is not able to retain the best solutions…</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating The Distance as the TSP Distance.</span>
+
+
+<span class="c1"># fitness calculation - compute the total distance of the list of cities represented by indices:</span>
+<span class="k">def</span> <span class="nf">tpsDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tsp</span><span class="o">.</span><span class="n">getTotalDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span>  <span class="c1"># return a tuple</span>
+
+
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">tpsDistance</span><span class="p">)</span>
+
+
+<span class="c1"># Genetic operators:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxOrdered</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">mutShuffleIndexes</span><span class="p">,</span> <span class="n">indpb</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">))</span>
+
+<span class="c1"># create initial population (generation 0):</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">populationCreator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">POPULATION_SIZE</span><span class="p">)</span>
+
+<span class="c1"># prepare the statistics object:</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Statistics</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ind</span><span class="p">:</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+
+
+
+<span class="c1"># define the hall-of-fame object:</span>
+<span class="n">hof</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">HallOfFame</span><span class="p">(</span><span class="n">HALL_OF_FAME_SIZE</span><span class="p">)</span>
+
+<span class="c1"># perform the Genetic Algorithm flow with hof feature added:</span>
+<span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">algorithms</span><span class="o">.</span><span class="n">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="n">P_CROSSOVER</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="n">P_MUTATION</span><span class="p">,</span>
+                                            <span class="n">ngen</span><span class="o">=</span><span class="n">MAX_GENERATIONS</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">hof</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># print best individual info:</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">hof</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Individual = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Fitness = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gen	nevals	min    	avg    
+0  	300   	21103.5	26399.8
+1  	274   	21361.6	25481.4
+2  	258   	19153.7	24928.2
+3  	285   	18299.3	24318.2
+4  	275   	19199.8	23753.1
+5  	271   	18344.1	23313.5
+6  	270   	18344.1	23081.9
+7  	264   	18078.7	22838.6
+8  	273   	17945.4	22705.6
+9  	276   	18042.5	22653.7
+10 	263   	17340.4	22467.2
+11 	268   	17549.7	22291.7
+12 	272   	17144.4	22138.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13 	274   	17379.9	21704.1
+14 	269   	17143.3	21659.2
+15 	261   	17288.3	21517.3
+16 	273   	16224.5	21419.9
+17 	277   	16676.9	21367.1
+18 	263   	15293  	21390.3
+19 	272   	16688.3	21436.5
+20 	272   	16388.9	21475.2
+21 	270   	16388.9	21326.1
+22 	278   	16014.6	21420.9
+23 	273   	16779.1	21255.7
+24 	278   	16615  	21044  
+25 	254   	16738.1	20971.9
+26 	274   	17463  	21139.5
+27 	274   	17331.4	21043.8
+28 	272   	16859.7	20956.5
+29 	271   	16402  	20855  
+30 	271   	16206.3	20919.5
+31 	271   	16492.5	20749.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32 	268   	16853.3	20707.1
+33 	264   	16667.7	20748.3
+34 	288   	16083.8	20855.3
+35 	277   	16157.7	20896.1
+36 	265   	16036.8	20924.3
+37 	266   	16169.1	20953.2
+38 	268   	16335.5	20932.7
+39 	279   	16335.5	20877.3
+40 	269   	16521.9	20784.1
+41 	281   	17424.2	21013.6
+42 	273   	17046.1	21073.9
+43 	262   	16854  	20843.3
+44 	276   	16357.8	20953.5
+45 	276   	16357.8	21156  
+46 	265   	17285.9	21187.9
+47 	276   	16799.8	21134.7
+48 	277   	16251  	21150.8
+49 	272   	15854.7	21271.9
+50 	277   	15588.8	21348.2
+51 	278   	14563.7	21173.6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>52 	279   	14249.4	20943.6
+53 	265   	16149.7	20917.3
+54 	275   	17031.8	20867.9
+55 	274   	16278.2	20746.1
+56 	262   	15532.3	20685.8
+57 	267   	16097.3	20703.7
+58 	277   	16441.2	20357.1
+59 	285   	15057.9	20287  
+60 	270   	15057.9	20072.7
+61 	263   	15311.8	20077.8
+62 	275   	16103.8	20311.4
+63 	270   	16103.8	20438.1
+64 	274   	15672.4	20323.6
+65 	268   	16123.5	20361.7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66 	258   	15764.1	20453.8
+67 	278   	15573.2	20546.5
+68 	278   	15573.2	20312.7
+69 	276   	15945  	20168.7
+70 	262   	16211  	20045.8
+71 	265   	15224.5	19886.9
+72 	275   	15224.5	19888.3
+73 	280   	15809  	20169.8
+74 	278   	16331.9	20202  
+75 	271   	16285.4	20218.7
+76 	268   	13871.3	20027.3
+77 	264   	13871.3	19940.9
+78 	264   	15407  	19734.6
+79 	267   	15645.2	19789.4
+80 	276   	12955.5	19732.4
+81 	272   	12955.5	19861.2
+82 	273   	12955.5	19564.4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83 	268   	14070.9	19513.9
+84 	271   	14445.9	19350.3
+85 	281   	14502.3	19297.6
+86 	278   	14827.2	19126.1
+87 	268   	14461.4	18970.9
+88 	255   	14230.7	18559.6
+89 	270   	14109.2	18499.4
+90 	265   	13381.8	18369.5
+91 	272   	14131.6	18252  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>92 	275   	14549.2	18079.1
+93 	273   	14048.4	18096.7
+94 	284   	14137.4	18202.6
+95 	258   	13344.2	18079.2
+96 	274   	13191  	18065.4
+97 	276   	13570.1	18014.6
+98 	272   	13570.1	17879.5
+99 	277   	13789.3	18022  
+100	280   	13691.4	17954.3
+101	274   	13468.1	17759.1
+102	280   	13172.8	17626.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>103	268   	13159.3	17696.3
+104	259   	14291  	17820  
+105	279   	14462.7	17779.8
+106	265   	14476.2	17836  
+107	268   	13715.8	17840.7
+108	276   	14242.1	17942.9
+109	284   	13628  	18132.7
+110	273   	13390.5	18238.5
+111	279   	13600.3	18442.6
+112	266   	13461.5	18331.3
+113	271   	13461.5	18271.2
+114	280   	12910.8	18261.2
+115	281   	13587.4	18260.8
+116	269   	13639.6	18263.5
+117	273   	13603.5	18210.9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>118	276   	13977.8	18051.2
+119	280   	13195.3	17917.1
+120	273   	14310.7	17827.5
+121	262   	13982.4	18028.4
+122	273   	13569.9	18039.5
+123	278   	14228.8	18189.9
+124	276   	13208.5	18056.2
+125	265   	13632.2	17937.3
+126	273   	14468.8	18115.5
+127	274   	14330.4	18172.6
+128	268   	14212.1	18202.2
+129	282   	14523.6	18310.7
+130	280   	14624.1	18408.5
+131	277   	14025.1	18482.2
+132	279   	14359.8	18284.9
+133	270   	14243.4	18428.7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>134	273   	13577  	18301.5
+135	282   	13878.6	18267.4
+136	268   	13758.6	18087.1
+137	270   	14297.1	18154.7
+138	268   	14274.6	18039.8
+139	285   	13162.2	18088.6
+140	281   	13472.2	18132.5
+141	266   	13937.4	18021.2
+142	267   	13257.5	17882.7
+143	266   	13376.4	17756.5
+144	277   	13796.6	17633.3
+145	278   	13769.7	17685.6
+146	276   	14044.2	17795.6
+147	267   	14044.2	17691.6
+148	270   	13542.7	17753.6
+149	264   	13634.8	17730.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>150	276   	13294.7	17928.2
+151	276   	13693.6	17949.9
+152	277   	13600.8	17875.5
+153	274   	12738.6	17938.5
+154	268   	12738.6	17944  
+155	273   	12296.6	17932.7
+156	269   	12741.2	17570.3
+157	274   	13152.3	17612.7
+158	273   	12946  	17662.3
+159	264   	12070.9	17603.5
+160	267   	12070.9	17389.9
+161	264   	12070.9	17347.1
+162	279   	12967.3	17124  
+163	275   	12370.7	16920  
+164	274   	12730.9	16864.2
+165	270   	13658.8	16925.7
+166	267   	13225.9	17144.9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>167	267   	13610.7	17313.1
+168	276   	13912.6	17418.3
+169	270   	12961.4	17399.4
+170	271   	13335.9	17502.1
+171	273   	13357.5	17628.6
+172	263   	13456.1	17795.4
+173	275   	14259.9	17795.4
+174	267   	13859.9	17726.7
+175	269   	13752  	17703.6
+176	269   	13852.9	17626.9
+177	283   	13539  	17612.7
+178	273   	13418.4	17636.9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>179	262   	13230.4	17498.5
+180	279   	13702  	17553.1
+181	279   	13456.2	17665  
+182	270   	13874.4	17881.2
+183	280   	13818.4	17950.4
+184	271   	13818.4	17969.7
+185	279   	13660.9	17971.5
+186	272   	13793.1	18030.4
+187	265   	13793.1	18153.7
+188	286   	14066.1	17980.3
+189	258   	13236.8	17798.1
+190	272   	13463.7	17976.3
+191	277   	13233.5	17818.7
+192	276   	14378.3	18048.2
+193	271   	13784.3	18182.4
+194	278   	14436.5	18534.6
+195	277   	14171.8	18530.7
+196	281   	13440.1	18614.7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>197	273   	13938.8	18707.3
+198	271   	14678.1	18458  
+199	271   	14921.4	18568.2
+200	258   	14572.3	18512.5
+-- Best Ever Individual =  Individual(&#39;i&#39;, [11, 27, 0, 7, 23, 26, 15, 6, 22, 24, 3, 18, 17, 13, 16, 21, 10, 14, 19, 1, 25, 4, 5, 8, 28, 2, 9, 12, 20])
+-- Best Ever Fitness =  12070.9267578125
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot best solution:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tsp</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+
+<span class="c1"># plot statistics:</span>
+<span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">meanFitnessValues</span> <span class="o">=</span> <span class="n">logbook</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;avg&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meanFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Generation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Min / Average Fitness&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Min and Average fitness over Generations&#39;</span><span class="p">)</span>
+
+<span class="c1"># show both plots:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/04bd3775f025b8d34f6f3b99a7af1abdae362eeb286f865387292b616d5e877a.png" src="../_images/04bd3775f025b8d34f6f3b99a7af1abdae362eeb286f865387292b616d5e877a.png" />
+<img alt="../_images/135955776fc7bd7005423b46c49b2b9a9da3eba350d3c8ab8447208ad30fc5d6.png" src="../_images/135955776fc7bd7005423b46c49b2b9a9da3eba350d3c8ab8447208ad30fc5d6.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Attempt using Elitism</span>
+
+<span class="kn">import</span> <span class="nn">elitism</span>
+
+<span class="c1"># Calculating The Distance as the TSP Distance.</span>
+
+
+<span class="c1"># fitness calculation - compute the total distance of the list of cities represented by indices:</span>
+<span class="k">def</span> <span class="nf">tpsDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tsp</span><span class="o">.</span><span class="n">getTotalDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span>  <span class="c1"># return a tuple</span>
+
+
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">tpsDistance</span><span class="p">)</span>
+
+
+<span class="c1"># Genetic operators:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxOrdered</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">mutShuffleIndexes</span><span class="p">,</span> <span class="n">indpb</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">))</span>
+
+<span class="c1"># create initial population (generation 0):</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">populationCreator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">POPULATION_SIZE</span><span class="p">)</span>
+
+<span class="c1"># prepare the statistics object:</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Statistics</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ind</span><span class="p">:</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+
+
+
+<span class="c1"># define the hall-of-fame object:</span>
+<span class="n">hof</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">HallOfFame</span><span class="p">(</span><span class="n">HALL_OF_FAME_SIZE</span><span class="p">)</span>
+
+<span class="c1"># perform the Genetic Algorithm flow with hof feature added:</span>
+<span class="c1"># population, logbook = algorithms.eaSimple(population, toolbox, cxpb=P_CROSSOVER, mutpb=P_MUTATION,</span>
+<span class="c1">#                                             ngen=MAX_GENERATIONS, stats=stats, halloffame=hof, verbose=True)</span>
+
+<span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">elitism</span><span class="o">.</span><span class="n">eaSimpleWithElitism</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="n">P_CROSSOVER</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="n">P_MUTATION</span><span class="p">,</span>
+                                            <span class="n">ngen</span><span class="o">=</span><span class="n">MAX_GENERATIONS</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">hof</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># print best individual info:</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">hof</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Individual = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Fitness = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+
+
+<span class="c1"># plot best solution:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tsp</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+
+<span class="c1"># plot statistics:</span>
+<span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">meanFitnessValues</span> <span class="o">=</span> <span class="n">logbook</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;avg&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meanFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Generation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Min / Average Fitness&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Min and Average fitness over Generations&#39;</span><span class="p">)</span>
+
+<span class="c1"># show both plots:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gen	nevals	min    	avg    
+0  	300   	21219.9	26467.8
+1  	276   	20638  	25521.8
+2  	282   	20272.5	24884.4
+3  	260   	18344.9	24197.1
+4  	278   	18344.9	23918.4
+5  	278   	17194.8	23487.6
+6  	280   	17194.8	23202.3
+7  	282   	17194.8	23106  
+8  	275   	17194.8	22890.5
+9  	278   	16695.1	22527.2
+10 	273   	16695.1	22323.1
+11 	279   	16695.1	22103  
+12 	275   	16695.1	21905.8
+13 	262   	16695.1	21578.5
+14 	270   	16695.1	21511.8
+15 	271   	16695.1	21421.8
+16 	267   	16695.1	21416.1
+17 	269   	16448.3	21469.7
+18 	271   	16443.9	21180.3
+19 	278   	16443.9	21154.2
+20 	282   	16443.9	21224.8
+21 	273   	16147.2	21298.1
+22 	275   	16147.2	21319.3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23 	270   	16147.2	21238.5
+24 	277   	14959.4	21254.6
+25 	269   	14959.4	21262.3
+26 	272   	14959.4	21114.6
+27 	260   	14959.4	21199.2
+28 	280   	14959.4	21174  
+29 	270   	14959.4	21024.7
+30 	271   	14959.4	20909.9
+31 	267   	14959.4	20744  
+32 	270   	14505.1	20586.8
+33 	276   	14505.1	20572.7
+34 	268   	14505.1	20585.1
+35 	277   	14505.1	20593.3
+36 	273   	14505.1	20373.2
+37 	269   	14432.1	20338.1
+38 	265   	14432.1	20251.1
+39 	270   	14432.1	20027  
+40 	268   	14432.1	19904.4
+41 	270   	14432.1	19865.6
+42 	281   	14432.1	19723.6
+43 	272   	14432.1	19403.4
+44 	263   	14432.1	19393.1
+45 	279   	14432.1	19404.7
+46 	278   	14432.1	19095  
+47 	265   	14353.2	18961  
+48 	279   	14353.2	18960.3
+49 	272   	14336.5	18909.9
+50 	279   	14336.5	19068.2
+51 	266   	14291  	19109.2
+52 	260   	14291  	19077.7
+53 	267   	14291  	19043.8
+54 	278   	14291  	19074.8
+55 	270   	14291  	19183  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56 	263   	14291  	19122.6
+57 	276   	14291  	19053.9
+58 	280   	14291  	19265  
+59 	268   	13912.2	19110.3
+60 	280   	13912.2	19154.2
+61 	274   	13912.2	19151.5
+62 	279   	13912.2	19186.3
+63 	274   	13912.2	19076.5
+64 	270   	13912.2	18957  
+65 	271   	13680  	19043.5
+66 	268   	13680  	18885.5
+67 	275   	13680  	18870.7
+68 	282   	13680  	18860.3
+69 	281   	13680  	18984.5
+70 	275   	13680  	18966  
+71 	275   	13680  	18713.1
+72 	270   	13680  	18877.2
+73 	267   	13680  	18771.1
+74 	276   	13680  	18721.6
+75 	272   	13680  	18730.5
+76 	274   	13680  	18719.6
+77 	280   	13680  	18629.1
+78 	271   	13680  	19013.3
+79 	276   	13680  	18954.8
+80 	263   	13680  	18965.8
+81 	268   	13539.2	19078.7
+82 	269   	13539.2	18964.2
+83 	269   	13539.2	19171.5
+84 	263   	13539.2	19073.9
+85 	273   	13539.2	19108.6
+86 	270   	13539.2	19345.2
+87 	266   	13539.2	19330.6
+88 	260   	13539.2	19278.1
+89 	272   	13539.2	19367.2
+90 	276   	13539.2	19219  
+91 	271   	13539.2	19422  
+92 	269   	13539.2	19438.4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>93 	271   	13539.2	19301.6
+94 	281   	13539.2	19521.6
+95 	267   	13539.2	19447  
+96 	267   	13539.2	19416.6
+97 	276   	13539.2	19510.2
+98 	281   	13539.2	19566.9
+99 	265   	13539.2	19519.1
+100	267   	13539.2	19356.7
+101	264   	13539.2	19210.5
+102	273   	13539.2	19203.6
+103	277   	13539.2	19181.4
+104	267   	13539.2	18950.4
+105	270   	13539.2	18946.4
+106	277   	13539.2	19101.3
+107	278   	13539.2	19126.7
+108	277   	13539.2	19076.7
+109	270   	13539.2	19198.5
+110	260   	13539.2	19010.5
+111	265   	13531.3	19203.9
+112	276   	13155.3	19083.3
+113	283   	13155.3	18903.2
+114	271   	13155.3	18779.2
+115	280   	13155.3	18662  
+116	279   	13155.3	18638.1
+117	266   	13155.3	18731.5
+118	267   	13155.3	18649.7
+119	272   	13155.3	18777.7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120	276   	13155.3	18563.6
+121	271   	13155.3	18477.8
+122	266   	13155.3	18401.6
+123	284   	13155.3	18180.6
+124	279   	13155.3	18271  
+125	267   	13155.3	18375.8
+126	283   	13155.3	18192  
+127	264   	13155.3	18437.5
+128	276   	13155.3	18491.9
+129	250   	13155.3	18249.9
+130	267   	13155.3	18140  
+131	267   	13155.3	18326  
+132	271   	13155.3	18352.6
+133	273   	13155.3	18533  
+134	273   	13155.3	18456.4
+135	271   	13155.3	18440.1
+136	275   	13155.3	18353.6
+137	273   	13155.3	18340.5
+138	274   	13155.3	18287.8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>139	276   	13155.3	18304.6
+140	272   	13155.3	18203.1
+141	278   	13155.3	18367.2
+142	273   	13155.3	18628.6
+143	264   	13155.3	18564.2
+144	278   	13155.3	18668  
+145	260   	13155.3	18585.9
+146	276   	13155.3	18586.5
+147	263   	13155.3	18583.1
+148	270   	13155.3	18165.6
+149	270   	13155.3	18193.8
+150	262   	13155.3	18288.4
+151	272   	13155.3	18125.1
+152	274   	13155.3	18429.8
+153	259   	13155.3	18464  
+154	265   	13155.3	18499.6
+155	269   	13155.3	18317.6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>156	286   	13155.3	18350.5
+157	255   	13155.3	18277.5
+158	274   	13071  	18338.9
+159	269   	13071  	18233.7
+160	267   	13071  	18378  
+161	273   	13071  	18350.4
+162	282   	13071  	18146.3
+163	274   	13071  	18005.8
+164	279   	13071  	18303.3
+165	273   	13071  	18319.4
+166	285   	13071  	18674.4
+167	276   	13071  	18771.8
+168	266   	13071  	18825.1
+169	255   	13071  	18610.6
+170	275   	13071  	18712.8
+171	271   	13071  	18762.3
+172	267   	13071  	18941.9
+173	284   	13071  	19018.1
+174	274   	13071  	19268.8
+175	274   	13071  	19311.6
+176	266   	13071  	19214.6
+177	281   	13071  	19308.3
+178	289   	13071  	19196.7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>179	277   	13071  	19067.4
+180	256   	13071  	19091.8
+181	286   	13071  	19183.3
+182	270   	13071  	19080.7
+183	269   	13071  	18880.7
+184	262   	13071  	18716.6
+185	265   	13071  	18638.1
+186	277   	13071  	18493.9
+187	275   	13071  	18739.1
+188	267   	13071  	18706.8
+189	266   	13071  	18900.2
+190	271   	13071  	18870  
+191	282   	13071  	19022.7
+192	268   	13071  	19037.4
+193	274   	13071  	18949  
+194	263   	13071  	18789  
+195	275   	13071  	18757.7
+196	272   	13071  	18854.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>197	259   	13071  	18893.6
+198	273   	13071  	18928.7
+199	265   	13071  	19257.7
+200	280   	13071  	19339.1
+-- Best Ever Individual =  Individual(&#39;i&#39;, [13, 17, 16, 21, 10, 24, 6, 15, 20, 8, 11, 5, 4, 2, 28, 25, 7, 23, 27, 0, 12, 1, 3, 14, 9, 19, 26, 22, 18])
+-- Best Ever Fitness =  13071.04296875
+</pre></div>
+</div>
+<img alt="../_images/8ae4579ed4ed8f28ebde8c0be0b682cd2cadac8f403180fdfcc8eef6e9468a5a.png" src="../_images/8ae4579ed4ed8f28ebde8c0be0b682cd2cadac8f403180fdfcc8eef6e9468a5a.png" />
+<img alt="../_images/ac01297df25c507e22cae73743123d88358a2feb4f05bd2a4d80bec0471fccf2.png" src="../_images/ac01297df25c507e22cae73743123d88358a2feb4f05bd2a4d80bec0471fccf2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">creator</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">tools</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">array</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">import</span> <span class="nn">tsp</span>
+<span class="kn">import</span> <span class="nn">elitism</span>
+
+<span class="c1"># set the random seed for repeatable results</span>
+<span class="n">RANDOM_SEED</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">RANDOM_SEED</span><span class="p">)</span>
+
+<span class="c1"># create the desired traveling salesman problem instace:</span>
+<span class="n">TSP_NAME</span> <span class="o">=</span> <span class="s2">&quot;bayg29&quot;</span>  <span class="c1"># name of problem</span>
+<span class="n">tsp</span> <span class="o">=</span> <span class="n">tsp</span><span class="o">.</span><span class="n">TravelingSalesmanProblem</span><span class="p">(</span><span class="n">TSP_NAME</span><span class="p">)</span>
+
+<span class="c1"># Genetic Algorithm constants:</span>
+<span class="n">POPULATION_SIZE</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">MAX_GENERATIONS</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">HALL_OF_FAME_SIZE</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">P_CROSSOVER</span> <span class="o">=</span> <span class="mf">0.9</span>  <span class="c1"># probability for crossover</span>
+<span class="n">P_MUTATION</span> <span class="o">=</span> <span class="mf">0.1</span>   <span class="c1"># probability for mutating an individual</span>
+
+<span class="n">toolbox</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Toolbox</span><span class="p">()</span>
+
+<span class="c1"># define a single objective, minimizing fitness strategy:</span>
+<span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMin&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,))</span>
+
+<span class="c1"># create the Individual class based on list of integers:</span>
+<span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Individual&quot;</span><span class="p">,</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">typecode</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">FitnessMin</span><span class="p">)</span>
+
+<span class="c1"># create an operator that generates randomly shuffled indices:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;randomOrder&quot;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">))</span>
+
+<span class="c1"># create the individual creation operator to fill up an Individual instance with shuffled indices:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individualCreator&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initIterate</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">Individual</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">randomOrder</span><span class="p">)</span>
+
+<span class="c1"># create the population creation operator to generate a list of individuals:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;populationCreator&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individualCreator</span><span class="p">)</span>
+
+
+<span class="c1"># fitness calculation - compute the total distance of the list of cities represented by indices:</span>
+<span class="k">def</span> <span class="nf">tpsDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tsp</span><span class="o">.</span><span class="n">getTotalDistance</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span>  <span class="c1"># return a tuple</span>
+
+
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">tpsDistance</span><span class="p">)</span>
+
+
+<span class="c1"># Genetic operators:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxOrdered</span><span class="p">)</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">mutShuffleIndexes</span><span class="p">,</span> <span class="n">indpb</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">tsp</span><span class="p">))</span>
+
+
+
+<span class="c1"># create initial population (generation 0):</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">populationCreator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">POPULATION_SIZE</span><span class="p">)</span>
+
+<span class="c1"># prepare the statistics object:</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Statistics</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ind</span><span class="p">:</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+
+<span class="c1"># define the hall-of-fame object:</span>
+<span class="n">hof</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">HallOfFame</span><span class="p">(</span><span class="n">HALL_OF_FAME_SIZE</span><span class="p">)</span>
+
+<span class="c1"># perform the Genetic Algorithm flow with hof feature added:</span>
+<span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">elitism</span><span class="o">.</span><span class="n">eaSimpleWithElitism</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="n">P_CROSSOVER</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="n">P_MUTATION</span><span class="p">,</span>
+                                            <span class="n">ngen</span><span class="o">=</span><span class="n">MAX_GENERATIONS</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">hof</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># print best individual info:</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">hof</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Individual = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Fitness = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># plot best solution:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">tsp</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">best</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Best Solution&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot statistics:</span>
+<span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">meanFitnessValues</span> <span class="o">=</span> <span class="n">logbook</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="s2">&quot;avg&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">minFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meanFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Generation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Min / Average Fitness&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Min and Average fitness over Generations&#39;</span><span class="p">)</span>
+
+<span class="c1"># show both plots:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gen	nevals	min    	avg  
+0  	300   	21103.3	26457
+1  	252   	19726.4	25210.9
+2  	249   	18977.1	24364.3
+3  	257   	17868.2	23514.7
+4  	237   	17585.3	22929.8
+5  	247   	17585.3	22350.6
+6  	247   	17585.3	21831.4
+7  	249   	17012.3	21442.6
+8  	238   	17012.3	20999.7
+9  	249   	16856.3	20513.2
+10 	249   	16766.4	20235.4
+11 	249   	16165.7	19852.8
+12 	244   	14934  	19588.4
+13 	242   	14934  	19454.3
+14 	252   	14934  	19412.6
+15 	245   	14757.5	19286.6
+16 	242   	14757.5	19057.2
+17 	253   	14757.5	18846.9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18 	246   	14757.5	18782.7
+19 	240   	14607  	18293.7
+20 	249   	14607  	17740.2
+21 	248   	14227.7	17786.1
+22 	238   	14227.7	17546.7
+23 	242   	12893.9	17310.7
+24 	245   	12893.9	16959.3
+25 	241   	12893.9	16699.8
+26 	242   	12766.2	16481.4
+27 	246   	12766.2	16321.5
+28 	246   	12662.4	16263.8
+29 	236   	12662.4	15799.7
+30 	248   	12610.1	15691.9
+31 	245   	12610.1	15636.5
+32 	247   	12410.6	15465  
+33 	253   	12199.6	15328.7
+34 	242   	12199.6	15059.9
+35 	237   	11848.8	15000.8
+36 	251   	11848.8	14836.8
+37 	237   	11848.8	14476.5
+38 	240   	11848.8	14406.1
+39 	251   	11787.9	14350.9
+40 	244   	11787.9	14119.6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>41 	240   	11645.8	13769.5
+42 	248   	11611.2	13731.4
+43 	251   	11208.4	13714.4
+44 	243   	11208.4	13642.7
+45 	245   	11208.4	13548.5
+46 	256   	11208.4	13507.2
+47 	247   	11208.4	13489.6
+48 	244   	11208.4	13402.3
+49 	240   	11093.4	13304.7
+50 	248   	11093.4	13213.2
+51 	241   	10975.6	12976.7
+52 	235   	10975.6	12877.5
+53 	257   	10975.6	12878.6
+54 	247   	10855.3	12847  
+55 	246   	10855.3	12690  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56 	245   	10855.3	12702.2
+57 	246   	10855.3	12835.6
+58 	251   	10673.6	12916  
+59 	248   	10673.6	12836.2
+60 	240   	10572.8	12905.9
+61 	230   	10572.8	12600.5
+62 	245   	10572.8	12687.6
+63 	253   	10572.8	12515.9
+64 	235   	10572.8	12429  
+65 	245   	10572.8	12582.2
+66 	232   	10572.8	12713.7
+67 	252   	10572.8	12741.4
+68 	235   	10197.1	12809.4
+69 	244   	10197.1	12705.1
+70 	257   	10197.1	12876.2
+71 	247   	10197.1	12885.3
+72 	254   	10197.1	12819.5
+73 	242   	10197.1	12871.6
+74 	233   	10197.1	12692.1
+75 	243   	10197.1	12795.3
+76 	242   	10197.1	12824.4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>77 	246   	10197.1	12819.1
+78 	239   	10197.1	12716.5
+79 	246   	10197.1	12514.2
+80 	238   	10197.1	12521.6
+81 	245   	10021.4	12453.3
+82 	252   	10021.4	12233.4
+83 	251   	9958.81	12295.2
+84 	246   	9958.81	12005.7
+85 	243   	9817.91	12051.9
+86 	239   	9817.91	11983.5
+87 	253   	9752.08	11980.8
+88 	243   	9752.08	11948.1
+89 	232   	9718.78	11783.5
+90 	244   	9718.78	11544.6
+91 	253   	9718.78	11590.4
+92 	248   	9718.78	11575.3
+93 	246   	9584.21	11487.4
+94 	237   	9584.21	11324.7
+95 	237   	9584.21	11209.5
+96 	244   	9584.21	11226.7
+97 	257   	9584.21	11277.8
+98 	238   	9352.51	10975  
+99 	249   	9352.51	10994.3
+100	236   	9352.51	10923.4
+101	250   	9352.51	11018.6
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>102	242   	9352.51	11023.7
+103	254   	9341.54	10962.8
+104	241   	9341.54	10727.6
+105	241   	9266.7 	10828.5
+106	236   	9266.7 	10722.4
+107	246   	9266.7 	10516.8
+108	246   	9266.69	10608.1
+109	243   	9266.69	10671  
+110	243   	9266.69	10615.1
+111	255   	9266.69	10645  
+112	246   	9266.69	10633.7
+113	252   	9266.69	10576.4
+114	243   	9266.69	10533.5
+115	242   	9266.69	10431.7
+116	244   	9266.69	10376.1
+117	240   	9266.69	10343.1
+118	254   	9232.07	10219.5
+119	245   	9232.07	10117.4
+120	256   	9232.07	10202.2
+121	242   	9232.07	10209.1
+122	248   	9232.07	10382  
+123	246   	9232.07	10256  
+124	245   	9204.93	10105  
+125	234   	9204.93	10150.4
+126	236   	9204.93	10088.2
+127	229   	9204.93	10045.4
+128	253   	9204.93	10161.8
+129	247   	9204.93	10007  
+130	246   	9170.3 	9969.34
+131	236   	9170.3 	9993.64
+132	260   	9170.3 	10131.6
+133	242   	9170.3 	9926.74
+134	247   	9170.3 	9887.23
+135	250   	9170.3 	9966.44
+136	243   	9170.3 	9958.18
+137	251   	9170.3 	10143.4
+138	244   	9108.77	10185.9
+139	245   	9108.77	10237.1
+140	235   	9108.77	10149.8
+141	254   	9108.77	10217.6
+142	252   	9104.36	10189.9
+143	245   	9104.36	10114.9
+144	250   	9074.15	10124.3
+145	251   	9074.15	10127.8
+146	242   	9074.15	10201.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>147	251   	9074.15	10169.5
+148	250   	9074.15	10113.9
+149	229   	9074.15	10025.9
+150	242   	9074.15	9933.94
+151	231   	9074.15	9967.2 
+152	253   	9074.15	9962.38
+153	252   	9074.15	10085.3
+154	243   	9074.15	9887.07
+155	244   	9074.15	9916.6 
+156	235   	9074.15	9798.14
+157	238   	9074.15	9741.92
+158	245   	9074.15	9854.62
+159	252   	9074.15	9950.48
+160	238   	9074.15	9933.46
+161	251   	9074.15	9986.24
+162	244   	9074.15	10045.3
+163	241   	9074.15	9945.64
+164	244   	9074.15	10113  
+165	244   	9074.15	10091.2
+166	252   	9074.15	9984.51
+167	246   	9074.15	9963.11
+168	245   	9074.15	9903   
+169	257   	9074.15	9911.7 
+170	247   	9074.15	9881.34
+171	236   	9074.15	9973.72
+172	241   	9074.15	9980.26
+173	242   	9074.15	9883.92
+174	249   	9074.15	9878.07
+175	239   	9074.15	9900.23
+176	240   	9074.15	9790.76
+177	244   	9074.15	9647.22
+178	248   	9074.15	9791.55
+179	251   	9074.15	9679.68
+180	251   	9074.15	9715.82
+181	249   	9074.15	9696.82
+182	249   	9074.15	9653.68
+183	252   	9074.15	9655.67
+184	233   	9074.15	9450.34
+185	243   	9074.15	9464.17
+186	236   	9074.15	9307.74
+187	244   	9074.15	9380   
+188	250   	9074.15	9348.07
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>189	238   	9074.15	9256.05
+190	250   	9074.15	9340.67
+191	233   	9074.15	9372.6 
+192	243   	9074.15	9339.89
+193	251   	9074.15	9346.98
+194	239   	9074.15	9332.73
+195	229   	9074.15	9388.14
+196	254   	9074.15	9352.36
+197	253   	9074.15	9299.68
+198	256   	9074.15	9293.32
+199	255   	9074.15	9356.17
+200	235   	9074.15	9328.94
+-- Best Ever Individual =  Individual(&#39;i&#39;, [0, 23, 12, 15, 26, 7, 22, 6, 24, 18, 10, 21, 16, 13, 17, 14, 3, 9, 19, 1, 20, 4, 28, 2, 25, 8, 11, 5, 27])
+-- Best Ever Fitness =  9074.146484375
+</pre></div>
+</div>
+<img alt="../_images/9d091fe514ad1805b1c699c3929f1b60f53d1a64035871e2ba4872b1d0ca0af9.png" src="../_images/9d091fe514ad1805b1c699c3929f1b60f53d1a64035871e2ba4872b1d0ca0af9.png" />
+<img alt="../_images/46dc6f7c8f29c2c1d297a3e2872614e34d9756d044b405a1e96a572b419f54e1.png" src="../_images/46dc6f7c8f29c2c1d297a3e2872614e34d9756d044b405a1e96a572b419f54e1.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeneWang/nenewang.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./genetic_algorithms"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="report.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to Genetic Algorithms</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="knacksack.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Knacksack Problem</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-building-the-traveling-salesman-problem">1. Activity Building the Traveling Salesman Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem">Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-tsp-using-deap-framework">2. Solving TSP Using DEAP Framework</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tsp-modifying-tour-size-3">TSP Modifying Tour Size: 3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeneWang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

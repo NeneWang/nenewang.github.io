@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Knacksack Problem &#8212; Rogue Docs</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-examples.css?v=e236af4b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=b1422caa"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genetic_algorithms/knacksack';</script>
+    <link rel="canonical" href="https://nenewang.github.io/genetic_algorithms/knacksack.html" />
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Vehicle Routing Problem (VRP)" href="vrp.html" />
+    <link rel="prev" title="The Traveling Salesman" href="travlingsalesman.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/2.svg" class="logo__image only-light" alt="Rogue Docs - Home"/>
+    <script>document.write(`<img src="../_static/2.svg" class="logo__image only-dark" alt="Rogue Docs - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Rogue Docs
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About these Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../author.html">Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1-intro/syllabus.html">Syllabus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Genetic Algorithms</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="report.html">Introduction to Genetic Algorithms</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="travlingsalesman.html">The Traveling Salesman</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Knacksack Problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vrp.html">The Vehicle Routing Problem (VRP)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/search-problems.html">Search Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/genetic-algortihms.html">Genetic Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/intro.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/constraint-sastifaction-problems.html">Constraint Sastifaction Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/graph-problems.html">Graph Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/k-means-clustering.html">K Means Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/fair-simple-natural-networks.html">Fair Simple Natural  Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/adversarial-search.html">Adversarial Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/miscellaneus-problems.html">Miscellaneus Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/NeneWang/nenewang.github.io/main?urlpath=tree/genetic_algorithms/knacksack.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/NeneWang/nenewang.github.io/blob/main/genetic_algorithms/knacksack.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/nenewang.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/edit/main//genetic_algorithms/knacksack.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/NeneWang/nenewang.github.io/issues/new?title=Issue%20on%20page%20%2Fgenetic_algorithms/knacksack.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/genetic_algorithms/knacksack.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Knacksack Problem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="knacksack-problem">
+<h1>Knacksack Problem<a class="headerlink" href="#knacksack-problem" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Knapsack01Problem</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This class encapsulates the Knapsack 0-1 Problem from RosettaCode.org</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># initialize instance variables:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxCapacity</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># initialize the data:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__initData</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the total number of items defined in the problem</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__initData</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;initializes the RosettaCode.org knapsack 0-1 problem data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">(</span><span class="s2">&quot;map&quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;compass&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;water&quot;</span><span class="p">,</span> <span class="mi">153</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;sandwich&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">160</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;glucose&quot;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;tin&quot;</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">45</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;cheese&quot;</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;beer&quot;</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;suntan cream&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">70</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;camera&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;t-shirt&quot;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;trousers&quot;</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;umbrella&quot;</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;waterproof trousers&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">70</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;waterproof overclothes&quot;</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">75</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;note-case&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">80</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;sunglasses&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;towel&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;socks&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;book&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxCapacity</span> <span class="o">=</span> <span class="mi">400</span>
+
+    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zeroOneList</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calculates the value of the selected items in the list, while ignoring items that will cause the accumulating weight to exceed the maximum weight</span>
+<span class="sd">        :param zeroOneList: a list of 0/1 values corresponding to the list of the problem&#39;s items. &#39;1&#39; means that item was selected.</span>
+<span class="sd">        :return: the calculated value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">totalWeight</span> <span class="o">=</span> <span class="n">totalValue</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zeroOneList</span><span class="p">)):</span>
+            <span class="n">item</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">totalWeight</span> <span class="o">+</span> <span class="n">weight</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxCapacity</span><span class="p">:</span>
+                <span class="n">totalWeight</span> <span class="o">+=</span> <span class="n">zeroOneList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">weight</span>
+                <span class="n">totalValue</span> <span class="o">+=</span> <span class="n">zeroOneList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="n">totalValue</span>
+
+    <span class="k">def</span> <span class="nf">printItems</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zeroOneList</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Prints the selected items in the list, while ignoring items that will cause the accumulating weight to exceed the maximum weight</span>
+<span class="sd">        :param zeroOneList: a list of 0/1 values corresponding to the list of the problem&#39;s items. &#39;1&#39; means that item was selected.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">totalWeight</span> <span class="o">=</span> <span class="n">totalValue</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">zeroOneList</span><span class="p">)):</span>
+            <span class="n">item</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">totalWeight</span> <span class="o">+</span> <span class="n">weight</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxCapacity</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">zeroOneList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">totalWeight</span> <span class="o">+=</span> <span class="n">weight</span>
+                    <span class="n">totalValue</span> <span class="o">+=</span> <span class="n">value</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Adding </span><span class="si">{}</span><span class="s2">: weight = </span><span class="si">{}</span><span class="s2">, value = </span><span class="si">{}</span><span class="s2">, accumulated weight = </span><span class="si">{}</span><span class="s2">, accumulated value = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">totalWeight</span><span class="p">,</span> <span class="n">totalValue</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Total weight = </span><span class="si">{}</span><span class="s2">, Total value = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">totalWeight</span><span class="p">,</span> <span class="n">totalValue</span><span class="p">))</span>
+        
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a problem instance:</span>
+<span class="n">knapsack</span> <span class="o">=</span> <span class="n">Knapsack01Problem</span><span class="p">()</span>
+
+<span class="c1"># creaete a random solution and evaluate it:</span>
+<span class="n">randomSolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">knapsack</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Random Solution = &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randomSolution</span><span class="p">)</span>
+<span class="n">knapsack</span><span class="o">.</span><span class="n">printItems</span><span class="p">(</span><span class="n">randomSolution</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random Solution = 
+[1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 1 1]
+- Adding map: weight = 9, value = 150, accumulated weight = 9, accumulated value = 150
+- Adding compass: weight = 13, value = 35, accumulated weight = 22, accumulated value = 185
+- Adding water: weight = 153, value = 200, accumulated weight = 175, accumulated value = 385
+- Adding trousers: weight = 48, value = 10, accumulated weight = 223, accumulated value = 395
+- Adding waterproof trousers: weight = 42, value = 70, accumulated weight = 265, accumulated value = 465
+- Adding sunglasses: weight = 7, value = 20, accumulated weight = 272, accumulated value = 485
+- Adding towel: weight = 18, value = 12, accumulated weight = 290, accumulated value = 497
+- Adding socks: weight = 4, value = 50, accumulated weight = 294, accumulated value = 547
+- Adding book: weight = 30, value = 10, accumulated weight = 324, accumulated value = 557
+- Total weight = 324, Total value = 557
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">base</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">creator</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">tools</span>
+<span class="kn">from</span> <span class="nn">deap</span> <span class="kn">import</span> <span class="n">algorithms</span>
+
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">import</span> <span class="nn">knapsack</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># problem constants:</span>
+<span class="c1"># create the knapsack problem instance to be used:</span>
+<span class="n">knapsack</span> <span class="o">=</span> <span class="n">knapsack</span><span class="o">.</span><span class="n">Knapsack01Problem</span><span class="p">()</span>
+
+<span class="c1"># Genetic Algorithm constants:</span>
+<span class="n">POPULATION_SIZE</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">P_CROSSOVER</span> <span class="o">=</span> <span class="mf">0.9</span>  <span class="c1"># probability for crossover</span>
+<span class="n">P_MUTATION</span> <span class="o">=</span> <span class="mf">0.1</span>   <span class="c1"># probability for mutating an individual</span>
+<span class="n">MAX_GENERATIONS</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">HALL_OF_FAME_SIZE</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<span class="c1"># set the random seed:</span>
+<span class="n">RANDOM_SEED</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">RANDOM_SEED</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">toolbox</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">Toolbox</span><span class="p">()</span>
+<span class="c1"># create an operator that randomly returns 0 or 1:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;zeroOrOne&quot;</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a single objective, maximizing fitness strategy:</span>
+<span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;FitnessMax&quot;</span><span class="p">,</span> <span class="n">base</span><span class="o">.</span><span class="n">Fitness</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,))</span>
+
+<span class="c1"># create the Individual class based on list:</span>
+<span class="n">creator</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;Individual&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">fitness</span><span class="o">=</span><span class="n">creator</span><span class="o">.</span><span class="n">FitnessMax</span><span class="p">)</span>
+
+<span class="c1"># create the individual operator to fill up an Individual instance:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;individualCreator&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="n">creator</span><span class="o">.</span><span class="n">Individual</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">zeroOrOne</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">knapsack</span><span class="p">))</span>
+
+<span class="c1"># create the population operator to generate a list of individuals:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;populationCreator&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">initRepeat</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">individualCreator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fitness calculation</span>
+<span class="k">def</span> <span class="nf">knapsackValue</span><span class="p">(</span><span class="n">individual</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">knapsack</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span>  <span class="c1"># return a tuple</span>
+
+
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;evaluate&quot;</span><span class="p">,</span> <span class="n">knapsackValue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># genetic operators:mutFlipBit</span>
+
+<span class="c1"># Tournament selection with tournament size of 3:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">selTournament</span><span class="p">,</span> <span class="n">tournsize</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Single-point crossover:</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">cxTwoPoint</span><span class="p">)</span>
+
+<span class="c1"># Flip-bit mutation:</span>
+<span class="c1"># indpb: Independent probability for each attribute to be flipped</span>
+<span class="n">toolbox</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;mutate&quot;</span><span class="p">,</span> <span class="n">tools</span><span class="o">.</span><span class="n">mutFlipBit</span><span class="p">,</span> <span class="n">indpb</span><span class="o">=</span><span class="mf">1.0</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">knapsack</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create initial population (generation 0):</span>
+<span class="n">population</span> <span class="o">=</span> <span class="n">toolbox</span><span class="o">.</span><span class="n">populationCreator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">POPULATION_SIZE</span><span class="p">)</span>
+
+<span class="c1"># prepare the statistics object:</span>
+<span class="n">stats</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">Statistics</span><span class="p">(</span><span class="k">lambda</span> <span class="n">ind</span><span class="p">:</span> <span class="n">ind</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+
+<span class="c1"># define the hall-of-fame object:</span>
+<span class="n">hof</span> <span class="o">=</span> <span class="n">tools</span><span class="o">.</span><span class="n">HallOfFame</span><span class="p">(</span><span class="n">HALL_OF_FAME_SIZE</span><span class="p">)</span>
+
+<span class="c1"># perform the Genetic Algorithm flow with hof feature added:</span>
+<span class="n">population</span><span class="p">,</span> <span class="n">logbook</span> <span class="o">=</span> <span class="n">algorithms</span><span class="o">.</span><span class="n">eaSimple</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">toolbox</span><span class="p">,</span> <span class="n">cxpb</span><span class="o">=</span><span class="n">P_CROSSOVER</span><span class="p">,</span> <span class="n">mutpb</span><span class="o">=</span><span class="n">P_MUTATION</span><span class="p">,</span>
+                                            <span class="n">ngen</span><span class="o">=</span><span class="n">MAX_GENERATIONS</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="n">stats</span><span class="p">,</span> <span class="n">halloffame</span><span class="o">=</span><span class="n">hof</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gen	nevals	max	avg   
+0  	50    	805	595.86
+1  	50    	860	704.66
+2  	48    	867	750.42
+3  	46    	905	793.74
+4  	48    	945	826.8 
+5  	46    	955	858.18
+6  	42    	1000	897.02
+7  	44    	1002	916   
+8  	46    	1030	952.2 
+9  	45    	1030	974.14
+10 	50    	1030	985.88
+11 	48    	1030	998.9 
+12 	45    	1030	1003.7
+13 	47    	1030	1023.3
+14 	45    	1030	1018.9
+15 	46    	1030	1021.6
+16 	47    	1030	1022.1
+17 	48    	1030	1026.7
+18 	46    	1030	1020  
+19 	43    	1030	1018.34
+20 	46    	1030	1024.9 
+21 	46    	1030	1016.9 
+22 	45    	1030	1022.8 
+23 	46    	1030	1027.7 
+24 	44    	1030	1021.1 
+25 	49    	1030	1025.7 
+26 	44    	1030	1015.6 
+27 	42    	1030	1017.1 
+28 	44    	1030	1017.1 
+29 	43    	1030	1023.24
+30 	50    	1030	1025.6 
+31 	46    	1030	1025.5 
+32 	48    	1030	1027.5 
+33 	46    	1030	1030   
+34 	47    	1030	1018.74
+35 	47    	1030	1023.2 
+36 	36    	1030	1024.1 
+37 	48    	1030	1016.1 
+38 	45    	1030	1022.6 
+39 	42    	1030	1018.7 
+40 	47    	1030	1022.94
+41 	46    	1030	1027.1 
+42 	43    	1030	1024.7 
+43 	46    	1030	1016.1 
+44 	44    	1030	1025.7 
+45 	48    	1030	1023.3 
+46 	50    	1030	1025.6 
+47 	50    	1030	1026.1 
+48 	45    	1030	1024.6 
+49 	49    	1030	1020.9 
+50 	46    	1030	1021.9 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print best solution found:</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">hof</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Individual = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Best Ever Fitness = &quot;</span><span class="p">,</span> <span class="n">best</span><span class="o">.</span><span class="n">fitness</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- Knapsack Items = &quot;</span><span class="p">)</span>
+<span class="n">knapsack</span><span class="o">.</span><span class="n">printItems</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+
+<span class="c1"># extract statistics:</span>
+<span class="n">maxFitnessValues</span><span class="p">,</span> <span class="n">meanFitnessValues</span> <span class="o">=</span> <span class="n">logbook</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="s2">&quot;avg&quot;</span><span class="p">)</span>
+
+<span class="c1"># plot statistics:</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">maxFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">meanFitnessValues</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Generation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Max / Average Fitness&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Max and Average fitness over Generations&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-- Best Ever Individual =  [1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1]
+-- Best Ever Fitness =  1030.0
+-- Knapsack Items = 
+- Adding map: weight = 9, value = 150, accumulated weight = 9, accumulated value = 150
+- Adding compass: weight = 13, value = 35, accumulated weight = 22, accumulated value = 185
+- Adding water: weight = 153, value = 200, accumulated weight = 175, accumulated value = 385
+- Adding sandwich: weight = 50, value = 160, accumulated weight = 225, accumulated value = 545
+- Adding glucose: weight = 15, value = 60, accumulated weight = 240, accumulated value = 605
+- Adding banana: weight = 27, value = 60, accumulated weight = 267, accumulated value = 665
+- Adding suntan cream: weight = 11, value = 70, accumulated weight = 278, accumulated value = 735
+- Adding waterproof trousers: weight = 42, value = 70, accumulated weight = 320, accumulated value = 805
+- Adding waterproof overclothes: weight = 43, value = 75, accumulated weight = 363, accumulated value = 880
+- Adding note-case: weight = 22, value = 80, accumulated weight = 385, accumulated value = 960
+- Adding sunglasses: weight = 7, value = 20, accumulated weight = 392, accumulated value = 980
+- Adding socks: weight = 4, value = 50, accumulated weight = 396, accumulated value = 1030
+- Total weight = 396, Total value = 1030
+</pre></div>
+</div>
+<img alt="../_images/3d2ab683101ad0266893fc38b8b51317f7b5a9e908e9dc4513b0d89eba16b5d2.png" src="../_images/3d2ab683101ad0266893fc38b8b51317f7b5a9e908e9dc4513b0d89eba16b5d2.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeneWang/nenewang.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./genetic_algorithms"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="travlingsalesman.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The Traveling Salesman</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="vrp.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Vehicle Routing Problem (VRP)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeneWang
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
