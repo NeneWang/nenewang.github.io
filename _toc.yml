@@ -5,7 +5,6 @@ parts:
 - caption: About these Notes
   chapters:
   - file: author
-  - file: 1-intro/about
   - file: 1-intro/syllabus
 - caption: Computer Science
   chapters:
