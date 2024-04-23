@@ -1,162 +1,51 @@
----
-title: Resume
----
+# Rogue Docs
 
-::::{grid} 2
-:reverse:
+## About the Website
 
-:::{grid-item}
-:columns: 4
-:class: sd-m-auto
+The website is organized as a digital book contains an exploration of Algorithms, Data Science, Math, Artificial Intellegence, Classical Computer Science, and Financial modeling using Python. Here is the current [coverage status](current-coverage).
 
 
-:::
-
-:::{grid-item}
-:columns: 8
-:class: sd-fs-3
-Nelson Wang
-
-
-% The SVG rendering breaks latex builds for the GitHub badge, so only include in HTML
-```{only} html
-[![](https://img.shields.io/badge/github_profile-blue)](https://github.com/NeneWang)
-```
-
-:::
-
-::::
+- Code can be cloned to be tested on machine.
+- All Code is written by the [author](./author.md) on his journey to the mastery of topics from Computer Science
+- Each Page is designed to be mantained on the long term. For consulting which verision the page is at currently check the following [Stage Tags](stage-tags).
+- This book is barely handles theory, instead it focuses on assigments with the intention to be put into practice by the practicant. 
+- This book is not designed for teaching theory but it will contain to important references to the theory.
 
 
-## Projects Highlights
+## How to use the Book
 
-::::{card-carousel} 2
+## Setup
 
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/NeneWang/mastery-cli
-**Mastery CLI**
-^^^
-```{image} https://camo.githubusercontent.com/1f55a28fa6d2351dd4f3c9483cddd1a11859af487f6eb883dfacaaff7718ad4d/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f657665426b3070744b7a6a715565306954672f67697068792e676966
-:height: 100
-```
+1. Clone the following repository
+2. It contains all data required to finish the book.
 
-CLI Assistant to improve as a programmer. Flashcards, DSA Practice, Statistics, and habit hooks.
-+++
-{bdg-primary}`npm` {bdg-primary}`CLI`
-+++
-Explore this project {fas}`arrow-right`
-:::
+## Page by Page Learning
 
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/Hmmsien/ECommerce_behavior
+- Each Page chapter has an assigment with resources to help you finish the assigments. 
+- If a chapter suggest an 
+- Try completing the assigment on your own.
+- Use the references to help you finish your assigment.
+- Use the book to check your answers and solutions.
 
-**Ecommerce with Recommendation**
-^^^
-```{image} https://user-images.githubusercontent.com/29577570/214152850-342421e7-5e2f-48bd-a841-bb00c3e7edba.png
-:height: 100
-```
+## Practice Mode.
 
-Ecommerce lab website with a recommendation engine using collaborative filtering.
-+++
-{bdg-primary}`FastAPI` {bdg-primary}`Next` {bdg-primary}`Data Sciece`
-+++
-Explore this project {fas}`arrow-right`
-:::
+1. Check your code.
+
+## Misc
+
+(current-coverage)=
+### Current Coverage
+
+[Check Syllaubus](./1-intro/syllabus.md)
+
+| Topic              | State       |
+| ------------------ | ----------- |
+| Genetic Algorithms | IN PROGRESS |
+| Graph Problems     |             |
+
+(stage-tags)=
+### Page Stage Tag
 
 
-::::
 
 
-::::{card-carousel} 2
-
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/elisvcodes/Offset
-**Offset**
-^^^
-```{image} https://www.notion.so/image/https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FU58DaSaJYV1GBWaH78%2Fgiphy.gif
-:height: 100
-```
-
-IOS and Android Application that compares and tracks carbon footprint between reusable and non-reusable items.
-+++
-{bdg-primary}`Flutter` {bdg-primary}`Firebase`
-+++
-Explore this project {fas}`arrow-right`
-:::
-
-:::{card}
-:margin: 3
-:class-body: text-center
-:class-header: bg-light text-center
-:link: https://github.com/Koppelman-Student-Leadership-Council/slc-next
-
-**Student Leadership Full Stack Website**
-^^^
-```{image} https://brooklynslcouncil.com/assets/promotion/logo.png
-:height: 100
-```
-
-Built with NextJS and Laravel - Student Leadership Council website for Koppelman School of Business.
-+++
-{bdg-primary}`Next` {bdg-primary}`Laravel`
-+++
-Explore this project {fas}`arrow-right`
-:::
-
-::::
-
-## Experience
-
-````{card} Junior Software Engineer
-June 2022 – Present
-^^^
-- Development and documentation of full-stack internal applications using React, FastAPI that reduced manual work and streamlined processes.
-- Implemented a data pipeline that ingested streaming (through WebSockets) data from various external sources utilizing Spark, Lambda, SNS, SQS, Gateway, Elasticsearch, S3, and Python.
-- Deployment and maintenance of applications using EC2, Amplify, AppRunner and Docker.
-- Development of CD/CI pipeline with Unit/Integration/End-to-end testing using Pytest and Jenkins
-+++
-Platinum Filings - New York City, NY
-````
-
-````{card} Highschool Programming Instructor
-Dec 2021 - Jul 2022
-^^^
-- Taught Python and Java in 5 different classes of around 30 students each at least 3 days a week.
-- Created a reactive website for students to use for notes and improve their learning experience. ([learn.wangnelson.xyz](https://learn.wangnelson.xyz))
-+++
-Wizara - Nuasin Next Generation
-````
-
-````{card} Software Engineer Intern
-January 20220– December 2020
-^^^
-- Developed the organization’s current website using Django.
-- Architected 5 unique games with 35 levels using Unity Engine.
-- Hosted their services using AWS and Google Cloud.
-+++
-A Free Bird
-````
-
-
-## Education
-
-````{card} Bachelor of Science in Computer Science with Minor in Marketing
-3.83GPA, Expected May 2024
-^^^
-Relevant coursework: Discrete Structures and Algorithms, Data Structures, Object-Oriented Programming, Develop-
-ment of Large-Scale Applications, Artificial Intelligence, Multi-variable Calculus
-+++
-City University New York, Brooklyn College, NY
-````
-
-
-<script src='https://cdn.jsdelivr.net/gh/eddymens/markdown-external-link-script@v2.0.0/main.min.js'></script>

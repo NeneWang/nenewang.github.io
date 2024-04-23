@@ -132,7 +132,7 @@ class TravelingSalesmanProblem:
 
         return distance
 
-    def plotData(self, indices):
+    def plotData(self, indices, label=None):
         """plots the path described by the given indices of the cities
 
         :param indices: A list of ordered city indices describing the given path.
@@ -148,6 +148,8 @@ class TravelingSalesmanProblem:
 
         # plot a line between each pair of consequtive cities:
         plt.plot(*zip(*locs), linestyle='-', color='blue')
+        if label:
+            plt.title(label)
 
         return plt
 
