@@ -20,7 +20,7 @@ Notes
 
 - [ ] Traveling Salesman With Time Frame Own Implementation
 
-## Resources
+### Resources
 
 
 ::::{card-carousel} 2

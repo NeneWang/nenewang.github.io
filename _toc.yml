@@ -1,7 +1,5 @@
 format: jb-book
 root: index
-options:
-  numbered: true
 parts:
 
 - caption: About these Notes
@@ -9,6 +7,7 @@ parts:
   - file: author
   - file: 1-intro/syllabus
 - caption: Computer Science
+  numbered: true
   chapters:
   - file: genetic_algorithms/index
     sections:

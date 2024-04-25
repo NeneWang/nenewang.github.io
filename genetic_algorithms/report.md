@@ -5,7 +5,7 @@
 Here a small section describing distinctively what Genetic Algorithms are and how they are used in optimization problems.
 
 
-### 1.1 Resources
+###  Resources
 
 
 ::::{card-carousel} 2
