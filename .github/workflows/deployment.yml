@@ -1,5 +1,4 @@
 name: deploy-book
-
 # Run this when the master or main branch changes
 on:
   push:
@@ -17,6 +16,8 @@ on:
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
+    environment:
+      name: gh-pages
     permissions:
       pages: write
       id-token: write
