@@ -14,6 +14,18 @@ Study Anki Cards
 - [Traveling Salesman](./travlingsalesman)
 - [Vehicle Routing problem](./vrp)
 
+**Must Finish**
+- [ ] Constrait Satisfaction Problem (5)
+- [ ] Optimizing Continuous Problem (6)
+- [ ] Other Evolutionary and Bio Inspired Competition Techniques (12)
+
+**Leave for Later**
+- [ ] Enhancing Machine Learning Models using Featured Selection.
+- [ ] Hyperparameter Tuning of Machine Learning Models.
+- [ ] Architecture Optimization of Neural Networks.
+- [ ] reinforcement learning with Genetic Algorithms
+- [ ] Genetic Image reconstruction
+
 
 Notes
 - Mainly will be using [DEAP Framework](https://deap.readthedocs.io/en/master/api/tools.html#deap.tools.cxOnePoint)
