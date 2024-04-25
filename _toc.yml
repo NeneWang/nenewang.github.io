@@ -10,9 +10,8 @@ parts:
   chapters:
   - file: genetic_algorithms/index
     sections:
-    - file: genetic_algorithms/report
-    - file: genetic_algorithms/travlingsalesman
     - file: genetic_algorithms/knacksack
+    - file: genetic_algorithms/travlingsalesman
     - file: genetic_algorithms/vrp
   - file: algorithms/search-problems
   - file: algorithms/genetic-algortihms
