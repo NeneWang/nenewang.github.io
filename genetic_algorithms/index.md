@@ -19,9 +19,14 @@ Notes
 ### Backlog
 
 - [ ] Traveling Salesman With Time Frame Own Implementation
+- [ ] Try using Cooperative Coevolution [^coop]
+- [ ] Try the Artificial [Ant Problem](https://deap.readthedocs.io/en/master/examples/gp_ant.html)  
 
+[^coop] [Cooperative Coevolution](https://deap.readthedocs.io/en/master/examples/coev_coop.html?highlight=toolbox.evaluate) is a method that uses multiple populations to solve a problem. Each population is responsible for solving a part of the problem. The populations are evolved separately, and their solutions are combined to form a solution to the complete problem.
 ### Resources
 
+
+- [CrossOver Operators in GA - Medium Post](https://medium.com/geekculture/crossover-operators-in-ga-cffa77cdd0c8)
 
 ::::{card-carousel} 2
 
