@@ -5,6 +5,9 @@ Study Anki Cards
   - DEAP Framework
   - Common Genetic Strategies
 
+**Backlog**
+- [ ] Add All Mutation Streategies from [Medium](https://medium.com/geekculture/crossover-operators-in-ga-cffa77cdd0c8) into cards.
+
 ## Content
 
 - [Knacksack](./knacksack)
