@@ -15,6 +15,7 @@ parts:
     - file: genetic_algorithms/travlingsalesman
     - file: genetic_algorithms/vrp
     - file: genetic_algorithms/nqueens
+    - file: genetic_algorithms/nurses
   - file: algorithms/search-problems
   - file: algorithms/genetic-algortihms
   - file: algorithms/intro
