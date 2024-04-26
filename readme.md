@@ -53,6 +53,17 @@ The expected format for my notes are:
 - If I dont understand it (because I didnt do the assigment) I will not include it in the book. It is not supposed to be a 1 to 1 Cookbook or Documentation reference.
 
 
+### Setup
+
+
+
+```
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+
 
 
 
