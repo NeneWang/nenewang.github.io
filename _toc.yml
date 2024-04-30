@@ -18,6 +18,7 @@ parts:
     - file: genetic_algorithms/nurses
     - file: genetic_algorithms/graphs-coloring-problem
     - file: genetic_algorithms/optimizing-continuous-functions
+    - file: genetic_algorithms/himmeblaus-function
   - file: algorithms/search-problems
   - file: algorithms/genetic-algortihms
   - file: algorithms/intro
