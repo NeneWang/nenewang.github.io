@@ -19,6 +19,8 @@ sympy
 ghp-import
 livereload
 networkx
-
+deap
+scikit-learn
+seaborn
 
 
