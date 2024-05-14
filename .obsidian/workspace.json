@@ -11,19 +11,94 @@
             "id": "96ebb4237e142256",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "misc/History/Union Power.canvas",
-                "viewState": {
-                  "x": 378.57057231962614,
-                  "y": 199.82022775024592,
-                  "zoom": -0.34747857904434204
-                }
+                "file": "misc/History/The Imperial World at War, part 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "feb8862f19652847",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/History/LF.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e40843fad1a84188",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/History/Solarpunk. Rebelling against unsustainability..md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "52f25cc5a06bc656",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fbdc275fd220c39a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/History/officers.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
+      },
+      {
+        "id": "d090135a2fc5ef0e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad7f8d94ef0c799a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Essay - Solarpunk. Rebelling Against Unsustainability.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5cf70e935b176d87",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "misc/History/Assignment The Imperial World at War, part 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -52,7 +127,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "essay",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "misc/History/Union Power.canvas",
+                "file": "Untitled 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "misc/History/Union Power.canvas",
+                "file": "Untitled 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +204,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/History/Union Power.canvas"
+                "file": "Untitled 1.md"
               }
             }
           }
@@ -138,7 +213,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,9 +226,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "96ebb4237e142256",
+  "active": "52f25cc5a06bc656",
   "lastOpenFiles": [
+    "_build/html/searchindex.js.tmp",
+    "misc/History/Solarpunk. Rebelling against unsustainability..md",
+    "Untitled 1.md",
+    "Essay - Solarpunk. Rebelling Against Unsustainability.md",
+    "misc/History/Assignment The Imperial World at War, part 2.md",
+    "misc/History/Reply.md",
+    "misc/History/officers.md",
+    "misc/History/LF.md",
+    "misc/History/Day 1930s.md",
+    "misc/History/The Second Industrial Revolution.md",
+    "misc/History/The Imperial World at War, part 2.md",
+    "misc/History/Zonra Drift War.md",
     "misc/History/Union Power.canvas",
+    "misc/History/Small Wars.md",
+    "Untitled.md",
+    "readme.md",
+    "img/Solarpunk. Rebelling against unsustainability._image_1.png",
+    "img/Zonra Drift War_image_4.png",
+    "img/Zonra Drift War_image_3.png",
+    "img/Zonra Drift War_image_2.png",
+    "img/Zonra Drift War_image_1.png",
     "genetic-algorithms/deap-framework-explore-selection-parameters.ipynb",
     "genetic-algorithms/deap-framework-short copy.ipynb",
     "img/Pasted image 20240330211835.png",
@@ -168,38 +264,15 @@
     "ios-development/SwiftUI-Backend with Firebase.md",
     "ios-development/Plan.md",
     "ios-development",
-    "img/Pasted image 20240330192842.png",
-    "img/Pasted image 20240330155105.png",
-    "img/Pasted image 20240330155050.png",
-    "img/Pasted image 20240330155034.png",
-    "img/Pasted image 20240330155023.png",
-    "misc/History/The Second Industrial Revolution.md",
-    "misc/History/Small Wars.md",
-    "misc/History/Reply.md",
-    "misc/History/officers.md",
     "misc/History",
     "misc/Anthropology/Chapter 7 - Primate Behavior.md",
     "misc/Anthropology/Chapter 6 - The Primates.md",
     "misc/Anthropology",
-    "recommendation-systems/Chapter7/Hybrid Recommender.ipynb",
     "recommendation-systems/hands-on-recommendation-systems-exploration-report.md",
     "recommendation-systems/abstract.md",
     "genetic-algorithms/genetic-algorithms-book-report.md",
     "corrected small wars.md",
     "Plan.md",
-    "Hands-On-Recommendation-Systems-with-Python/abstract.md",
-    "Hands-On-Recommendation-Systems-with-Python/hands-on-machine-learning-exploration-report.md",
-    "data_tools/bc_lectures/data/readme..md",
-    "History/The Second Industrial Revolution.md",
-    "History/Reply.md",
-    "History/offciers.md",
-    "1-intro/coursework.md",
-    "Alternative Careers.md",
-    "_build/html/_sources/index.md",
-    "_build/html/_sources/genetic_algorithms/genetic-algorithms-book-report.md",
-    "_build/html/_sources/algorithms/search-problems.md",
-    "_build/html/_sources/algorithms/miscellaneus-problems.md",
-    "_build/html/_sources/algorithms/k-means-clustering.md",
-    "_build/html/_sources/algorithms/intro.md"
+    "Hands-On-Recommendation-Systems-with-Python/abstract.md"
   ]
 }

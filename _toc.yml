@@ -11,6 +11,7 @@ parts:
   chapters:
   - file: genetic_algorithms/index
     sections:
+    - file: genetic_algorithms/theorical-foundations-genetic-algorithms
     - file: genetic_algorithms/knacksack
     - file: genetic_algorithms/travlingsalesman
     - file: genetic_algorithms/vrp
