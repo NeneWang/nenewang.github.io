@@ -115,5 +115,14 @@ def dfsvisit(v, g):
 
 
 
+### FInal
+
+- We will have some of this small probelms and try to solve them manually.
+- Exam is 21st
+- Is going to start 5-8: You will have till alter
+- Chapters:
+  - 4, 7, 12, 15, 22, my complexity chapter (5)
+    - 3 questions of the complexity | And 5 other questions of each. 
+  - 8 questions each is 5 points. worth 35%
 
 
