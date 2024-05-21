@@ -7,10 +7,10 @@ Core
 
 
 
-- Find maxsubarray crossing midpoint
-- matrix chain order
-- Delete from heap
-- Optimal BST
+- [x] [ ] Find maxsubarray crossing midpoint
+- [x] [ ] matrix chain order
+- [ ] [ ] Delete from heap
+- [ ] [ ] Optimal BST
 
 
 
