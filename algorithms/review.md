@@ -9,7 +9,7 @@ Core
 
 - [x] [ ] Find maxsubarray crossing midpoint
 - [x] [ ] matrix chain order
-- [ ] [ ] Delete from heap
+- [x] [ ] Delete from heap
 - [ ] [ ] Optimal BST
 
 
