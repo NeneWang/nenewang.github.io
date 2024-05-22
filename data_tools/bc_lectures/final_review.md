@@ -18,9 +18,7 @@
   - Not classification. Fidning Distinct groups of data.
 
 
-1. T F
-
- If you perform k-means clustering on a dataset containing different types of tea, the clustering can help you classify new teas you have never seen before.
+1. `False` If you perform k-means clustering on a dataset containing different types of tea, the clustering can help you classify new teas you have never seen before.
 
 1. `False`, K means: It would be fragile, no classification meaning ful way stretch it but is not sued for classifying but for finding groups.
 
