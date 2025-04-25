@@ -15,14 +15,3 @@ Plan
 - For the session in Codepath Do the same (The idea is to not have to many ugly subsectiosn but link them togehter. Same goes for Math: calculust, linear algebra, etc. should be on the same folder to avoid cluttering the main page)
 
 
-
-
-### Genetic Algorithms
-
-
-
-
-### IOS Development
-
-### Data Science
-

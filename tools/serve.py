@@ -9,7 +9,7 @@ server = Server()
 files = [
     "*.md",
     "*.yml",
-    "images/*",
+    "img/*",
 ]
 for filename in files:
     server.watch(filename, "make build")

@@ -9,7 +9,7 @@ title: Books with Jupyter
 :columns: 4
 :class: sd-m-auto
 
-<img src="images/logo-square.svg" />
+<img src="img/logo-square.svg" />
 
 :::
 

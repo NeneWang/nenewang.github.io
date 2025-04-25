@@ -58,7 +58,7 @@ directive like so:
 ```{toggle}
 Some hidden toggle content!
 
-![](../images/cool.jpg)
+![](../img/cool.jpg)
 ```
 ````
 
@@ -67,7 +67,7 @@ This results in:
 ```{toggle}
 Some hidden toggle content!
 
-![](../images/cool.jpg)
+![](../img/cool.jpg)
 ```
 
 Note that if you'd like to **show the toggle content by default**, you can
@@ -78,7 +78,7 @@ add the `:show:` flag when you use `{toggle}`, like so:
 :show:
 Some hidden toggle content!
 
-![](../images/cool.jpg)
+![](../img/cool.jpg)
 ```
 ````
 
@@ -94,7 +94,7 @@ For example, the code
 :class: dropdown
 Some hidden toggle content!
 
-![](../images/cool.jpg)
+![](../img/cool.jpg)
 ```
 ````
 
@@ -104,7 +104,7 @@ results in:
 :class: dropdown
 Some hidden toggle content!
 
-![](../images/cool.jpg)
+![](../img/cool.jpg)
 ```
 
 See {ref}`content/toggle-admonitions` for more information on admonition dropdowns.

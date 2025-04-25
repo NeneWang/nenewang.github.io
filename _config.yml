@@ -1,7 +1,7 @@
 #######################################################################################
 # Book settings
 title: "Rogue Docs"
-logo: images/2.svg
+logo: img/2.svg
 author: NeneWang
 email: nelson.wang80@bcmail.cuny.edu
 description: >- # this means to ignore newlines until "baseurl:"
@@ -25,7 +25,7 @@ html:
   # (The documentation says only that HTML is allowed, nothing about the base URL is mentioned.)
   # Then we could link to the changelog in the *same* build of the docs.
   # announcement: '⚠️The 0.13 release refactored our HTML, so double-check your custom CSS rules!⚠️'
-  favicon: images/favicon.png
+  favicon: img/favicon.png
   # google_analytics_id: UA-52617120-7
   home_page_in_navbar: true
   use_edit_page_button: true
@@ -78,7 +78,7 @@ sphinx:
     nb_execution_show_tb: True
     nb_execution_timeout: 120
     html_extra_path:
-      - images/badge.svg
+      - img/badge.svg
     intersphinx_mapping:
       ebp:
         - "https://executablebooks.org/en/latest/"
