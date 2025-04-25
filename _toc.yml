@@ -6,6 +6,7 @@ parts:
   chapters:
   - file: author
   - file: 1-intro/syllabus
+  - file: cite
 - caption: Computer Science
   numbered: true
   chapters:
