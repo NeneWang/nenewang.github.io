@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: c0fddba8-079c-4781-a2b1-9286f1c66236
+  title: Finance and Software Engineering
+  # description:
+  # keywords: []
+  # authors: []
+  github: https://github.com/NeneWang/nenewang.github.io
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png

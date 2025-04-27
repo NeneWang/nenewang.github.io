@@ -1,0 +1,32 @@
+format: jb-book
+root: index
+parts:
+
+- caption: About these Notes
+  chapters:
+  - file: author
+  - file: 1-intro/syllabus
+  - file: cite
+- caption: Computer Science
+  numbered: true
+  chapters:
+  - file: 3-genetic_algorithms/index
+    sections:
+    - file: 3-genetic_algorithms/theorical-foundations-genetic-algorithms
+    - file: 3-genetic_algorithms/knacksack
+    - file: 3-genetic_algorithms/travlingsalesman
+    - file: 3-genetic_algorithms/vrp
+    - file: 3-genetic_algorithms/nqueens
+    - file: 3-genetic_algorithms/nurses
+    - file: 3-genetic_algorithms/graphs-coloring-problem
+    - file: 3-genetic_algorithms/optimizing-continuous-functions
+    - file: 3-genetic_algorithms/himmeblaus-function
+  # - file: 2-algorithms/search-problems
+  # - file: 2-algorithms/genetic-algortihms
+  # - file: 2-algorithms/intro
+  # - file: 2-algorithms/constraint-sastifaction-problems
+  # - file: 2-algorithms/graph-problems
+  # - file: 2-algorithms/k-means-clustering
+  # - file: 2-algorithms/fair-simple-natural-networks
+  # - file: 2-algorithms/adversarial-search
+  # - file: 2-algorithms/miscellaneus-problems
